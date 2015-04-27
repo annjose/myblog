@@ -1,0 +1,7 @@
+baseurl = "http://ann.chiramattel.com/"
+languageCode = "en-us"
+title = "My Thoughts"
+
+[[menu.main]]
+    name = "Blog"
+    url = "/post"

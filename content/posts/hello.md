@@ -1,6 +1,6 @@
 +++
 date = "2015-04-27T00:49:45-07:00"
-draft = true
+draft = false
 title = "First Post from Hugo"
 
 +++
@@ -14,7 +14,7 @@ Here is what I love about Hugo:
 * Static site generator - no need of databases, runtimes, VMs etc.
 * Very easy to publish content
 * No dependency issues; literally runs out of the box
-* Highly customizable
+* Highly customizable UI
 * A good opportunity to learn #golang
 
 So far, I am just loving Hugo. Next step is to explore it further and customize it to my heart's content.

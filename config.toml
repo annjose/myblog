@@ -14,7 +14,7 @@ paginate = 10
 
 [params]
   # Shown in the home page
-  # subtitle = "A Hugo Theme"
+  subtitle = "Ann Catherine Jose"
   brand = "Ann"
   googleAnalytics = "UA-75357261-1"
   disqus = "anncjose"

@@ -15,7 +15,7 @@ Here is what I love about Hugo:
 * Very easy to publish content
 * No dependency issues; literally runs out of the box
 * Highly customizable UI
-* A good opportunity to learn #golang
+* A good opportunity to learn Go #golang
 
 So far, I am just loving Hugo. Next step is to explore it further and customize it to my heart's content.
 

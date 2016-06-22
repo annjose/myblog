@@ -1,15 +1,13 @@
 +++
 date = "2016-03-20T20:54:56-07:00"
 draft = false
-title = "About Me"
+title = "Ann Catherine Jose"
 
 +++
-Software developer skilled in iOS, Swift, ObjectiveC, ReactNative, JavaScript, C#, .NET. 
+**Ann Catherine Jose** is the Principal Software Engineer in TurboTax Mobile team at Intuit. She was a key contributor in building TurboTax iOS app from the ground up in 2014, working with an awesome team. Prior to Intuit, she worked with Philips, SAP and Tata Infotech. She earned her Masters degree in Mathematics from Indian Institute of Technology Chennai in 2000, specializing in predicate logic.
 
-Loves to learn and experiment. 
+Her passion is to learn and experiment with new technology and use that to solve real world problems. She loves writing code, building solutions, attending hackathons and meetups. 
 
-The latest contribution has been developing TurboTax iOS app from ground up last year. Always looking for multiple ways to improve the user experience as well as tech hygeine. 
+She believes that building the **product right** is as important as building the **right product**. 
 
-I believe that building the product right is as important as building the right product. 
-
-I love coding @[github](https://github.com/annjose), tweet [@annjose](https://twitter.com/annjose), and connect [@LinkedIn](https://www.linkedin.com/in/annjose)
+She blogs at [Reflections](http://ann.chiramattel.com/) and codes at [github](https://github.com/annjose). You can reach her at [@LinkedIn](https://www.linkedin.com/in/annjose).

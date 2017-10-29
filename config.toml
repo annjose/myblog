@@ -3,8 +3,11 @@ languageCode = "en-us"
 title = "Reflections"
 author = "Ann Catherine Jose"
 
+theme = "blackburn"
+disablePathToLower = true
+
 # Shown in the side menu
-copyright = "&copy; 2016. All rights reserved."
+copyright = "&copy; 2017. All rights reserved."
 canonifyurls = true
 paginate = 10
 
@@ -15,9 +18,10 @@ paginate = 10
 [params]
   # Shown in the home page
   subtitle = "Ann Catherine Jose"
-  brand = "Ann"
+  brand = "Reflections"
   googleAnalytics = "UA-75357261-1"
   disqus = "anncjose"
+  
   # CSS name for highlight.js
   highlightjs = "androidstudio"
   dateFormat = "02 Jan 2006, 15:04"
@@ -27,19 +31,19 @@ paginate = 10
   [[menu.main]]
     name = "Home"
     pre = "<i class='fa fa-home fa-fw'></i>"
-    weight = 0
+    weight = 10
     identifier = "home"
     url = "/"
   [[menu.main]]
     name = "Posts"
     pre = "<i class='fa fa-list fa-fw'></i>"
-    weight = 1
+    weight = 20
     identifier = "post"
     url = "/post/"
   [[menu.main]]
     name = "About"
     pre = "<i class='fa fa-user fa-fw'></i>"
-    weight = 2
+    weight = 30
     identifier = "about"
     url = "/about/"
   #[[menu.main]]
@@ -78,6 +82,6 @@ paginate = 10
   # Techie
   github = "annjose"
   # bitbucket = "*"
-  # stackoverflow = "*"
+  stackoverflow = "402100"
 
 

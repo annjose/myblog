@@ -8,7 +8,7 @@ description = "An introduction to GraphQL with examples and comparison to REST"
 
 I have been using GraphQL in my work project for a few months now and I love it. But all my learnings of this technology have been in a hurry and mainly from a consumption standpoint as a mobile developer. So I wanted to learn it much deeper, tinker with it and finally write this blog to share my learnings and cement my understanding. Finally got the time to do it this weekend. 
 
-In this post, we learn what GraphQL is, the key concepts and how does it compare with the classic REST model - all with a lot of examples. All the content here is mainly based on what I learned from [GraphQL official docs](http://graphql.org/learn/) and the excellent [GitHub GraphQL V4 API documentation](https://developer.github.com/v4/).
+In this post, we will learn what GraphQL is, the key concepts and how does it compare with the classic REST model - all with a lot of examples. All the content here is mainly based on what I learned from [GraphQL official docs](http://graphql.org/learn/) and the excellent [GitHub GraphQL V4 API documentation](https://developer.github.com/v4/).
 
 ## What is GraphQL?
 [GraphQL](http://graphql.org/) is an API query language and a runtime for fulfilling those queries using a type system that you define for your data. It was built by Facebook in 2012 as part of the effort to rebuild their native mobile applications and was open-sourced in 2015. 
@@ -129,7 +129,7 @@ As you may have realized by now, GraphQL is essentially a technology that involv
 
 * GraphQL queries can access multiple resources in a single request originated from the client. In the REST world, client will have to send multiple requests - one for reach resource. This 
 
-* In REST, every operation that can be performed on the resource (read/add/edit/delete) are specified by HTTP verbs (*GET/POST/PUT/DELETE*) in the request. In GraphQL, the operations (query/mutation) are specified in the JSON encoded bosy of the request and the hTTP verb is almost always *POST* (except for Introspection of schema which uses GET)
+* In REST, every operation that can be performed on the resource (read/add/edit/delete) are specified by HTTP verbs (*GET/POST/PUT/DELETE*) in the request. In GraphQL, the operations (query/mutation) are specified in the JSON encoded body of the request and the HTTP verb is almost always *POST* (except for Introspection of schema which uses GET)
 
 * In REST, the shape and size of the resource is determined by the server. In GraphQL, the server declares what resources are available; the client asks for what it needs.
 
@@ -142,7 +142,7 @@ The two types of operations allowed in GraphQL are *queries* and *mutations*. Ev
 
 ### Queries
 
-Query is an operation that defines what we want to get from the GraphQL server. Queries return only the data that you ask for and a query has the same shape as the result. You create a query by specifying the fields (top-level fields or nested fields) of the types until every leaf node is a scalar. You can also have pass *arguments* to every field and nested object in the query. Queries can also include reusable snippets called *fragments* that help in splitting complex queries into smaller chunks and avoid repetition of fields.
+Query is an operation that defines what we want to get from the GraphQL server. Queries return only the data that you ask for and a query has the same shape as the result. You create a query by specifying the fields (top-level fields or nested fields) of the types until every leaf node is a scalar. You can also pass *arguments* to every field and nested object in the query. Queries can also include reusable snippets called *fragments* that help in splitting complex queries into smaller chunks and avoid repetition of fields.
 
   Here is a sample query that fetches a github issue from the repository https://github.com/octocat/Hello-World/issues/392:
 
@@ -158,12 +158,13 @@ query {
 
 ### Mutations
 Mutation is an operation to execute a modification on an object. You form a mutation by specifying three things:
+
  * **mutationName** - type of modification that you want to perform
  * **Input object** - the data that you want to send to server, composed of input fields. Pass  *  argument to the mutationName
  * **Payload object** - the data that you want to return from the server. Pass it as the body of the mutationName
 
 This is how a mutation is structured:
-```
+```Java
 mutation {
   mutationName(input: {MutationNameInput!}) {
     MutationNamePayload
@@ -206,11 +207,11 @@ const resolvers = {
 ```
 
 ## Conclusion
-As we have seen so far, GraphQL is an excellent solution that can power all data fetching requirements of client applications. It can be a complete replacement for resource-dependent REST services, orchestration services and custom services custom-built for applications. What I love the most about GraphQL is how it solves the data-fetching problem from the application developer's point of view without compromising the server-side developer's desire to create flexible maintainable code.
+As we have seen so far, GraphQL is an excellent solution that can power all the data fetching requirements of client applications. It can be a complete replacement for resource-dependent REST services, orchestration services and services custom-built for applications. What I love the most about GraphQL is how it solves the data-fetching problem from the application developer's point of view without compromising the server-side developer's desire to create flexible maintainable code.
 
 ## References
 
-Of course there is a lot more to explore and experiment to get a deep understanding of the technology. The specific topics I would like to explore are the Single Version model and the advanced type systems (Union Types, Interface Types etc.) 
+Of course there is a lot more to explore and experiment to get a deep understanding of this technology. The specific topics I would like to explore are the Single Version model and the advanced type systems (Union Types, Interface Types etc.) 
 Here is a list of some great articles and documentation to learn more.
 
 * GraphQL main learning site - http://graphql.org/learn/

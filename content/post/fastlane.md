@@ -1,6 +1,6 @@
 +++
 title = "Fastlane"
-date = "2017-12-24T12:02:23-08:00"
+date = "2017-12-23T12:02:23-08:00"
 tags = ["iOS", "fastlane"]
 topics = []
 description = "Fastlane - an intro and sneak peek"
@@ -9,7 +9,7 @@ description = "Fastlane - an intro and sneak peek"
 [Fastlane](https://fastlane.tools/) is a suite of simple yet powerful tools to automate building and releasing iOS and Android apps. It takes care of the mundane tasks of mobile application development like generating screenshots, managing provisioning profiles, code signing, beta deployments and releasing the application. It is very popular in the mobile developer community and the best part - it is completely open source.
 
 ## The Toolchain
-fastlane comes out-of-the-box with a very good set of tools - better known as *actions* such as:
+fastlane comes out-of-the-box with a set of very good tools (better known as *actions*) such as:
 
 * **produce** - create new iOS apps on iTunes and Apple Developer portal. The Android equivalent is *supply*.
 * **gym** - builds the iOS app using Xcode build tools
@@ -59,13 +59,14 @@ Now you can execute each of the lane by running one of the following commands fr
 * Easy to get started - just do the one-time setup, add a fastfile and you are done
 * Integrates well with existing tools and services like TestFlight, HockeyApp, SonarQube, gradle etc.
 * Integrates well with exall major CI systems like Jenkins, CircleCI, Travis
-* Supports a wide range of capabilities through 170 actions https://docs.fastlane.tools/actions/. There is an action for everything that you can think of - yes of course for clearing derived data too :-)
+* Supports a wide range of capabilities through 170 actions https://docs.fastlane.tools/actions. There is an action for everything that you can think of - yes of course for clearing derived data too :-)
 * Easy to extend and customize actions as needed
 * Custom private lanes / actions for custom scripts
 * 100% open source under MIT license - https://github.com/fastlane/fastlane
 
 ## Advanced Concepts
-fastlane supports some cool features that are very helpful in managing mobile applications.
+Fastlane supports some cool features that are very helpful in managing mobile applications.
+
 * Pass parameters to your lane from command line
 * Private lanes
 * Retrieve the return value of a lane by reading the last line of the lane

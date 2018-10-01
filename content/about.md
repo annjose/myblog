@@ -10,4 +10,4 @@ Her passion is to learn and experiment with new technology and use it to solve r
 
 She believes that building the **product right** is as important as building the **right product**. 
 
-She blogs at [Reflections](http://ann.chiramattel.com/) and codes at [github](https://github.com/annjose). You can reach her at [@LinkedIn](https://www.linkedin.com/in/annjose).
+She blogs at [Reflections](https://ann.chiramattel.com/) and codes at [github](https://github.com/annjose). You can reach her at [@LinkedIn](https://www.linkedin.com/in/annjose).

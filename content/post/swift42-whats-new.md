@@ -13,7 +13,7 @@ In this post, I would like to share what's new in Swift 4.2. All the code displa
 * It also provides a convenient API `randomElement` which returns a random element from a sequence
 * It also provides the APIs `shuffle` and `shuffled` to shuffle a sequence
 
-```swift
+```
 let randomInt = Int.random(in: 0..<10)
 let randomElement = ["one", "two", "three", "four"].randomElement()
 ```
@@ -23,7 +23,7 @@ Swift 4.2 introduces a dot syntax to access custom subscripts; this is much clea
 
 In order to use this feature, you have annotate your type with `@dynamicMemberLookup` and implement the method `subscript(dynamicMember:)`
 
-```swift
+```
 @dynamicMemberLookup
 class Person {
     let name: String, let age: Int, let details: [String: String]
@@ -46,7 +46,7 @@ Swift 4.2 has added enumeration case arrays `allCases` to all enumerations so th
 
 If you want to customize the cases that is returned by `allCases`, you can implement the `CaseIterator` yourself.
 
-```swift
+```
 for (index, season) in Season.allCases.enumerated() {
     print ("[\(index)]: \(season.rawValue.capitalized)")
 }
@@ -55,7 +55,7 @@ for (index, season) in Season.allCases.enumerated() {
 ## Sequence Enhancements
 Swift 4.2 made some neat enhancements to the Sequence APIs, for example, `last(where:)`, `lastIndex(of:)`, `lastIndes(where:)`. They also added a new method `allSatisfy(:)` that checks whether all elements in a sequence satisfy a specific condition.
 
-```swift
+```
 let numbers = [11, 14, 91, 12, 43]
 numbers.last(where: { $0 % 2 == 0 })    
 numbers.lastIndex(where: { $0 % 2 == 0 })
@@ -67,7 +67,7 @@ numbers.lastIndex(where: { $0 % 2 == 0 })
 ## Conditional Conformance
 Swift 4.2 provides default implementation for conditional conformance to `Equatable`, `Hashable` and `Codable` in extensions. In Swift 4.1, you had to manually implement these protocols even though the conforming protocol provided the implementations.
 
-```swift
+```
 // Swift 4.1 - you have to implement the Equatable for conditional conformance 
 extension Screencast: Equatable where Tutorial: Equatable {
     /*static func ==(lhs: Screencast, rhs: Screencast) -> Bool {
@@ -86,20 +86,20 @@ Also, optionals, arrays, dictionaries and ranges are `Hashable` when their eleme
 ## Other improvements
 
 * Swift 4.2 provides universal hash functions which enables us to implement custom hash functions for a class much easier, more correct and performant. The `Hashable` protocol defines a new method `hash(into:)` which repalces `hasValue` of Swift 4.1
-```swift
+```
     func hash(into hasher: inout Hasher) {
         hasher.combine(url)
     }
 ```
 
 * Convenience method to remove elements of a collection that satisfy a condition
-```swift
+```
 var nums = [1, 2, 3, 4]
 nums.removeAll { $0 % 2 == 0}   // {1, 3}
 ```
 
 * And finally, Yes! Swift 4.2 adds `toggle` to `Bool`
-```swift
+```
 var flipMe = true
 flipMe.toggle()
 ```

@@ -1,8 +1,8 @@
 +++
 title = "Learn GraphQL By Example"
-date = "2017-12-28T13:35:28-08:00"
-tags = ["graphql"]
-topics = []
+date = "2019-01-28T14:30:28-08:00"
+tags = ["mobile-tech"]
+topics = ["graphql"]
 description = "An introduction to GraphQL with examples and comparison to REST"
 +++
 

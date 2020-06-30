@@ -1,8 +1,8 @@
 +++
-title = "How To Mock Network Requests in iOS"
-date = "2018-11-17T19:00:52-08:00"
-tags = ["ios", "unit testing"]
-topics = []
+title = "How To mock network requests in iOS"
+date = "2019-03-11T20:00:52-08:00"
+tags = ["ios","mobile-tech"]
+topics = ["unit-testing"]
 description = "A simple Swift framework for mocking network requests"
 +++
 

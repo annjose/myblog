@@ -1,7 +1,7 @@
 +++
 date = "2016-09-24T07:26:19-07:00"
 draft = true
-title = "math symbols test"
+title = "Math symbols test"
 
 +++
 

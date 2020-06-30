@@ -1,11 +1,11 @@
 +++
 date = "2016-08-09T20:05:54-07:00"
 draft = false
-title = "Machine Learning - A New Journey"
-categories = [
-  "Machine Learning"
-]
+title = "Machine Learning - A new journey"
+tags = ["tech-explorations"]
+topics = ["machine-learning"]
 +++
+
 Few weeks ago, I started the [Machine Learning course on Coursera] (https://www.coursera.org/learn/machine-learning) by Andrew Ng of Stanford University. The course is great, learning a lot of new concepts. Sometimes it is hard, but it is really fun learning this new topic and brushing up the old Math lessons of Linear Algebra, matrix manipulation and derivatives.
 
 The course starts with the basics, including a primer on Linear Algebra (it is optional, but I took it anyway since it has been more than a decade when I learned it in college). At the end of each module, there is a quiz and programming assignments, which are interesting. 

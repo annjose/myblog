@@ -2,9 +2,8 @@
 date = "2016-09-27T08:22:02-07:00"
 draft = false
 title = "Realm Mobile Platform"
-categories = [
-  "Mobile Development"
-]
+tags = ["mobile-tech","tech-explorations"]
+topics = ["realm"]
 +++
 
 [Realm](https://realm.io) is a company that I respect a lot because of their support for mobile developers and the open nature nature of their offerings. Their easy-to-use, blazingly fast [Mobile database](https://realm.io/products/realm-mobile-database/) software supports all mobile platforms - iOS, Android, React Native and Xamarin, in Java, ObjC, Swift and C#. 

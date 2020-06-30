@@ -1,11 +1,9 @@
 +++
 date = "2016-09-24T07:49:00-07:00"
 draft = false
-title = "How to Display Mathematical Expressions in Blog"
-categories = [
-  "Machine Learning",
-  "How-To"
-]
+title = "How to display Mathematical Expressions in blog"
+tags = ["how-to"]
+topics = ["machine-learning"]
 +++
 
 As part of my Machine Learning course, I wanted to share some of my learnings / notes in this blog so that someone will find it useful and I could also refer to it later. But I was not sure how to display the mathemtical expressions used in calculating cost function, gradient descent etc. in my blog. I have used the [OneNote Equation tool] (https://support.office.com/en-us/article/Insert-a-mathematical-equation-in-OneNote-2016-for-Mac-08969f84-ed02-4baf-8a77-7ab3c1e26afe) before, but didn't know how to do it on the Web for my blog. So I explored the options and here is what I found.

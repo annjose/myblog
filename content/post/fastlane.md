@@ -1,8 +1,8 @@
 +++
 title = "Fastlane"
 date = "2017-12-23T12:02:23-08:00"
-tags = ["iOS", "fastlane"]
-topics = []
+tags = ["ios","mobile-tech","how-to"]
+topics = ["fastlane"]
 description = "Fastlane - an intro and sneak peek"
 +++
 

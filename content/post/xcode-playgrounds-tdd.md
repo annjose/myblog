@@ -1,10 +1,7 @@
 +++
 date = "2017-04-02T02:02:31-07:00"
 title = "TDD in Xcode Playground"
-categories = [
-  "Mobile Development",
-  "iOS"
-]
+tags = ["ios","swift","mobile-tech","tech-explorations"]
 +++
 
 I use Xcode playground a lot in order to write code snippets - either to try out something that I read in a blog, or to demonstrate a code improvement that I want to suggest in a code review, or sometimes even to prototype a design before doing the full-blown implementation in Xcode project. During this experimentation phase, the correctness of the code was verified by analyzing the ouput displayed on the right-hand side column of the playground. This was really cumbersome and error-prone and I was hoping that there would be a better solution for this.

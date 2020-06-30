@@ -2,7 +2,7 @@
 title = "GraceHopper 2018 Highlights"
 date = "2018-09-30T21:17:46-07:00"
 draft = false
-tags = ["ghc-2018", "highlights"]
+tags = ["ghc-2018","highlights"]
 topics = []
 description = "Learnings and Experience of Grace Hopper Celebration 2018"
 +++

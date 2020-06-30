@@ -2,7 +2,7 @@
 title = "Bootstrapping Root View Controller in iOS Apps"
 date = "2018-11-22T15:56:54-08:00"
 draft = true
-tags = []
+tags = ["ios","mobile-tech"]
 topics = []
 description = "Learn the different ways in which you can bootstrap the main UI of iOS application"
 +++

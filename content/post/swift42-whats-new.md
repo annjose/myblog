@@ -1,8 +1,8 @@
 +++
 title = "Swift 4.2 - What's New"
 date = "2018-10-12T20:09:12-08:00"
-tags = ["ios", "swift"]
-topics = []
+tags = ["ios","swift","mobile-tech","tech-explorations"]
+topics = ["swift"]
 description = "A quick glance at all the goodness in Swift 4.2"
 +++
 

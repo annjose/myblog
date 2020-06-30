@@ -1,11 +1,8 @@
 +++
 date = "2017-05-23T03:37:57-07:00"
 draft = false
-title = "GoogleIO 2017"
-categories = [
-  "Mobile Development",
-  "Android"
-]
+title = "Google IO 2017"
+tags = ["mobile-tech","android"]
 +++
 
 I had the wonderful opportunity to attend Google I/O last week and absolutely loved it. I learned a lot of things during the three days. Btw, it was tiring too with the continuous sessions and the sunny Sun. 

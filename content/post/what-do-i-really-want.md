@@ -1,9 +1,8 @@
 +++
-title = "What Do I Really Want"
-date = "2020-06-29T11:26:39-07:00"
+title = "What do I really want"
+date = "2020-06-28T11:26:39-07:00"
 draft = false
-tags = []
-topics = []
+topics = ["thinking-loud"]
 description = "A brief look at what I really want"
 +++
 

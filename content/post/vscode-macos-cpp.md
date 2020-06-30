@@ -2,8 +2,8 @@
 title = "Tinkering with VS Code, Mac and C++"
 date = "2020-06-29T22:32:55-07:00"
 draft = false
-tags = ["Tech Explorations"]
-topics = ["Visual Studio Code", "C++"]
+tags = ["tech-explorations","how-to"]
+topics = ["visual-studio-code","c++"]
 +++
 
 After a long time, I got some time to tinker with something fun and learn from it, thanks to the week-long break from work. The task at hand is to set up Visual Studio for Mac to compile/run/debug C++ programs. Why, you may wonder - because I wanted to read and learn from the book [Data Structures and Algorithms in C++](https://www.amazon.com/Data-Structures-Algorithms-Adam-Drozdek-dp-1133608426/dp/1133608426) by Adam Drozdek. For the past few months, I was having a craving to learn something new and became curious when I saw this book on my shelf. 

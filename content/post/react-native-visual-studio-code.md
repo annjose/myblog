@@ -2,7 +2,8 @@
 date = "2016-04-13T21:22:02-07:00"
 draft = false
 title = "ReactNative in Visual Studio Code"
-
+tags = ["mobile-tech","tech-explorations"]
+topics = ["react-native","visual-studio-code"]
 +++
 
 I have been thoroughly enjoying working on [ReactNative](https://facebook.github.io/react-native/) projects, but was disappointed by the lack of a good debugging environment. I had tried multiple solutions like [Nuclide](http://nuclide.io/) (which I found it to be very slow), WebStorm with JSX plugins (which is mainly syntax recognition). So I had to always launch the app from Xcode/Android Studio, then attach Chrome Dev tools and keep switching between all three for debugging. This was frustrating, but there is hope...

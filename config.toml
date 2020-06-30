@@ -7,7 +7,7 @@ theme = "blackburn"
 disablePathToLower = true
 
 # Shown in the side menu
-copyright = "&copy; 2017. All rights reserved."
+copyright = "&copy; 2020. All rights reserved."
 canonifyurls = true
 paginate = 10
 
@@ -35,13 +35,13 @@ paginate = 10
     identifier = "home"
     url = "/"
   [[menu.main]]
-    name = "Posts"
+    name = "Blog"
     pre = "<i class='fa fa-list fa-fw'></i>"
     weight = 20
     identifier = "post"
     url = "/post/"
   [[menu.main]]
-    name = "About"
+    name = "About Me"
     pre = "<i class='fa fa-user fa-fw'></i>"
     weight = 30
     identifier = "about"

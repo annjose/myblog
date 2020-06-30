@@ -41,16 +41,29 @@ paginate = 10
     identifier = "post"
     url = "/post/"
   [[menu.main]]
+    name = "iOS"
+    pre = "<i class='fa fa-list fa-fw'></i>"
+    weight = 30
+    identifier = "ios"
+    url = "/tags/ios"
+  [[menu.main]]
+    name = "Mobile Tech"
+    pre = "<i class='fa fa-list fa-fw'></i>"
+    weight = 40
+    identifier = "mobile-tech"
+    url = "/tags/mobile-tech"
+   [[menu.main]]
+    name = "Tech Explorations"
+    pre = "<i class='fa fa-list fa-fw'></i>"
+    weight = 50
+    identifier = "tech-explorations/"
+    url = "/tags/tech-explorations"
+  [[menu.main]]
     name = "About Me"
     pre = "<i class='fa fa-user fa-fw'></i>"
-    weight = 30
+    weight = 100
     identifier = "about"
     url = "/about/"
-  #[[menu.main]]
-  #  name = "Contact"
-  #  pre = "<i class='fa fa-phone fa-fw'></i>"
-  #  weight = 3
-  #  url = "/contact/"
 
 [social]
   # Link your social networking accouns to the side menu

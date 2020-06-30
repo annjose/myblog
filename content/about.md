@@ -1,13 +1,14 @@
 +++
-date = "2016-03-20T20:54:56-07:00"
+date = "2020-02-20T10:54:56-07:00"
 draft = false
 title = "Ann Catherine Jose"
 
 +++
-**Ann Catherine Jose** is a Principal Software Engineer in TurboTax Mobile team at Intuit. She has been a key contributor in rebuilding TurboTax iOS app from scratch in 2014, working with an awesome team. Prior to Intuit, she worked with Philips, SAP and Tata Infotech. She earned her Masters degree in Mathematics from Indian Institute of Technology Chennai in 2000, specializing in predicate logic.
+I am a Software Tinkerer and Engineering Leader at Intuit. As the Director of Engineering, I lead the Mobile Engineering team in the Small Business and Self Employed group; we build the QuickBooks suite of mobile apps that serve our small business and self employed customers. Prior to this role, I worked as Principal Software Engineer in the TurboTax mobile team, and worked at other companies including Philips and SAP. I did Masters in Mathematics from Indian Institute of Technology Chennai, specializing in predicate logic.
 
-Her passion is to learn and experiment with new technology and use it to solve real world problems. She loves coding, reading, attending hackathons and meetups. 
+My main passions in life are following technology (particularly mobile), solving difficult problems and learning something new everyday. After a long stint as an individual contributor at Intuit, I took on the people leadership role last year and have been absolutely loving it. I enjoy working with my team, my peer group, my product partners and senior leadership team across various functions in the organization. Everyday I am faced with a new challenge which makes me come up with a solution and teaches me a new lesson in leadership.
 
-She believes that building the **product right** is as important as building the **right product**. 
+* My life mantra - **Be the Change** You Want to See. Make today **better than yesterday**.
+* My work mantra - Building the **product right** is as important as building the **right product**.
 
-She blogs at [Reflections](https://ann.chiramattel.com/) and codes at [github](https://github.com/annjose). You can reach her at [@LinkedIn](https://www.linkedin.com/in/annjose).
+I blog here at [Reflections](https://ann.chiramattel.com/) and code at [github](https://github.com/annjose). You can contact me at [LinkedIn](https://www.linkedin.com/in/annjose).

@@ -34,7 +34,7 @@ Once the installation is done, you can create a configuration file named *Fastfi
 Here is an example of a Fastfile that defines two lanes - one for the **beta** deployment and another for AppStore **release**.
 ``` ruby
 lane :beta do
-  increment_build_number    # increment the build number before building the final version
+  increment_build_number    # increment build number before building the final version
   build_app                 # build the app using gym
   upload_to_testflight      # upload the binaries to TestFlight
 end

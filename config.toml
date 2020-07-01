@@ -1,15 +1,12 @@
 baseurl = "https://ann.chiramattel.com/"
 languageCode = "en-us"
 title = "Reflections"
-author = "Ann Catherine Jose"
-
 theme = "blackburn"
-disablePathToLower = true
-
-# Shown in the side menu
+author = "Ann Catherine Jose"
 copyright = "&copy; 2020. All rights reserved."
 canonifyurls = true
 paginate = 10
+disablePathToLower = true
 
 [indexes]
   tag = "tags"
@@ -21,10 +18,13 @@ paginate = 10
   brand = "Reflections"
   googleAnalytics = "UA-75357261-1"
   disqus = "anncjose"
-  
-  # CSS name for highlight.js
-  highlightjs = "androidstudio"
   dateFormat = "02 Jan 2006, 15:04"
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    lineNos = true
+    style = "dracula"
 
 [menu]
   # Shown in the side menu.

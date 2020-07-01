@@ -11,4 +11,4 @@ My main passions in life are following technology (particularly mobile), solving
 * My life mantra - **Be the Change** You Want to See. Make today **better than yesterday**.
 * My work mantra - Building the **product right** is as important as building the **right product**.
 
-I blog here at [Reflections](https://ann.chiramattel.com/) and code at <a href="https://github.com/annjose" target="_blank">annjose at github</a>. You can contact me through <a href="https://www.linkedin.com/in/annjose" target="_blank">LinkedIn</a>.
+I blog here at [Reflections](/) and code at [annjose at github](https://github.com/annjose). You can contact me through [LinkedIn](https://www.linkedin.com/in/annjose).

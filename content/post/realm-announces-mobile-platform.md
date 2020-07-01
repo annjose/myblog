@@ -7,7 +7,7 @@ topics = ["realm"]
 +++
 
 [Realm](https://realm.io) is a company that I respect a lot because of their support for mobile developers and the open nature nature of their offerings. Their easy-to-use, blazingly fast [Mobile database](https://realm.io/products/realm-mobile-database/) software supports all mobile platforms - iOS, Android, React Native and Xamarin, in Java, ObjC, Swift and C#. 
-That is why I am happy to see that today they announced [Realm Mobile Platform](https://realm.io/news/introducing-realm-mobile-platform/) that combines Realm client side database with server-side technology (Object Server as they call it). This platform provides the base infrastructure for mobile apps to support offline sync, that enables end users to interact with the app even when there is no network connection. 
+That is why I am happy to see that today they announced [Realm Mobile Platform](https://realm.io/blog/introducing-realm-mobile-platform/) that combines Realm client side database with server-side technology (Object Server as they call it). This platform provides the base infrastructure for mobile apps to support offline sync, that enables end users to interact with the app even when there is no network connection. 
 
 According to the article, this a highly performant solution because of the following reasons:
 

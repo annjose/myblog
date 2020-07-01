@@ -3,6 +3,7 @@ date = "2015-04-27T00:49:45-07:00"
 draft = false
 title = "First post from Hugo"
 tags = ["tech-explorations"]
+topics = ["hugo"]
 +++
 
 This is my first blog post created by [Hugo](http://gohugo.io/), a simple, fast and powerful blogging engine written in Go. Setting up my blog on Hugo was quick and easy; it took less than 4 hours.

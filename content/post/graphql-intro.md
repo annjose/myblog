@@ -24,7 +24,7 @@ In essence, GraphQL has three main parts - Specification, Query Language and Run
 ## An Example
 As an example, if you want to create a GraphQL service that provides a list of users in your database and some basic information about the user, you can define a **User** type as follows:
 
-```
+```graphql
 type Query {
   users: [User]
 }
@@ -49,7 +49,7 @@ function User_name(user) {
 Then you run the service on a secure URL endpoint and send GraphQL queries to that service. The service validated the request, makes sure that it refers to well defined types only and then executes the query by invoking the provided functions and returns the result.
 
 In the above example, a query like ths:
-```
+```graphql
 {
   users {
     name
@@ -69,7 +69,7 @@ will produce the following JSON result:
 
 You can run these queries using an API explorer provided by the GraphQL server (for example, see [Github's API explorer](https://developer.github.com/v4/explorer/)). Alternately, you can run it using curl - see the example below:
 
-```
+```bash
 curl -H "Authorization: bearer token" -X POST -d " \
 { \
 \"query\": \"query { viewer { login }}\" \
@@ -87,7 +87,7 @@ As we have seen so far, here are the unique features of GraphQL that sets it apa
   
     Here is an example:
 
-    ```
+    ```graphql
     query {
       __schema {
         types {
@@ -105,7 +105,7 @@ As we have seen so far, here are the unique features of GraphQL that sets it apa
 
 * **Version free** - GraphQL follows a Single Evolving Version model where the query determines the shape of the data instead oa version of the API. So APIs can evolve without versions by adding new fields / types and deprecating aging fields.
 
-    ``` Java
+    ``` graphql
     type {   
       User {   
         name: String
@@ -146,7 +146,7 @@ Query is an operation that defines what we want to get from the GraphQL server. 
 
   Here is a sample query that fetches a github issue from the repository https://github.com/octocat/Hello-World/issues/392:
 
-```
+```graphql
 query {
   repository(owner:"octocat", name:"Hello-World") {
       issue(number:349) {
@@ -172,7 +172,7 @@ mutation {
 ```
 
 And here is a sample mutation that adds a *HOORAY* reaction to the above github repo:
-```
+```graphql
 mutation AddReactionToIssue {
   addReaction(input:{subjectId:"MDU6SXNzdWUyMzEzOTE1NTE=",content:HOORAY}) {
     reaction {

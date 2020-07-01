@@ -1,9 +1,9 @@
 .header {
-  font-family: 'Avenir', 'Helvetica', 'Arial', sans-serif
+  font-family: "Avenir", Helvetica, Arial, sans-serif
 }
 
 html, p {
-  font-family: 'Avenir', 'Helvetica', 'Arial', sans-serif
+  font-family: "Avenir", Helvetica, Arial, sans-serif
 }
 
 a {
@@ -13,9 +13,6 @@ a {
 a:hover,
 a:focus {
   text-decoration: underline;
-}
-a:visited {
-  color: #3b8bba;
 }
 
 .small-print {
@@ -39,6 +36,12 @@ article > footer {
   border-bottom: 1px solid #eee;
 }
 
+.prev-next-post a {
+  font-family: "Avenir";
+  font-size: 1.1em;
+  color: #d84b94;
+}
+
 .prev-next-post .prev {
   float: left;
   text-align: left;
@@ -52,7 +55,7 @@ article > footer {
 }
 
 #menu .brand {
-  font-family: 'Avenir';
+  font-family: "Avenir";
   font-weight: bold;
   font-size: 1em;
   letter-spacing: 0.1em;
@@ -71,11 +74,23 @@ i {
   margin-right: 0.2em;
 }
 
+.post-taxonomy-topic, .post-taxonomy-tag {
+  color: #d84b94;
+}
+
 .pagination {
   text-align: center;
   margin-top: 3em;
 }
 
 .pagination a {
-  color: #3b8bba;
+  color: #d84b94;
+}
+
+footer a {
+  color: #d84b94;
+}
+
+h2, h3 {
+  color: #000000;
 }

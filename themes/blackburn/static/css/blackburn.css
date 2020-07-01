@@ -92,5 +92,9 @@ footer a {
 }
 
 h2, h3 {
-  color: #000000;
+  color: #343434;
+}
+
+.highlight {
+  font-size: 0.9em;
 }

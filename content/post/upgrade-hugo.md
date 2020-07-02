@@ -1,5 +1,5 @@
 +++
-title = "Upgrade Hugo"
+title = "Upgrading my blog engine Hugo and content"
 date = "2020-06-30T14:09:57-07:00"
 draft = false
 tags = ["how-to"]

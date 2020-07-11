@@ -4,7 +4,7 @@
     {{ if .OutputFormats.Get "RSS" }}
     <li class="pure-menu-item">
       <a class="pure-menu-link" href='{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}'><i
-          class="fas fa-rss"></i>RSS</a>
+          class="fa fa-rss fa-fw"></i>RSS</a>
     </li>
     {{ end }}
 

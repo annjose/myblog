@@ -26,3 +26,6 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Hugo specific
+.hugo_build.lock

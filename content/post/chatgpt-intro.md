@@ -9,6 +9,8 @@ topics = []
 
 Like many of you, I have been reading about ChatGPT in various forums and from industry experts. This blog post is a brief summary of my understanding of ChatGPT - what is it, how it works, its power and pitfalls, and its future potential in my perspective.
 
+And finally, to have some fun, I wrote this article in three ways - using the conventional method of writing it by myself (this post), asking ChatGPT to write it using my outline and then asking it to improvise my conventional version. Curious to know how it was and see the results? Head over to the meta post - [ChatGPT Intro in 3 ways](/post/chatgpt-intro-3-ways/)
+
 ### What is ChatGPT?
 ChatGPT is an AI powered **chat**bot that is capable of having human-like conversations on a wide range of topics using natural launguage processing. This model can answer your questions, write code, summarize text and explain concepts in a simple way. ChatGPT was developed by [OpenAI](https://openai.com/), the creators of [DallE-2](https://openai.com/dall-e-2/), the popular AI text-to-image generator and [Whisper](https://openai.com/blog/whisper/), the powerful speech recognition system. 
 

@@ -1,9 +1,9 @@
-baseurl = "https://ann.chiramattel.com/"
+baseurl = "https://annjose.com/"
 languageCode = "en-us"
 title = "Reflections"
 theme = "blackburn"
 author = "Ann Catherine Jose"
-copyright = "&copy; 2022. All rights reserved."
+copyright = "&copy; 2023. All rights reserved."
 canonifyurls = true
 paginate = 10
 disablePathToLower = true

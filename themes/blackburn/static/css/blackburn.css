@@ -1,13 +1,12 @@
-.header {
-  font-family: "Avenir", Helvetica, Arial, sans-serif
-}
+/* Some styles (body,.header, .content etc.) are defined in another class side-menu.css*/
 
-html, p {
-  font-family: "Avenir", Helvetica, Arial, sans-serif
+/* header tag is used to render the article titles in the routes /post, /tags/xx and /topics/xx */
+header a {
+  color: #343434;
 }
 
 a {
-  color: #3b8bba;
+  color: #06c;
   text-decoration: none;
 }
 a:hover,
@@ -18,6 +17,7 @@ a:focus {
 .small-print {
   font-size: 0.8em;
   margin: 0.6em;
+  color: #777;
 }
 
 .post-meta {
@@ -39,7 +39,6 @@ article > footer {
 .prev-next-post a {
   font-family: "Avenir";
   font-size: 1.1em;
-  color: #d84b94;
 }
 
 .prev-next-post .prev {
@@ -83,16 +82,14 @@ i {
   margin-top: 3em;
 }
 
+/* Pages '<2 / 3>', <3 / 3>, etc. in the root page and in route /page/2 */
 .pagination a {
   color: #d84b94;
 }
 
+/* 'Read more>>' link in /tags and /topics routes. Keeping it as the pink color to match tha tags */
 footer a {
   color: #d84b94;
-}
-
-h2, h3 {
-  color: #343434;
 }
 
 .highlight {

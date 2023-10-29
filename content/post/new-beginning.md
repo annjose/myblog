@@ -1,9 +1,9 @@
 +++
 title = "A new beginning"
 description = "Taking a pivot in my career path to learn, build and code"
-date = "2023-10-14T10:44:09-22:00"
+date = "2023-10-14T10:44:09-07:00"
 draft = false
-tags = ["career", "personal-growth"]
+tags = ["career", "personal-growth", "new-beginning"]
 topics = []
 +++
 

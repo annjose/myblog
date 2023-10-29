@@ -1,9 +1,9 @@
 +++
 title = "Week in Review - Week #1"
 description = "Reimagine Week #1 - 14 Oct 2023 -20 Oct 2023"
-date = "2023-10-20T19:14:02-14:00"
+date = "2023-10-20T19:14:02-07:00"
 draft = false
-tags = ["career", "personal-growth"]
+tags = ["career", "personal-growth", "new-beginning"]
 topics = []
 +++
 

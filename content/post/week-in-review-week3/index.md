@@ -1,62 +1,59 @@
 +++
 title = "Week in Review - Week #3"
-description = "Reimagine Week #2 - 28 Oct 2023 -03 Nov 2023"
+description = "Reimagine Week #3: 28 Oct 2023 - 03 Nov 2023"
 date = "2023-11-03T21:32:43-07:00"
 draft = false
 tags = ["career", "personal-growth", "new-beginning"]
 topics = []
 +++
 
-It has three weeks since I started the [new beginning](/post/new-beginning/), so let's review week #3. The reviews of the  past two weeks are at [Week #1 review](/post/week-in-review-week1/ "Week In Review - Week 1") and [Week #2 review](/post/week-in-review-week2/ "Week In Review - Week 2")
+*This post has been sitting in my draft for two weeks, waiting for my time to polish and post. But then as usual, I never got to it and it just stayed there. Anyway, now I am gonna just publish. So if you see typos or mistakes, please lmk. Progress, not perfection, yeah?*
 
-## What I did during the week
+It's time to review Week #3 of my [reimagine journey](/post/new-beginning/). The previous week's reviews and the full series be found at [new-beginning tag collection](/tags/new-beginning/).
 
-As usual, let' start with the goals of last week:
+## What I was able to do this week ✅
 
-  1. **Complete the course *Modern JavaScript* and *Typescript* - 100% this time** 🎯. - It turns out it is impossible to finish the Modern JavaScript course because it follows the spaced repetition model.
-  2. **Improve the consistency of walking 9K steps every.single.day and do 2000m rowing three days (Tue, Thu, Sat)** 💪 - I made good progress here. Did rowing for two days - Tue and Thu. Satursday's share I will do today. Walked every day - in fact on Tuesday, I decided to walk to the piano class so that I will get the steps. After that, I went to the grocery store nearby and bought a few veggies. It was funny carrying onions and beans in a backpack along with piano lesson book and binder.
-  3. **Continue to refine *The Flow* routine - move around >= 10 min every hour** 🚶👟. - Most of the days were good, 
-  4. **Play the song Perfect by Ed Sheeran on the piano - both hands** 🎵🎹 - I got the right hand properly, but the left hand was hard. But today I practiced again and I got it! It was as if it just clicked. The class also started Christmas songs - I am really excited to learn that next.
-  5. **Read one book** 📚 - I started a book, but did not finish it. Hoping to finish it this weekend.
+As usual, let' review based on the goals that were set up for the week:
 
+1. **Complete the course *Modern JavaScript* and *Typescript* - 100% this time** 🎯. I could reached only 46% of the *Modern JavaScript* course. And the TypeScript course - I have not even started. Actually, I realized that it is not possible to finish the *Modern JavaScript* course quickly - because of the huge volume of content and it follows the spaced repetition practice that allows you to do only a pre-defined portion of the content.
 
-An honest review of this week should start by reviewing the goals I set out at the beginning of the week. These are the goals I decided in [my last week's review](/post/week-in-review-week1/ "Week In Review - Week 1"):
+2. **Improve the consistency of walking 9K steps every.single.day and do 2000m rowing three days (Tue, Thu, Sat)** 💪 - I made good progress here. Did rowing for two days - Tue and Thu. Andd I walked every.single.day. In fact, on Tuesday, I went to my piano class and to the grovery store by walking so that I will get the steps in 🚶‍♀️. It was fun (and funny) to walk around with a backpack full of lessons books, onions, carrots and beans.
 
-  1. **Complete the courses - Learn JavaScript and Modern JavaScript** - I could not achieve this goal 100%, but completed 80% of the first course and 50% of the second one. I found that I had to do the structured course quite a bit before I can get the best value of the [Execute Program course](https://www.executeprogram.com/courses/modern-javascript). Btw, it has been a long time since I learned the fundamentals of a technology at this level of depth. This is plain HTML, JS and CSS at its core. I want to solidify my understanding of this before I learn React, Tailwind etc. I also completed the capstone project to build a simple Todo app from scratch with plain HTML, JS and CSS and stores the data in a Firebase DB 🚀.
+3. **Continue to refine *The Flow* routine - move around >= 10 min every hour** 🚶👟. - This was slow this week, at least I could not stay focused as much as I wanted to. I followed it may be 50% of the time. 
 
-  2. **Solidify the exercise routine - strength and walking** - I am happy with the progress of this goal. I did strength training by the [Julian.com Build Muscle program](https://www.julian.com/guide/muscle/intro) on all three days (Mon, Wed and Fri). I also realized that I am most productive and fresh in the mornings, whereas there is a slump in the afternoons, so I decided to start the day with learning and then do exercise in the afternoon. This followed by a bath gives me energy late into the evening. The strength exercises are simple, but hard to do because of the weights, and I really enjoy doing them - takes about 45 min to complete the routing. In terms of walking, I did more than 9K steps on 3 days. Should improve this a lot more. Need to improve the consistency of 9K steps (all 7 days).
+4. **Play the song Perfect by Ed Sheeran on the piano - both hands** 🎵🎹 - I got the right hand properly (see a video below), but I |really struggled with the left hand. I just could not even understand the chords. I would continously play the keys until my hands hurt, and be frustrated. Then toda morning, out of the blue, I got it while practicing! It just clicked for me - very wierd. Now I can practice and make it bette. Yes, small success motivates you to do more.
 
-  3. **Refine The Flow routine** - This has improved a lot from last week. I found a good rhythm of 50 min work + 10 min break, using Obsidian to take notes, Visual Code for coding, debugging and checking in code to my git repo. All of this while taking  leisure breaks to walk, play the piano or doing small chores. However, there were days when I just couldn't follow this routine - see details below in the Learnings section.
+5. **Read one book** 📚 - I started [reading a book](https://en.wikipedia.org/wiki/Tom_Brown%27s_School_Days), but did not finish it. Not finding the motivation to read everyday in the midst of many things. This is also strange, but more on that below.
 
-  #### Other goals/tasks done.. 
-  * Completed the Silver tier for Peloton's October running challenge by walking 25 miles - for the record, I did not "run", only walked. But this is the first time this year that I got this tier. 
-  * Started a Spanish lesson in Duolingo - this was the inspiration for this. Learning can be made addictive with 
-  * Started a 30-day Winter cleaning - every day clean one part of the house - timeboxed to 30 min. 
+Note: As usual, all the code examples and exercises done this week are shared in my github repo https://github.com/annjose/learn-javascript/tree/main/execprogram-modernjs-course.
 
-## What I learned this week - the insights 
+## Other things done ☑️
 
-I want to try a differnt approach to share my learnings - rather than saying what I learning, let me show you how I learned.
+This week, I completed the Peloton October Running Challenge with Silver Tier- walk 25 miles in a month. Btw, the challenge is named "running", but I absolutely did not run, I just walked on the treadmill at a speed of 3.2 mph. I know, I know this is low intensity, but I walk for 45-60 min. So (I think) it is good. Plus, I get to watch Netflix/HBO while on the treadmill. Btw, I reached this level after a long time - the last time I got here was 14 months ago. So yeah, that too!
 
-Allow me to present three artifacts
+ ![Peloton October Challenge](peloton-oct-running-challenge.jpg) 
 
-1. Workout tracker - for the last week
+This one may sound crazy (and may also be one of the reasons why I didn't get the time to read) - I started taking [Spanish lessons in Duolingo](https://www.duolingo.com/enroll/es/en/Learn-Spanish). As a California resident, I was always curious about this language which was the official state administrative language until 1848. What really triggered my motivation was a recent TED talk [How to make learning as addictive as social media](https://www.ted.com/talks/luis_von_ahn_how_to_make_learning_as_addictive_as_social_media?language=en) by Luis von Ahn. 
 
-2. Learning plan for the day - sometimes I track
+He made a strong case than we can (and should) use the techniques and strategies used by social media companies to grab our attention to the field of learning and education. And that is exactly what he and his co-foudner did in Duolingo. And I see it in action in the  product as I am taking these lessons. They do just the right amount of gamification, healthy competition and nudges to maintain your streak. Yes, indeed it is addicitive, but is for a good cause to learn this language.
 
-3. Piano playing Perfect - it is nowhere close to "good", in fact you may not even recognize the song. But the deal is progress, not perfection, right? So 
+## What I learned this week 🍀
 
-  ![Peloton October Challenge](/img/peloton-oct-running-challenge.jpg)
+* Wearing the workout sneakers at home gives you constant reminder that you need to walk around and reach the 9K steps by end of the day. I tried it a couple of days and it really helped me, so I will continue this practice.
 
-  {{< video src="piano-practice-perfect-song" width="200px" height="300px" autoplay="yes">}}
+* I love, love, love that I am coding everyday, even though they are simple exercises and projects. When I am at the keyboard, I am in the flow.
 
-  What I learned this week
-  - how to add a video into a blog post - added a Hugo shortcode for video and embedded it - used the shortcode by https://github.com/martignoni/hugo-video . Pretty cool. The more I learn about Hugo, the more I love it.
+* In Hugo, you can embed a video in any page/post using a Hugo shortcode https://github.com/martignoni/hugo-video. This was pretty cool - I thought we could embed only images. The more I learn about Hugo, the more I love it.
 
-## Looking Ahead to Next Week
+  Here is a video of me playing the Perfect song on my piano. This was recorded on 29 Oct to send to my teacher for review. As you can see, it is nowhere close to the real song, in fact, you may even find it hard to recognize the song as you know it. Sorry! But, you know, this is my progress at the time and I am happt to share it with you. Also,his is my best performance on the piano in my entire life. Progress over perfection, right? 
 
-#### Primary goals for next week (Week #3)
-  1. Complete the course *Modern JavaScript* and *Typescript* - 100% this time 🎯.
+{{< video src="piano-practice-perfect-song" width="200px" height="300px" autoplay="yes">}}
+
+## Looking Ahead to Next Week ⏭️
+
+#### Primary goals for next week (Week #4)
+  1. Complete 60% of the course *Modern JavaScript*
   2. Improve the consistency of walking 9K steps every.single.day and do 2000m rowing three days (Tue, Thu, Sat) 💪
-  3. Health - complete the Gold tier of Peloton Running challenge of November - 45 miles
+  3. [OpenAI Dev Day](https://devday.openai.com/) on Nov 6th! Excited to see what's coming!
   4. Play the song Perfect by Ed Sheeran on the piano - both hands 🎵🎹
-  5. Read one book 📚
+  5. Read three pages every day (average) 📚

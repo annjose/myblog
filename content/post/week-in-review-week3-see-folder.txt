@@ -1,0 +1,4 @@
+This file is a placeholder to point to the folder where the Week 3 Review was posted from - content\post\week-in-review-week3\index.md.
+
+I had to write that post in the folder so that the video of the piano playing can be embedded in the page. 
+That shortcode requires the video to be a page bundle - i.e. the asset to be included in the folder of the post.

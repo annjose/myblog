@@ -16,7 +16,8 @@ disablePathToLower = true
   # Shown in the home page
   subtitle = "Ann Catherine Jose"
   brand = "Reflections"
-  googleAnalytics = "UA-75357261-1"
+  # Old googleAnalytics = "UA-75357261-1"
+  googleAnalytics = "G-2PEL4BVYJE"
   disqus = "anncjose"
   dateFormat = "02 Jan 2006"
 

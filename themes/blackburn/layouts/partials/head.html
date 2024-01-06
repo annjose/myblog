@@ -1,7 +1,8 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="{{ if .IsNode }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ else }}{{ with .Description }}{{ . }}{{ end }}{{ end }}">
+  <meta name="description"
+    content="{{ if .IsNode }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ else }}{{ with .Description }}{{ . }}{{ end }}{{ end }}">
   {{hugo.Generator}}
 
   <title>{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}</title>
@@ -30,9 +31,20 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Uncomment the following lines if you want to enable any of these fonts. Remember to update the font-family in side-menu.css also.
+  These CSS snippets taken from https://fonts.google.com, search for a font and select a few styles (eg: Regular 400, SemiBold 600 ) -->
+  <!--
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
+  -->
+
   <!-- Use local font instead of remote because googleapis.com was not returning HTTP Response header Access-Control-Allow-Origin -->
   <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Avenir">-->
-  <link rel="stylesheet" href="/css/google-font-local.css">
+  <!-- <link rel="stylesheet" href="/css/google-font-local.css"> -->
 
   <!-- RSS -->
   {{ if .OutputFormats.Get "RSS" }}
@@ -52,10 +64,10 @@
   {{ partial "favicon.html" . }}
 
   {{ range .Site.Params.custom_css }}
-    <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
+  <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
   {{ end }}
   {{ range .Site.Params.custom_js }}
-    <script src="{{ $.Site.BaseURL }}{{ . }}"></script>
+  <script src="{{ $.Site.BaseURL }}{{ . }}"></script>
   {{ end }}
 
 </head>

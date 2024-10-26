@@ -1,20 +1,20 @@
 +++
-title = "Compare LLMs and AI Assistants"
-description = "Side by side comparison of AI tools for everyday tasks"
+title = "Compare AI Tools: LLMs and AI Assistants"
+description = "Side by side comparison of AI tools and models useful for everyday tasks"
 date = "2024-10-25T17:22:33-07:00"
 draft = false
-tags = ["how-to", "generative-ai"]
-topics = []
+tags = ["tech-explorations", "LLM", "generative-ai"]
+topics = ["AI"]
 +++
 
-In this post, we will compare the most popular AI tools (frontier models and AI assistants) based on its capabilities, limitations and how I found them useful in my day-to-day use. 
+In this post, we will compare the most popular AI tools (frontier models and AI assistants) based on its capabilities, limitations and my personal experience of using them day-to-day. 
 
-There are multiple models to look at and multiple dimensions for each model. So they are represented as mind maps in three sections:
+In order to accomodate the multiple dimensions of each model, this comparison is represented as mind maps in three parts:
 1. **Language models** - the most popular text-based models that are used for text-to-text content generation.
-2. **AI assistants** - the chatbots that use one or more of the above models.
+2. **AI assistants** - the chatbots that are powered by one or more of the above models.
 3. **Other models** - other models that are used for text-to-image, text-to-voice or text-to-video use cases.
 
-At the end, we will also see the common set of tasks that we try to accomplish using these LLMs and recommendations on which tool is best for each task.
+At the end, we will also see the common set of tasks that we try to accomplish using these tools and recommendations on which tool is best for each task.
 
 Note - this is not an exhaustive list, just the tools that I have explored and used. Also, these tools are constantly evolving, so this comparison is relevant at this point in time and will change very soon.
 

@@ -1,5 +1,12 @@
 {{ $image := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) }}
 
 {{/* I use .Title to specify the max-width property */}}
-<img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with $image }} width="{{ $image.Width }}"
-    height="{{ $image.Height }}" {{ end }} />
+<!-- <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with $image }} width="{{ $image.Width }}"
+    height="{{ $image.Height }}" {{ end }} /> -->
+
+{{ $fullName := replace .Destination (path.Ext .Destination) (printf "-full%s" (path.Ext .Destination)) }}
+<a href="{{ $fullName | safeURL }}" target="_blank">
+    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" 
+        {{ with .Title}} title="{{ . }}" {{ end }} 
+        {{ with $image }} width="{{ $image.Width }}" height="{{ $image.Height }}" {{ end }}/>
+</a>

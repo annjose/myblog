@@ -29,17 +29,21 @@ Note - this is not an exhaustive list, just the tools that I have explored and u
 ![Image, Audio, Video Models](compare-image-audio-video-models.png)
 
 ## Best tools for the common tasks
-The table below shows the common tasks that we try to do using the AI tools, suggestions on which tools are best for those tasks and my individual preference (the tool that I use personally).
+The table below shows the common tasks that can be done using the AI tools, specifically available through an AI assisant. I give suggestions on which tools are best for each task and my own preference of the tool that I use personally.
 
 {{< pure_table
+
 "Task | Good Tools  |  My Preference"
-"Explore world knowledge with latest up-to-date information     | ChatGPT, Perplexity AI , Microsoft Copilot  |  Perplexity AI in regular mode because it gives references and citations to verify the answer"
-"Creative writing - write essays, formal letters, poems | ChatGPT, Claude Sonnet 3.5 New | Claude Sonnet 3.5 New"
-"Ask questions about any topic - health, medicine, nations, technology| Perplexity AI , Microsoft Copilot  |  Perplexity AI because it gives references and citations and you can publish your pages"
-"Step-by-step reasoning, problem solving     | Claude 3.5 Sonnet New, Open AI o1-preview |  Both models are equally good, so I will use one model to judge the results of the other."
-"OCR (extracting info from images)     | ChatGPT, Perplexity AI, Google Gemini  | Google Gemini (gives the option to create a google sheets also)"
-"Image generation  | Open AI DALL-E, Midjourney, Freepik with AI  | DALL-E for artistic images, Midjourney for photo realistic "
+
+"Knowledge discovery, searching for any up-to-date information   | ChatGPT, Perplexity AI , Microsoft Copilot  |  Perplexity AI because it gives citations to verify the response"
+"Finding infomation and learning any topic - health, medicine, technology| Perplexity AI , Microsoft Copilot  |  Perplexity AI because it gives citations., and you can publish your pages for others"
+"Creative writing - essays, formal letters, poems, video script | ChatGPT, Claude Sonnet 3.5 New | Claude Sonnet 3.5 New (it is more coherent and generates language within context)"
+"Analyzing academic papers and research articles |Claude Sonnet 3.5 New, ChatGPT |Claude Sonnet 3.5 New "
+"Step-by-step reasoning, problem solving     | Claude 3.5 Sonnet New, Open AI o1-preview |  Both models are equally good. I would use the output of one model to judge the results of the other."
+"OCR (extracting info from images)     | ChatGPT, Perplexity AI, Google Gemini  | Google Gemini (gives the option to create a google sheets from the data)"
+"Image generation  | DALL-E, Midjourney, FLUX  | DALL-E for artistic images, FLUX through Freepik for random images, Midjourney for photo realistic images  "
 "Create music  | Suno AI | Suno AI"
 "Coding Assistant  | GitHub Copilot, Cursor AI  | GitHub Copilot in JetBrains IDE "
-"Coding with Reasoning and Debugging  | GPT-4o, Claude 3.5 Sonnet New  | Claude 3.5 Sonnet New "
+"Coding with Reasoning and Debugging  | GPT-4o, Claude 3.5 Sonnet New  | Claude 3.5 Sonnet New mostly"
+
 >}}

@@ -1,0 +1,9 @@
+<div class="nav-list-headingless">
+    <ul>
+    {{ range (where .Site.RegularPages "Type" "post") }}
+        {{ if .Draft }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{end}}
+    {{ end }}
+    </ul>
+</div>

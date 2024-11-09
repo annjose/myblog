@@ -1,13 +1,14 @@
 {{ $image := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) }}
 
 {{ if $image }}
+{{ $xsmall := $image.Resize "320x" }}
 {{ $small := $image.Resize "480x" }}
 {{ $medium := $image.Resize "768x" }}
 {{ $large := $image.Resize "1024x" }}
-<figure>
+<figure style="margin-inline-start: 10px; margin-inline-end: 10px">
     <a href="{{ $image.RelPermalink }}" target="_blank">
-        <img srcset="{{ $small.RelPermalink }} 480w, {{ $medium.RelPermalink }} 768w, {{ $large.RelPermalink }} 1024w"
-            sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, 1024px" src="{{ $image.RelPermalink }}"
+        <img srcset="{{ $xsmall.RelPermalink }} 320w, {{ $small.RelPermalink }} 480w, {{ $medium.RelPermalink }} 768w, {{ $large.RelPermalink }} 1024w"
+            sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, (max-width: 768px) 768px, 1024px" src="{{ $image.RelPermalink }}"
             alt="{{ .Text }}" {{ with .Title }} title="{{ . }}" {{ end }} loading="lazy">
     </a>
     {{ with .Title }}<figcaption>{{ . }}</figcaption>{{ end }}

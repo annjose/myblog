@@ -1,17 +1,17 @@
 +++
-title = "Browser Extensions: What, Why and How"
-description = "An introductory     guide to building and troubleshooting browser extensions"
+title = "Browser Extensions: Part 1 - Introduction"
+description = "An introductory guide to building and troubleshooting browser extensions"
 date = "2024-09-04T10:12:32-07:00"
 draft = false
 tags = ["modern-web-dev", "web-development", "tech-explorations", "how-to", "building"]
-topics = []
+topics = ["browser-extensions"]
 +++
 
 Imagine a world where every website adapts to your specific needs in real-time, securely and easily, without selling your data to third party companies. It will be cool, right? Yes and it is possible - thanks to **Browser extensions**.
 
-In this post, we will learn about browser extensions - what they are, why you should build them and how to build them. We will conclude by looking at a few issues that come up frequently while building an extension and how to troubleshoot them.
+In this post, we will learn about browser extensions - what they are, why you should build them and how to build them. We will conclude by looking at a few issues that come up frequently while building an extension and how to troubleshoot them. For those interested in advanced topics, check out Part 2 of this series - [Browser Extensions: Part 2 - Advanced Concepts](/post/browser-extn-adv/).
           
-### The What
+## The What
 Browser extensions are lightweight software components that can be integrated into web browsers to customize and enhance the web browsing experience. It enables you to modify web page content, add UI elements like buttons or sidebars, observe browser events, capture user input and run background scripts.
 
 These extensions are built using standard web technologies: HTML, CSS and JavaScript. You can use TypeScript too, but more on that later.  The extension package includes all the necessary resources (pages, stylesheets, images) as well as the business logic (code and scripts). They have access to many APIs including: 
@@ -24,14 +24,14 @@ An important security feature of browser extensions is that their source code is
 
 A few examples of browser extensions that I found to be useful are [ublock ad-blocker](https://chromewebstore.google.com/detail/ublock/epcnnfbjfcgphgdmggkamkmgojdagdnn), [Readwise reader](https://chromewebstore.google.com/detail/readwise/egfepjgjabnppmaiadpedbgadkcelcbd), [Readwise highlighter](https://chromewebstore.google.com/detail/readwise-highlighter/jjhefcfhmnkfeepcpnilbbkaadhngkbi) and [React developer tools](https://chromewebstore.google.com/detail/readwise-highlighter/jjhefcfhmnkfeepcpnilbbkaadhngkbi).
 
-### The Why
+## The Why
 Browser extensions give you a low-barrier way to customize websites. They are very easy to build, distribute and maintain - in fact, the simplest extension is often easier to create than the simplest website. You don't need your own domain or server to host the extension. No hosting costs. No special infrastructure required. 
 
 They are also a great addition to your product portfolio, alongside other platforms such as websites, desktop apps for macOS and Windows, and mobile apps for iOS and Android. Browser extension helps you meet users wherever they are. Also, extensions built for one browser (eg: Chrome) typically work as-is for others (like MS Edge or Firefox), thereby expanding your reach  with minimal effort.
 
 And here is my favorite reason to build browser extension - the ability to tailor every website to my specific needs, while keeping them private and secure. For instance, you can integrate Perplexity or ChatGPT-like functionality to any website you browse. Instead of constantly copying and pasting content between standalone AI assistants and web pages, the extension brings that functionality into your browsing context - wherever you are. Keeping it in your private session ensures security and privacy. I love it!
 
-### The How
+## The How
 So, how do we build a browser extension. Let's dive in step-by-step in detail.
 
 The source code for the extensions discussed here is available in my GitHub repo [annjose/browser-extensions](https://github.com/annjose/browser-extensions).
@@ -144,7 +144,7 @@ chrome.scripting
   )
 ```
 
-3. **Inject programmatically** - Inject the content scripts programatically when you want to run some script only based on a condition or in response to specific events. You can do this using another Scripting API - **chrome.scripting.executeScript()**. The sample code this method is lengthy, so I will give it in the follow-up blog post.
+3. **Inject programmatically** - Inject the content scripts programatically when you want to run some script only based on a condition or in response to specific events. You can do this using another Scripting API - **chrome.scripting.executeScript()**. The sample code this method is lengthy, so I will give it in the follow-up blog post at [Browser Extensions: Part 2 - Advanced Concepts](/post/browser-extn-adv/).
 
 #### Step #4: Load the extension in your browser
 As you are developing your extension, you can load them into your local browser to test and verify that everything is working as intended. Follow these steps:
@@ -181,7 +181,7 @@ When you click on the tool bar icon of your extension, it shows 'File not found'
 #### Extension's icon is not loaded
 Sometimes, you may see that the icon shown in the toolbar is different from what you specified in the manifest file. This happens when the manifest file is not correct, for example, the icon is specified in the wrong attribute 'popup_action', it said 'popup_icon'. If the browser cannot find the icon specified in the manifest, it will generate a default icon and use it. Fix the JSON and you will see the correct icon.
 
-### What's Next
+## What's Next
 Chrome developer documentation has a lot of good tutorials on building extensions, for example:
 * [Hello World extension](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world)
 * [Run scripts on every page](https://developer.chrome.com/docs/extensions/get-started/tutorial/scripts-on-every-tab)
@@ -195,3 +195,4 @@ Next, I want to build a private local extension that can bring the GPT 4o or Per
 ## References
 * [Chrome Documentation](https://developer.chrome.com/docs/extensions/get-started/tutorial/scripts-on-every-tab)
 * all my browser extensions - [annjose/browser-extensions](https://github.com/annjose/browser-extensions/)
+* Part 2 of this article - [Browser Extensions: Part 2 - Advanced Concepts](/post/browser-extn-adv/)

@@ -20,6 +20,7 @@ disablePathToLower = true
   googleAnalytics = "G-2PEL4BVYJE"
   disqus = "anncjose"
   dateFormat = "02 Jan 2006"
+  siteId = "annjose-blog"
 
 [markup]
   [markup.highlight]

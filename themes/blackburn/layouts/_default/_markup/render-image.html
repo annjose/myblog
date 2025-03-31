@@ -1,36 +1,63 @@
 {{ $image := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) }}
 
+<!-- First check if we have a page resource matching the image -->
 {{ if $image }}
 
-<!-- Set a min threshold for the image (width and height).
-    If the image meets the size criteria (larger than the threshold), we apply the resizing logic as before.
-    If the image is smaller than the threshold, we display the original image without resizing.
+<!-- Now check if the image is large enough for responsive treatment by setting a min threshold for width and height.
+     If the image is larger than the threshold, resize the image and set srcSet and sizes.
+     Otherwise, display the original image without resizing.
 -->
-{{ $minWidth := 800 }} <!-- Set your minimum width threshold here -->
-{{ $minHeight := 600 }} <!-- Set your minimum height threshold here -->
+{{ $minWidth := 800 }}
+{{ $minHeight := 600 }}
 
-{{ if and (gt $image.Width $minWidth) (gt $image.Height $minHeight) }}
-    {{ $xsmall := $image.Resize "320x" }}
-    {{ $small := $image.Resize "480x" }}
-    {{ $medium := $image.Resize "768x" }}
-    {{ $large := $image.Resize "1024x" }}
-    <figure style="margin-inline-start: 10px; margin-inline-end: 10px">
-        <a href="{{ $image.RelPermalink }}" target="_blank">
-            <img srcset="{{ $xsmall.RelPermalink }} 320w, {{ $small.RelPermalink }} 480w, {{ $medium.RelPermalink }} 768w, {{ $large.RelPermalink }} 1024w"
-                sizes="(max-width: 320px) 320px, (max-width: 480px) 480px, (max-width: 768px) 768px, 1024px" src="{{ $image.RelPermalink }}"
-                alt="{{ .Text }}" {{ with .Title }} title="{{ . }}" {{ end }} loading="lazy">
-        </a>
-        {{ with .Title }}<figcaption>{{ . }}</figcaption>{{ end }}
-    </figure>
+    {{ if and (ge $image.Width $minWidth) (ge $image.Height $minHeight) }}
+        <!-- Generate responsive image versions -->
+        {{ $xsmall := $image.Resize "320x" }}
+        {{ $small := $image.Resize "480x" }}
+        {{ $medium := $image.Resize "768x" }}
+        {{ $large := $image.Resize "1024x" }}
+        {{ $xlarge := $image.Resize "1500x" }}
+        <figure style="margin-inline-start: 10px; margin-inline-end: 10px; margin-left: auto; margin-right: auto; max-width: 100%; text-align: center;">
+            <a href="{{ $image.RelPermalink }}" target="_blank">
+                <img srcset="{{ $xsmall.RelPermalink }} 320w, {{ $small.RelPermalink }} 480w, {{ $medium.RelPermalink }} 768w, {{ $large.RelPermalink }} 1024w, {{ $xlarge.RelPermalink }} 1500w"
+                     sizes="(max-width: 320px) 90vw, (max-width: 480px) 85vw, (max-width: 768px) 80vw, (max-width: 1200px) 60vw, 50vw"
+                     src="{{ $image.RelPermalink }}"
+                     alt="{{ .Text }}" {{ with .Title }} title="{{ . }}" {{ end }} 
+                     style="max-width: 100%; height: auto;" loading="lazy">
+            </a>
+            {{ with .Title }}<figcaption>{{ . }}</figcaption>{{ end }}
+        </figure>
+
     {{ else }}
-    <a href="{{ .Destination | safeURL }}" target="_blank">
-        <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}" {{ end }}
-            loading="lazy" />
-    </a>
+        <!-- Small page resource - use figure for consistency -->
+        <figure style="margin-inline-start: 10px; margin-inline-end: 10px; margin-left: auto; margin-right: auto; max-width: 100%; text-align: center;">
+            <a href="{{ $image.RelPermalink }}" target="_blank">
+                <img src="{{ $image.RelPermalink }}"
+                     alt="{{ .Text }}" {{ with .Title}} title="{{ . }}" {{ end }}
+                     style="max-width: 100%; height: auto;" loading="lazy">
+            </a>
+            {{ with .Title }}<figcaption>{{ . }}</figcaption>{{ end }}
+        </figure>
     {{ end }}
 {{ else }}
-<a href="{{ .Destination | safeURL }}" target="_blank">
-    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}" {{ end }}
-        loading="lazy" />
-</a>
+    <!-- Not a page resource, instead this is static image (/img/*) or external URL. Wrap in figure if title exists -->
+    {{ if .Title }}
+        <figure style="margin-inline-start: 10px; margin-inline-end: 10px; margin-left: auto; margin-right: auto; max-width: 100%; text-align: center;">
+            <a href="{{ .Destination | safeURL }}" target="_blank">
+                <img src="{{ .Destination | safeURL }}" 
+                     alt="{{ .Text }}" title="{{ .Title }}"
+                     style="max-width: 100%; height: auto;" loading="lazy">
+            </a>
+            <figcaption>{{ .Title }}</figcaption>
+        </figure>
+    {{ else }}
+        <!-- No title, just use regular img -->
+        <div style="text-align: center; margin-inline-start: 10px; margin-inline-end: 10px;">
+            <a href="{{ .Destination | safeURL }}" target="_blank">
+                <img src="{{ .Destination | safeURL }}" 
+                     alt="{{ .Text }}" 
+                     style="max-width: 100%; height: auto;" loading="lazy">
+            </a>
+        </div>
+    {{ end }}
 {{ end }}

@@ -89,7 +89,9 @@ appears on the left side of the page.
 */
 
 #menu {
-    margin-left: -200px;
+    padding: 0 12px;
+    /* Offset from left when menu is closed = 200px width + 12px padding on each side */
+    margin-left: -224px;
     /* "#menu" width */
     width: 200px;
     position: fixed;
@@ -233,13 +235,15 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     }
 
     #layout {
-        padding-left: 200px;
+        /* Offset from left when menu is open = 200px menu width + 12px padding on each side */
+        padding-left: 224px;
         /* left col width "#menu" */
         left: 0;
     }
 
     #menu {
-        left: 200px;
+        /* Offset from left when menu is open = 200px width + 12px padding on each side */
+        left: 224px;
     }
 
     .menu-link {

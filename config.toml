@@ -32,43 +32,49 @@ disablePathToLower = true
   # Shown in the side menu.
   [[menu.main]]
     name = "Home"
-    pre = "<i class='fa fa-home fa-fw'></i>"
+    pre = "<i class='fas fa-home fa-fw'></i>"
     weight = 10
     identifier = "home"
     url = "/"
   [[menu.main]]
     name = "My Blog"
-    pre = "<i class='fa fa-list fa-fw'></i>"
+    pre = "<i class='fas fa-pen-to-square fa-fw'></i>"
     weight = 20
     identifier = "post"
     url = "/post/"
   [[menu.main]]
-    name = "Generative AI"
-    pre = "<i class='fa fa-list fa-fw'></i>"
+    name = "AI & LLMs"
+    pre = "<i class='fas fa-hexagon-nodes fa-fw'></i>"
     weight = 30
-    identifier = "generative-ai"
-    url = "/tags/generative-ai"
-  [[menu.main]]
-    name = "Mobile Tech"
-    pre = "<i class='fa fa-list fa-fw'></i>"
-    weight = 40
-    identifier = "mobile-tech"
-    url = "/tags/mobile-tech"
+    identifier = "llm"
+    url = "/tags/LLM"
   [[menu.main]]
     name = "Tech Explorations"
-    pre = "<i class='fa fa-list fa-fw'></i>"
-    weight = 50
+    pre = "<i class='fas fa-magnifying-glass fa-fw'></i>"
+    weight = 40
     identifier = "tech-explorations/"
     url = "/tags/tech-explorations"
   [[menu.main]]
     name = "Personal Growth"
-    pre = "<i class='fa fa-list fa-fw'></i>"
-    weight = 60
+    pre = "<i class='fas fa-arrow-up-right-dots fa-fw'></i>"
+    weight = 50
     identifier = "personal-growth"
     url = "/tags/personal-growth"
   [[menu.main]]
+    name = "Web Development"
+    pre = "<i class='fas fa-globe fa-fw'></i>"
+    weight = 60
+    identifier = "web-development/"
+    url = "/tags/web-development"
+  [[menu.main]]
+    name = "Mobile Tech"
+    pre = "<i class='fas fa-mobile-screen fa-fw'></i>"
+    weight = 70
+    identifier = "mobile-tech"
+    url = "/tags/mobile-tech"
+  [[menu.main]]
     name = "About Me"
-    pre = "<i class='fa fa-user fa-fw'></i>"
+    pre = "<i class='fas fa-user fa-fw'></i>"
     weight = 100
     identifier = "about"
     url = "/about/"
@@ -78,7 +84,8 @@ disablePathToLower = true
   # by entering your username or ID.
 
   # SNS microblogging
-  twitter = "annjose"
+  bluesky = "annjose.com"
+  # twitter = ""
   # facebook = "*"
   # googleplus = "*"
   # weibo = "*"
@@ -98,11 +105,9 @@ disablePathToLower = true
 
   # SNS news
   # reddit = "*"
-  # hackernews = "*"
+  hackernews = "annjose"
 
   # Techie
   github = "annjose"
   # bitbucket = "*"
-  stackoverflow = "402100"
-
-
+  # stackoverflow = "402100"

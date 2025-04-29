@@ -10,6 +10,12 @@
 
     <!-- SNS microblogging -->
 
+    {{ with .Site.Social.bluesky }}
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://bsky.app/profile/{{ . }}" target="_blank"><i class="fa-brands fa-square-bluesky fa-fw"></i>Bluesky</a>
+    </li>
+    {{ end }}
+
     {{ with .Site.Social.twitter }}
     <li class="pure-menu-item">
       <a class="pure-menu-link" href="https://twitter.com/{{ . }}" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>

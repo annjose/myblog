@@ -29,7 +29,7 @@ This practical guide walks you through implementing mobile on-device AI using Go
 4. [Running Gemma in Google AI Studio](#1-run-gemma-in-google-ai-studio)
 5. [Running Gemma on Android](#2-run-gemma-on-android)
 6. [Running Gemma on iOS](#3-run-gemma-on-ios)
-7. [Bonus: Gemma in Mobile Web Browsers](#4-bonus-run-gemma-on-mobile-browsers)
+7. [Running Gemma in Mobile Web Browsers (Bonus Content)](#4-run-gemma-on-mobile-browsers-bonus-content)
 8. [Cross-Platform Summary](#cross-platform-summary)
 9. [Conclusion & Next Steps](#conclusion)
 10. [References](#references)
@@ -168,23 +168,31 @@ Here is a screenshot of Google AI Studio running Gemma 3n 4B. As you can see, th
 ### 2. Run Gemma on Android
 
 We have two options to run Gemma models on Android:
-#### 2.1 MediaPipe Sample App
-This app demonstrates all supported Small Language Models (SLMs) like Gemma 2, Gemma 3, Microsoft Phi, and QWEN. It’s available on [GitHub: google-ai-edge/mediapipe-samples](https://github.com/google-ai-edge/mediapipe-samples).
-    - **Drawbacks:** The sample app is minimal, somewhat outdated, and not as polished as newer offerings. Importantly, **you cannot run Gemma 3n models in this app**. Attempts to modify the source code to add Gemma 3n often result in errors like “Access denied. Please try again and grant the necessary permissions,” even after setting up permissions on Hugging Face. In my understanding, this suggests the app is explicitly restricted from running newer models.
+#### 2.1 MediaPipe Android Sample App
+This app demonstrates all supported Small Language Models (SLMs) like Gemma 2, Gemma 3, Microsoft Phi, and QWEN. It’s available on [GitHub: google-ai-edge/mediapipe-samples](https://github.com/google-ai-edge/mediapipe-samples). There are many examples here, the easiest one to run is the [LLM inference sample app](https://github.com/google-ai-edge/mediapipe-samples/tree/main/examples/llm_inference/android).
 
-Here are some screenshots of MediaPipe sample app running on my Pixel 8 Pro Android device:
+ Just clone the repo, navigate to the folder `mediapipe-samples/examples/llm_inference/android`, open the project in Android Studio and build. When you run the app, you can choose a model and the app will download the model to the device and run it. If the model you choose needs permissions, the app will show HuggingFace screen to acknowledge the license.
+
+**Drawbacks:** 
+The sample app is minimal, somewhat outdated, and not as polished as newer offerings. More importantly, **you cannot run Gemma 3n models** in this app. I tried to modify the code and add Gemma 3n manually, but it resulted in the error - “Access denied. Please try again and grant the necessary permissions”, even though the right permissions were set up on Hugging Face. 
+
+In my understanding, this suggests the app is explicitly restricted from running newer models like Gemma 3n. But it can run Gemma 3, Gemma 2, smaller Llama 3/2, Microsoft Phi and Qwen.
+
+Here are some screenshots of Android MediaPipe sample app running on my Pixel 8 Pro Android device:
 {{< fluid_imgs
-  "pure-u-1 pure-u-md-1-2|media-pipe-android-app-models.png|MediaPipe sample with Gemma 3 - 1B"
-  "pure-u-1 pure-u-md-1-2|mediapipe-android-chat-gemma-3-1B.png|MediaPipe sample with Gemma 3 - 1B"
+  "pure-u-1 pure-u-md-1-2|mediapipe-android-app-models.png|MediaPipe sample with Gemma 3 - 1B"
+  "pure-u-1 pure-u-md-1-2|mediapipe-android-app-chat-gemma-3-1B.png|MediaPipe sample with Gemma 3 - 1B"
 >}}
 
-And the sample app running in Adroid studio
+And the sample app code in Android Studio
 ![](mediapipe-android-app-AndroidStudio.png)
 
 #### 2.2 Google AI Edge Gallery App
 This is a newer, more versatile sample app available as an experimental Alpha release. It’s sleek, easy to use, and demonstrates the full power of on-device AI. You can run Gemma 3n models (E2B and E4B) directly on your device, but not older models.    
-    - **Download and instructions:** [GitHub: google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)
-    - **How it works:** After installing, select a model from the list (such as Gemma 3n E2B or E4B), and you can start using AI features like chat, image analysis, and more - all offline
+- **Instructions to download and run:** - [Gallery App Wiki](https://github.com/google-ai-edge/gallery/wiki/2.-Getting-Started)
+- **How it works:** After installing, select a model from the list (such as Gemma 3n E2B or E4B), and you can start using AI features like chat, image analysis, and more - all offline.
+
+The full source code is available at [GitHub: google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)
 
 Here are some screenshots of Gallery app running on my Pixel 8 Pro Android device - the home page that shows the tasks it supports, asking the user to review the license of Gemma 3n and downloading the Gemma 3n model:
 
@@ -207,12 +215,28 @@ See detailed instructions for each app:
 In summary, use the old MediaPipe sample app to run models prior to Gemma 3n, and the new Gallery app to run Gemma 3n models. Google may consolidate these apps in the future or deprecate older models.
 
 ### 3. Run Gemma on iOS
-**The new Google AI Edge Gallery app is not yet available for iOS - its release is marked as “coming soon.”**  
-Currently, our only option is to use the old MediaPipe sample app, which supports models prior to Gemma 3n (like Gemma 2 and Gemma 3).
 
-The LLM Inference API from MediaPipe enables you to run large language models (LLMs) entirely on-device for iOS applications. This allows you to perform advanced AI tasks such as text generation, information retrieval, and document summarization - all while keeping user data private and secure.
+The [MediaPipe LLM Inference API for iOS](https://ai.google.dev/edge/mediapipe/solutions/genai/llm_inference/ios) enables you to run LLMs directly on the iOS device. This allows you to perform advanced AI tasks such as text generation, information retrieval, and document summarization - all while keeping user data private and secure.
 
-**How to get started:**
+**Run the MediaPipe iOS sample app**
+
+In terms of sample apps, the newer Google AI Edge Gallery app is not yet available for iOS; its release is marked as “coming soon.” But there is an [iOS version of old MediaPipe sample app](https://github.com/google-ai-edge/mediapipe-samples/tree/main/examples/llm_inference/ios) which demonstrates how to use the LLM Inference API in iOS applications.
+
+This iOS sample app (similar to the Android sample app) cannot run the latest Gemma 3n model. But it can run earlier models like Gemma 3, Gemma 2, smaller Llama 3/2, DeepSeek distilled and Qwen. Here is how you can run the app:
+
+- Clone the [mediapipe-samples GitHub repo](https://github.com/google-ai-edge/mediapipe-samples/tree/main)
+- Run `pod install` in the folder `examples/llm_inference/ios`
+- Launch Xcode and open the workspace file `InferenceExample.xcworkspace`
+- Run the app with the Play button at the top
+- If the model you choose needs permissions, the app will show HuggingFace screen to acknowledge the license
+
+Here are some screenshots of iOS MediaPipe sample app running on iPhone 16 Pro with iOS 18.5:
+{{< fluid_imgs
+  "pure-u-1 pure-u-md-1-2|mediapipe-ios-app-models.png|iOS MediaPipe sample with Gemma 3 - 1B"
+  "pure-u-1 pure-u-md-1-2|mediapipe-ios-app-chat-gemma-3-1B.png|iOS MediaPipe sample with Gemma 3 - 1B"
+>}}
+
+#### Integrate the model and API manually
 
 1. **Install the MediaPipeTasksGenai library**  - Add the necessary dependencies to your project using CocoaPods. Add the following to your `Podfile`:
 ```ruby
@@ -224,25 +248,29 @@ end
 ```
 Note - The library is compatible with both Swift and Objective-C apps and does not require any additional language-specific setup.
 
-2. **Download a compatible model**   - Download a supported model (such as Gemma-2 2B in 8-bit quantized format) from Kaggle Models. Add the model file to your Xcode project.
+2. **Download the model** of your choice from [HuggingFace LiteRT community](https://huggingface.co/litert-community). You may need to convert the model to the MediaPipe compatible format using [AI Edge Torch Generative Converter](https://github.com/google-ai-edge/ai-edge-torch/tree/main/ai_edge_torch/generative). See the full instructions at [Model guide for LLM inference](https://ai.google.dev/edge/mediapipe/solutions/genai/llm_inference/index#models).
     
-3. **Initialize the LLM Inference task**  - Configure the task with your model path and desired options:
+3. **Initialize the LLM Inference task**  - Configure the task with your model path and desired options. You can adjust the model parameters like **maxTokens**, **topk**, **temperature**, **randomSeed** and path to the model file as **modelPath**.
 ```swift
 import MediaPipeTasksGenai
 
-let modelPath = Bundle.main.path(forResource: "model", ofType: "bin")
+let modelPath = Bundle.main.path(forResource: "small-model", ofType: "bin")
+
 let options = LlmInferenceOptions()
 options.baseOptions.modelPath = modelPath
 options.maxTokens = 1000
 options.topk = 40
 options.temperature = 0.8
 options.randomSeed = 101
+
 let llmInference = try LlmInference(options: options)
 ```
     
 4. **Run the task and generate responses**  - Use the `generateResponse(inputText:)` method for single responses, or `generateResponseAsync(inputText:)` for streaming:
 ``` swift
+// For single response
 let result = try LlmInference.generateResponse(inputText: inputPrompt)
+
 // For streaming:
 let resultStream = LlmInference.generateResponseAsync(inputText: inputPrompt)
 do {
@@ -253,15 +281,13 @@ do {
   print("Response error: \(error)")
 }
 ```
-    
-5. **More configuration** - You can adjust the model parameters like **maxTokens**, **topk**, **temperature**, **randomSeed** and path to the model file as **modelPath**
-6. **Sample application** - The [MediaPipe Samples GitHub repository](https://github.com/google-ai-edge/mediapipe-samples) includes a sample iOS app that demonstrates how to use the LLM Inference API. Clone the repository and open the project in Xcode to see it in action.
 
-The API also supports LoRA (Low-Rank Adaptation) for efficient fine-tuning of models, allowing you to customize model behavior for specific tasks.
+Here is the sample app code in Xcode:
+![](mediapipe-ios-app-xcode.png)
 
-For detailed instructions and advanced setup, see the official documentation: [MediaPipe LLM Inference API for iOS](https://ai.google.dev/edge/mediapipe/solutions/genai/llm_inference/ios)
+For detailed instructions and advanced setup, see the official documentation: [MediaPipe LLM Inference API for iOS](https://ai.google.dev/edge/mediapipe/solutions/genai/llm_inference/ios). The API also supports LoRA (Low-Rank Adaptation) for efficient fine-tuning of models, allowing you to customize model behavior for specific tasks.
 
-### 4. Bonus: Run Gemma on mobile browsers
+### 4. Run Gemma on mobile browsers (Bonus Content)
 You can run Gemma and other large language models directly in your browser using the MediaPipe LLM Inference API for JavaScript. This allows you to perform advanced AI tasks - such as text generation, information retrieval, and document summarization - entirely on-device, without sending data to a server.
 
 **Supported Models**
@@ -285,7 +311,7 @@ Or use the CDN:
 ```
 - **Download a model:**  For example, download Gemma-2 2B in 8-bit quantized format from Kaggle Models or HuggingFace LiteRT and place it in your project directory.
         
-- **Initialize the task:**
+- **Initialize the task:** Load the task (eg: LLM inference) with its corresponding options.
 ``` javascript
     const genai = await FilesetResolver.forGenAiTasks(
 	  "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-genai@latest/wasm"
@@ -298,12 +324,12 @@ Or use the CDN:
 	  randomSeed: 101
 	});
 ```
-- **Run inference:**
+- **Run inference:** Use the `generateResponse` function on the `llmInfernce` object as single response or streaming.
 ```javascript
+  // single responce
 	const response = await llmInference.generateResponse(inputPrompt);
-```
-Or stream the output:
-```javascript
+
+  // or stream the output
 	llmInference.generateResponse(
         inputPrompt,
         (partialResult, done) => {
@@ -315,7 +341,7 @@ Or stream the output:
 - **Browser Compatibility** - Requires WebGPU support. Check the [GPU browser compatibility](https://ai.google.dev/edge/mediapipe/solutions/genai/llm_inference/web_js#gpu_browser_compatibility) page for details.
 - **LoRA (Low-Rank Adaptation)** - You can fine-tune models using LoRA and load custom LoRA weights at runtime for specialized tasks.
         
-See detailed instructions: [MediaPipe LLM Inference API for Web](https://ai.google.dev/edge/mediapipe/solutions/genai/llm_inference/web_js)
+See detailed instructions: [MediaPipe LLM Inference API for Web](https://ai.google.dev/edge/mediapipe/solutions/genai/llm_inference/web_js).
 
 ### Cross platform summary
 The following table summarizes how to run the model on various platforms.

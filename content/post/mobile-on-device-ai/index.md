@@ -7,9 +7,13 @@ tags = ["mobile", "AI"]
 topics = ["tech-explorations", "on-device-ai", "edge-ai"]
 +++
 
-While cloud computing drives many AI breakthroughs, a parallel revolution is happening right in our hands: **Mobile On-device AI**. As mobile devices become ever more powerful, the ability to run AI locally offers a compelling path to faster, more private, and smarter app experiences. As a developer who loves exploring AI and has built mobile apps, I am fascinated by the idea of these two worlds of **mobile and AI converging**.
+While cloud computing drives many AI breakthroughs, a parallel revolution is happening right in our hands - running LLMs locally on mobile devices. This emerging field, known as **Mobile On-device AI**, enables us to build more private, faster and smarter app experiences - especially as mobile devices become increasingly powerful. As a developer passionate about **AI and mobile**, I am fascinated by the convergence these two worlds and the possibilities it brings.
 
-This post unpacks Mobile On-device AI. We will start with the basics (and how it relates to [Edge AI Essentials](/post/edge-ai-essentials)), showcase its real-world applications, analyze its pros and cons, and introduce the core tools like Apple Core ML and Google AI Edge (with TensorFlow Lite). Whether you're new to the concept or a seasoned developer, I hope this provides valuable insights and a starting point for your own explorations. I'd love to hear your thoughts on this topic; feel free to join the discussion on [Bluesky](https://bsky.app/profile/annjose.com/post/3lquwpq6zy22b) or [LinkedIn](https://www.linkedin.com/posts/annjose_mobile-on-device-ai-smarter-faster-private-activity-7336452492366422018-LstO).
+This post unpacks Mobile On-device AI - what it is, why it matters and how it relates to the broader Edge AI landscape (see my earlier post: [Edge AI Essentials](/post/edge-ai-essentials)). We'll explore real-world applications, weigh the pros and cons, and introduce core tools like Apple Core ML and Google AI Edge (with TensorFlow Lite). Whether you're new to the concept or a seasoned developer, I hope this helps as a useful starting point for your own explorations.
+
+If you're ready to get hands-on, check out this follow-up guide: [Hands-On: Mobile AI with Gemma - iOS, Android](/post/mobile-on-device-ai-hands-on-gemma/), where I walk through how to run a small LLM locally on a mobile device. 
+
+I'd love to hear your thoughts on this topic; feel free to join the discussion on [Bluesky](https://bsky.app/profile/annjose.com/post/3lquwpq6zy22b) or [LinkedIn](https://www.linkedin.com/posts/annjose_mobile-on-device-ai-smarter-faster-private-activity-7336452492366422018-LstO).
 
 ## The Basics
 

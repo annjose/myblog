@@ -7,13 +7,15 @@ topics = ["tech-explorations", "AI"]
 tags = ["AI", "llm", "coding-assistants"]
 +++
 
-I used to think that I love coding, but in the last year, I came to realize that I love building apps as much as I love coding. Creating something useful and beautiful is what I love. Last year this time, my coding workflow was to fire up VS Code with  Claude in the browser or GitHub Copilot in 'Ask' mode and brainstorm problems, review solutions suggested by the LLM, copy code into the editor, test and deploy. This was fun in the beginning, but soon the context-switching became tedious and it broke the flow of building.
+I used to think that I love coding, but in the last year, I came to realize that what I love more is *building* - creating something useful and beautiful. Last year this time, my coding workflow was to fire up VS Code with  Claude in the browser or GitHub Copilot in 'Ask' mode and brainstorm with a model, review solutions suggested by the LLM, copy code into the editor, test and deploy🚀. This was fun in the beginning, but soon the context-switching became tedious and broke the flow of building.
 
-I went back and forth: 'this is fun', 'but I miss writing code', 'this is scary'. At first, all the terms were confusing—tools, MCP servers, commands, hooks, skills. But once I understood how they fit together, learned the best practices and used it in tandem with other tools, agentic coding became faster and more effective than coding without it. And the best part, I didn't lose the joy of building - I just built more.
+Then I started exploring agentic coding - starting in VS Code with Copilot 'Agent' mode, then using CLI agents like Claude Code, Codex, and most recently Gemini and Open Code. At first, it was all fun, then I went back and forth the reactions: 'this is fun', 'but I miss writing code', 'this code is terrible'.  All the terms - tools, MCP servers, commands, hooks, skills - were confusing and hard to keep up. But once I dug a little deep, learned the best practices and understood how they all fit together agentic coding became **faster and more effective** than coding without it. And the best part...
 
-That's when my personal projects took off, especially [HN Companion](https://hncompanion.com) that George and I have been working on. We built multiple assets almost entirely with agentic coding - the [landing page](https://hncompanion.com), [web app](https://app.hncompanion.com), and a [custom skill hn-summarizer](https://github.com/hncompanion/workspace/tree/main/skills-scripts) - all in production. That's when I realized these tools are worth learning.
+> I didn't lose the joy of coding - I just built more. 
 
-So I'm writing this post to break down the concepts that confused me at the beginning. The way I think about it now: there are three layers to agentic coding - the **foundation** (agents, models, and tools), the **extensions** (skills, commands, hooks), and the **integrations** (MCP, plugins). Let's start with the foundation.
+My personal projects took off, especially [HN Companion](https://hncompanion.com) that George and I have been working on. We built multiple assets almost entirely with agentic coding - the [landing page](https://hncompanion.com), [web app](https://app.hncompanion.com), and a [custom skill hn-summarizer](https://github.com/hncompanion/workspace/tree/main/skills-scripts) - all in production and in the [open source world](https://github.com/hncompanion).
+
+It taught me that these tools are worth learning and using. So I'm writing this post to break down the concepts that confused me at the beginning. The way I think about it now: there are three layers to agentic coding - the **foundation** (agents, models, and tools), the **extensions** (skills, commands, hooks), and the **integrations** (MCP, plugins). Let's start with the foundation.
 
 **Note:** All agentic systems name these concepts slightly differently; I've used Claude as the reference since that's what I know best and use the most. Once you understand the concepts, you can easily find the parallels in other systems.
 
@@ -89,8 +91,6 @@ This is how I would go about adopting the agentic coding workflow - in a progres
 **AGENTS.md first:** Define your project-level preferences and patterns here. This runs every session.
 
 **Skills for repetition:** If you're doing the same workflow multiple times, make it a skill. Good candidates: code review patterns, documentation generation, testing workflows.
-
-**Commands for explicit control:** When you want to decide exactly when something runs, make it a command. Good for: deployment workflows, complex refactoring, generating boilerplate.
 
 **Hooks for automation:** When something should always happen at a specific point (pre-commit, post-deployment), use hooks.
 

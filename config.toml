@@ -5,7 +5,7 @@ theme = "blackburn"
 author = "Ann Catherine Jose"
 copyright = "&copy; 2025. All rights reserved."
 canonifyurls = true
-paginate = 10
+pagination.pagerSize = 10
 disablePathToLower = true
 
 [indexes]

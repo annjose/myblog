@@ -5,6 +5,7 @@ date = "2026-02-07T16:23:08-07:00"
 draft = false
 topics = ["tech-explorations", "AI"]
 tags = ["AI", "llm", "coding-assistants"]
+images = ["hero.png"]
 +++
 
 In the [last post](/post/agentic-coding-basics/), I explained the basic concepts of agentic coding - the terminology, the constructs, when to use what. It was mostly theoretical. This post is the practical follow-up that describes how I actually build features with AI agents day to day.
@@ -60,6 +61,11 @@ As Armin Ronacher [puts it](https://lucumr.pocoo.org/2025/7/30/things-that-didnt
 
 > it encourages mental disengagement - when you stop thinking like an engineer, 
 quality drops, time gets wasted and you don't understand and learn.
+
+If you want to understand what's actually happening under the hood - how the agent loop works, 
+how context evolves during a session, and why this matters - George Chiramattel 
+has an excellent technical breakdown that complements what I'm describing here. 
+See [Mental Models for Working with Coding Agents](https://george.chiramattel.com/blog/mental-models-for-working-with-coding-agents).
 
 ### Step 1: Start with a solid AGENTS.md
 
@@ -238,6 +244,8 @@ all worth your time.
 - [Claude Code: Best Practices for Agentic Coding](https://www.anthropic.com/engineering/claude-code-best-practices) 
   - Anthropic's official guide. The CLAUDE.md as a living document idea 
   came from here.
+- [Mental Models for Working with Coding Agents](https://george.chiramattel.com/blog/mental-models-for-working-with-coding-agents)
+   - George Chiramattel. How coding agents work under the hood - the loop, context evolution, and harness design.
 - [Spec-Driven Development](https://www.thoughtworks.com/en-us/insights/blog/agile-engineering-practices/spec-driven-development-unpacking-2025-new-engineering-practices) 
   - Thoughtworks. Good framing of where specs fit in the agentic workflow.
 - [How StrongDM's AI Team Builds Software Without Looking at the Code](https://simonwillison.net/2026/Feb/7/software-factory/) 
@@ -248,3 +256,7 @@ all worth your time.
 - [Agentic Engineering](https://addyosmani.com/blog/agentic-engineering/) 
   - Addy Osmani on why the distinction between vibe coding and disciplined 
   agentic work matters.
+
+---
+
+![](hero.png)

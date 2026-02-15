@@ -28,3 +28,11 @@ Use this file to keep short architecture/process decisions so agents and humans 
 - Chosen approach: lowercase-only values in front matter/URLs (`llm`, `ai`, `rag`) plus template label mapping (`llm` -> `LLM`, `ai` -> `AI`, `rag` -> `RAG`).
 - Consequences: stable canonical archive URLs and merged taxonomy buckets without sacrificing UI readability.
 - Follow-ups: complete Phase 2 content normalization and verify legacy uppercase links where needed.
+
+- Date: `2026-02-15`
+- Decision: Treat `resources/_gen/` as generated-only and stop tracking it in git.
+- Context: `resources/_gen/` introduced large, noisy diffs for content changes and was not part of source-of-truth content/config/theme logic.
+- Options considered: keep `resources/_gen/` committed for deterministic artifacts vs ignore and regenerate locally.
+- Chosen approach: add `resources/_gen/` to `.gitignore` and remove tracked `_gen` files from git index.
+- Consequences: cleaner diffs and lower repo churn; requires regeneration during local builds.
+- Follow-ups: verify fresh checkout build and deploy workflow remain stable.

@@ -32,10 +32,9 @@ This repo stores source code and content for the Hugo blog published at `https:/
 - active custom theme templates
 - Generated artifacts:
 - `public/`
-- `resources/_gen/`
+- `resources/_gen/` (generated locally; ignored in git and regenerated as needed)
 
 ## Publishing Model
 1. Run `hugo` in this repo.
 2. Hugo generates output to `public/`.
 3. Commit/push inside `public/` submodule to publish site updates.
-

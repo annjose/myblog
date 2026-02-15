@@ -3,7 +3,7 @@ title = "How to finetune an LLM with unsloth"
 description = "Step by step guide to finetune an LLM with unsloth"
 date = "2025-03-13T14:22:15-07:00"
 draft = true
-tags = ["AI", "LLM"]
+tags = ["ai", "llm"]
 topics = ["tech-explorations"]
 +++
 

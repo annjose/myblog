@@ -3,7 +3,7 @@ title = "Claude Code: First Impressions"
 description = "Exploring Anthropic's new CLI-based agentic coding tool"
 date = "2025-02-24T04:32:12-07:00"
 draft = false
-tags = ["AI", "coding-assistants", "agentic-systems", "LLM"]
+tags = ["ai", "coding-assistants", "agentic-systems", "llm"]
 topics = ["tech-explorations"]
 +++
 

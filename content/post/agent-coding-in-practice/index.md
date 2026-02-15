@@ -3,8 +3,8 @@ title = "Agentic Coding In Practice"
 description = "How I build features with AI agents after two years of agentic coding"
 date = "2026-02-07T16:23:08-07:00"
 draft = false
-topics = ["tech-explorations", "AI"]
-tags = ["AI", "llm", "coding-assistants"]
+topics = ["tech-explorations", "ai"]
+tags = ["ai", "llm", "coding-assistants"]
 images = ["hero.png"]
 +++
 

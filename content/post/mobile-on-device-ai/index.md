@@ -3,7 +3,7 @@ title = "Mobile On-device AI: Smarter Faster Private Apps"
 description = "Understanding AI on your phone: benefits, challenges, and how it works"
 date = "2025-06-02T09:02:21-07:00"
 draft = false
-tags = ["mobile", "AI"]
+tags = ["mobile", "ai"]
 topics = ["tech-explorations", "on-device-ai", "edge-ai"]
 +++
 

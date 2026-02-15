@@ -16,6 +16,7 @@ Improve maintainability, publishing safety, taxonomy consistency, and content qu
 ## Decision Lock-Ins (2026-02-15)
 - Taxonomy normalization: enforce lowercase canonical values for tags/topics; replace uppercase and mixed-case variants with lowercase slugs.
 - Generated assets policy: treat `resources/_gen/` as generated output and do not commit it going forward.
+- Taxonomy display strategy: keep lowercase taxonomy slugs in front matter/URLs, but render selected acronym labels (for example `llm` -> `LLM`, `ai` -> `AI`) in UI templates.
 
 ---
 
@@ -89,8 +90,9 @@ Improve maintainability, publishing safety, taxonomy consistency, and content qu
    - Separator standard (e.g., hyphen only).
 3. Create a mapping table for variants -> canonical values.
 4. Apply controlled updates to front matter across posts, including uppercase and mixed-case values to lowercase canonical values.
-5. Rebuild and verify that merged tag pages render correctly.
-6. Optionally add Hugo aliases/redirects for frequently used legacy URLs where needed.
+5. Update taxonomy label rendering so acronym-like terms remain readable in UI while preserving lowercase canonical slugs in URLs.
+6. Rebuild and verify that merged tag pages render correctly.
+7. Optionally add Hugo aliases/redirects for frequently used legacy URLs where needed.
 
 ### Validation
 - Reduced duplicate taxonomy buckets.

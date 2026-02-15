@@ -3,7 +3,7 @@ title = "GPT-4 Turbo Vision: In Action"
 description = "A practical guide to using GPT-4 Turbo Vision"
 date = "2024-04-04T21:12:23-07:00"
 draft = false
-tags = ["LLM", "how-to", "tech-explorations", "generative-ai"]
+tags = ["llm", "how-to", "tech-explorations", "generative-ai"]
 topics = []
 +++
 

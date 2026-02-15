@@ -1,0 +1,8 @@
+{{- $term := printf "%v" . -}}
+{{- $normalized := lower $term -}}
+{{- if eq $normalized "llm" -}}LLM
+{{- else if eq $normalized "ai" -}}AI
+{{- else if eq $normalized "rag" -}}RAG
+{{- else -}}
+{{- $term -}}
+{{- end -}}

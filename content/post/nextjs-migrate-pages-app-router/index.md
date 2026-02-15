@@ -3,7 +3,7 @@ title = "Next.js - Migrate from Pages to App Router"
 description = "A step-by-step guide with lessons and gotchas for a smooth migration"
 date = "2024-06-05T12:42:25-07:00"
 draft = false
-tags = ["tech-explorations", "how-to", "web-development", "next.js"]
+tags = ["tech-explorations", "how-to", "web-development", "next-js"]
 topics = []
 +++
 

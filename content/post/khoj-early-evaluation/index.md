@@ -3,7 +3,7 @@ title = "Khoj - an early hands-on evaluation "
 description = "Evaluating Khoj, the open source AI assistant"
 date = "2024-05-01T21:12:23-07:00"
 draft = true
-tags = ["LLM", "how-to", "tech-explorations", "generative-ai"]
+tags = ["llm", "how-to", "tech-explorations", "generative-ai"]
 topics = []
 +++
 

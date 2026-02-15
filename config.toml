@@ -47,7 +47,7 @@ disablePathToLower = true
     pre = "<i class='fas fa-hexagon-nodes fa-fw'></i>"
     weight = 30
     identifier = "llm"
-    url = "/tags/LLM"
+    url = "/tags/llm"
   [[menu.main]]
     name = "Tech Explorations"
     pre = "<i class='fas fa-magnifying-glass fa-fw'></i>"

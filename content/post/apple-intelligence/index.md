@@ -3,7 +3,7 @@ title = "The Apple of AI"
 description = "Apple Intelligence: Highlights from Apple WWDC24"
 date = "2024-06-11T20:14:23-07:00"
 draft = false
-tags = ["AI", "tech-explorations", "generative-ai", "LLM"]
+tags = ["ai", "tech-explorations", "generative-ai", "llm"]
 topics = []
 +++
 

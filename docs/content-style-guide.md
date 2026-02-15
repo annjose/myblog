@@ -23,6 +23,7 @@ Recommended order:
 ## Taxonomy Formatting
 - Use lowercase, hyphenated values in `tags` and `topics`.
 - Avoid mixed variants for the same concept.
+- Keep display formatting concerns (for example `LLM`, `AI`) in templates, not in front matter taxonomy values.
 
 Examples:
 - Good: `llm`, `next-js`, `web-development`
@@ -48,4 +49,3 @@ Examples:
 ## Backward Compatibility
 - Keep historical content mostly intact.
 - Prefer metadata/taxonomy consistency updates over broad prose rewrites unless explicitly requested.
-

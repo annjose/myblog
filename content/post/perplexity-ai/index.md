@@ -3,7 +3,7 @@ title = "Perplexity AI: A Deep Dive"
 description = "A new way of discovering information through Perplexity AI"
 date = "2024-06-27T16:19:12-07:00"
 draft = false
-tags = ["AI", "tech-explorations", "generative-ai", "LLM", "machine-learning"]
+tags = ["ai", "tech-explorations", "generative-ai", "llm", "machine-learning"]
 topics = []
 +++
 

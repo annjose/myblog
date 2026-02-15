@@ -3,7 +3,7 @@ title = "Run Code Llama 70B locally"
 description = "Testing out Meta's new model Code Llama 70B"
 date = "2024-01-29T16:42:25-07:00"
 draft = false
-tags = ["LLM", "tech-explorations", "how-to", "generative-ai"]
+tags = ["llm", "tech-explorations", "how-to", "generative-ai"]
 topics = []
 +++
 

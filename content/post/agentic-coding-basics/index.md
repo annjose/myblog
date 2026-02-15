@@ -3,8 +3,8 @@ title = "Agentic Coding: The Basic Concepts"
 description = "Explaining core concepts of agentic coding and when to use each one"
 date = "2026-02-04T10:11:08-07:00"
 draft = false
-topics = ["tech-explorations", "AI"]
-tags = ["AI", "llm", "coding-assistants"]
+topics = ["tech-explorations", "ai"]
+tags = ["ai", "llm", "coding-assistants"]
 +++
 
 I used to think that I love coding, but in the last year, I came to realize that what I love more is *building* - creating something useful and beautiful. Last year this time, my coding workflow was to fire up VS Code with  Claude in the browser or GitHub Copilot in 'Ask' mode and brainstorm with a model, review solutions suggested by the LLM, copy code into the editor, test and deploy🚀. This was fun in the beginning, but soon the context-switching became tedious and broke the flow of building.

@@ -3,7 +3,7 @@ title = "Vibe coding a Pomodoro app with AI"
 description = "How I built a personal pomodoro app with vibe coding"
 date = "2025-03-15T15:18:12-07:00"
 draft = false
-tags = ["AI", "LLM", "coding-assistants"]
+tags = ["ai", "llm", "coding-assistants"]
 topics = ["tech-explorations"]
 +++
 

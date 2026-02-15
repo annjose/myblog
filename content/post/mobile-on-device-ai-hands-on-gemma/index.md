@@ -3,7 +3,7 @@ title = "Hands-On: Mobile AI with Gemma - iOS, Android"
 description = "Practical guide to run mobile-optimized models like Gemma across mobile platforms"
 date = "2025-06-03T13:13:12-07:00"
 draft = false
-tags = ["mobile", "AI", "mobile-development", "privacy", "gemma", "hands-on"]
+tags = ["mobile", "ai", "mobile-development", "privacy", "gemma", "hands-on"]
 topics = ["tech-explorations", "on-device-ai", "edge-ai"]
 +++
 

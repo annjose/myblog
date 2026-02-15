@@ -3,7 +3,7 @@ title = "Perplexity AI: Insights from the CEO Aravind Srinivas"
 description = "Insights from Lex Fridman's interview with Aravind"
 date = "2024-06-27T20:21:42-07:00"
 draft = false
-tags = ["AI", "tech-explorations", "LLM"]
+tags = ["ai", "tech-explorations", "llm"]
 topics = []
 +++
 

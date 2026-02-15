@@ -3,8 +3,8 @@ title = "Compare AI Tools: LLMs and AI Assistants"
 description = "Side by side comparison of AI tools and models useful for everyday tasks"
 date = "2024-10-25T17:22:33-07:00"
 draft = false
-tags = ["tech-explorations", "LLM", "generative-ai"]
-topics = ["AI"]
+tags = ["tech-explorations", "llm", "generative-ai"]
+topics = ["ai"]
 +++
 
 In this post, we will compare the most popular AI tools (frontier models and AI assistants) based on its capabilities, limitations and my personal experience of using them day-to-day. 

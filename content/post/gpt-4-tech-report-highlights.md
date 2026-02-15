@@ -4,7 +4,7 @@ title = "GPT-4 Technical Report Highlights"
 description = "My key insights and takeaways from the GPT-4 Technical Report"
 date = "2023-04-09T12:59:18-08:00"
 draft = false
-tags = ["gpt","generative-ai", "LLM", "tech-explorations"]
+tags = ["gpt","generative-ai", "llm", "tech-explorations"]
 topics = []
 +++
 

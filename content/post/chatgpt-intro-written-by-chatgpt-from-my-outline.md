@@ -3,7 +3,7 @@ title = "ChatGPT Introduction - written by ChatGPT using Ann's outline"
 description = "An introductory post about ChatGPT - authored by ChatGPT based on a rough outline provided by Ann"
 date = "2023-02-12T20:54:11-08:00"
 draft = false
-tags = ["chatgpt", "generative-ai", "LLM", "tech-explorations"]
+tags = ["chatgpt", "generative-ai", "llm", "tech-explorations"]
 topics = []
 +++
 

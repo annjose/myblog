@@ -3,7 +3,7 @@ title = "Edge AI Essentials"
 description = "An essential introduction to Edge AI and how it works"
 date = "2025-06-01T12:32:08-07:00"
 draft = false
-tags = ["AI"]
+tags = ["ai"]
 topics = ["tech-explorations", "on-device-ai", "edge-ai"]
 +++
 

@@ -9,15 +9,18 @@
 - Use hyphens (`-`) as separators.
 - Avoid dots and spaces where a slug exists.
 - Reuse existing canonical values when possible.
+- Keep canonical slugs in front matter and URLs; apply readability formatting in templates instead of mixed-case taxonomy values.
 
 ## Current Known Normalization Targets
 - `LLM` -> `llm`
 - `next.js` -> `next-js`
-- `AI` -> `ai` (if you decide to enforce full lowercase canonically)
+- `AI` -> `ai`
+- `RAG` -> `rag`
 
-Note:
-- This repo currently contains both uppercase and lowercase variants for some tags.
-- Decide one canonical standard and migrate incrementally.
+UI display labels (template-level) for readability:
+- `llm` renders as `LLM`
+- `ai` renders as `AI`
+- `rag` renders as `RAG`
 
 ## Migration Workflow
 1. Identify variants from content front matter.
@@ -45,3 +48,8 @@ Use this section to track taxonomy migrations:
 - Reason:
 - Impacted posts:
 
+## Change Log
+- Date: `2026-02-15`
+- Changed: canonicalized uppercase/mixed-case taxonomy values to lowercase (`LLM` -> `llm`, `AI` -> `ai`, `RAG` -> `rag`) and aligned menu/tag URL references.
+- Reason: avoid split archives and broken case-sensitive URLs while preserving readable acronym labels in UI.
+- Impacted posts: all posts containing uppercase/mixed-case `tags` or `topics` values.

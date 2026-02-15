@@ -31,6 +31,7 @@ This file is the source of truth for AI coding agents working in this repo.
 ## Agent Behavior Expectations
 - Make focused, minimal changes.
 - Preserve current publishing behavior unless asked to change it.
+- Do not commit or push code changes in the repo.
 - Do not run destructive git commands (no `reset --hard`, no forced checkout/revert).
 - Do not remove themes/assets unless dependency is verified and requested.
 - If unsure about taxonomy or naming conventions, follow `docs/taxonomy-conventions.md`.

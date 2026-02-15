@@ -3,7 +3,7 @@ title = "OpenAI DevDay 2023 - Observations & Learnings"
 description = "My observations and learnings from the OpenAI DevDay"
 date = "2023-11-09T09:02:53-08:00"
 draft = false
-tags = ["gpt","generative-ai", "LLM", "conferences"]
+tags = ["gpt","generative-ai", "llm", "conferences"]
 topics = []
 +++
 

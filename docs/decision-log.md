@@ -36,3 +36,11 @@ Use this file to keep short architecture/process decisions so agents and humans 
 - Chosen approach: add `resources/_gen/` to `.gitignore` and remove tracked `_gen` files from git index.
 - Consequences: cleaner diffs and lower repo churn; requires regeneration during local builds.
 - Follow-ups: verify fresh checkout build and deploy workflow remain stable.
+
+- Date: `2026-02-15`
+- Decision: Keep inactive themes (`redlounge`, `hurock`) for now and document active `blackburn` overrides explicitly.
+- Context: Phase 4 required auditing non-active themes and reducing maintenance ambiguity without risking template regressions.
+- Options considered: remove inactive themes immediately vs keep them and document a clear retention rationale.
+- Chosen approach: keep inactive themes for now; add `docs/theme-overrides.md` as source-of-truth for active customizations and audit result.
+- Consequences: lower immediate risk and clearer maintenance ownership; inactive theme cleanup remains an optional future repo-hygiene task.
+- Follow-ups: if strict repo minimization is needed later, remove inactive themes in a dedicated, tested cleanup change.

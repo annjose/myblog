@@ -5,6 +5,7 @@ date = "2024-01-29T16:42:25-07:00"
 draft = false
 tags = ["llm", "tech-explorations", "how-to", "generative-ai"]
 topics = []
+images = ["ollama-terminal.png"]
 +++
 
 Today, [Meta AI announced](https://twitter.com/AIatMeta/status/1752013879532782075) they are releasing a new model **Code Llama 70B**, a higher performing LLM to generate code. This was exciting news and we have to try it out immediately.

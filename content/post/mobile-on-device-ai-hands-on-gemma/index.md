@@ -5,6 +5,7 @@ date = "2025-06-03T13:13:12-07:00"
 draft = false
 tags = ["mobile", "ai", "mobile-development", "privacy", "gemma", "hands-on"]
 topics = ["tech-explorations", "on-device-ai", "edge-ai"]
+images = ["gemma-3n-ai-studio.png"]
 +++
 
 In our previous post, [Mobile On-device AI: Smarter Faster Private Apps](/post/mobile-on-device-ai/), we explored the fundamentals of running AI locally on mobile devices. Now, it's time to get hands-on and see this technology in action!

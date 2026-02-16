@@ -18,6 +18,21 @@ Improve maintainability, publishing safety, taxonomy consistency, and content qu
 - Generated assets policy: treat `resources/_gen/` as generated output and do not commit it going forward.
 - Taxonomy display strategy: keep lowercase taxonomy slugs in front matter/URLs, but render selected acronym labels (for example `llm` -> `LLM`, `ai` -> `AI`) in UI templates.
 
+## Progress Tracker
+- 📝 Update this tracker at the end of each phase before committing.
+- ✅ `Phase 0` Baseline and safety net: completed
+- ✅ `Phase 1` Deployment hardening: completed
+- ✅ `Phase 2` Taxonomy/tag normalization: completed
+- ✅ `Phase 3` Repo hygiene and generated asset policy: completed
+- ✅ `Phase 4` Theme/customization consolidation: completed
+- ✅ `Phase 5` Content quality and consistency: completed
+- ⏳ `Phase 6` Lightweight automation and quality gates: pending
+
+## Next TODO
+- Phase 6:
+  - Validate and, if needed, extend `scripts/check-content.sh` for regression detection goals.
+  - Decide whether to add optional CI workflow for build/check gates.
+
 ---
 
 ## Phase 0: Baseline and Safety Net

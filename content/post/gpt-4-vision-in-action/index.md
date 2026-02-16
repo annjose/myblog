@@ -5,6 +5,7 @@ date = "2024-04-04T21:12:23-07:00"
 draft = false
 tags = ["llm", "how-to", "tech-explorations", "generative-ai"]
 topics = []
+images = ["chatgpt-select-gpt-4.png"]
 +++
 
 It's been a few months since OpenAI announced [GPT-4 Turbo with Vision](https://openai.com/index/new-models-and-developer-products-announced-at-devday) a model capable of understanding images and answering questions based on visual input. Recently, I decided to leverage this in a real app and got valuable insights. This post is a quick summary of my learnings from that experience. 

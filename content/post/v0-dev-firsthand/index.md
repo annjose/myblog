@@ -5,6 +5,7 @@ date = "2024-11-04T15:54:13-07:00"
 draft = false
 tags = ["how-to", "web-development"]
 topics = []
+images = ["todo-app-v1.png"]
 +++
 
 I have been using many [Vercel](https://vercel.com/home) products in my web projects - for example, their [Next.js app framework](https://nextjs.org/), [deployment infrastructure](https://vercel.com/docs/deployments/overview) and [Vercel AI SDK](https://sdk.vercel.ai/). I love these tools because are easy to use and onboard, they are reliable and fast - and most of them are open source, which is fantastic ❤️. 

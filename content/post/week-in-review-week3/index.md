@@ -5,6 +5,7 @@ date = "2023-11-03T21:32:43-07:00"
 draft = false
 tags = ["career", "personal-growth", "new-beginning"]
 topics = []
+images = ["peloton-oct-running-challenge.jpg"]
 +++
 
 *This post has been sitting in my draft for two weeks, waiting for my time to polish and post. But then as usual, I never got to it and it just stayed there. Anyway, now I am gonna just publish. So if you see typos or mistakes, please lmk. Progress, not perfection, yeah?*

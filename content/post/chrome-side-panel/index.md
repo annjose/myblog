@@ -5,6 +5,7 @@ date = "2024-12-15T12:15:21-07:00"
 draft = false
 tags = ["modern-web-dev", "web-development", "tech-explorations", "how-to", "building"]
 topics = ["browser-extensions"]
+images = ["side-panel-bookmarks.png"]
 +++
 
 Of late, I have been building and [learning about browser extensions](/post/browser-extn-intro/) for a few projects. It was surprising to learn that there are many ways to build UI for these extensions and the most interesting one was the Side Panel UI available to Chrome extensions. In this post, I will talk about the Chrome side panel, how to build one and the advantages and limitations of using it.

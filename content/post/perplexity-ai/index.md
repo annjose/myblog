@@ -5,6 +5,7 @@ date = "2024-06-27T16:19:12-07:00"
 draft = false
 tags = ["ai", "tech-explorations", "generative-ai", "llm", "machine-learning"]
 topics = []
+images = ["perplexity-ai-library.jpeg"]
 +++
 
 **Perplexity AI** (https://www.perplexity.ai) has been gaining attention in the world of chatbots and large language models. I had heard about it in a few forums and mentioned by industry leaders like Jensen Huang and Kelsey Hightower. In fact, I had created an account and tried it out a few times earlier this year, but didn't take it much seriously. 

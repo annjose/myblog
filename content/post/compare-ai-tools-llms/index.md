@@ -5,6 +5,7 @@ date = "2024-10-25T17:22:33-07:00"
 draft = false
 tags = ["tech-explorations", "llm", "generative-ai"]
 topics = ["ai"]
+images = ["compare-language-models.png"]
 +++
 
 In this post, we will compare the most popular AI tools (frontier models and AI assistants) based on its capabilities, limitations and my personal experience of using them day-to-day. 

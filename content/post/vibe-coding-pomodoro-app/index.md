@@ -5,6 +5,7 @@ date = "2025-03-15T15:18:12-07:00"
 draft = false
 tags = ["ai", "llm", "coding-assistants"]
 topics = ["tech-explorations"]
+images = ["main-page.png"]
 +++
 
 Today I tried something fun - built a Pomodoro timer app mostly by talking to AI instead of typing code myself. And guess what - there is a term for it - [vibe coding](https://en.wikipedia.org/wiki/Vibe_coding), coined by Andrej Karpathy 😎. 

@@ -4,6 +4,7 @@ description = "Explaining core concepts of agentic coding and when to use each o
 date = "2026-02-04T10:11:08-07:00"
 draft = false
 topics = ["tech-explorations", "ai"]
+images = ["agentic-loop.png"]
 tags = ["ai", "llm", "coding-assistants"]
 +++
 

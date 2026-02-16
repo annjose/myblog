@@ -5,6 +5,7 @@ date = "2025-02-24T04:32:12-07:00"
 draft = false
 tags = ["ai", "coding-assistants", "agentic-systems", "llm"]
 topics = ["tech-explorations"]
+images = ["cmd-init-result.jpg"]
 +++
 
 Today I tried [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code), the new agentic coding tool [announced by Anthropic](https://www.anthropic.com/news/claude-3-7-sonnet) this morning. Unlike other agentic tools, Claude Code is a CLI tool.

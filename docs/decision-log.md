@@ -52,3 +52,11 @@ Use this file to keep short architecture/process decisions so agents and humans 
 - Chosen approach: extend `scripts/check-content.sh` for metadata/taxonomy checks and add GitHub Actions workflow `Content Check` to run `check-content` and `hugo`.
 - Consequences: earlier detection of content regressions and more predictable publishing quality.
 - Follow-ups: tune warning thresholds over time and add extra checks only if signal remains high.
+
+- Date: `2026-02-16`
+- Decision: Close the phased blog improvement plan as complete.
+- Context: Phases 0-6 were executed and validated incrementally with local and production verification.
+- Options considered: keep plan open for additional polish vs formally close and track future work separately.
+- Chosen approach: close current plan scope and treat remaining enhancements as optional follow-up tasks.
+- Consequences: clear completion baseline and lower coordination overhead for future maintenance work.
+- Follow-ups: maintain optional improvements as separate TODOs (quality gate tuning, broader CI checks, future OG default image decision).

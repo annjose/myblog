@@ -5,6 +5,7 @@ date = "2025-05-23T17:54:13-07:00"
 draft = false
 tags = ["ai", "llm", "how-to", "cloudflare"]
 topics = ["rag"]
+images = ["autorag-create-select-datasource.png"]
 +++
 
 We know that RAG (Retrieval Augmented Generation) is a reliable mechanism to augment LLMs with up-to-date data and ground them on facts relevant to the context of the user query, thereby reducing hallucination. When set up properly, it works pretty well. Companies like Perplexity AI and enterprise applications use RAG extensively. 

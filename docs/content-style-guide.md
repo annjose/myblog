@@ -45,6 +45,7 @@ Examples:
 - Set `draft = true` while editing.
 - Set `draft = false` only after final review and checks.
 - Run `./scripts/check-content.sh` before publishing.
+- For page bundles with local images, add `images = [...]` in front matter for social card metadata.
 
 ## Backward Compatibility
 - Keep historical content mostly intact.

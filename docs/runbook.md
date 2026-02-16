@@ -79,3 +79,11 @@ See `docs/deploy.md` for details and safety notes.
 3. No unintended taxonomy changes.
 4. Deploy commit message reflects the release intent.
 
+## Quality Gates
+- Local gate:
+```bash
+./scripts/check-content.sh
+```
+- CI gate:
+  - GitHub Actions workflow `Content Check` runs on push and pull request.
+  - It runs `./scripts/check-content.sh` and `hugo`.

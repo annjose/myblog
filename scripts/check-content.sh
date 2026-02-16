@@ -108,6 +108,64 @@ detect_collisions "${tmp_tags}"
 echo "[check] topic collisions:"
 detect_collisions "${tmp_topics}"
 
+# Front matter and social metadata quality checks for bundle posts.
+echo "[check] bundle metadata checks:"
+
+missing_required=0
+missing_images_hint=0
+
+for f in $(find content/post -name "index.md" | sort); do
+  fm="$(sed -n '/^\+\+\+$/,/^\+\+\+$/p' "$f" | sed '1d;$d')"
+
+  if ! printf "%s\n" "$fm" | rg -q '^title[[:space:]]*='; then
+    echo "  - missing required key in $f: title"
+    missing_required=$((missing_required + 1))
+  fi
+  if ! printf "%s\n" "$fm" | rg -q '^date[[:space:]]*='; then
+    echo "  - missing required key in $f: date"
+    missing_required=$((missing_required + 1))
+  fi
+  if ! printf "%s\n" "$fm" | rg -q '^draft[[:space:]]*='; then
+    echo "  - missing required key in $f: draft"
+    missing_required=$((missing_required + 1))
+  fi
+  if ! printf "%s\n" "$fm" | rg -q '^tags[[:space:]]*='; then
+    echo "  - missing required key in $f: tags"
+    missing_required=$((missing_required + 1))
+  fi
+  if ! printf "%s\n" "$fm" | rg -q '^topics[[:space:]]*='; then
+    echo "  - missing required key in $f: topics"
+    missing_required=$((missing_required + 1))
+  fi
+
+  # If a bundle has local images and no front matter images key, raise a warning-style hint.
+  if ! printf "%s\n" "$fm" | rg -q '^images[[:space:]]*='; then
+    image_count="$(find "$(dirname "$f")" -maxdepth 1 -type f | rg -i '\.(png|jpe?g|webp)$' || true)"
+    image_count="$(printf "%s\n" "${image_count}" | sed '/^$/d' | wc -l | tr -d ' ')"
+    if [ "${image_count}" -gt 0 ]; then
+      echo "  - missing recommended key in $f: images (local images found: ${image_count})"
+      missing_images_hint=$((missing_images_hint + 1))
+    fi
+  fi
+done
+
+if [ "${missing_required}" -gt 0 ]; then
+  echo "[check] error: missing required bundle front matter keys: ${missing_required}"
+  rm -f "${tmp_tags}" "${tmp_topics}"
+  exit 1
+fi
+
+if [ "${missing_images_hint}" -gt 0 ]; then
+  echo "[check] warning: bundle posts missing recommended images key: ${missing_images_hint}"
+else
+  echo "[check] bundle images metadata: OK"
+fi
+
+if ! rg -q '^[[:space:]]*images[[:space:]]*=' config.toml; then
+  echo "[check] info: config.toml has no default [params].images fallback for social cards"
+else
+  echo "[check] default social image fallback in config.toml: OK"
+fi
+
 rm -f "${tmp_tags}" "${tmp_topics}"
 echo "[check] completed"
-

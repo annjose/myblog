@@ -26,12 +26,12 @@ Improve maintainability, publishing safety, taxonomy consistency, and content qu
 - ✅ `Phase 3` Repo hygiene and generated asset policy: completed
 - ✅ `Phase 4` Theme/customization consolidation: completed
 - ✅ `Phase 5` Content quality and consistency: completed
-- ⏳ `Phase 6` Lightweight automation and quality gates: pending
+- ✅ `Phase 6` Lightweight automation and quality gates: completed
 
 ## Next TODO
-- Phase 6:
-  - Validate and, if needed, extend `scripts/check-content.sh` for regression detection goals.
-  - Decide whether to add optional CI workflow for build/check gates.
+- 📌 Optional follow-up:
+- 🧪 Tune `scripts/check-content.sh` warnings/errors over time based on editor workflow and false positives.
+- 🔧 Expand CI gates if needed (for example markdown linting or link checks).
 
 ---
 

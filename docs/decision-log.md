@@ -44,3 +44,11 @@ Use this file to keep short architecture/process decisions so agents and humans 
 - Chosen approach: keep inactive themes for now; add `docs/theme-overrides.md` as source-of-truth for active customizations and audit result.
 - Consequences: lower immediate risk and clearer maintenance ownership; inactive theme cleanup remains an optional future repo-hygiene task.
 - Follow-ups: if strict repo minimization is needed later, remove inactive themes in a dedicated, tested cleanup change.
+
+- Date: `2026-02-15`
+- Decision: Add lightweight automated quality gates via local script checks and optional CI workflow.
+- Context: Manual pre-deploy checks were repetitive and easy to miss; repo needed repeatable guardrails.
+- Options considered: local-only checks vs local checks plus CI validation on push/PR.
+- Chosen approach: extend `scripts/check-content.sh` for metadata/taxonomy checks and add GitHub Actions workflow `Content Check` to run `check-content` and `hugo`.
+- Consequences: earlier detection of content regressions and more predictable publishing quality.
+- Follow-ups: tune warning thresholds over time and add extra checks only if signal remains high.

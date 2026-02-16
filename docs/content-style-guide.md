@@ -34,6 +34,7 @@ Examples:
 - `content/post/<slug>/index.md`
 - Keep images/media in the same bundle folder.
 - Use descriptive file names for images.
+- See `docs/image-guidelines.md` for image sizing, shortcode layout patterns, and OG validation workflow.
 
 ## Writing and Markdown Conventions
 - Use concise headings and clear section hierarchy.

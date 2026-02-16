@@ -31,11 +31,12 @@ hugo new post/<slug>/index.md
 2. Update front matter (`title`, `date`, `draft`, `tags`, `topics`).
 3. Add media files next to `index.md`.
 4. Reference images with relative paths in markdown.
-5. Run checks:
+5. Follow `docs/image-guidelines.md` for image size, grid shortcode usage, and social card metadata (`images` front matter).
+6. Run checks:
 ```bash
 ./scripts/check-content.sh
 ```
-6. Switch `draft = false` when ready to publish.
+7. Switch `draft = false` when ready to publish.
 
 ## Update an Existing Post
 1. Edit post markdown and/or colocated media.

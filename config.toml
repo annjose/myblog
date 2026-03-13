@@ -23,6 +23,8 @@ disablePathToLower = true
   siteId = "annjose-blog"
 
 [markup]
+  [markup.goldmark.renderer]
+    unsafe = true
   [markup.highlight]
     codeFences = true
     lineNos = true
@@ -72,6 +74,12 @@ disablePathToLower = true
     weight = 70
     identifier = "mobile-tech"
     url = "/tags/mobile-tech"
+  [[menu.main]]
+    name = "Redesign Log"
+    pre = "<i class='fas fa-wand-magic-sparkles fa-fw'></i>"
+    weight = 90
+    identifier = "redesign"
+    url = "/redesign/"
   [[menu.main]]
     name = "About Me"
     pre = "<i class='fas fa-user fa-fw'></i>"

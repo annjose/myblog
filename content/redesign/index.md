@@ -22,8 +22,8 @@ I'm redesigning this blog from Hugo to Astro, using AI coding agents (Claude Cod
 **Goal:** Go from "I want to redesign my blog" to a spec that an AI agent can execute against.
 
 **Output Artifacts**
-* [The Spec](https://github.com/annjose/myblog/blob/main/docs/redesign/spec.md)
-* [Agent Session Transcript #1 — Spec Creation](https://github.com/annjose/myblog/blob/main/docs/redesign/sessions/session-01-spec-creation.md)
+* [The Spec](https://github.com/annjose/myblog/blob/master/docs/redesign/spec.md)
+* [Agent Session Transcript #1 — Spec Creation](https://github.com/annjose/myblog/blob/master/docs/redesign/sessions/session-01-spec-creation.md)
 
 ### Day 1 — Picking a template (Mar 11)
 

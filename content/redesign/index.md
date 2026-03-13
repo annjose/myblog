@@ -74,8 +74,35 @@ It asked two rounds of clarifying questions — here are the key decisions that 
 
 The result: an **8-phase migration plan spanning ~14 days**. The critical path is a content migration script that converts all 58 posts from Hugo format (TOML front matter, Hugo shortcodes) to Astro format (YAML front matter, MDX). Everything else builds on that.
 
-**What I learned:** Don't start with the AI. Start with your own thinking — even on paper. The handwritten spec forced me to decide what I *actually* want before an agent started suggesting things. The AI's job was to pressure-test it and add structure, not to dream it up from scratch. Also: the agent's first move was to *explore*, not ask. It built context before engaging. That's a good pattern for humans too.
+See the [first version of the spec](https://github.com/annjose/myblog/blob/f27bd1d/docs/redesign/spec.md).
+
+**Reviewing and refining the spec**
+
+The initial spec was solid but needed pressure-testing. I reviewed it and came back with 7 questions covering scope, naming, URLs, deployment strategy, Astro 6 compatibility, and gaps. This kicked off two more rounds of back-and-forth that significantly shaped the final spec.
+
+Key refinements from the review:
+
+- **Scope split**: Moved the Projects page and Auth to "Wave 2" (post-launch enhancements), keeping Wave 1 focused on the core site, blog migration, and deployment. Also renamed "Phase 2" (which was overloaded — used for both implementation phases and deferred features) to "Wave 1" vs "Wave 2" to avoid ambiguity.
+- **URL migration strategy**: New posts live at `/blog/<slug>/` instead of Hugo's `/post/<slug>/`. Old URLs preserved via Cloudflare `_redirects` with 301 redirects — no broken links.
+- **Coexistence plan**: The old Hugo site stays live at annjose.com while the new Astro site is tested at `annjose.pages.dev`. DNS cutover happens only when the new site is fully validated.
+- **Astro version**: AstroPaper hasn't been updated for Astro 6 yet, so we start on Astro 5 and upgrade before launch (Phase 7 in the plan).
+- **Repo strategy**: I almost let the agent create a new repo, but caught it — that would lose all git history. Instead, we're using an `astro` branch in the same repo, with a repo rename (`myblog` → `annjose.com`) and branch rename (`master` → `main`) at cutover.
+
+The agent also ran a gap analysis and found several things neither of us had mentioned:
+
+- **MathJax → KaTeX migration** (2 posts use math expressions)
+- **Git submodule cleanup** (`public/` and theme submodules need removal on the astro branch)
+- **Missing from Wave 1 overview**: RSS feed, page migration (/about, /ammachi, /epsilla, /redesign)
+- **Analytics**: The spec mentioned Google Analytics, but the site actually uses Counterscale (self-hosted on Cloudflare Workers). Fixed throughout.
+- **Automated tests**: Added Playwright e2e tests, Lighthouse CI, and a link checker — none of which were in the original spec.
+
+The final spec has 10 decisions, 8 implementation phases across ~14 days, a full folder structure reference, and a verification checklist. See the [full diff of the spec refinements](https://github.com/annjose/myblog/commit/7bbc49a57258708accd8022136e5116786e1972b) and the [final version of the spec](https://github.com/annjose/myblog/blob/master/docs/redesign/spec.md).
+
+#### What I learned
+Don't start with the AI. Start with your own thinking — even on paper. The handwritten spec forced me to decide what I *actually* want before an agent started suggesting things. The AI's job was to pressure-test it and add structure, not to dream it up from scratch. Also: the agent's first move was to *explore*, not ask. It built context before engaging. That's a good pattern for humans too.
+
+The review rounds taught me something else: **read the spec like a skeptic, not an approver.** The agent produced a thorough plan, but it had a "new repo" default that would have lost git history, wrong analytics (GA instead of Counterscale), and naming collisions I only caught by reading carefully. The AI is good at structure and completeness; the human is good at catching things that *feel wrong*.
 
 ---
 
-*Next up: reviewing the 8-phase plan, adjusting it, and kicking off the migration script.*
+*Next up: kicking off the migration script and scaffolding the Astro project.*

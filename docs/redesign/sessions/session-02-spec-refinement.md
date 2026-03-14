@@ -224,3 +224,94 @@ All 6 changes are done. Summary of what changed in `docs/redesign/collaborative-
 ### Me
 ok can you create a spec that combines the best of both spec/plans (note - i have renamed spec.md to @docs/redesign/collaborative-spec.md so that you can name the combined spec as spec.md 
 as you suggested i want to use collab spec as source of truth and starting point for combined spec, and bring good elements from superpowers spec into the combined spec. and do the neat separation of spec and plan as you suggested.
+
+### Claude
+starts doing some of the things, but then said this ....
+
+You've hit your limit · resets 9pm (America/Los_Angeles)
+
+(after 9 pm PST)....
+
+### Me
+continue what you were doing
+
+### Claude
+I'll draft the structure and content plan for both documents. Let me first check if there's anything in the Superpowers spec's visual design or About page sections that I should pull in precisely.
+
+Now I have all three documents fully read. Let me now write the combined spec and plan.
+
+Done! Here's a summary of what was created:
+
+### `docs/redesign/spec.md` — The Spec (~350 lines)
+**What/why document.** Contains all architectural decisions, visual design specs, content migration rules, URL routing, feature descriptions, testing strategy, and Wave 2 roadmap. No step-by-step commands — just decisions and rationale.
+
+Key elements pulled from each source:
+- **From Collaborative Spec** (retained verbatim): Decisions table, repo strategy, topics→tags merge, Disqus export, RSS continuity, shortcode conversion, KaTeX math, custom routes, Pagefind, Counterscale, image optimization, code block enhancements, 404 page, full testing checklist, Playwright e2e, Lighthouse CI, folder structure with EXISTING/MODIFY/NEW labels, Wave 2 roadmap
+- **From Superpowers Spec**: Color palette with hex values, About page Sectioned Profile design with frontmatter schema, layout dimensions (65%/25% grid, line-height 1.75)
+- **From your choices**: night-owl/github-light syntax themes, Inter + JetBrains Mono fonts
+- **New additions**: Content freeze protocol, performance baseline, SEO validation
+
+### `docs/redesign/wave-1-plan.md` — The Plan (~490 lines)
+**How/when document.** 10 chunks, 43 tasks with checkbox syntax. Adopts Superpowers' format (granular steps, expected outcomes) but covers the full Collaborative Spec scope. Includes TDD workflow for the migration script and tag labels.
+
+Both documents cross-reference each other at the top.
+
+### Me
+ok looks great. let's do one more thing to move the unwanted files collaborative-spec-original.md, superpowers-spec.md and superpowers-plan-phase1.md to an `archive` folder and a disclaimer at the top to say that agents should not use this anymore?
+tell me what is a good approach and not make changes now
+
+### Claude
+Good idea to archive rather than delete — keeps the provenance trail without confusing future agents.
+
+**Recommended approach:**
+
+1. Create `docs/redesign/archive/` folder
+2. Move the three files there:
+   - `collaborative-spec-original.md`
+   - `superpowers-spec.md`
+   - `superpowers-plan-phase1.md`
+3. Add a short `README.md` in the archive folder (rather than editing each file):
+
+```markdown
+# Archive — Do Not Use
+
+These files are superseded by:
+- **[../spec.md](../spec.md)** — the consolidated spec
+- **[../wave-1-plan.md](../wave-1-plan.md)** — the implementation plan
+
+They are kept for historical reference only.
+```
+
+**Why a README instead of editing each file:**
+- One file to maintain instead of three
+- Doesn't modify the original files (preserving them exactly as they were)
+- Any agent opening the folder sees the disclaimer immediately
+
+**For `collaborative-spec-original.md` specifically:** Use `git mv` (not plain `mv`) so git tracks the move. For the Superpowers files, same — `git mv` to preserve history.
+
+Want me to go ahead with this?
+
+### Me
+Yes, go ahead
+
+### Claude
+Great! Clean git history with the rename diff tracked properly. Here's where things stand:
+
+```
+docs/redesign/
+├── spec.md              ← Consolidated spec (git tracks evolution from collaborative-spec.md)
+├── wave-1-plan.md       ← 10-phase, 43-task implementation plan
+├── sessions/
+└── archive/
+    ├── README.md                    ← "Do not use" disclaimer
+    ├── collaborative-spec.md        ← Original collaborative spec snapshot
+    ├── superpowers-spec.md          ← Superpowers-generated spec
+    └── superpowers-plan-phase1.md   ← Superpowers-generated plan
+```
+
+Ready to start implementing whenever you are — Phase 1 of the plan is project bootstrap (repo rename, scaffold AstroPaper, first Cloudflare deploy).
+
+### Me
+Yay!
+
+THE END!

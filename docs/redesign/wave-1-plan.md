@@ -10,24 +10,24 @@
 
 ### Task 1: Rename repo and create Astro branch
 
-- [ ] Rename GitHub repo: `myblog` → `annjose.com` (do this first, before Cloudflare Pages setup)
-- [ ] Update local remote: `git remote set-url origin git@github.com:annjose/annjose.com.git`
-- [ ] Create branch: `git checkout -b astro`
-- [ ] Remove Hugo files: theme, config.toml, deploy.sh, resources/
-- [ ] Remove git submodules: `public/` (GitHub Pages output) and theme submodules in `.gitmodules`
-- [ ] Preserve `content/`, `docs/`, `scripts/`, `static/` directories
-- [ ] Commit cleanup
+- [x] Rename GitHub repo: `myblog` → `annjose.com` (do this first, before Cloudflare Pages setup)
+- [x] Update local remote: `git remote set-url origin git@github.com:annjose/annjose.com.git`
+- [x] Create branch: `git checkout -b astro`
+- [x] Remove Hugo files: theme, config.toml, deploy.sh, resources/
+- [x] Remove git submodules: `public/` (GitHub Pages output) and theme submodules in `.gitmodules`
+- [x] Preserve `content/`, `docs/`, `scripts/`, `static/` directories
+- [x] Commit cleanup
 
 **Expected**: Clean branch with only content, docs, scripts, and static assets remaining. Hugo `master` branch untouched.
 
 ### Task 2: Scaffold AstroPaper
 
-- [ ] Scaffold into a temp dir, then move files into repo root: `pnpm create astro@latest --template satnaing/astro-paper`
-- [ ] Verify Astro 5.x in package.json
-- [ ] Run `pnpm install`
-- [ ] Verify `pnpm run build` succeeds (AstroPaper demo content)
-- [ ] Verify `pnpm run dev` starts at `http://localhost:4321`
-- [ ] Commit scaffold
+- [x] Scaffold into a temp dir, then move files into repo root: `pnpm create astro@latest --template satnaing/astro-paper`
+- [x] Verify Astro 5.x in package.json
+- [x] Run `pnpm install`
+- [x] Verify `pnpm run build` succeeds (AstroPaper demo content)
+- [x] Verify `pnpm run dev` starts at `http://localhost:4321`
+- [x] Commit scaffold
 
 **Expected**: Vanilla AstroPaper site builds and runs locally.
 

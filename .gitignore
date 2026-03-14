@@ -27,8 +27,14 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# Hugo specific
+# Astro
+node_modules/
+dist/
+
+# Hugo (legacy)
 .hugo_build.lock
 resources/_gen/
 
 .claude/launch.json
+public/pagefind/
+.astro/

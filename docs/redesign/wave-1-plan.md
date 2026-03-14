@@ -136,10 +136,12 @@
 
 **Files**: `scripts/convert-disqus.ts`, `src/content/comments/`
 
-- [ ] Export XML from Disqus admin (shortname: `anncjose`)
-- [ ] Write conversion script: parse XML, group by thread URL → post slug
-- [ ] Generate static HTML fragments at `src/content/comments/<slug>.html`
-- [ ] Commit
+- [x] Export XML from Disqus admin (shortname: `anncjose`)
+- [x] Write conversion script with TDD (15 tests): parse XML, group by thread URL → post slug
+- [x] Generate static HTML fragments at `src/content/comments/<slug>.html`
+- [x] Commit
+
+**Results**: 24 comments across 9 posts (2 deleted + 8 spam filtered). Threaded replies supported. ✅
 
 ---
 

@@ -1,0 +1,14 @@
+<div class="disqus-comment" id="comment-6558122154">
+  <div class="comment-header">
+    <span class="comment-author">M ALI</span>
+    <time datetime="2024-09-26T16:05:49Z">Sep 26, 2024</time>
+  </div>
+  <div class="comment-body"><p>There is also a user parameter we can pass in session callback. Where does that come from?</p></div>
+</div>
+<div class="disqus-comment" id="comment-6607502315">
+  <div class="comment-header">
+    <span class="comment-author">Christian Rich</span>
+    <time datetime="2024-12-09T00:33:44Z">Dec 8, 2024</time>
+  </div>
+  <div class="comment-body"><p>Making a DB call in the session callback is inefficient since the callback is invoked every time the session is checked.<br>It's better to do this DB lookup in the <code>jwt</code> callback handler (which is invoked only when a new JWT is created) and pin the <code>userId</code> to the session object.</p><p>E.g (sorry I'm unable to format the code block using Disquss so it's readable)</p><p><code>async session({ session, token }) {</code><br><code>    if (typeof token?.userId === 'string') {</code><br><code>         session.user.id   = token.userId;</code><br><code>    }<br></code><br><code>    return session;</code><br><code>},</code><br><code>async jwt({ trigger, token, account, profile, user }) {</code><br><code>    if (!trigger) {</code><br><code>        return token;</code><br><code>    }<br></code><br><code>    const email = user?.email || profile?.email;</code><br><code>    let dbUser = null;<br></code><br><code>    // Only do a DB when userId is not pinned to the token</code><br><code>    if (!token.userId || trigger === "signIn" || trigger === "signUp") {</code><br><code>        dbUser = await getOrCreateDbUser(email, account, user, profile);</code><br><code>    }<br></code><br><code>    if (!token.userId &amp;&amp; dbUser) {</code><br><code>        token.userId =  dbUser.id</code><br><code>    }<br></code><br><code>    return token;</code><br><code>}</code></p></div>
+</div>

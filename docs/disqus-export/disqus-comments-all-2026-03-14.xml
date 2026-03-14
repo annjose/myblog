@@ -1,0 +1,2992 @@
+<?xml version="1.0" encoding="utf-8"?>
+<disqus xmlns="http://disqus.com" xmlns:dsq="http://disqus.com/disqus-internals" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://disqus.com/api/schemas/1.0/disqus.xsd http://disqus.com/api/schemas/1.0/disqus-internals.xsd">
+<category dsq:id="4570336">
+<forum>anncjose</forum>
+<title>General</title>
+<isDefault>true</isDefault>
+</category>
+<thread dsq:id="4679806386">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>http://ann.chiramattel.com/post/hello/</link>
+<title>First Post from Hugo · My Thoughts</title>
+<message />
+<createdAt>2016-03-21T04:47:26Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="4745451212">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>http://ann.chiramattel.com/post/first-post-from-hugo/</link>
+<title>First Post from Hugo · My Thoughts</title>
+<message />
+<createdAt>2016-04-14T03:45:32Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="4745498292">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>http://ann.chiramattel.com/post/conversation-as-interface/</link>
+<title>Conversation As Interface</title>
+<message />
+<createdAt>2016-04-14T04:21:13Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="4745706066">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>http://ann.chiramattel.com/post/react-native-visual-studio-code/</link>
+<title>ReactNative in Visual Studio Code</title>
+<message />
+<createdAt>2016-04-14T06:45:27Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="5167483325">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>http://ann.chiramattel.com/post/machine-learning-coursera/</link>
+<title>Machine Learning - a new journey</title>
+<message />
+<createdAt>2016-09-23T15:51:42Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="5170093521">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>http://ann.chiramattel.com/post/display-math-expressions-in-hugo/</link>
+<title>How to Display Mathematical Expressions in Blog</title>
+<message />
+<createdAt>2016-09-24T16:28:18Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="5177985912">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>http://ann.chiramattel.com/post/realm-announces-mobile-platform/</link>
+<title>Realm Mobile Platform · Reflections</title>
+<message />
+<createdAt>2016-09-27T17:21:04Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="5307238662">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>http://ann.chiramattel.com/post/realm-announces-mobile-platform/index.html</link>
+<title>Realm Mobile Platform · Reflections</title>
+<message />
+<createdAt>2016-11-15T23:10:47Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="5688884659">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>http://ann.chiramattel.com/post/xcode-playgrounds-tdd/</link>
+<title>TDD in Xcode Playground</title>
+<message />
+<createdAt>2017-04-02T09:47:58Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="5842765651">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>http://ann.chiramattel.com/post/GoogleIO-2017/</link>
+<title>GoogleIO 2017 · Reflections</title>
+<message />
+<createdAt>2017-05-23T10:59:29Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="6383332010">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>http://ann.chiramattel.com/post/graphql-intro/</link>
+<title>Learn GraphQL By Example</title>
+<message />
+<createdAt>2017-12-31T18:59:22Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="6383332071">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>http://ann.chiramattel.com/post/fastlane/</link>
+<title>Fastlane · Reflections</title>
+<message />
+<createdAt>2017-12-31T18:59:25Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="6942522053">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>http://ann.chiramattel.com/post/ghc-2018-hightlights/</link>
+<title>GHC 2018 Hightlights · Reflections</title>
+<message />
+<createdAt>2018-10-01T05:01:56Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="7053712443">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://ann.chiramattel.com/post/mocking-network-requests-ios/</link>
+<title>How To Mock Network Requests in iOS</title>
+<message />
+<createdAt>2018-11-18T05:14:06Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="7065609539">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://ann.chiramattel.com/post/swift42-whats-new/</link>
+<title>Swift 4.2 - What's New</title>
+<message />
+<createdAt>2018-11-22T23:33:57Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="7926178332">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://games.yahoo.co.jp/news/item?n=20171208-00000021-ygame_famitsu_com</link>
+<title>ReactNative in Visual Studio Code</title>
+<message />
+<createdAt>2020-03-21T04:27:44Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="8101961908">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://ann.chiramattel.com/post/vscode-macos-cpp/</link>
+<title>Tinkering with VS Code, Mac and C++</title>
+<message />
+<createdAt>2020-06-30T05:47:50Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="8102165467">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://ann.chiramattel.com/post/what-do-i-really-want/</link>
+<title>What do I really want · Reflections</title>
+<message />
+<createdAt>2020-06-30T08:51:30Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="8103348346">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://ann.chiramattel.com/post/upgrade-hugo/</link>
+<title>Upgrade Hugo · Reflections</title>
+<message />
+<createdAt>2020-07-01T00:07:53Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="8113584152">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://ann.chiramattel.com/post/grit-passion-perseverance/</link>
+<title>Grit: Passion &amp; Perseverance</title>
+<message />
+<createdAt>2020-07-07T06:33:51Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="8301309139">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://slyervistby26oaus3ece3in64--ann-chiramattel-com.translate.goog/post/mocking-network-requests-ios/</link>
+<title>How to mock network requests in iOS</title>
+<message />
+<createdAt>2020-12-04T20:57:22Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="8465669437">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>http://evil.com</link>
+<title>How to mock network requests in iOS</title>
+<message />
+<createdAt>2021-04-05T06:37:31Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9376898373">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://ann.chiramattel.com/post/mocking-network-requests-ios/?_sm_nck=1</link>
+<title>How to mock network requests in iOS</title>
+<message />
+<createdAt>2022-09-30T16:37:43Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9575722089">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://ann.chiramattel.com/post/chatgpt-intro-3-ways/</link>
+<title>ChatGPT Intro - 3 Ways</title>
+<message />
+<createdAt>2023-02-13T07:31:05Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9575722135">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://ann.chiramattel.com/post/chatgpt-fully-written-by-chatgpt/</link>
+<title>ChatGPT Intro - Fully written by ChatGPT</title>
+<message />
+<createdAt>2023-02-13T07:31:07Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9575722205">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://ann.chiramattel.com/post/chatgpt-intro/</link>
+<title>ChatGPT - An Introduction</title>
+<message />
+<createdAt>2023-02-13T07:31:11Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9575722370">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://ann.chiramattel.com/post/chatgpt-fully-improvised-by-chatgpt/</link>
+<title>ChatGPT Intro - Ann's draft, improvised by ChatGPT</title>
+<message />
+<createdAt>2023-02-13T07:31:21Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9595712202">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://ann.chiramattel.com/post/chatgpt-intro-rewritten-by-chatgpt/</link>
+<title>ChatGPT Introduction - rewritten by ChatGPT from Ann's originial post</title>
+<message />
+<createdAt>2023-02-27T04:46:56Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9595712270">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://ann.chiramattel.com/post/chatgpt-intro-written-by-chatgpt-from-my-outline/</link>
+<title>ChatGPT Introduction - written by ChatGPT using Ann's outline</title>
+<message />
+<createdAt>2023-02-27T04:47:03Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9652299079">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://ann.chiramattel.com/post/gpt-4-tech-report-highlights/</link>
+<title>GPT-4 Technical Report Highlights</title>
+<message />
+<createdAt>2023-04-10T05:32:26Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9876353539">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/gpt-4-tech-report-highlights/</link>
+<title>GPT-4 Technical Report Highlights</title>
+<message />
+<createdAt>2023-10-01T00:36:33Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9876353808">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/xcode-playgrounds-tdd/</link>
+<title>TDD in Xcode Playground</title>
+<message />
+<createdAt>2023-10-01T00:36:54Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9876353871">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/GoogleIO-2017/</link>
+<title>Google IO 2017 · Reflections</title>
+<message />
+<createdAt>2023-10-01T00:36:59Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9876353954">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/fastlane/</link>
+<title>Fastlane · Reflections</title>
+<message />
+<createdAt>2023-10-01T00:37:05Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9877103034">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/what-do-i-really-want/</link>
+<title>What do I really want · Reflections</title>
+<message />
+<createdAt>2023-10-01T14:40:47Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9877103389">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/vscode-macos-cpp/</link>
+<title>Tinkering with VS Code, MacOS and C++</title>
+<message />
+<createdAt>2023-10-01T14:41:08Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9877103549">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/upgrade-hugo/</link>
+<title>Upgrading my blog engine Hugo and content</title>
+<message />
+<createdAt>2023-10-01T14:41:17Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9877104227">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/grit-passion-perseverance/</link>
+<title>Grit: Passion &amp; Perseverance</title>
+<message />
+<createdAt>2023-10-01T14:41:55Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9878436374">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/mocking-network-requests-ios/</link>
+<title>How to mock network requests in iOS</title>
+<message />
+<createdAt>2023-10-02T14:23:56Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9882944045">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/chatgpt-intro-3-ways/</link>
+<title>Blog about ChatGPT in three different ways</title>
+<message />
+<createdAt>2023-10-05T22:42:31Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9892091068">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/ghc-2018-hightlights/</link>
+<title>GraceHopper 2018 Highlights</title>
+<message />
+<createdAt>2023-10-12T21:15:15Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9892433257">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/chatgpt-intro/</link>
+<title>ChatGPT - An Introduction</title>
+<message />
+<createdAt>2023-10-13T04:32:31Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9892433552">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/first-post-from-hugo/</link>
+<title>First post from Hugo · Reflections</title>
+<message />
+<createdAt>2023-10-13T04:32:55Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9893762594">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/chatgpt-intro-rewritten-by-chatgpt/</link>
+<title>ChatGPT Introduction - rewritten by ChatGPT from Ann's originial post</title>
+<message />
+<createdAt>2023-10-14T05:49:04Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9894254239">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/graphql-intro/</link>
+<title>Learn GraphQL By Example</title>
+<message />
+<createdAt>2023-10-14T15:24:23Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9894284783">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/conversation-as-interface/</link>
+<title>Conversation as Interface</title>
+<message />
+<createdAt>2023-10-14T15:52:44Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9894314220">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/machine-learning-coursera/</link>
+<title>Machine Learning - A new journey</title>
+<message />
+<createdAt>2023-10-14T16:20:42Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9894875410">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/chatgpt-intro-written-by-chatgpt-from-my-outline/</link>
+<title>ChatGPT Introduction - written by ChatGPT using Ann's outline</title>
+<message />
+<createdAt>2023-10-15T03:55:22Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9896836043">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/new-beginning/</link>
+<title>A new beginning · Reflections</title>
+<message />
+<createdAt>2023-10-16T16:50:41Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9897118153">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/new-beginning/?_x_tr_sl=auto&amp;_x_tr_tl=zh-CN&amp;_x_tr_hl=en&amp;_x_tr_pto=wapp</link>
+<title>A new beginning · Reflections</title>
+<message />
+<createdAt>2023-10-16T21:37:11Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9897391101">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/display-math-expressions-in-hugo/</link>
+<title>Display mathematical expressions in blog</title>
+<message />
+<createdAt>2023-10-17T03:48:28Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9903544569">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/week-in-review-week1/</link>
+<title>Week in Review - Week #1</title>
+<message />
+<createdAt>2023-10-21T22:09:47Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9903707175">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/week-in-review-week1/?trk=feed_main-feed-card_feed-article-content</link>
+<title>Week in Review - Week #1</title>
+<message />
+<createdAt>2023-10-22T01:52:19Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9904629672">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/swift42-whats-new/</link>
+<title>Swift 4.2 - What's New</title>
+<message />
+<createdAt>2023-10-22T18:03:20Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9912381843">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/week-in-review-week2/</link>
+<title>Week in Review - Week #2</title>
+<message />
+<createdAt>2023-10-29T00:55:00Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9912443316">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/week-in-review-week2/?trk=feed_main-feed-card_feed-article-content</link>
+<title>Week in Review - Week #2</title>
+<message />
+<createdAt>2023-10-29T02:31:19Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9914928508">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/week-in-review-week1/?trk=feed-detail_main-feed-card_feed-article-content</link>
+<title>Week in Review - Week #1</title>
+<message />
+<createdAt>2023-10-30T22:16:21Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9928580657">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/openai-devday-2023-highlights/</link>
+<title>OpenAI DevDay 2023 - Highlights</title>
+<message />
+<createdAt>2023-11-10T06:45:02Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9929337868">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/openai-devday-2023-observations-learnings/</link>
+<title>OpenAI DevDay 2023 - Observations &amp; Learnings</title>
+<message />
+<createdAt>2023-11-10T19:41:04Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9940447572">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/week-in-review-week5/</link>
+<title>Week in Review - Week #5</title>
+<message />
+<createdAt>2023-11-19T05:21:59Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9940447910">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/week-in-review-week4/</link>
+<title>Week in Review - Week #4</title>
+<message />
+<createdAt>2023-11-19T05:22:23Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9940448216">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/week-in-review-week3/</link>
+<title>Week in Review - Week #3</title>
+<message />
+<createdAt>2023-11-19T05:22:47Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="9969698782">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/openai-devday-2023-observations-learnings/?trk=feed_main-feed-card_feed-article-content</link>
+<title>OpenAI DevDay 2023 - Observations &amp; Learnings</title>
+<message />
+<createdAt>2023-12-08T08:29:55Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10005025525">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/goodbye-thankyou-2023/</link>
+<title>Goodbye and Thank You 2023</title>
+<message />
+<createdAt>2023-12-31T05:08:47Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10005634862">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/goodbye-thankyou-2023/?trk=feed_main-feed-card_feed-article-content</link>
+<title>Goodbye and Thank You 2023</title>
+<message />
+<createdAt>2023-12-31T15:27:17Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10047558388">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/react-native-visual-studio-code/</link>
+<title>ReactNative in Visual Studio Code</title>
+<message />
+<createdAt>2024-01-26T13:38:37Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10051456736">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/learning-to-building.md/</link>
+<title>From Learning to Building</title>
+<message />
+<createdAt>2024-01-28T21:22:51Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10051822974">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/learning-to-building/</link>
+<title>From Learning to Building</title>
+<message />
+<createdAt>2024-01-29T03:12:25Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10053032449">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/learning-to-building/?trk=feed_main-feed-card_feed-article-content</link>
+<title>From Learning to Building</title>
+<message />
+<createdAt>2024-01-29T19:41:40Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10053788677">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/run-code-llama-70B-locally/</link>
+<title>Run Code Llama 70B locally</title>
+<message />
+<createdAt>2024-01-30T06:42:23Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10055426151">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/run-code-llama-70B-locally/?trk=feed-detail_main-feed-card_feed-article-content</link>
+<title>Run Code Llama 70B locally</title>
+<message />
+<createdAt>2024-01-31T06:39:23Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10176647502">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/how-to-customize-nextauth-session/</link>
+<title>How to customize session data in NextAuth</title>
+<message />
+<createdAt>2024-04-30T05:20:07Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10215738703">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/how-to-customize-nextauth-session/?_x_tr_sl=en&amp;_x_tr_tl=ja&amp;_x_tr_hl=ja&amp;_x_tr_pto=sc</link>
+<title>How to customize session data in NextAuth</title>
+<message />
+<createdAt>2024-06-03T07:09:54Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10223549128">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/nextjs-migrate-pages-app-router/</link>
+<title>Next.js - Migrate from Pages to App Router</title>
+<message />
+<createdAt>2024-06-11T00:13:38Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10224178232">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/realm-announces-mobile-platform/</link>
+<title>Realm Mobile Platform · Reflections</title>
+<message />
+<createdAt>2024-06-11T15:14:36Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10226734628">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/apple-intelligence/</link>
+<title>The Apple of AI · Reflections</title>
+<message />
+<createdAt>2024-06-14T05:48:06Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10227510835">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/apple-intelligence/?trk=feed_main-feed-card_feed-article-content</link>
+<title>The Apple of AI · Reflections</title>
+<message />
+<createdAt>2024-06-15T00:35:58Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10228600221">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/apple-intelligence/?trk=feed-detail_main-feed-card_feed-article-content</link>
+<title>The Apple of AI · Reflections</title>
+<message />
+<createdAt>2024-06-16T07:05:01Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10233283430">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/nextjs-migrate-pages-app-router/?trk=feed_main-feed-card_feed-article-content</link>
+<title>Next.js - Migrate from Pages to App Router</title>
+<message />
+<createdAt>2024-06-21T04:11:15Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10241365516">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/perplexity-ai/</link>
+<title>Perplexity AI: A Deep Dive</title>
+<message />
+<createdAt>2024-06-29T02:44:32Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10241365680">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/perplexity-ai-ceo-insights/</link>
+<title>Perplexity AI: Insights from the CEO Aravind Srinivas</title>
+<message />
+<createdAt>2024-06-29T02:44:47Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10257530022">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/perplexity-ai/?t</link>
+<title>Perplexity AI: A Deep Dive</title>
+<message />
+<createdAt>2024-07-13T18:03:10Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10279846402">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/reimagine-milestone/</link>
+<title>Reimagine Journey - A Big Milestone</title>
+<message />
+<createdAt>2024-08-03T02:05:06Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10280715226">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/reimagine-milestone/?trk=feed_main-feed-card_feed-article-content</link>
+<title>Reimagine Journey - A Big Milestone</title>
+<message />
+<createdAt>2024-08-03T22:42:21Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10304017697">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/run-code-llama-70B-locally/?_x_tr_sl=en&amp;_x_tr_tl=zh-TW&amp;_x_tr_hl=zh-TW&amp;_x_tr_pto=sc</link>
+<title>本地運行程式碼 Llama 70B · 反思</title>
+<message />
+<createdAt>2024-08-30T02:13:35Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10315816586">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/browser-extn-intro/</link>
+<title>Browser Extensions: What, Why and How</title>
+<message />
+<createdAt>2024-09-10T23:52:55Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10359927998">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/compare-llms-ai-assistants/</link>
+<title>Compare LLMs and AI Assistants</title>
+<message />
+<createdAt>2024-10-26T03:48:58Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10360024058">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/compare-ai-tools-llms/</link>
+<title>Compare AI Tools: LLMs and AI Assistants</title>
+<message />
+<createdAt>2024-10-26T07:05:11Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10361581619">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/compare-ai-tools-llms/?trk=feed_main-feed-card_feed-article-content</link>
+<title>Compare AI Tools: LLMs and AI Assistants</title>
+<message />
+<createdAt>2024-10-28T01:55:39Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10371323024">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/v0-dev-firsthand/</link>
+<title>Vercel's v0.dev: My Firsthand Experience</title>
+<message />
+<createdAt>2024-11-07T16:50:26Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10373204656">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/browser-extn-adv/</link>
+<title>Browser Extensions: Part 2 - Advanced Concepts</title>
+<message />
+<createdAt>2024-11-09T20:16:35Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10373320352">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/gpt-4-vision-in-action/</link>
+<title>GPT-4 Turbo Vision: In Action</title>
+<message />
+<createdAt>2024-11-09T23:31:09Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10397117384">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/reimagine-milestone/?t</link>
+<title>Reimagine Journey - A Big Milestone</title>
+<message />
+<createdAt>2024-12-06T07:33:50Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10405962187">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/how-to-customize-nextauth-session/?_x_tr_sl=auto&amp;_x_tr_tl=pt&amp;_x_tr_hl=pt-BR</link>
+<title>How to customize session data in NextAuth</title>
+<message />
+<createdAt>2024-12-15T22:08:46Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10409872884">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/v0-dev-firsthand/?_x_tr_sl=en&amp;_x_tr_tl=nl&amp;_x_tr_hl=nl&amp;_x_tr_pto=rq</link>
+<title>Vercel v0.dev: A hands-on review</title>
+<message />
+<createdAt>2024-12-20T09:40:23Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10410594717">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/v0-dev-firsthand/?t</link>
+<title>Vercel v0.dev: A hands-on review</title>
+<message />
+<createdAt>2024-12-21T06:15:26Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10417631142">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/openai-devday-2023-highlights/?t</link>
+<title>OpenAI DevDay 2023 - Highlights</title>
+<message />
+<createdAt>2024-12-29T19:36:28Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10420897963">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/how-to-customize-nextauth-session/?_x_tr_sl=en&amp;_x_tr_tl=es&amp;_x_tr_hl=es&amp;_x_tr_pto=tc</link>
+<title>Cómo personalizar los datos de sesión en NextAuth · Reflexiones</title>
+<message />
+<createdAt>2025-01-02T14:16:34Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10425067586">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/v0-dev-firsthand/?_x_tr_sl=en&amp;_x_tr_tl=de&amp;_x_tr_hl=de&amp;_x_tr_pto=rq</link>
+<title>Vercel v0.dev: A hands-on review</title>
+<message />
+<createdAt>2025-01-06T17:01:17Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10436811287">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/v0-dev-firsthand/?_x_tr_sl=en&amp;_x_tr_tl=pl&amp;_x_tr_hl=pl&amp;_x_tr_pto=rq</link>
+<title>Vercel v0.dev: A hands-on review</title>
+<message />
+<createdAt>2025-01-19T06:29:39Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10468671320">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/chrome-side-panel/</link>
+<title>Chrome Side Panel · Reflections</title>
+<message />
+<createdAt>2025-02-21T06:37:07Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10472445195">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/claude-code-first-impressions/</link>
+<title>Claude Code: First Impressions</title>
+<message />
+<createdAt>2025-02-25T05:03:22Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10472457310">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/claude-code-first-impressions/?trk=feed_main-feed-card_feed-article-content</link>
+<title>Claude Code: First Impressions</title>
+<message />
+<createdAt>2025-02-25T05:24:45Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10475595448">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/v0-dev-firsthand/?_x_tr_sl=en&amp;_x_tr_tl=es&amp;_x_tr_hl=es&amp;_x_tr_pto=rq</link>
+<title>Vercel v0.dev: A hands-on review</title>
+<message />
+<createdAt>2025-02-27T23:30:08Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10483277755">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/v0-dev-firsthand/</link>
+<title>Vercel v0.dev: A hands-on review</title>
+<message />
+<createdAt>2025-03-07T05:03:09Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10484933423">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/v0-dev-firsthand/?_x_tr_sl=en&amp;_x_tr_tl=es&amp;_x_tr_hl=es&amp;_x_tr_pto=wa</link>
+<title>Vercel v0.dev: una revisión práctica</title>
+<message />
+<createdAt>2025-03-08T23:52:00Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10485361827">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/v0-dev-firsthand/?_x_tr_sl=en&amp;_x_tr_tl=es&amp;_x_tr_hl=es&amp;_x_tr_pto=tc</link>
+<title>Vercel v0.dev: una revisión práctica</title>
+<message />
+<createdAt>2025-03-09T13:18:10Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10485486224">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/v0-dev-firsthand/?_x_tr_sl=en&amp;_x_tr_tl=ru&amp;_x_tr_hl=ru&amp;_x_tr_pto=rq</link>
+<title>Vercel v0.dev: A hands-on review</title>
+<message />
+<createdAt>2025-03-09T16:24:34Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10485948748">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/v0-dev-firsthand/?_x_tr_sl=en&amp;_x_tr_tl=hi&amp;_x_tr_hl=hi&amp;_x_tr_pto=tc</link>
+<title>Vercel v0.dev: A hands-on review</title>
+<message />
+<createdAt>2025-03-10T05:16:35Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10490500261">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/reimagine-fitness-milestone/</link>
+<title>Reimagining Strength: A Fitness Milestone</title>
+<message />
+<createdAt>2025-03-13T22:17:37Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10493099308">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/vibe-coding-pomodoro-app/</link>
+<title>Vibe coding a Pomodoro app with AI</title>
+<message />
+<createdAt>2025-03-16T02:35:40Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10493394049">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/vibe-coding-pomodoro-app/?trk=feed-detail_main-feed-card_feed-article-content</link>
+<title>Vibe coding a Pomodoro app with AI</title>
+<message />
+<createdAt>2025-03-16T11:19:56Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10493685645">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/vibe-coding-pomodoro-app/?trk=feed_main-feed-card_feed-article-content</link>
+<title>Vibe coding a Pomodoro app with AI</title>
+<message />
+<createdAt>2025-03-16T18:16:14Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10499926755">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>http://127.0.0.1:5500/public/post/chrome-side-panel/index.html</link>
+<title>Chrome Side Panel · Reflections</title>
+<message />
+<createdAt>2025-03-24T02:00:20Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10499927428">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>http://127.0.0.1:5500/public/post/browser-comparison-by-privacy/index.html</link>
+<title>Privacy features of popular browsers</title>
+<message />
+<createdAt>2025-03-24T02:01:44Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10499928536">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>http://127.0.0.1:5500/public/post/browsers-privacy-compare/index.html</link>
+<title>Which browser cares about privacy the most?</title>
+<message />
+<createdAt>2025-03-24T02:04:07Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10499995977">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/browsers-privacy-compare/</link>
+<title>Which browser cares about privacy the most?</title>
+<message />
+<createdAt>2025-03-24T04:34:34Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10511855140">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/v0-dev-firsthand/?_x_tr_sl=en&amp;_x_tr_tl=sv&amp;_x_tr_hl=sv&amp;_x_tr_pto=rq</link>
+<title>Vercel v0.dev: A hands-on review</title>
+<message />
+<createdAt>2025-04-07T16:20:38Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10518366216">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/v0-dev-firsthand/?_x_tr_sl=en&amp;_x_tr_tl=ta&amp;_x_tr_hl=ta&amp;_x_tr_pto=rq</link>
+<title>Vercel v0.dev: A hands-on review</title>
+<message />
+<createdAt>2025-04-16T04:52:44Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10524083824">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/perplexity-ai/?_x_tr_sl=en&amp;_x_tr_tl=es&amp;_x_tr_hl=es&amp;_x_tr_pto=tc</link>
+<title>Perplexity AI: Un análisis profundo</title>
+<message />
+<createdAt>2025-04-24T01:56:48Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10529655734">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/run-code-llama-70B-locally/?_x_tr_sl=en&amp;_x_tr_tl=es&amp;_x_tr_hl=es&amp;_x_tr_pto=tc</link>
+<title>Run Code Llama 70B locally</title>
+<message />
+<createdAt>2025-04-30T21:31:41Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10530266817">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/v0-dev-firsthand/?_x_tr_sl=en&amp;_x_tr_tl=hi&amp;_x_tr_hl=hi&amp;_x_tr_pto=rq</link>
+<title>Vercel v0.dev: A hands-on review</title>
+<message />
+<createdAt>2025-05-01T15:54:17Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10531217723">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/v0-dev-firsthand/?_x_tr_sl=auto&amp;_x_tr_tl=es&amp;_x_tr_hl=es-419&amp;_x_tr_pto=tc</link>
+<title>Vercel v0.dev: A hands-on review</title>
+<message />
+<createdAt>2025-05-02T20:41:11Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10540315824">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/v0-dev-firsthand/?_x_tr_sl=en&amp;_x_tr_tl=pt&amp;_x_tr_hl=pt&amp;_x_tr_pto=tc</link>
+<title>Vercel v0.dev: A hands-on review</title>
+<message />
+<createdAt>2025-05-14T19:32:22Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10542975946">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/v0-dev-firsthand/?_x_tr_sl=en&amp;_x_tr_tl=tr&amp;_x_tr_hl=tr&amp;_x_tr_pto=wa</link>
+<title>Vercel v0.dev: A hands-on review</title>
+<message />
+<createdAt>2025-05-18T19:19:07Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10546225076">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/v0-dev-firsthand/?_x_tr_sl=en&amp;_x_tr_tl=fr&amp;_x_tr_hl=fr&amp;_x_tr_pto=rq</link>
+<title>Vercel v0.dev: A hands-on review</title>
+<message />
+<createdAt>2025-05-23T09:10:16Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10548810999">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/cloudflare-autorag-step-by-step/</link>
+<title>Cloudflare AutoRAG: RAG on auto-pilot</title>
+<message />
+<createdAt>2025-05-25T21:10:10Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10548954490">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/cloudflare-autorag-step-by-step/?trk=feed_main-feed-card_feed-article-content</link>
+<title>Cloudflare AutoRAG: RAG on auto-pilot</title>
+<message />
+<createdAt>2025-05-26T02:34:21Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10553911994">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/v0-dev-firsthand/?_x_tr_sl=en&amp;_x_tr_tl=tr&amp;_x_tr_hl=tr&amp;_x_tr_pto=tc</link>
+<title>Vercel v0.dev: A hands-on review</title>
+<message />
+<createdAt>2025-05-31T22:12:51Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10554179808">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/v0-dev-firsthand/?_x_tr_sl=en&amp;_x_tr_tl=vi&amp;_x_tr_hl=vi&amp;_x_tr_pto=tc</link>
+<title>Vercel v0.dev: Đánh giá thực tế</title>
+<message />
+<createdAt>2025-06-01T08:04:20Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10554499061">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/mobile-ondevice-ai/</link>
+<title>Mobile On-device AI · Reflections</title>
+<message />
+<createdAt>2025-06-01T18:58:26Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10556502611">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/edge-ai-essentials/</link>
+<title>Edge AI: The Essentials</title>
+<message />
+<createdAt>2025-06-04T16:10:19Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10556894265">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/mobile-on-device-ai/</link>
+<title>Mobile On-device AI: Smarter, Faster, and Private Apps</title>
+<message />
+<createdAt>2025-06-05T05:32:49Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10556901427">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/</link>
+<title>Hands-On: Mobile AI with Gemma - iOS, Android</title>
+<message />
+<createdAt>2025-06-05T05:49:37Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10556933322">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/mobile-ondevice-ai-hands-on-gemma/</link>
+<title>Hands-On: Mobile AI with Gemma - iOS, Android</title>
+<message />
+<createdAt>2025-06-05T06:55:31Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10558116609">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/mobile-on-device-ai/?trk=feed_main-feed-card_feed-article-content</link>
+<title>Mobile On-device AI: Smarter Faster Private Apps</title>
+<message />
+<createdAt>2025-06-06T22:34:25Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10567688997">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/perplexity-ai/?_x_tr_sl=auto&amp;_x_tr_tl=zh-tw&amp;_x_tr_hl=zh-TW</link>
+<title>Perplexity AI: A Deep Dive · Reflections</title>
+<message />
+<createdAt>2025-06-22T11:46:01Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10581737833">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/v0-dev-firsthand/?ref=aipill.io</link>
+<title>Vercel v0.dev: A hands-on review</title>
+<message />
+<createdAt>2025-07-14T05:22:32Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10591665291">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/mobile-on-device-ai-hands-on-gemma/?_x_tr_sl=en&amp;_x_tr_tl=ru&amp;_x_tr_hl=ru&amp;_x_tr_pto=rq</link>
+<title>Hands-On: Mobile AI with Gemma - iOS, Android</title>
+<message />
+<createdAt>2025-07-29T20:03:04Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10597287260">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/claude-code-first-impressions/?_x_tr_sl=en&amp;_x_tr_tl=sv&amp;_x_tr_hl=sv&amp;_x_tr_pto=sc</link>
+<title>Claude Code: First Impressions</title>
+<message />
+<createdAt>2025-08-07T13:12:10Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10602623959">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/cloudflare-autorag-step-by-step/?_x_tr_sl=en&amp;_x_tr_tl=pt&amp;_x_tr_hl=pt&amp;_x_tr_pto=tc</link>
+<title>Cloudflare AutoRAG: RAG no piloto automático</title>
+<message />
+<createdAt>2025-08-15T12:41:27Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10604586454">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/v0-dev-firsthand/?_x_tr_sl=en&amp;_x_tr_tl=vi&amp;_x_tr_hl=vi&amp;_x_tr_pto=tc&amp;zarsrc=30</link>
+<title>Vercel v0.dev: A hands-on review</title>
+<message />
+<createdAt>2025-08-18T15:28:04Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10610787769">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/mobile-on-device-ai-hands-on-gemma/?_x_tr_sl=en&amp;_x_tr_tl=es&amp;_x_tr_hl=es&amp;_x_tr_pto=tc</link>
+<title>Hands-On: Mobile AI with Gemma - iOS, Android</title>
+<message />
+<createdAt>2025-08-28T21:26:52Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10615122949">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/mobile-on-device-ai-hands-on-gemma/?gtm_latency=1</link>
+<title>Hands-On: Mobile AI with Gemma - iOS, Android</title>
+<message />
+<createdAt>2025-09-05T02:42:40Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10625507838">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/v0-dev-firsthand/?_x_tr_sl=auto&amp;_x_tr_tl=th&amp;_x_tr_hl=th&amp;_x_tr_pto=tc</link>
+<title>Vercel v0.dev: A hands-on review</title>
+<message />
+<createdAt>2025-09-21T15:53:36Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10687599742">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/v0-dev-firsthand/?_x_tr_sl=auto&amp;_x_tr_tl=fi&amp;_x_tr_hl=fi&amp;_x_tr_pto=wapp</link>
+<title>Vercel v0.dev: A hands-on review</title>
+<message />
+<createdAt>2025-10-24T05:10:01Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10688081659">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/v0-dev-firsthand/?_x_tr_sl=en&amp;_x_tr_tl=th&amp;_x_tr_hl=th&amp;_x_tr_pto=tc</link>
+<title>Vercel v0.dev: A hands-on review</title>
+<message />
+<createdAt>2025-10-24T09:25:10Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10694764453">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/chrome-side-panel/?_x_tr_sl=en&amp;_x_tr_tl=pl&amp;_x_tr_hl=pl&amp;_x_tr_pto=sge</link>
+<title>Chrome Side Panel · Reflections</title>
+<message />
+<createdAt>2025-10-26T21:04:35Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10791556116">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose-com.translate.goog/post/perplexity-ai/?_x_tr_sl=en&amp;_x_tr_tl=id&amp;_x_tr_hl=id&amp;_x_tr_pto=tc</link>
+<title>Perplexity AI: A Deep Dive</title>
+<message />
+<createdAt>2025-11-27T08:28:10Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10846666671">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/chatgpt-intro/?gtm_latency=1</link>
+<title>ChatGPT - An Introduction</title>
+<message />
+<createdAt>2025-12-27T12:23:38Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10865863882">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/serve-images-cloudflare-r2/</link>
+<title>· Reflections</title>
+<message />
+<createdAt>2026-01-07T07:27:16Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10884008068">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://go.mobileatscale.com/mocker-ios</link>
+<title>How to mock network requests in iOS</title>
+<message />
+<createdAt>2026-01-19T00:38:11Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10890054910">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/v0-dev-firsthand/?ref=aipill.app</link>
+<title>Vercel v0.dev: A hands-on review</title>
+<message />
+<createdAt>2026-01-22T09:15:17Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10912227671">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/agentic-coding-basics/</link>
+<title>Agentic Coding: The Basic Concepts</title>
+<message />
+<createdAt>2026-02-04T19:54:45Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10913470471">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/agentic-coding-basics/?trk=feed_main-feed-card_feed-article-content</link>
+<title>Agentic Coding: The Basic Concepts</title>
+<message />
+<createdAt>2026-02-05T08:29:34Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10917780220">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>http://10.0.0.190:1313/post/agent-coding-in-practice/</link>
+<title>Agentic Coding In Practice</title>
+<message />
+<createdAt>2026-02-08T06:40:45Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10917848769">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/agent-coding-in-practice/</link>
+<title>Agentic Coding In Practice</title>
+<message />
+<createdAt>2026-02-08T07:40:28Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10936785735">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/mobile-ondevice-ai/?gtm_latency=1</link>
+<title>Mobile On-device AI · Reflections</title>
+<message />
+<createdAt>2026-02-20T13:09:50Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="10956133449">
+<id />
+<forum>anncjose</forum>
+<category dsq:id="4570336" />
+<link>https://annjose.com/post/agent-coding-in-practice/?trk=feed_main-feed-card_feed-article-content</link>
+<title>Agentic Coding In Practice</title>
+<message />
+<createdAt>2026-03-02T21:18:46Z</createdAt>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<post dsq:id="2918004948">
+<id />
+<message><![CDATA[<p>Well, you must be one of the lucky. I couldn't make it run :(</p>]]></message>
+<createdAt>2016-09-25T19:54:08Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Neil Young</name>
+<isAnonymous>false</isAnonymous>
+<username>disqus_TJemoBwLdS</username>
+</author>
+<thread dsq:id="4745706066" />
+</post>
+<post dsq:id="3201320168">
+<id />
+<message><![CDATA[<p>Thanks for the double backslash tip!</p>]]></message>
+<createdAt>2017-03-13T04:18:00Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>apricity</name>
+<isAnonymous>false</isAnonymous>
+<username>disqus_4fYDCfYcQD</username>
+</author>
+<thread dsq:id="5170093521" />
+</post>
+<post dsq:id="3243345928">
+<id />
+<message><![CDATA[<p>Hey Neil, I just came across a new article that describes how to set up VSCode for ReactNative  and I remembered this comment from you 6 months ago and thought you may find it interesting / useful. I haven't tried the set up yet, but hopefully it will work for you. <a href="https://medium.com/react-native-training/vscode-for-react-native-526ec4a368ce" rel="nofollow noopener" target="_blank" title="https://medium.com/react-native-training/vscode-for-react-native-526ec4a368ce">https://medium.com/react-na...</a></p>]]></message>
+<createdAt>2017-04-06T18:18:01Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<thread dsq:id="4745706066" />
+<parent dsq:id="2918004948" />
+</post>
+<post dsq:id="3247865451">
+<id />
+<message><![CDATA[<p>Hi Ann Catherine, thanks for the follow up. It motivated me to have a fresh start with react-native. The issue remains: I cannot debug iOS apps in Simulator. VSCode simply does not stop at breakpoints.</p><p>PS: Tried again, enabled debugging (whith CMD_D --shame on me--) --- works :)</p>]]></message>
+<createdAt>2017-04-09T17:20:03Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Neil Young</name>
+<isAnonymous>false</isAnonymous>
+<username>disqus_TJemoBwLdS</username>
+</author>
+<thread dsq:id="4745706066" />
+<parent dsq:id="3243345928" />
+</post>
+<post dsq:id="4086193124">
+<id />
+<message><![CDATA[<p><a href="https://uploads.disquscdn.com/images/45ba42ee698ef85ba133769bb3bfdb28364d5d1a36a5f45ebbf2c80e62f0e74b.jpg" rel="nofollow noopener" target="_blank" title="https://uploads.disquscdn.com/images/45ba42ee698ef85ba133769bb3bfdb28364d5d1a36a5f45ebbf2c80e62f0e74b.jpg">https://uploads.disquscdn.c...</a> What does a suicide bomber say when he's teaching class? Pay attention! I'm only going to show this once.</p>]]></message>
+<createdAt>2018-09-09T17:48:29Z</createdAt>
+<isDeleted>true</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Libby6109</name>
+<isAnonymous>false</isAnonymous>
+<username>libby6109</username>
+</author>
+<thread dsq:id="5170093521" />
+</post>
+<post dsq:id="5258437099">
+<id />
+<message><![CDATA[<p>HOW DO YOU SECURE THE WIX "AUDIO CONTENT" ELEMENT  FROM DISAPPEARING FROM YOUR WEB PAGE AFTER SAVING THE AUDIO CONTENT? NO CODING INVOLVE..DRAG AND DROP ENABLING OPTION. THANKS</p>]]></message>
+<createdAt>2021-02-07T22:26:37Z</createdAt>
+<isDeleted>true</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>CHARLES ONIKOSI</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="5688884659" />
+</post>
+<post dsq:id="6306273418">
+<id />
+<message><![CDATA[<p>This is a test comment.</p>]]></message>
+<createdAt>2023-10-22T18:05:02Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<thread dsq:id="9903544569" />
+</post>
+<post dsq:id="6306281004">
+<id />
+<message><![CDATA[<p>Test comment with the option to 'rather post as a guest'</p>]]></message>
+<createdAt>2023-10-22T18:15:28Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>ACJ</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="9904629672" />
+</post>
+<post dsq:id="6309572466">
+<id />
+<message><![CDATA[<p>OK! You've inspired me to leave my job too! Just kidding. :)</p><p>From what you described, your plan sounds very well rounded. Training up both body and mind instead of weighting 100% in a single direction. I feel like going to hard in one direction is a great way to burn out or feel some sort of guilt when you can't stick to the plan for one reason or another.</p><p>Last thing... For your Hugo theme, i highly recommend checking out <a href="https://wowchemy.com/" rel="nofollow noopener" target="_blank" title="https://wowchemy.com/">https://wowchemy.com/</a> there are a few theme variations to choose from but the main power are the various "view component" like blocks they offer. I built my last hugo site with it and it was a good experience (the developer is very nice too).</p>]]></message>
+<createdAt>2023-10-26T22:21:31Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Mario Zigliotto</name>
+<isAnonymous>false</isAnonymous>
+<username>mariozig</username>
+</author>
+<thread dsq:id="9903544569" />
+</post>
+<post dsq:id="6309747754">
+<id />
+<message><![CDATA[<p>Thanks Mario! Wowchemy gallery looks really cool. Will definitely try it out.</p>]]></message>
+<createdAt>2023-10-27T04:44:49Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<thread dsq:id="9903544569" />
+<parent dsq:id="6309572466" />
+</post>
+<post dsq:id="6558122154">
+<id />
+<message><![CDATA[<p>There is also a user parameter we can pass in session callback. Where does that come from?</p>]]></message>
+<createdAt>2024-09-26T16:05:49Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>M ALI</name>
+<isAnonymous>false</isAnonymous>
+<username>disqus_Wi4yMQ30G5</username>
+</author>
+<thread dsq:id="10176647502" />
+</post>
+<post dsq:id="6572157862">
+<id />
+<message><![CDATA[<p>Ann! I am catching up on your blog but this post got me.</p><p>I am becoming a heavier and heavier user of Perplexity in the past few weeks. I don't have any knowledge of Perplexity's internals but recently I used it to find out some very specific information about a government program that can vary from county to county. Perplexity provided it's answer and I conversationally pressed it to cite sources. The initial respond gave sources that i couldn't directly use to validate the answer... So i pressed again for the answer's specific source and location in the source. Perplexity responded with a PDF hosted at my county's website and described exactly where to find the answer -- never once had i mentioned my county or shared my exact location.</p><p>It was pretty mind blowing and I think some the little nuanced data inferences it may make help produce fantastic answers.</p>]]></message>
+<createdAt>2024-10-16T23:16:10Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Mario Zigliotto</name>
+<isAnonymous>false</isAnonymous>
+<username>mariozig</username>
+</author>
+<thread dsq:id="10241365516" />
+</post>
+<post dsq:id="6572531877">
+<id />
+<message><![CDATA[<p>Wow! it brought citations from the pdf. That's incredible! Being able to see those citations and doing the fact check myself is what draws me to this tool again and again.</p>]]></message>
+<createdAt>2024-10-17T14:26:37Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<thread dsq:id="10241365516" />
+<parent dsq:id="6572157862" />
+</post>
+<post dsq:id="6579829866">
+<id />
+<message><![CDATA[<p>A simple article for anyone to get an overview about the various models available. Good work and thanks for sharing your insights.</p>]]></message>
+<createdAt>2024-10-28T06:54:07Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Simjees Abraham</name>
+<isAnonymous>false</isAnonymous>
+<username>simjeesabraham</username>
+</author>
+<thread dsq:id="10360024058" />
+</post>
+<post dsq:id="6580113482">
+<id />
+<message><![CDATA[<p>Thank you Simjees!</p>]]></message>
+<createdAt>2024-10-28T16:21:16Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<thread dsq:id="10360024058" />
+<parent dsq:id="6579829866" />
+</post>
+<post dsq:id="6580615492">
+<id />
+<message><![CDATA[<p>Informative insights with mind maps. Thanks for sharing.</p>]]></message>
+<createdAt>2024-10-29T08:18:24Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Asifuddin K</name>
+<isAnonymous>false</isAnonymous>
+<username>asifuddink</username>
+</author>
+<thread dsq:id="10360024058" />
+</post>
+<post dsq:id="6607502315">
+<id />
+<message><![CDATA[<p>Making a DB call in the session callback is inefficient since the callback is invoked every time the session is checked.<br>It's better to do this DB lookup in the <code>jwt</code> callback handler (which is invoked only when a new JWT is created) and pin the <code>userId</code> to the session object.</p><p>E.g (sorry I'm unable to format the code block using Disquss so it's readable)</p><p><code>async session({ session, token }) {</code><br><code>    if (typeof token?.userId === 'string') {</code><br><code>         session.user.id   = token.userId;</code><br><code>    }<br></code><br><code>    return session;</code><br><code>},</code><br><code>async jwt({ trigger, token, account, profile, user }) {</code><br><code>    if (!trigger) {</code><br><code>        return token;</code><br><code>    }<br></code><br><code>    const email = user?.email || profile?.email;</code><br><code>    let dbUser = null;<br></code><br><code>    // Only do a DB when userId is not pinned to the token</code><br><code>    if (!token.userId || trigger === "signIn" || trigger === "signUp") {</code><br><code>        dbUser = await getOrCreateDbUser(email, account, user, profile);</code><br><code>    }<br></code><br><code>    if (!token.userId &amp;&amp; dbUser) {</code><br><code>        token.userId =  dbUser.id</code><br><code>    }<br></code><br><code>    return token;</code><br><code>}</code></p>]]></message>
+<createdAt>2024-12-09T00:33:44Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Christian Rich</name>
+<isAnonymous>false</isAnonymous>
+<username>ChristianRich2</username>
+</author>
+<thread dsq:id="10176647502" />
+</post>
+<post dsq:id="6625543613">
+<id />
+<message><![CDATA[<p>you can try <a href="http://bolt.new" rel="nofollow noopener" target="_blank" title="bolt.new">bolt.new</a>, i think. it's more better at build a prototype and deploy it.</p>]]></message>
+<createdAt>2025-01-08T03:21:44Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Christian Watson</name>
+<isAnonymous>false</isAnonymous>
+<username>disqus_SNkknB59BD</username>
+</author>
+<thread dsq:id="10371323024" />
+</post>
+<post dsq:id="6627621958">
+<id />
+<message><![CDATA[<p>TIL Perplexity is built on top of llama!</p>]]></message>
+<createdAt>2025-01-11T02:54:30Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Mario Zigliotto</name>
+<isAnonymous>false</isAnonymous>
+<username>mariozig</username>
+</author>
+<thread dsq:id="10360024058" />
+</post>
+<post dsq:id="6652106166">
+<id />
+<message><![CDATA[<p>I have created a simple coin flip simulator website,  <a href="https://flipacoinsimu.com/" rel="nofollow noopener" target="_blank" title="https://flipacoinsimu.com/">https://flipacoinsimu.com/</a>  which i made with <a href="http://vo.dev" rel="nofollow noopener" target="_blank" title="vo.dev">vo.dev</a> . Any one know how upload coin sound on  <a href="http://v0.dev" rel="nofollow noopener" target="_blank" title="v0.dev">v0.dev</a></p><p>Can anyone guide me on how to add a sound effect using <a href="http://vo.dev?" rel="nofollow noopener" target="_blank" title="vo.dev?">vo.dev?</a></p>]]></message>
+<createdAt>2025-02-15T07:52:00Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>kawatan admin</name>
+<isAnonymous>false</isAnonymous>
+<username>kawatanadmin</username>
+</author>
+<thread dsq:id="10371323024" />
+</post>
+<post dsq:id="6703174876">
+<id />
+<message><![CDATA[<p>I'm here to attest to the efforts of Recovery Hacker101, who helped me retrieve my money that had been stolen by con artists, leaving me defenseless and unable to pay my expenses. A buddy of mine was able to assist me by providing their contact information which is written below, he will assist you in getting your lost money back. Contact Recovery Hacker101 if you have fallen victim to any cryptocurrency, binary options, internet scams, mobile spying, or mobile hacking; they come highly recommended and were effective in recovering my lost money. They helped me recover my funds worth over $650,000 bitcoin loss, they are the best. Below is their contact details: INFO Email: recoveryhacker101[at]gmail[dot]com.</p>]]></message>
+<createdAt>2025-05-10T14:14:08Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>true</isSpam>
+<author>
+<name>Dominik Richard</name>
+<isAnonymous>false</isAnonymous>
+<username>dominik_richard</username>
+</author>
+<thread dsq:id="10371323024" />
+</post>
+<post dsq:id="6711724699">
+<id />
+<message><![CDATA[<p>I checked this app 6 months ago and I thought to myself: "Nice try guys, nothing close to senior dev experience with over a decade long career." But now I tried it again and I must say I was blown away.  <a href="https://devcrunch.com/vercel-v0-the-ai-black-magic-that-blew-my-skeptic-senior-devs-mind-%f0%9f%a4%af" rel="nofollow noopener" target="_blank" title="https://devcrunch.com/vercel-v0-the-ai-black-magic-that-blew-my-skeptic-senior-devs-mind-%f0%9f%a4%af">https://devcrunch.com/vercel-v0-the-ai-black-magic-that-blew-my-skeptic-senior-devs-mind-%f0%9f%a4%af</a> <br>Here is also a demo app that I did within 3 hours and 28 interactions with Vercel :)<br> <a href="https://rentaboathvar.net" rel="nofollow noopener" target="_blank" title="https://rentaboathvar.net">https://rentaboathvar.net</a></p>]]></message>
+<createdAt>2025-05-25T22:11:11Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>duplich</name>
+<isAnonymous>false</isAnonymous>
+<username>duplich</username>
+</author>
+<thread dsq:id="10371323024" />
+</post>
+<post dsq:id="6788153292">
+<id />
+<message><![CDATA[<p>I had a fair amount of trouble using v0 with firefox. I cold get it it to work if the stars aligned but at some point it would load at all.</p><p>Futzed around with this for about a week (this is all elective) and finally loaded-up chatgtp.</p><p>It's a challenge to use tools that won't even run a demo.. Yes V0 produced more-polished code than chatgtp from your example prompts (which at one point I could run in v0, and got what is shown here) but</p><p>I think this is going to be a fundamental problem for Vercel. And the forest of 3rd-party front-ends like it.<br>Kinda like coding in COBOL instead of Fortran or BASlIC. Yeah sure you can do the same things in all three...</p><p>hell you can code in Win64 if you want</p>]]></message>
+<createdAt>2025-10-27T12:04:38Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>true</isSpam>
+<author>
+<name>what_fun</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="10371323024" />
+</post>
+<post dsq:id="6788154377">
+<id />
+<message><![CDATA[<p>seems to me that chatgtp will rapidly become the industry-standard. <br>"Sure you can get other tools to work but"</p><p>you have a choice between tools that will work but are awkward to use, ms-based tools, or chatgtp<br>and ultimately goole and firefox will have AI prompts that can be called from a file or even in the browser window, that will work similarly....but will they work the same?</p>]]></message>
+<createdAt>2025-10-27T12:07:44Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>true</isSpam>
+<author>
+<name>what_fun</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="10371323024" />
+</post>
+<post dsq:id="6788154825">
+<id />
+<message><![CDATA[<p>it's going to be fun, fighting the front-end<br>ask me how many times I had to write this comment before I could get it posted</p><p>error error error error</p>]]></message>
+<createdAt>2025-10-27T12:09:09Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>true</isSpam>
+<author>
+<name>what_fun</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="10371323024" />
+</post>
+<post dsq:id="6788154917">
+<id />
+<message><![CDATA[<p>it's going to be fun, fighting the front-end<br>ask me how many times I had to write this comment before I could get it posted</p>]]></message>
+<createdAt>2025-10-27T12:09:22Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>true</isSpam>
+<author>
+<name>what_fun</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="10371323024" />
+</post>
+<post dsq:id="6788155669">
+<id />
+<message><![CDATA[<p>oh sorry it posted the comment every time, it just didn't show the "waiting for moderation" entries until later down the page</p>]]></message>
+<createdAt>2025-10-27T12:11:24Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>true</isSpam>
+<author>
+<name>what_fun</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="10371323024" />
+</post>
+<post dsq:id="6789024078">
+<id />
+<message><![CDATA[<p>Wow, this  <a href="http://v0.dev" rel="nofollow noopener" target="_blank" title="http://v0.dev">http://v0.dev</a>  tool sounds absolutely incredible! I had a similar "jaw-drop" moment recently when I finally understood a &lt;a href=" <a href="https://mermaidviewer.com/" rel="nofollow noopener" target="_blank" title="https://mermaidviewer.com/">https://mermaidviewer.com/</a> "&gt;mermaid drawing tutorial&lt;/a&gt; and created my first flowchart. It's amazing how these AI tools are making complex tasks so accessible. Reading about your excitement makes me want to drop everything and try  <a href="http://v0.dev" rel="nofollow noopener" target="_blank" title="http://v0.dev">http://v0.dev</a>  right now to build that side project I've been dreaming about. The future of web development is looking wild!</p>]]></message>
+<createdAt>2025-10-29T07:55:37Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>homels rattan</name>
+<isAnonymous>false</isAnonymous>
+<username>homelsrattan</username>
+</author>
+<thread dsq:id="10371323024" />
+</post>
+<post dsq:id="6809337108">
+<id />
+<message><![CDATA[<p>Great hands-on review 👍<br> <a href="http://v0.dev" rel="nofollow noopener" target="_blank" title="http://v0.dev">http://v0.dev</a>  really feels promising for quickly turning ideas into working UI, especially for Next.js projects. I’ve been experimenting with AI-assisted builders myself while working on small utility tools, and it definitely speeds up iteration and layout decisions. Curious to see how v0 evolves for more logic-heavy apps like calculators and data tools (I’m building a few over at  <a href="https://www.vipcalculator.net" rel="nofollow noopener" target="_blank" title="https://www.vipcalculator.net">https://www.vipcalculator.net</a> <br>). Overall, nice breakdown of strengths and limitations.</p>]]></message>
+<createdAt>2025-12-14T15:18:09Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>true</isSpam>
+<author>
+<name>Ravirajee</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="10371323024" />
+</post>
+<post dsq:id="6809338271">
+<id />
+<message><![CDATA[<p><b>Great hands-on review</b> 👍<br> <a href="http://v0.dev" rel="nofollow noopener" target="_blank" title="http://v0.dev">http://v0.dev</a>  really feels promising for quickly turning ideas into working UI, especially for Next.js projects. I’ve been experimenting with AI-assisted builders myself while working on small utility tools, and it definitely speeds up iteration and layout decisions. Curious to see how v0 evolves for more logic-heavy apps like calculators and data tools (I’m building a few over at  <a href="https://www.vipcalculator.net" rel="nofollow noopener" target="_blank" title="https://www.vipcalculator.net">https://www.vipcalculator.net</a> <br>). Overall, nice breakdown of strengths and limitations.</p>]]></message>
+<createdAt>2025-12-14T15:21:01Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>true</isSpam>
+<author>
+<name>Ravirajee</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="10371323024" />
+</post>
+<post dsq:id="6839149226">
+<id />
+<message><![CDATA[<p>[massive comment incoming!!]</p><p>Ann! I love reading your posts and it has helped me to realize that my path is not unique -- your lessons along the way are also the same lessons I've encountered along my way.</p><p> I wanted to comment more specifically on two things:</p><p>- Playwright<br>- CC agent teams</p><p><b>Playwright</b><br>You mentioned setting up playwright -- if you're working on web stuff you should set it up right now. It takes less than 5 minutes to get running and it can be extremely helpful. Claude Code has an installable plugin. A few actual use-cases for it: <br>1- I've built an agentic pipeline that helps me design websites. I have a skill that uses playwright and checks all screen sizes by adjusting the window, taking a screenshot and then inspecting it. Later in the pipeline i use it again to generate thumbnails of designs and build a gallery for me or my client to look at. The gallery large thumbnails of all screen sizes (mobile, tablet, desktop, desktop large) and gives a quick over view<br>2- Data scraping is a lot easier in a real browser. There's basic stuff like you get JS rendered content but even a playwright driven browser seems to get past a lot of cloudflareish types of blocks<br>3- Playwright is good for a QA agent. You can have it navigate around and just look for over lapping screens or delays, console errors, etc.</p><p>Playwright is super expensive though... it has been great at incinerating my tokens lol!</p><p><b>Claude Code agent teams<br></b>I've been trying out Claude's  <a href="https://code.claude.com/docs/en/agent-teams" rel="nofollow noopener" target="_blank" title="https://code.claude.com/docs/en/agent-teams">agent teams</a>  for the past week or so... It is really interesting. If you haven't tried it i highly recommend checking it out! Basically you can assign a huge chunk of work and a lead agent will build a plan with a prioritized and dependency-ordered task execution requirements. It spawns a team of agents and assigns them. The interesting thing is that the individual team members seem to be just additional claude code processes... there's no shared context and they can communicate with each other through some sort of message passing system! The team lead is not a bottle neck.</p><p>If you install tmux and run the latest claude code with: <br>`CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1 claude --teammate-mode tmux`</p><p>...You can actually watch it spawn new tmux panels and directly interact with the team member agents!</p><p>Like playwright, agent teams also burn through tokens but i have found that it gets really huge chunks of work done very quickly. A couple days ago i had it create a birth plan app for new moms in SwiftUI from 1000+ lines long PRD i wrote to see what it could do...  5 hours later it finished and only missed one requirement. The app itself compiled on first run (!), it had a full unit and UI test suite (!!) and  all information in the app had medical sources cited (🥼🥼🥼).  So cool.</p><p>Aaaand scene.</p>]]></message>
+<createdAt>2026-02-17T19:45:34Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Mario Zigliotto</name>
+<isAnonymous>false</isAnonymous>
+<username>mariozig</username>
+</author>
+<thread dsq:id="10917848769" />
+</post>
+<post dsq:id="6847877531">
+<id />
+<message><![CDATA[<p>Hi Ann ! <br>Thank you so much for sharing your thoughts in this post. It's refreshing to know my path is somewhat similar to yours although I've been using Cursor with Claude exclusively. I shared this post with my teams as I find it very valuable; so please keep blogging!</p><p>For me, adding "if you've any questions, ask and don't assume" or "explain your reasoning" at the end of my prompt helped immensely as I can then see what the agent is thinking in plan mode and steer it like how I wanted. I tried chatGPT, Gemini and Claude and for coding tasks, I find Claude is the best.</p><p>I started using Claude Code and appreciate various links in the references sections. Its hard to imagine not being able to see the code the agents write but maybe we'll get there sooner than later.</p><p>Sincerely,<br>Radha</p>]]></message>
+<createdAt>2026-03-09T01:33:14Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Radha Damera</name>
+<isAnonymous>false</isAnonymous>
+<username>radhadamera</username>
+</author>
+<thread dsq:id="10917848769" />
+</post>
+<post dsq:id="6849462625">
+<id />
+<message><![CDATA[<p>Hey Mario! Love the comments. You are absolutely right - using Playwright is essential. I tried the Claude in Chrome browser extension  <a href="https://code.claude.com/docs/en/chrome" rel="nofollow noopener" target="_blank" title="https://code.claude.com/docs/en/chrome">https://code.claude.com/docs/en/chrome</a>  and it has been game changing - for everything you said - debugging, testing, cloning website designs etc. I am curious to know how you use playwright to test responsiveness and your agentic pipeline. I would love to learn more about that.</p><p>With multi-agent mode, I can only do 2-3 in parallel. I lose track of who is doing what. But I regularly run claude and code as coder/reviewer mode and ask them to review each other's code. let them fight it out!<br>Yes, all of these burn through tokens - I have only the Claude Pro subscription, so my productive team is capped by Anthropic's 5 hour limit on Opus 4.6. I guess it is a forcing function to take a break.</p><p>It is fun to share notes on how we use these tools. I guess we should catch up and nerd out more. Take care!<br>- Ann</p>]]></message>
+<createdAt>2026-03-12T16:10:03Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<thread dsq:id="10917848769" />
+<parent dsq:id="6839149226" />
+</post>
+<post dsq:id="6849476962">
+<id />
+<message><![CDATA[<p>Thanks Radha - glad that you found this useful and shared with your team.</p><p>That 'ask and don't assume' is a great way to steer the output - you can add it to your <a href="http://CLAUDE.md" rel="nofollow noopener" target="_blank" title="CLAUDE.md">CLAUDE.md</a> file so that the agent will follow that instruction always.</p><p>Also, since you like to see the reasoning, you could use Claude Code's "Explanatory" output style which will surface good insights and explains the code as it works. It is easy to configure - just run "/config" command and change the value of "Output style" (use spacebar) and choose "Explanatory".</p><p>Happy agentic coding! It is fun! Feel free to reach out if you have any questions as you dive deeper into it!</p>]]></message>
+<createdAt>2026-03-12T16:41:55Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Ann Catherine Jose</name>
+<isAnonymous>false</isAnonymous>
+<username>anncjose</username>
+</author>
+<thread dsq:id="10917848769" />
+<parent dsq:id="6847877531" />
+</post>
+</disqus>

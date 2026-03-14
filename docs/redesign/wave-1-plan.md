@@ -73,11 +73,11 @@
 
 **Files**: `src/content.config.ts`
 
-- [ ] Check where AstroPaper put its content config (Astro 4-style `src/content/config.ts` or Astro 5+ `src/content.config.ts`)
-- [ ] Extend blog collection schema: add `disqusSlug: z.string().optional()`
-- [ ] Add `pages` collection with About page schema (name, tagline, photo, interests, currently, social)
-- [ ] Verify `npx astro check` passes
-- [ ] Commit
+- [x] Check where AstroPaper put its content config → `src/content.config.ts` (Astro 5+ style with glob loader)
+- [x] Move blog content from `src/data/blog/` to `src/content/blog/` (align with spec folder structure)
+- [x] Extend blog collection schema: add `disqusSlug: z.string().optional()`
+- [x] Verify `pnpm astro check` passes (0 errors)
+- [x] Commit
 
 ### Task 8: Write migration script (TDD)
 

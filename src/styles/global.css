@@ -59,6 +59,17 @@ html[data-theme="dark"] {
   @apply mx-auto w-full max-w-app px-4;
 }
 
+.avatar-ring {
+  background: conic-gradient(
+    #e44d26,
+    #f7c948,
+    #4caf50,
+    #2196f3,
+    #9c27b0,
+    #e44d26
+  );
+}
+
 .active-nav {
   @apply underline decoration-wavy decoration-2 underline-offset-8;
 }

@@ -1,3 +1,4 @@
+## Transcript of the Claude Code Session #2 - Refining the Spec
 ### Me
 i have reviewed the spec in detail - @docs/redesign/spec.md and have a few clarifying questions.
 

@@ -83,9 +83,9 @@
 
 **Files**: `scripts/migrate-content.ts`, `scripts/migrate-content.test.ts`
 
-- [ ] Install dependencies: `pnpm add -D @iarna/toml js-yaml vitest`
-- [ ] Add Vitest config to package.json (`"test": "vitest run"`, `"test:watch": "vitest"`)
-- [ ] **Write failing tests first**:
+- [x] Install dependencies: `pnpm add -D @iarna/toml js-yaml vitest tsx @types/js-yaml`
+- [x] Add Vitest config to package.json (`"test": "vitest run"`, `"test:watch": "vitest"`)
+- [x] **Write failing tests first** (23 tests):
   - Parse TOML frontmatter delimited by `+++`
   - Handle posts with no frontmatter (throw)
   - Map `images[0]` → `ogImage`
@@ -94,8 +94,10 @@
   - Coerce date to ISO string
   - Omit `ogImage` when `images` absent
   - Generate description from first 160 chars if missing
-- [ ] Run tests — expect failures
-- [ ] **Implement the migration script**:
+  - Set `disqusSlug` from Hugo slug
+  - Convert `pure_table`, `fluid_imgs`, `video` shortcodes
+- [x] Run tests — expect failures ✓ (module not found)
+- [x] **Implement the migration script**:
   - Find all `.md` files under `content/post/`
   - Parse TOML frontmatter → JS object
   - Remap fields per spec's field mapping table
@@ -103,7 +105,7 @@
   - Output YAML frontmatter
   - Write to `src/content/blog/` preserving directory structure
   - Copy colocated image files alongside
-- [ ] Run tests — expect pass
+- [x] Run tests — expect pass ✓ (23/23 pass)
 - [ ] Commit script and tests
 
 ### Task 9: Run migration and validate

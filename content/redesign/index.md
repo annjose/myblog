@@ -1,8 +1,8 @@
 +++
 date = "2026-03-11T12:13:21-07:00"
 draft = false
-title = "Site Redesign Log"
-description = "The end-to-end process of migrating this site from Hugo to Astro with AI coding agents."
+title = "Rebuilding this site, with AI agents"
+description = "The real process of rebuilding this site, documented as it happens"
 tags = ["ai", "coding-assistants", "agentic-systems", "web-development"]
 topics = ["tech-explorations"]
 +++
@@ -13,11 +13,13 @@ I'm redesigning this blog from Hugo to Astro, using AI coding agents (Claude Cod
 
 **The migration:** Hugo + Blackburn → Astro 5, Tailwind CSS, AstroPaper theme, Cloudflare Pages
 
+{{< figure src="current-hugo-homepage.png" caption="The current site — Reflections on Hugo + Blackburn" width="600" >}}
+
 **How to read this:** Each part below is a chapter of the redesign. Newest entries are at the top.
 
 --- 
 
-## Lessons learned along the way (WIP)
+## Running Notes - Lessons learned (WIP)
 1. Ask what am I missing when reviewing any spec or plan? This puts the agent in exploratory mode and it can go broad and surface important insights
 2. Ask what could go wrong and incorporate a plan to mitigate or handle such errors
 3. If you are working with newer frameworks or critical components, give the link to specific pages in the the framework's documentation to the agent and ask it to read the page and confirm that the plan takes it into account and follows the recommendations from the framework. Example, when I use InstantDB, I give the instand db's auth documenations. Or Astro collections https://docs.astro.build/en/guides/content-collections/
@@ -27,11 +29,15 @@ I'm redesigning this blog from Hugo to Astro, using AI coding agents (Claude Cod
 
 **Goal:** Reconcile two competing specs into one unified spec ready for implementation.
 
-**Output Artifact:** A unified spec and Wave 1 plan.
+**Output Artifact:**
+- Unified spec and Wave 1 plan (in progress)
+- [Agent Session Transcript #2 — Spec Refinement (WIP)](https://github.com/annjose/myblog/blob/master/docs/redesign/sessions/session-02-spec-refinement.md)
 
 ### Two specs, one project
 
-I now had two specs for the same migration - both generated from the same handwritten prompt. The first one I created from Part 1 - I call it the **Collaborative Spec** because it was built through multiple rounds of conversation with Claude Desktop, where I could push back, ask "what am I missing?", and refine as we went. The second one is **Superpowers Spec** which came from [Superpowers](https://claude.com/plugins/superpowers), a Claude Code plugin that provides a structured workflow for writing specs, plans, and implementation. Superpowers took the same handwritten prompt I started with and generated both a spec and plan in a single pass using Sonnet 4.6.
+I now had two specs for the same migration - both generated from the same handwritten prompt. 
+The first one I created from Part 1 - I call it the **Collaborative Spec** because it was built through multiple rounds of conversation with Claude Desktop, where I could push back, ask "what am I missing?", and refine as we went. 
+The second one is **Superpowers Spec** which came from [Superpowers](https://claude.com/plugins/superpowers), a Claude Code plugin that provides a structured workflow for writing specs, plans, and implementation. Superpowers took the same handwritten prompt I started with and generated both a spec and plan in a single pass using Sonnet 4.6.
 
 - [Collaborative Spec](https://github.com/annjose/myblog/blob/master/docs/redesign/spec.md) (from Part 1)
 - [Superpowers Spec](https://github.com/annjose/myblog/blob/master/docs/redesign/superpowers-spec.md)
@@ -78,34 +84,60 @@ I started by browsing Astro themes on [astro.build/themes](https://astro.build/t
 
 The one I kept coming back to was [AstroPaper](https://astro-paper.pages.dev/) — clean layout, good typography, nice page transition animations, and not over-designed. It felt like a solid foundation I could build on rather than fight against.
 
-Then I did something deliberately low-tech: **I wrote the spec by hand, in a notebook.** No AI, no editor. Just thinking through what I actually want from the new site. Here's the digitized version of those notes:
+Then I did something deliberately low-tech: **I wrote the spec by hand, in a notebook.** No AI, no editor. Just thinking through what I actually want from the new site.
+
+{{< figure src="hand-written-spec.jpg" caption="The handwritten spec" width="500" >}}
 
 <details>
-<summary><strong>The handwritten spec (digitized)</strong></summary>
+<summary>Digitized version of the handwritten spec (click to view)</summary>
 
-Redesign my blog and personal website annjose.com. It is currently built with Hugo and an old theme called `blackburn`. Content lives in a GitHub repo; static pages are hosted on GitHub Pages. Here's what I want:
+**Blog redesign** — https://annjose.com, currently Hugo with an old theme. Change to Astro with a good modern theme.
 
-- **Tech stack:** Astro, Tailwind CSS, with a good theme (leaning toward AstroPaper)
-- **Design:** Clean UI with enough whitespace but not wasted space. Beautiful colors and fonts. Mobile responsive. Light and dark mode.
-- **Custom routes** for pages I want to host on the domain — e.g. /books, /notes, /photos
-- **About Me** page
-- **Projects page** to showcase what I've worked on (liked the layout at adamfortuna.com/projects as inspiration, but don't want to copy it)
-- **Blog features:**
-  - Good syntax highlighting (lots of technical content)
-  - Floating table of contents on the right that follows scroll and highlights current section
-  - Tags, tag management, possibly a tag cloud
-  - Next/previous post links with titles
-  - OG images for every post
-  - A comment system that blocks spam but isn't ad-heavy like Disqus — could I build my own with something like InstantDB and email-based auth?
-- **Future (post-launch):** Some authenticated routes accessible only to family. URL-based access with generated GUIDs for sharing private pages.
+The things I want:
+- Clean UI - sufficient (not a lot of) whitespace on either side
+- Light and dark mode with beautiful subtle colors
+- Good font
+- Blog pages should have next/prev with post title
+- Table of contents on the right - highlights as I scroll down
+- Tags: easy to manage, displayed in every post
+- A tag cloud (either in every page or in a good place)
+- Links for headings
+- Collections of related posts and show them as easy-to-access links (eg: agentic coding, on-device AI)
+- Personal page: About Me
+- Projects page - various projects I worked on, links, what I learned, tools used
+- Comments: easy to add comments, reactions. Giscus/Bluesky/ATproto? Auto-generated?
+- Image for every post - either a specific image in the post or auto-generated
+- Mobile responsive
 
 </details>
 
 ### Day 2 — The spec meets Claude (Mar 12)
 
-I opened Claude Desktop and gave it the handwritten spec with one instruction: *"Review these requirements and tell me what you make of it. Ask clarifying questions."*
+I opened Claude Desktop, modified the handwritten prompt to add a few details on tech stack and gave it as follows:
+
+> Redesign my blog and personal website https://annjose.com. Use Claude Chrome extension to navigate to the site and understand what is there. It is built using Hugo and an old theme named blackburn. The content is in a github repo, the current folder myblog is the local working directory of this repo. The static pages generated by Hugo are hosted on GitHub pages. Here is what I want in the renewed system:
+> * Tech stack: Astro 6.0, Tailwind CSS, with a good theme.
+> * One of themes I liked is Astro Paper https://vercel.com/templates/blog/astro-paper. See live demo at https://astro-paper.pages.dev/
+> * clean UI with enough whitespace, but not a lot of empty space on both sides of the page
+> * beautiful colors and fonts
+> * mobile responsive. light and dark mode
+> * custom routes for any page(s) that i want to host on the domain, eg: https://annjose.com/books, notes, photos etc.
+> * About Me page
+> * Projects page where I can list all the projects that I have worked on. this is a good example adamfortuna.com/projects, but it is very slow to render. I like the visual layout, but want to be not copy cat.
+> * For the blog posts, I want (in addition to the new standard features of blogs):
+>    * a good syntax highlighting as many of the content i write is technical posts
+>    * table of contents on the right side - as i scroll down the page, the TOC should also float down with the respective sections highlighted.
+>    * add tags, manage task, perhaps a tag cloud
+>    * each post should have next and previous links with the title of those posts
+>    * OG image for every post - either an image from the post itself
+>    * a good comment system that restricts spam, but not a ad-heavy vendor like discus. can it be built myself with an instant db like setup with email-based auth?
+>    * after the first phase, i also want a few routes to be authenticated and accessible only to a few people (me and my close family). i want some URLs to be accessible with a guid that i can generate and give to people. only those who have that guid-based url can view the page
+>
+> Review these requirements and tell me what you make of it. ask clarifying questions
 
 Claude did something I didn't expect — before asking anything, it **explored the entire codebase and live site on its own**. It spawned two agents in parallel: one crawled the repo structure, the other fetched annjose.com and the AstroPaper demo. Only after building its own understanding did it come back with questions.
+
+{{< figure src="claude-session-start.png" caption="Claude Desktop — the spec creation session" width="700" >}}
 
 It asked two rounds of clarifying questions — here are the key decisions that came out of that exchange:
 
@@ -142,6 +174,8 @@ The agent also ran a gap analysis and found several things neither of us had men
 - **Missing from Wave 1 overview**: RSS feed, page migration (/about, /ammachi, /epsilla, /redesign)
 - **Analytics**: The spec mentioned Google Analytics, but the site actually uses Counterscale (self-hosted on Cloudflare Workers). Fixed throughout.
 - **Automated tests**: Added Playwright e2e tests, Lighthouse CI, and a link checker — none of which were in the original spec.
+
+{{< figure src="claude-start-missing-gaps.png" caption="Claude finding gaps in the spec" width="700" >}}
 
 The final spec has 10 decisions, 8 implementation phases across ~14 days, a full folder structure reference, and a verification checklist. See the [full diff of the spec refinements](https://github.com/annjose/myblog/commit/7bbc49a57258708accd8022136e5116786e1972b) and the [final version of the spec](https://github.com/annjose/myblog/blob/master/docs/redesign/spec.md).
 

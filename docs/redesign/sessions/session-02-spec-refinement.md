@@ -211,3 +211,16 @@ NOTE - I have renamed the file from `spec.md` to  @docs/redesign/collaborative-
 5. let's use `src/content`
 6. keep as is
 also i would like to add a few links to the document that will be useful for an agent when it is implementing these changes.
+
+### Claude
+All 6 changes are done. Summary of what changed in `docs/redesign/collaborative-spec.md`:
+
+1. **Continuous deployment** — Added decision row for deploy-at-every-milestone strategy. Added Phase 1.5 (Cloudflare Pages setup + first deploy). Simplified Phase 6 to "Final Testing & Polish" since deployment is already running.
+2. **Consistent `.md` format** — Changed `ammachi.astro`, `epsilla.astro`, `redesign.astro` to `.md` in all 4 locations (file mapping, custom routes, folder tree, key files table).
+3. **Explicit migration lists** — Added "Pages to migrate" and "Pages NOT migrated" (including `/image-test`) in Phase 2.1 and updated the Wave 1 scope line.
+4. **`src/content` instead of `src/data`** — Replaced all `src/data/` references with `src/content/` (blog posts, comments, folder tree).
+5. **Reference links** — Added section with AstroPaper repo, Astro Hugo migration guide, Content Collections docs, and the live redesign log.
+
+### Me
+ok can you create a spec that combines the best of both spec/plans (note - i have renamed spec.md to @docs/redesign/collaborative-spec.md so that you can name the combined spec as spec.md 
+as you suggested i want to use collab spec as source of truth and starting point for combined spec, and bring good elements from superpowers spec into the combined spec. and do the neat separation of spec and plan as you suggested.

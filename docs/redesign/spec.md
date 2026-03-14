@@ -1,5 +1,7 @@
 # Blog Redesign: Hugo to Astro Migration Spec
 
+> **Companion document**: [Wave 1 Implementation Plan](./wave-1-plan.md) — step-by-step execution checklist for this spec.
+
 ## Context
 
 The blog at annjose.com ("Reflections" by Ann Catherine Jose) runs on Hugo with the Blackburn theme, deployed to GitHub Pages. It has 58 posts (28 page bundles + 30 single-file), tags/topics taxonomies, Disqus comments, and custom routes (/ammachi/, /epsilla/). The goal is to modernize with Astro + Tailwind CSS, hosted on Cloudflare Pages, using AstroPaper as the starting template.
@@ -15,10 +17,11 @@ The blog at annjose.com ("Reflections" by Ann Catherine Jose) runs on Hugo with 
 | **Migration** | All 58 posts migrated | No content left behind |
 | **Topics taxonomy** | Merge into tags (deduplicate) | Simplifies architecture, one taxonomy system |
 | **URL scheme** | New posts at `/blog/<slug>/`, 301 redirects from `/post/<slug>/` | Cleaner URLs, old links preserved via Cloudflare redirects |
-| **Repo strategy** | Same repo (rename `myblog` -> `annjose.com`), new `astro` branch | Preserves full git history; merge to main when ready |
-| **Branch name** | Rename `master` -> `main` during final merge | Modern convention; done as part of cutover |
+| **Repo strategy** | Same repo (rename `myblog` → `annjose.com`), new `astro` branch | Preserves full git history; merge to main when ready |
+| **Branch name** | Rename `master` → `main` during final merge | Modern convention; done as part of cutover |
 | **Coexistence** | Old Hugo site stays live at `annjose.com`; new Astro site tested at Cloudflare Pages preview URL | DNS cutover only when new site is fully validated |
-| **Deployment strategy** | Deploy to Cloudflare Pages at end of Phase 1 (vanilla AstroPaper), then continuously at each phase milestone | Catches integration issues early; no big-bang deploy at the end |
+| **Deployment strategy** | Deploy to Cloudflare Pages at end of bootstrap, then continuously at each milestone | Catches integration issues early; no big-bang deploy at the end |
+| **Analytics** | Counterscale (existing, self-hosted on Cloudflare Workers) | Privacy-friendly, already set up, no Google Analytics needed |
 
 ## Scope: Wave 1 vs Wave 2
 
@@ -27,8 +30,8 @@ The blog at annjose.com ("Reflections" by Ann Catherine Jose) runs on Hugo with 
 - Content migration: all 58 posts + existing pages (/about, /ammachi, /epsilla, /redesign). Excluded: /bluesky and /image-test (test pages, not migrated)
 - Blog features: TOC, tags, comments, search, prev/next, OG images, reading time
 - RSS feed migration (preserve existing feed URL for subscribers)
-- Design: custom colors, fonts, wider layout, light/dark mode
-- Analytics: Counterscale (existing) migrated to Astro
+- Design: custom color palette, fonts, wider layout, light/dark mode
+- Analytics: Counterscale migrated to Astro
 - Automated tests (Playwright e2e + Lighthouse CI)
 - Deployment to Cloudflare Pages
 - DNS cutover
@@ -43,50 +46,84 @@ The blog at annjose.com ("Reflections" by Ann Catherine Jose) runs on Hugo with 
 
 ---
 
-# Wave 1: Implementation Phases
+## Architecture
 
-## Phase 1: Project Scaffolding (Day 1-2)
+### Repo Strategy
 
-### 1.1 Rename repo and create Astro branch
-- Rename GitHub repo: `myblog` -> `annjose.com` (do this first, before Cloudflare Pages setup)
-- Update local remote: `git remote set-url origin git@github.com:annjose/annjose.com.git`
-- Create branch: `git checkout -b astro`
-- Remove Hugo files (theme, config.toml, etc.) but keep `content/` and `docs/`
-- Remove git submodules: `public/` (GitHub Pages output) and theme submodules in `.gitmodules`
-- Scaffold AstroPaper into the repo root: `npm create astro@latest --template satnaing/astro-paper` (into a temp dir, then move files in)
-- Verify Astro 5.x in package.json
-- Preserve `docs/` directory (operational docs still relevant: taxonomy-conventions, decision-log, etc.)
-- The Hugo `master` branch remains untouched and deployable throughout
+1. Rename GitHub repo: `myblog` → `annjose.com`
+2. Create `astro` branch from `master`
+3. All Astro work happens on `astro` branch
+4. Hugo `master` branch remains untouched and deployable throughout
+5. At launch: merge `astro` into `master`, rename `master` → `main`
+6. Safety: if anything goes wrong, `master` with Hugo is always available
 
-### 1.2 Configure for Cloudflare Pages
-- `astro.config.ts`: `site: "https://annjose.com"`, `output: "static"`
-- `wrangler.jsonc`: `pages_build_output_dir: "./dist"`
-- Syntax highlighting: dual theme (light: `min-light`, dark: `night-owl`) with line numbers
+### Content Collections
 
-### 1.3 Update site metadata (`src/config.ts`)
-- title: "Reflections", author: "Ann Catherine Jose"
-- Social links: GitHub, LinkedIn, Bluesky, HackerNews (all `annjose`)
-- postPerPage: 10, lightAndDarkMode: true, dynamicOgImage: true
+**Blog collection** — extends AstroPaper's existing schema:
 
-### 1.4 Favicon
-- Carry over existing favicon from Hugo site, or create a new one
+```yaml
+---
+title: string (required)
+description: string (required)
+pubDatetime: Date (required)
+draft: boolean (default: false)
+tags: string[] (default: [])
+ogImage: string (optional)
+author: string (default: "Ann Catherine Jose")
+disqusSlug: string (optional)  # links archived comments
+---
+```
 
-### 1.5 Cloudflare Pages setup & first deploy
-- Connect GitHub repo (`annjose/annjose.com`) to Cloudflare Pages
-- Configure: production branch = `astro` (temporarily), build command: `npm run build`, output: `dist`
-- Cloudflare project name: `annjose` -> preview URL: `annjose.pages.dev`
-- Old Hugo site stays live at `annjose.com` via GitHub Pages throughout
-- Deploy vanilla AstroPaper site and verify it renders at `annjose.pages.dev`
-- **Milestone check**: vanilla AstroPaper running locally (`npm run dev`) and on Cloudflare Pages
-- From this point on, deploy to Cloudflare Pages at each phase milestone to catch issues early
+### Taxonomy: Tag Display Labels
+
+Standard approach: lowercase slugs in URLs, display labels in UI.
+- URLs/slugs: always lowercase with hyphens (`/tags/llm/`, `/tags/web-development/`)
+- Display: acronyms uppercase ("LLM", "AI", "RAG"), phrases title-cased ("Tech Explorations", "Personal Growth")
+- Preserves conventions from `docs/taxonomy-conventions.md`
+- Implementation: lookup map in `src/utils/tagLabels.ts` — if tag has custom label, use it; otherwise auto-title-case the slug
 
 ---
 
-## Phase 2: Content Migration (Day 2-4) -- CRITICAL PATH
+## Visual Design
 
-### 2.1 Migration script (`scripts/migrate-content.ts`)
+### Color Palette: Warm & Earthy
 
-**Front matter conversion (TOML `+++` to YAML `---`)**:
+| Role | Light mode | Dark mode |
+|---|---|---|
+| Accent | `#c2410c` (burnt orange) | `#c2410c` |
+| Background | `#faf7f5` (warm white) | `#1c1917` (warm black) |
+| Text | `#1c1917` | `#faf7f5` |
+| Muted text | `#78716c` | `#a8a29e` |
+| Tag background | `#fff7ed` | `#292524` |
+| Tag border | `#fed7aa` | `#44403c` |
+
+AstroPaper uses RGB triplets for CSS variables (for opacity modifiers). The hex values above are converted to RGB in the implementation.
+
+### Typography
+
+- **Headings & Body**: [Inter](https://rsms.me/inter/) — clean sans-serif, highly readable
+- **Code**: [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) — monospace with optional ligatures
+
+### Syntax Highlighting
+
+- Engine: Shiki (Astro built-in, zero client JS)
+- Dark theme: `night-owl`
+- Light theme: `github-light`
+- Line numbers enabled
+- Dual theme support (switches with light/dark mode toggle)
+
+### Layout
+
+- **Content area**: Increase AstroPaper's `max-w-3xl` to `max-w-4xl` for main content
+- **Blog post page**: Article `max-w-4xl` + TOC sidebar `w-64` within `max-w-6xl` container. ~65% content / ~25% TOC on desktop. Single column on mobile.
+- **Homepage**: Post list with tag cloud in sidebar (desktop) or below list (mobile)
+- **Whitespace**: Generous line height (1.75), comfortable paragraph spacing
+
+---
+
+## Content Migration
+
+### Front Matter Conversion (TOML `+++` → YAML `---`)
 
 | Hugo field | Astro field | Notes |
 |---|---|---|
@@ -98,29 +135,37 @@ The blog at annjose.com ("Reflections" by Ann Catherine Jose) runs on Hugo with 
 | `images[0]` | `ogImage` | First image, relative path for bundles |
 | (new) | `author` | Default: "Ann Catherine Jose" |
 
-**Hugo shortcode conversion** (found in ~12 posts):
-1. `{{< pure_table >}}` (6 posts) -> standard markdown tables
-2. `{{< fluid_imgs >}}` (5 posts) -> `<div class="image-grid cols-N">` with markdown images
-3. `{{< video >}}` (1 post) -> HTML5 `<video>` tag
+### Hugo Shortcode Conversion (found in ~12 posts)
 
-**File structure mapping**:
-- Page bundles: `content/post/slug/index.md` -> `src/content/blog/slug/index.md` (with colocated images)
-- Single-file: `content/post/slug.md` -> `src/content/blog/slug.md`
-- Static images: `static/img/*` -> `public/img/*`
-- About page: `content/about.md` -> `src/pages/about.md`
-- Custom routes: `content/ammachi/index.md` -> `src/pages/ammachi.md`, `content/epsilla/index.md` -> `src/pages/epsilla.md`
-- Redesign log: `content/redesign/index.md` -> `src/pages/redesign.md`
+1. `{{< pure_table >}}` (6 posts) → standard markdown tables
+2. `{{< fluid_imgs >}}` (5 posts) → `<div class="image-grid cols-N">` with markdown images
+3. `{{< video >}}` (1 post) → HTML5 `<video>` tag
+
+### File Structure Mapping
+
+| Hugo path | Astro path |
+|---|---|
+| `content/post/slug/index.md` | `src/content/blog/slug/index.md` (with colocated images) |
+| `content/post/slug.md` | `src/content/blog/slug.md` |
+| `static/img/*` | `public/img/*` |
+| `content/about.md` | `src/pages/about.md` |
+| `content/ammachi/index.md` | `src/pages/ammachi.md` |
+| `content/epsilla/index.md` | `src/pages/epsilla.md` |
+| `content/redesign/index.md` | `src/pages/redesign.md` |
 
 **Pages to migrate**: `/about`, `/ammachi`, `/epsilla`, `/redesign`
 **Pages NOT migrated**: `/bluesky` (test page), `/image-test` (test page)
 
-### 2.2 Disqus comment export (`scripts/convert-disqus.ts`)
+### Disqus Comment Export
+
 - Export XML from Disqus admin (shortname: `anncjose`)
-- Parse XML, group by thread URL -> post slug
+- Parse XML, group by thread URL → post slug
 - Generate static HTML fragments at `src/content/comments/<slug>.html`
 - Style as "Archived Comments" section below Giscus
 
-### 2.3 Validation script (`scripts/validate-migration.ts`)
+### Migration Validation
+
+Post-migration script checks:
 - Confirm 58 posts migrated, YAML parses correctly
 - Check all image references resolve to actual files
 - Check no residual `{{<` or `{{%` shortcode syntax remains
@@ -128,151 +173,205 @@ The blog at annjose.com ("Reflections" by Ann Catherine Jose) runs on Hugo with 
 
 ---
 
-## Phase 3: Content Collections & Routing (Day 3-5)
+## URL Routing & Redirects
 
-### 3.1 Extend content schema (`src/content.config.ts`)
+### URL Scheme
 
-**Blog collection** - add to existing AstroPaper schema:
-- `disqusSlug: z.string().optional()` -- links archived comments
-
-### 3.2 Taxonomy display labels
-Standard approach (used by most tech blogs): lowercase slugs in URLs, display labels in UI.
-- URLs/slugs: always lowercase with hyphens (`/tags/llm/`, `/tags/web-development/`)
-- Display: acronyms uppercase ("LLM", "AI", "RAG"), phrases title-cased ("Tech Explorations", "Personal Growth")
-- Preserves conventions from `docs/taxonomy-conventions.md`
-- Implementation: lookup map in `src/utils/tagLabels.ts` — if tag has custom label, use it; otherwise auto-title-case the slug
-
-### 3.3 URL routing: `/blog/<slug>/`
+- Blog listing: `/blog/`
+- Individual posts: `/blog/<slug>/`
 - Rename AstroPaper's `src/pages/posts/` to `src/pages/blog/`
 - Update all internal references from `/posts/` to `/blog/`
-- Blog listing at `/blog/`, individual posts at `/blog/<slug>/`
 
-### 3.4 Redirects (`public/_redirects`)
+### Redirect Rules (`public/_redirects`)
+
 Cloudflare Pages native redirect rules:
 ```
 /post/*    /blog/:splat   301
 /topics/*  /tags/:splat   301
+/index.xml /rss.xml       301
 ```
+
 - Old `/post/<slug>/` URLs permanently redirect to `/blog/<slug>/`
 - Old `/topics/<topic>/` URLs redirect to merged `/tags/<tag>/`
 - Existing backlinks, social shares, and search results all preserved
 
-### 3.5 Custom route pages
-- `src/pages/ammachi.md` -- family content with video
-- `src/pages/epsilla.md` -- product evaluation
-- `src/pages/redesign.md` -- redesign log page (already in Hugo nav)
-- Architecture supports future `/books`, `/notes`, `/photos`
+### RSS Feed Continuity
 
-### 3.6 RSS feed URL continuity
 - Hugo serves RSS at `/index.xml` (site-wide) and `/post/index.xml` (posts only)
-- Configure Astro RSS at `/rss.xml` (AstroPaper default) + add redirect: `/index.xml` -> `/rss.xml`
+- Configure Astro RSS at `/rss.xml` (AstroPaper default) + redirect `/index.xml` → `/rss.xml`
 - Existing RSS subscribers continue receiving updates without re-subscribing
+
+### Custom Route Pages
+
+- `src/pages/ammachi.md` — family content with video
+- `src/pages/epsilla.md` — product evaluation
+- `src/pages/redesign.md` — redesign log page
+- Architecture supports future `/books`, `/notes`, `/photos`
 
 ---
 
-## Phase 4: New Components (Day 5-8)
+## Blog Features
 
-### 4.1 Floating Table of Contents (`src/components/TableOfContents.astro`)
+### Floating Table of Contents
+
 - Receives `headings` from post render result
 - Sticky sidebar on desktop (right of content, `xl:block`, hidden on mobile)
 - Uses `IntersectionObserver` to highlight current section as user scrolls
-- Layout: article `max-w-4xl` + TOC sidebar `w-64` within `max-w-6xl` container
+- Collapses to an inline `<details>` dropdown on mobile
+- Only shown on posts with 3+ headings
 
-### 4.2 Tag Cloud (`src/components/TagCloud.astro`)
+### Tag Cloud
+
 - Weighted font sizes based on post count
 - Replaces AstroPaper's flat tag list on `/tags/`
-- Display labels for acronyms (llm->LLM, ai->AI)
+- Display labels for acronyms (llm→LLM, ai→AI)
 
-### 4.3 Comments section in `PostDetails.astro`
+### Comments
+
 - **GiscusComments component**: script embed, `data-theme="preferred_color_scheme"`, mapped by pathname
 - **DisqusComments component**: loads static HTML from `src/content/comments/<slug>.html`
 - Both render at bottom of post, archived Disqus above Giscus
 
-### 4.4 Image grid CSS (replaces `fluid_imgs` shortcode)
-- CSS-only: `.image-grid` with `grid-template-columns` for 2/3 col layouts
-- Responsive: collapses to 1 column on mobile
+### Search (Pagefind)
 
-### 4.5 Wider content area
-- Increase AstroPaper's `max-w-3xl` to `max-w-4xl` for main content
-- Post pages with TOC: `max-w-6xl` total, article `max-w-4xl`, TOC `w-64`
+- AstroPaper uses Pagefind for static search indexing
+- Zero JS bundle cost, indexes at build time
+- Verify it works with migrated content
 
-### 4.6 Prev/Next post navigation
-- AstroPaper may have this; if not, add to `PostDetails.astro`
-- Show post titles (not just arrows) for context
+### Code Block Enhancements
 
-### 4.7 Code block enhancements
 - Copy-to-clipboard button on all code blocks
 - Line highlighting support (e.g., `{1,3-5}` syntax)
 - Optional file name label above code blocks (e.g., `astro.config.ts`)
 - Dual theme: light theme for light mode, dark theme for dark mode
 
-### 4.8 Image optimization
-- Use `astro:assets` for post images (available in Astro 5, improved in 6)
-- Automatic WebP/AVIF conversion, responsive `srcset` generation
-- Lazy loading for below-fold images
+### Math Rendering (KaTeX)
 
-### 4.9 Reading time
-- Show estimated reading time on post cards and post detail pages
-- AstroPaper may already have this; verify and keep
-
-### 4.10 Search (Pagefind)
-- AstroPaper uses Pagefind for static search indexing
-- Zero JS bundle cost, indexes at build time
-- Verify it works with migrated content
-
-### 4.11 Math rendering (KaTeX)
 - Hugo site uses MathJax for math expressions (loaded in footer)
 - 2 posts use math: `display-math-expressions-in-hugo.md`, `math-symbols-test.md`
 - Migrate to KaTeX via `remark-math` + `rehype-katex` (lighter, faster than MathJax)
 - Add to `astro.config.ts` remarkPlugins/rehypePlugins
 
----
+### Image Optimization
 
-## Phase 5: Layout & Design Polish (Day 8-10)
+- Use `astro:assets` for post images (available in Astro 5, improved in 6)
+- Automatic WebP/AVIF conversion, responsive `srcset` generation
+- Lazy loading for below-fold images
 
-### 5.1 Header navigation
-- Home, Blog, About
-- Clean horizontal nav (not the Hugo side menu)
+### Image Grid CSS (replaces `fluid_imgs` shortcode)
 
-### 5.2 Footer with social links
-- GitHub, LinkedIn, Bluesky, HackerNews
+- CSS-only: `.image-grid` with `grid-template-columns` for 2/3 col layouts
+- Responsive: collapses to 1 column on mobile
 
-### 5.3 Custom color scheme & fonts
-- Customize Tailwind skin colors for a distinctive look
-- Clean font pairing (e.g., Inter + JetBrains Mono for code)
-- Beautiful colors that work in both light and dark mode
+### Prev/Next Post Navigation
 
-### 5.4 Custom 404 page
-- Designed 404 page matching the site theme
-- Helpful navigation back to home/blog
+- Show at bottom of each post
+- Show post titles (not just arrows) for context
+- Sorted by date descending
 
-### 5.5 Analytics: Counterscale
-- Migrate existing Counterscale analytics (self-hosted on Cloudflare Workers)
-- Add to `Layout.astro` head:
-  ```html
-  <script id="counterscale-script" data-site-id="annjose-blog"
-    src="https://counterscale.annjose.workers.dev/tracker.js" defer></script>
-  ```
-- No Google Analytics needed (Counterscale is the primary analytics)
+### Reading Time
 
-### 5.6 Draft preview
-- Draft posts (`draft: true`) excluded from production builds
-- Viewable locally with `npm run dev` for preview before publishing
+- Show estimated reading time on post cards and post detail pages
+- AstroPaper may already have this; verify and keep
+
+### OG Images
+
+- Posts with `ogImage` frontmatter use that image
+- Posts without one get AstroPaper's built-in generated OG card
+- `<meta>` tags for Open Graph and Twitter Card in base layout
 
 ---
 
-## Phase 6: Final Testing & Polish (Day 10-12)
+## About Page
 
-Cloudflare Pages is already set up and continuously deployed since Phase 1.
+### Layout: Sectioned Profile
 
-### 6.1 Giscus setup
-- Enable GitHub Discussions on the `annjose.com` repo
-- Configure at giscus.app, get repo ID and category ID
+The About page uses a structured frontmatter schema, rendered with a dedicated Astro page.
 
-### 6.2 GitHub Actions CI
-- Build check on push/PR to catch errors early
+**Frontmatter schema** (`src/content/pages/about.md`):
+```yaml
+---
+name: Ann Catherine Jose
+tagline: Engineer, writer, and perpetual learner
+photo: /img/ann-profile.jpg
+interests:
+  - AI & Large Language Models
+  - Web Development
+  - iOS & Mobile
+  - Leadership & Career Growth
+  - Personal Development
+currently: Exploring the intersection of AI tools and software engineering workflows
+social:
+  bluesky: annjose.com
+  linkedin: annjose
+  github: annjose
+---
 
-### 6.3 Testing checklist
+[Prose bio in markdown body]
+```
+
+**Visual structure**:
+1. Photo + name + tagline at top
+2. Prose bio (markdown body)
+3. "What I work on" section — interest tags with burnt orange accent
+4. "Currently" section — short blurb
+5. Social icon links
+
+Each section has a left accent border in burnt orange. Layout is single-column, centered, max ~700px wide.
+
+---
+
+## Deployment
+
+### Cloudflare Pages Configuration
+
+- `astro.config.ts`: `site: "https://annjose.com"`, `output: "static"`
+- `wrangler.jsonc`: `pages_build_output_dir: "./dist"`
+- Build command: `npm run build`, output: `dist`
+- Cloudflare project name: `annjose` → preview URL: `annjose.pages.dev`
+
+### Coexistence Strategy
+
+- Old Hugo site stays live at `annjose.com` via GitHub Pages throughout development
+- New Astro site tested at `annjose.pages.dev` preview URL
+- DNS cutover only when new site is fully validated
+- Safety: `master` branch with Hugo is always available as fallback — point DNS back to GitHub Pages if needed
+
+### DNS Cutover Sequence
+
+1. Final validation on `annjose.pages.dev`
+2. Migrate any Hugo posts published during the transition period
+3. Verify Google Search Console is set up
+4. Merge `astro` branch into `master`
+5. Rename `master` → `main`
+6. Update GitHub default branch to `main`
+7. Update Cloudflare Pages production branch to `main`
+8. Update DNS: point `annjose.com` to Cloudflare Pages
+9. Wait for DNS propagation (5-30 min with Cloudflare proxy)
+10. Verify SSL certificate is active
+11. Submit updated sitemap to Google Search Console
+
+### Post-Launch
+
+- Monitor Cloudflare Analytics for 404 errors
+- Check Google Search Console for crawl errors
+- Remove CNAME from old `public/` submodule to avoid GitHub Pages conflict
+- Old Hugo content preserved in git history
+
+### Content Freeze Protocol
+
+During migration, avoid publishing new Hugo posts. If unavoidable, document the post slug and migrate it into the Astro content collection before DNS cutover.
+
+---
+
+## Testing Strategy
+
+### Performance Baseline
+
+Before starting migration, run Lighthouse on the current Hugo site and record scores. This provides a benchmark to compare against the new Astro site.
+
+### Testing Checklist
+
 - [ ] All 58 posts render without errors
 - [ ] All images load (colocated and static)
 - [ ] Shortcode conversions render correctly (tables, grids, video)
@@ -291,81 +390,43 @@ Cloudflare Pages is already set up and continuously deployed since Phase 1.
 - [ ] Code blocks: syntax highlighting, copy button, line highlighting
 - [ ] Reading time displays on posts
 - [ ] Sitemap and RSS feed work
-- [ ] RSS feed URL matches old Hugo feed URL
+- [ ] RSS feed URL matches old Hugo feed URL (via redirect)
 - [ ] 404 page renders correctly
 - [ ] Image optimization: WebP/AVIF served, responsive sizes
 - [ ] Counterscale analytics script loads correctly
 - [ ] Math expressions render in posts that use them
 - [ ] Lighthouse > 95 all metrics
 
-### 6.4 Automated tests
+### Playwright E2E Tests (`tests/e2e/`)
 
-**Playwright e2e tests** (`tests/e2e/`):
 - Pages render: home, blog listing, individual post, about, ammachi, tags, 404
 - Navigation: header links, prev/next post, tag links
-- Redirects: `/post/<slug>/` -> `/blog/<slug>/` (301)
+- Redirects: `/post/<slug>/` → `/blog/<slug>/` (301)
 - Dark mode toggle works and persists
 - TOC sidebar: visible on desktop, hidden on mobile
 - Search: type query, results appear
 - Code blocks: copy button functional
 - Images load without 404s
 
-**Lighthouse CI** (in GitHub Actions):
+### Lighthouse CI (in GitHub Actions)
+
 - Run Lighthouse on key pages (home, blog post, tags)
 - Enforce thresholds: performance > 90, accessibility > 95, best practices > 95, SEO > 95
 - Fail CI if thresholds not met
 
-**Link checker** (post-build):
+### Link Checker (post-build)
+
 - Validate all internal links resolve
 - Check for broken anchor links
-- Can use `lychee` or `broken-link-checker` in CI
+- Use `lychee` or `broken-link-checker` in CI
 
-**Setup**: `npm install -D @playwright/test && npx playwright install`
+### GitHub Actions CI
 
----
-
-## Phase 7: Astro 6 Upgrade (Day 12-13)
-
-### 7.1 Upgrade process
-- Run `npx @astrojs/upgrade` to upgrade Astro 5 -> 6
-- Address breaking changes:
-  - Node.js 22+ required
-  - Vite 7, Shiki 4, Zod 4 dependency updates
-  - Zod imports: `astro/zod` instead of `astro:content`
-- Re-run full test checklist from Phase 6.4
-- Verify Cloudflare Pages preview build succeeds
+- Build check on push/PR to catch errors early
 
 ---
 
-## Phase 8: DNS Cutover & Launch (Day 13-14)
-
-### 8.1 Pre-cutover
-- Final validation on `annjose.pages.dev`
-- Migrate any Hugo posts published during the transition period
-- Verify Google Search Console is set up for new site
-
-### 8.2 Branch merge & rename
-1. Merge `astro` branch into `master`
-2. Rename `master` -> `main`: `git branch -m master main && git push origin main`
-3. Update GitHub default branch to `main`
-4. Update Cloudflare Pages production branch to `main`
-
-### 8.3 DNS Cutover
-1. Update DNS: point `annjose.com` to Cloudflare Pages
-2. Wait for DNS propagation (5-30 min with Cloudflare proxy)
-3. Verify SSL certificate is active
-4. Test live site on `annjose.com`
-5. Submit updated sitemap to Google Search Console
-
-### 8.4 Post-launch
-- Monitor Cloudflare Analytics for 404 errors
-- Check Google Search Console for crawl errors
-- Remove CNAME from old `public/` submodule to avoid GitHub Pages conflict
-- Old Hugo content preserved in git history (accessible via tags/commits)
-
----
-
-# Wave 2: Enhancements (after Wave 1 is stable)
+## Wave 2: Enhancements (after Wave 1 is stable)
 
 - **Projects page**: side projects & open source, card grid layout with `ProjectCard` components, featured section + regular grid, tech stack badges, status badges, live/GitHub links
 - **Projects content collection**: title, description, techStack[], liveUrl?, githubUrl?, status, featured, sortOrder, image?
@@ -377,9 +438,9 @@ Cloudflare Pages is already set up and continuously deployed since Phase 1.
 
 ---
 
-# Reference
+## Reference
 
-## Folder Structure (on `astro` branch of myblog repo)
+### Folder Structure (on `astro` branch)
 
 ```
 annjose.com/                          # Renamed repo, astro branch
@@ -387,7 +448,7 @@ annjose.com/                          # Renamed repo, astro branch
 │   ├── img/                          # Legacy static images (from Hugo static/img/)
 │   ├── fonts/
 │   ├── favicon.ico
-│   └── _redirects                    # Cloudflare redirect rules (/post/* -> /blog/*)
+│   └── _redirects                    # Cloudflare redirect rules (/post/* → /blog/*)
 │
 ├── src/
 │   ├── assets/                       # Icons, theme images, site logo
@@ -412,9 +473,11 @@ annjose.com/                          # Renamed repo, astro branch
 │   │   │   │   └── agentic-loop.png  # Colocated image
 │   │   │   ├── chatgpt-intro.md      # Single-file post (no images)
 │   │   │   └── ...56 more posts
-│   │   └── comments/                 # NEW: archived Disqus comment HTML
-│   │       ├── agentic-coding-basics.html
-│   │       └── ...
+│   │   ├── comments/                 # NEW: archived Disqus comment HTML
+│   │   │   ├── agentic-coding-basics.html
+│   │   │   └── ...
+│   │   └── pages/
+│   │       └── about.md              # About page content + frontmatter
 │   │
 │   ├── layouts/
 │   │   ├── Layout.astro              # MODIFY: analytics, fonts
@@ -425,7 +488,7 @@ annjose.com/                          # Renamed repo, astro branch
 │   │
 │   ├── pages/
 │   │   ├── index.astro               # Home page
-│   │   ├── about.md                  # About page (migrated from Hugo)
+│   │   ├── about.astro               # About page (renders content/pages/about.md)
 │   │   ├── search.astro              # Search page (Pagefind)
 │   │   ├── 404.astro                 # MODIFY: custom 404 design
 │   │   ├── ammachi.md                # NEW: custom route (markdown)
@@ -444,15 +507,15 @@ annjose.com/                          # Renamed repo, astro branch
 │   │   └── typography.css            # MODIFY: wider prose, code blocks
 │   │
 │   ├── utils/
-│   │   ├── tagLabels.ts              # NEW: tag display label map (llm->LLM)
+│   │   ├── tagLabels.ts              # NEW: tag display label map (llm→LLM)
 │   │   └── ...existing AstroPaper utils
 │   │
 │   ├── config.ts                     # MODIFY: site metadata
-│   └── content.config.ts             # MODIFY: add disqusSlug field
+│   └── content.config.ts             # MODIFY: add disqusSlug, pages collection
 │
 ├── scripts/                          # Migration scripts (not part of Astro build)
-│   ├── migrate-content.ts            # NEW: Hugo -> Astro content migration
-│   ├── convert-disqus.ts             # NEW: Disqus XML -> static HTML
+│   ├── migrate-content.ts            # NEW: Hugo → Astro content migration
+│   ├── convert-disqus.ts             # NEW: Disqus XML → static HTML
 │   └── validate-migration.ts         # NEW: post-migration validation
 │
 ├── tests/                            # NEW: automated tests
@@ -471,24 +534,25 @@ annjose.com/                          # Renamed repo, astro branch
 
 **Legend**: EXISTING = comes with AstroPaper, MODIFY = customize existing, NEW = create from scratch
 
-## Key Files Reference
+### Key Files Reference
 
 | File | Purpose |
 |---|---|
-| `scripts/migrate-content.ts` | Content migration: TOML->YAML, shortcodes, file structure |
-| `scripts/convert-disqus.ts` | Disqus XML export -> static HTML fragments |
+| `scripts/migrate-content.ts` | Content migration: TOML→YAML, shortcodes, file structure |
+| `scripts/convert-disqus.ts` | Disqus XML export → static HTML fragments |
 | `scripts/validate-migration.ts` | Post-migration validation checks |
-| `src/content.config.ts` | Content collection schema (add disqusSlug) |
+| `src/content.config.ts` | Content collection schema (blog + pages) |
 | `src/config.ts` | Site metadata, author, social links |
 | `src/components/TableOfContents.astro` | Floating sticky TOC with scroll tracking |
 | `src/components/TagCloud.astro` | Weighted tag cloud with display labels |
 | `src/components/GiscusComments.astro` | Giscus comment embed |
 | `src/components/DisqusComments.astro` | Archived Disqus static comments |
-| `src/utils/tagLabels.ts` | Tag slug -> display label mapping |
+| `src/utils/tagLabels.ts` | Tag slug → display label mapping |
 | `src/pages/blog/` | Blog routes (renamed from posts/) |
 | `src/pages/ammachi.md` | Custom route: family content |
 | `src/pages/epsilla.md` | Custom route: product evaluation |
 | `src/pages/redesign.md` | Redesign log page |
+| `src/pages/about.astro` | About page with Sectioned Profile layout |
 | `src/layouts/PostDetails.astro` | Post layout: TOC sidebar + comments |
 | `public/_redirects` | Cloudflare redirect rules |
 | `wrangler.jsonc` | Cloudflare Pages deployment config |
@@ -496,25 +560,9 @@ annjose.com/                          # Renamed repo, astro branch
 | `tailwind.config.mjs` | Tailwind: custom colors, wider max-width |
 | `tests/e2e/*.spec.ts` | Playwright e2e tests |
 
----
-
-## Reference Links
+### Reference Links
 
 - [AstroPaper theme repo](https://github.com/satnaing/astro-paper)
 - [Astro: Migrating from Hugo](https://docs.astro.build/en/guides/migrate-to-astro/from-hugo/)
 - [Astro Content Collections](https://docs.astro.build/en/guides/content-collections/)
 - [Site Redesign Log](https://annjose.com/redesign/) (live on current Hugo site)
-
----
-
-## Verification Plan
-1. Run migration script, then validation script
-2. `npm run build` -- zero errors
-3. `npm run dev` -- manually check 5-10 posts, about, custom routes, search, tags
-4. Deploy to Cloudflare Pages preview URL
-5. Test redirect rules: `/post/*` -> `/blog/*`
-6. Test on mobile viewports (375px, 768px)
-7. Test light/dark mode toggle
-8. Lighthouse audit on preview URL (target: >95 all metrics)
-9. Upgrade to Astro 6, re-run steps 2-8
-10. DNS cutover when all checks pass

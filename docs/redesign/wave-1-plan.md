@@ -22,11 +22,11 @@
 
 ### Task 2: Scaffold AstroPaper
 
-- [ ] Scaffold into a temp dir, then move files into repo root: `npm create astro@latest --template satnaing/astro-paper`
+- [ ] Scaffold into a temp dir, then move files into repo root: `pnpm create astro@latest --template satnaing/astro-paper`
 - [ ] Verify Astro 5.x in package.json
-- [ ] Run `npm install`
-- [ ] Verify `npm run build` succeeds (AstroPaper demo content)
-- [ ] Verify `npm run dev` starts at `http://localhost:4321`
+- [ ] Run `pnpm install`
+- [ ] Verify `pnpm run build` succeeds (AstroPaper demo content)
+- [ ] Verify `pnpm run dev` starts at `http://localhost:4321`
 - [ ] Commit scaffold
 
 **Expected**: Vanilla AstroPaper site builds and runs locally.
@@ -57,7 +57,7 @@
 ### Task 6: Cloudflare Pages setup & first deploy
 
 - [ ] Connect GitHub repo (`annjose/annjose.com`) to Cloudflare Pages
-- [ ] Configure: production branch = `astro` (temporarily), build command: `npm run build`, output: `dist`
+- [ ] Configure: production branch = `astro` (temporarily), build command: `pnpm run build`, output: `dist`
 - [ ] Cloudflare project name: `annjose` → preview URL: `annjose.pages.dev`
 - [ ] Deploy and verify vanilla AstroPaper renders at `annjose.pages.dev`
 - [ ] Verify old Hugo site still live at `annjose.com` via GitHub Pages
@@ -82,7 +82,7 @@
 
 **Files**: `scripts/migrate-content.ts`, `scripts/migrate-content.test.ts`
 
-- [ ] Install dependencies: `npm install --save-dev @iarna/toml js-yaml vitest`
+- [ ] Install dependencies: `pnpm add -D @iarna/toml js-yaml vitest`
 - [ ] Add Vitest config to package.json (`"test": "vitest run"`, `"test:watch": "vitest"`)
 - [ ] **Write failing tests first**:
   - Parse TOML frontmatter delimited by `+++`
@@ -119,7 +119,7 @@
   - No residual `{{<` or `{{%` shortcode syntax
   - All dates parse, all tags are lowercase slugs
 - [ ] Run validation script — expect pass
-- [ ] Verify Astro build picks up migrated content: `npm run build`
+- [ ] Verify Astro build picks up migrated content: `pnpm run build`
 - [ ] Commit migrated content
 
 **Expected**: All 58 posts in `src/content/blog/`, all images in place, zero validation errors.
@@ -395,13 +395,13 @@
 ### Task 34: Draft preview
 
 - [ ] Verify draft posts (`draft: true`) are excluded from production builds
-- [ ] Verify they're viewable locally with `npm run dev`
+- [ ] Verify they're viewable locally with `pnpm run dev`
 
 ### Task 35: Playwright e2e tests
 
 **Files**: `tests/e2e/pages.spec.ts`, `tests/e2e/navigation.spec.ts`, `tests/e2e/features.spec.ts`, `tests/e2e/playwright.config.ts`
 
-- [ ] Install: `npm install -D @playwright/test && npx playwright install`
+- [ ] Install: `pnpm add -D @playwright/test && pnpm exec playwright install`
 - [ ] Write tests per spec's Playwright section:
   - Pages render (home, blog listing, post, about, ammachi, tags, 404)
   - Navigation (header links, prev/next, tag links)

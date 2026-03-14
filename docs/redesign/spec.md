@@ -10,7 +10,8 @@ The blog at annjose.com ("Reflections" by Ann Catherine Jose) runs on Hugo with 
 
 | Decision | Choice | Rationale |
 |---|---|---|
-| **Base template** | AstroPaper (as Astro template, not fork) | `npm create astro@latest --template satnaing/astro-paper` |
+| **Base template** | AstroPaper (as Astro template, not fork) | `pnpm create astro@latest --template satnaing/astro-paper` |
+| **Package manager** | pnpm | Faster installs, stricter dependency resolution, disk-efficient; AstroPaper's own repo uses pnpm |
 | **Astro version** | Start on Astro 5 (AstroPaper's current base), upgrade to Astro 6 before launch | AstroPaper not yet updated for Astro 6; mechanical upgrade path exists |
 | **Hosting** | Cloudflare Pages (static output for Wave 1) | Free, fast CDN, supports SSR later for auth |
 | **Comments** | Static embed of old Disqus comments + Giscus for new posts | Preserves history, no Disqus dependency going forward |
@@ -327,7 +328,7 @@ Each section has a left accent border in burnt orange. Layout is single-column, 
 
 - `astro.config.ts`: `site: "https://annjose.com"`, `output: "static"`
 - `wrangler.jsonc`: `pages_build_output_dir: "./dist"`
-- Build command: `npm run build`, output: `dist`
+- Build command: `pnpm run build`, output: `dist`
 - Cloudflare project name: `annjose` → preview URL: `annjose.pages.dev`
 
 ### Coexistence Strategy

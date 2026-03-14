@@ -15,6 +15,53 @@ I'm redesigning this blog from Hugo to Astro, using AI coding agents (Claude Cod
 
 **How to read this:** Each part below is a chapter of the redesign. Newest entries are at the top.
 
+--- 
+
+## Lessons learned along the way (WIP)
+1. Ask what am I missing when reviewing any spec or plan? This puts the agent in exploratory mode and it can go broad and surface important insights
+2. Ask what could go wrong and incorporate a plan to mitigate or handle such errors
+3. If you are working with newer frameworks or critical components, give the link to specific pages in the the framework's documentation to the agent and ask it to read the page and confirm that the plan takes it into account and follows the recommendations from the framework. Example, when I use InstantDB, I give the instand db's auth documenations. Or Astro collections https://docs.astro.build/en/guides/content-collections/
+
+---
+## Part 2: Refine the Spec — Mar 13, 2026
+
+**Goal:** Reconcile two competing specs into one unified spec ready for implementation.
+
+**Output Artifact:** A unified spec and Wave 1 plan.
+
+### Two specs, one project
+
+I now had two specs for the same migration - both generated from the same handwritten prompt. The first one I created from Part 1 - I call it the **Collaborative Spec** because it was built through multiple rounds of conversation with Claude Desktop, where I could push back, ask "what am I missing?", and refine as we went. The second one is **Superpowers Spec** which came from [Superpowers](https://claude.com/plugins/superpowers), a Claude Code plugin that provides a structured workflow for writing specs, plans, and implementation. Superpowers took the same handwritten prompt I started with and generated both a spec and plan in a single pass using Sonnet 4.6.
+
+- [Collaborative Spec](https://github.com/annjose/myblog/blob/master/docs/redesign/spec.md) (from Part 1)
+- [Superpowers Spec](https://github.com/annjose/myblog/blob/master/docs/redesign/superpowers-spec.md)
+- [Superpowers Plan](https://github.com/annjose/myblog/blob/master/docs/redesign/superpowers-plan-phase1.md)
+
+### Comparing the two specs
+
+I read through both in detail. They're mostly aligned on the big picture, but diverge in interesting ways:
+
+{{< pure_table
+  "Aspect|Collaborative Spec|Superpowers Spec"
+  "Document structure|Spec + plan in one document|Separate spec and plan documents"
+  "Design specifics (fonts, colors, syntax themes)|Deferred — decide during implementation|✅ Specified upfront (less ambiguity)"
+  "Plan detail level|High-level steps|✅ Code snippets, commit messages, bash scripts (more actionable)"
+  "Astro version|✅ Start on Astro 5, upgrade to 6 before launch (safe since v6 is brand new)|Astro 6 directly"
+  "Repo strategy|✅ Branch-based coexistence (old site stays live) (lower risk)|In-place migration"
+  "Testing approach|Added tests during review rounds|✅ Test-first (write failing test, then implement) (more disciplined)"
+  "Gap coverage (MathJax, RSS, Counterscale, etc.)|✅ Discovered through conversation (conversation surfaces gaps)|Missing"
+  "Process|✅ Multi-round back-and-forth (room for exploration)|One-shot generation"
+  "Code generation|Requires a bigger model to fill in the details|✅ Can be implemented using a smaller model like Haiku (faster, cheaper)"
+>}}
+
+The pattern is clear: Superpowers is better at *detail and structure*, the Collaborative Spec is better at *coverage and risk management*. The one-shot approach produces a more actionable plan, but misses things you'd only catch through discussion — like MathJax in two posts, RSS feed continuity, or the fact that the site uses Counterscale instead of Google Analytics.
+
+I think there's real value in keeping things open-ended early on so there's room for exploration and discovery, instead of narrowing to a specific path before you've asked enough questions.
+
+### Next: cross-evaluation with multiple agents
+
+I'm going to give both specs to two more agents — Codex CLI and Claude Code — and ask each to evaluate both specs for pros, cons, and what's missing. Even though both specs were in essence made by Claude, the prompts and workflows were different. Will they find differences I didn't? This should help me reconcile the two into a single unified spec.
+
 ---
 
 ## Part 1: Write the Spec — Mar 11-12, 2026

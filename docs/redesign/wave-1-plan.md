@@ -35,11 +35,11 @@
 
 **Files**: `src/config.ts`, `astro.config.ts`
 
-- [ ] Update `src/config.ts`: title "Reflections", author "Ann Catherine Jose", social links (GitHub, LinkedIn, Bluesky, HackerNews — all `annjose`), postPerPage 10, lightAndDarkMode true, dynamicOgImage true
-- [ ] Update `astro.config.ts`: `site: "https://annjose.com"`, `output: "static"`
-- [ ] Configure syntax highlighting: dual theme (`night-owl` dark, `github-light` light) with line numbers
-- [ ] Verify build passes
-- [ ] Commit
+- [x] Update `src/config.ts`: title "Reflections", author "Ann Catherine Jose", social links (GitHub, LinkedIn, Bluesky, HackerNews — all `annjose`), postPerPage 10, lightAndDarkMode true, dynamicOgImage true
+- [x] Update `astro.config.ts`: `site: "https://annjose.com"`, `output: "static"`
+- [x] Configure syntax highlighting: dual theme (`night-owl` dark, `github-light` light) with line numbers
+- [x] Verify build passes
+- [x] Commit
 
 ### Task 4: Cloudflare Pages config
 

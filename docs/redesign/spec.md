@@ -136,11 +136,13 @@ AstroPaper uses RGB triplets for CSS variables (for opacity modifiers). The hex 
 | `images[0]` | `ogImage` | First image, relative path for bundles |
 | (new) | `author` | Default: "Ann Catherine Jose" |
 
-### Hugo Shortcode Conversion (found in ~12 posts)
+### Hugo Shortcode Conversion (found in ~15 posts)
 
 1. `{{< pure_table >}}` (6 posts) → standard markdown tables
-2. `{{< fluid_imgs >}}` (5 posts) → `<div class="image-grid cols-N">` with markdown images
+2. `{{< fluid_imgs >}}` (5 posts) → plain markdown images (one per line, separated by blank lines). Note: images render vertically stacked; multi-column grid layout deferred to Wave 2 (Task 23).
 3. `{{< video >}}` (1 post) → HTML5 `<video>` tag
+4. `{{< figure >}}` (3 posts) → standard markdown image `![alt](src)`
+5. `{{< highlight >}}` (1 post) → fenced code blocks with language identifier
 
 ### File Structure Mapping
 
@@ -261,7 +263,8 @@ Cloudflare Pages native redirect rules:
 
 ### Image Grid CSS (replaces `fluid_imgs` shortcode)
 
-- CSS-only: `.image-grid` with `grid-template-columns` for 2/3 col layouts
+- Migration converts `fluid_imgs` to plain markdown images (vertically stacked)
+- Wave 2: Add CSS grid or remark plugin for multi-column image layouts
 - Responsive: collapses to 1 column on mobile
 
 ### Prev/Next Post Navigation

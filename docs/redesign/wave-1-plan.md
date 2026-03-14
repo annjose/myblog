@@ -106,26 +106,31 @@
   - Write to `src/content/blog/` preserving directory structure
   - Copy colocated image files alongside
 - [x] Run tests — expect pass ✓ (23/23 pass)
-- [ ] Commit script and tests
+- [x] Commit script and tests
 
 ### Task 9: Run migration and validate
 
 **Files**: `src/content/blog/`, `public/img/`, `scripts/validate-migration.ts`
 
-- [ ] Run migration script: `node scripts/migrate-content.ts`
-- [ ] Spot-check 3-5 migrated posts (TOML→YAML, ogImage mapping, topics merged)
-- [ ] Move `static/img/` → `public/img/`
-- [ ] **Write validation script** (`scripts/validate-migration.ts`):
+- [x] Run migration script: `npx tsx scripts/migrate-content.ts`
+- [x] Spot-check 3-5 migrated posts (TOML→YAML, ogImage mapping, topics merged)
+- [x] Copy images from both `static/img/` and `content/img/` → `public/img/` (handled by migration script)
+- [x] **Write validation script** (`scripts/validate-migration.ts`):
   - Confirm 58 posts migrated
   - YAML parses correctly for all posts
   - All image references resolve to actual files
   - No residual `{{<` or `{{%` shortcode syntax
   - All dates parse, all tags are lowercase slugs
-- [ ] Run validation script — expect pass
-- [ ] Verify Astro build picks up migrated content: `pnpm run build`
-- [ ] Commit migrated content
+- [x] Run validation script — 6/6 checks pass
+- [x] Verify Astro build picks up migrated content: `pnpm run build` (119 pages, 55 indexed)
+- [x] Fix additional shortcodes discovered during migration: `figure` (3 posts), `highlight` (1 post)
+- [x] Fix `fluid_imgs` rendering: dropped `<div>` wrapper (markdown inside HTML blocks not parsed by Astro)
+- [x] Fix `pubDatetime` type: output `new Date()` object so js-yaml writes unquoted YAML date for `z.date()`
+- [x] Fix double-slug URLs for page bundles in `getPath.ts`
+- [x] Back up AstroPaper demo posts to `src/content/_demo/`
+- [x] Commit migrated content
 
-**Expected**: All 58 posts in `src/content/blog/`, all images in place, zero validation errors.
+**Expected**: All 58 posts in `src/content/blog/`, all images in place, zero validation errors. ✅
 
 ### Task 10: Disqus comment export
 
@@ -331,14 +336,15 @@
 - [ ] Verify each page renders at its URL
 - [ ] Commit
 
-### Task 27: URL routing — rename posts/ to blog/
+### Task 27: URL routing — rename posts/ to blog/ *(pulled forward into Task 9)*
 
 **Files**: `src/pages/blog/`, all component `href` references
 
-- [ ] Rename AstroPaper's `src/pages/posts/` → `src/pages/blog/`
-- [ ] Update all internal references from `/posts/` to `/blog/`
-- [ ] Verify blog listing at `/blog/`, individual posts at `/blog/<slug>/`
-- [ ] Commit
+- [x] Rename AstroPaper's `src/pages/posts/` → `src/pages/blog/`
+- [x] Update all internal references from `/posts/` to `/blog/` (`index.astro`, `Header.astro`, `Breadcrumb.astro`, `getPath.ts`)
+- [x] Header nav says "Blog", page title/heading says "Reflections", breadcrumb says "Reflections (Page N)"
+- [x] Verify blog listing at `/blog/`, individual posts at `/blog/<slug>/`
+- [x] Committed as part of Task 9
 
 ### Task 28: Redirect rules
 

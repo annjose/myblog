@@ -233,7 +233,7 @@ describe("convertPureTable", () => {
 });
 
 describe("convertFluidImgs", () => {
-  it("converts fluid_imgs to image-grid div with correct column count", () => {
+  it("converts fluid_imgs to plain markdown images", () => {
     const input = `{{< fluid_imgs
   "pure-u-1 pure-u-md-1-3|img1.png|Caption 1"
   "pure-u-1 pure-u-md-1-3|img2.png|Caption 2"
@@ -241,7 +241,7 @@ describe("convertFluidImgs", () => {
 >}}`;
 
     const result = convertFluidImgs(input);
-    expect(result).toContain('class="image-grid cols-3"');
+    expect(result).not.toContain("<div");
     expect(result).toContain("![Caption 1](img1.png)");
     expect(result).toContain("![Caption 2](img2.png)");
     expect(result).toContain("![Caption 3](img3.png)");
@@ -254,7 +254,9 @@ describe("convertFluidImgs", () => {
 >}}`;
 
     const result = convertFluidImgs(input);
-    expect(result).toContain('class="image-grid cols-2"');
+    expect(result).not.toContain("<div");
+    expect(result).toContain("![Caption 1](img1.png)");
+    expect(result).toContain("![Caption 2](img2.png)");
   });
 
   it("handles single full-width image", () => {
@@ -263,7 +265,7 @@ describe("convertFluidImgs", () => {
 >}}`;
 
     const result = convertFluidImgs(input);
-    expect(result).toContain('class="image-grid cols-1"');
+    expect(result).not.toContain("<div");
     expect(result).toContain("![Caption](img1.png)");
   });
 });

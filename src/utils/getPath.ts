@@ -5,7 +5,7 @@ import { slugifyStr } from "./slugify";
  * Get full path of a blog post
  * @param id - id of the blog post (aka slug)
  * @param filePath - the blog post full file location
- * @param includeBase - whether to include `/posts` in return value
+ * @param includeBase - whether to include `/blog` in return value
  * @returns blog post path
  */
 export function getPath(
@@ -21,7 +21,7 @@ export function getPath(
     .slice(0, -1) // remove the last segment_ file name_ since it's unnecessary
     .map(segment => slugifyStr(segment)); // slugify each segment path
 
-  const basePath = includeBase ? "/posts" : "";
+  const basePath = includeBase ? "/blog" : "";
 
   // Making sure `id` does not contain the directory
   const blogId = id.split("/");
@@ -32,5 +32,15 @@ export function getPath(
     return [basePath, slug].join("/");
   }
 
-  return [basePath, ...pathSegments, slug].join("/");
+  // For page bundles (slug/index.md), the slug already matches the directory,
+  // so filter out pathSegments that duplicate the slug to avoid /blog/slug/slug
+  const filteredSegments = pathSegments.filter(
+    segment => segment !== slug[0]
+  );
+
+  if (filteredSegments.length < 1) {
+    return [basePath, slug].join("/");
+  }
+
+  return [basePath, ...filteredSegments, slug].join("/");
 }

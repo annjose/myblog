@@ -45,22 +45,23 @@
 
 **Files**: `wrangler.jsonc`
 
-- [ ] Create `wrangler.jsonc`: `pages_build_output_dir: "./dist"`
-- [ ] Commit
+- [x] Create `wrangler.jsonc`: `pages_build_output_dir: "./dist"`
+- [x] Commit
 
 ### Task 5: Favicon
 
-- [ ] Carry over existing favicon from Hugo site, or create new one
-- [ ] Place in `public/`
-- [ ] Commit
+- [x] Create favicon from colorized pencil sketch avatar (`src/assets/images/ann-color-sketch-square.png`)
+- [x] Generate `public/favicon-32.png` (32×32) and `public/favicon-180.png` (apple-touch-icon)
+- [x] Update `Layout.astro` to reference PNG favicons (replaced default SVG)
+- [x] Commit
 
 ### Task 6: Cloudflare Pages setup & first deploy
 
-- [ ] Connect GitHub repo (`annjose/annjose.com`) to Cloudflare Pages
-- [ ] Configure: production branch = `astro` (temporarily), build command: `pnpm run build`, output: `dist`
-- [ ] Cloudflare project name: `annjose` → preview URL: `annjose.pages.dev`
-- [ ] Deploy and verify vanilla AstroPaper renders at `annjose.pages.dev`
-- [ ] Verify old Hugo site still live at `annjose.com` via GitHub Pages
+- [x] Connect GitHub repo (`annjose/annjose.com`) to Cloudflare Pages
+- [x] Configure: production branch = `astro` (temporarily), build command: `pnpm run build`, output: `dist`
+- [x] Cloudflare project name: `annjose` → preview URL: `annjose.pages.dev`
+- [x] Deploy and verify vanilla AstroPaper renders at `annjose.pages.dev`
+- [x] Verify old Hugo site still live at `annjose.com` via GitHub Pages
 
 **Milestone**: Vanilla AstroPaper running locally AND on Cloudflare Pages. From here on, deploy at each phase milestone.
 

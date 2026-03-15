@@ -29,6 +29,72 @@ These are transferable techniques I'd use again on any project with an AI agent.
 4. Cross-evaluate competing specs by asking an agent to compare them — it surfaces risks and tradeoffs you'd miss reading them yourself
 5. Keep spec and plan as separate documents — spec = decisions + rationale (the "why"), plan = ordered checklist (the "how"). Mixing them makes both harder to use
 
+--- 
+### Part 4: Implementation Phase 2 — Content Migration — Mar 14, 2026
+
+**Goal:** Migrate all 58 blog posts from Hugo to Astro, validate everything, and export Disqus comments.
+
+**Output Artifacts:**
+- [Live site on Astro](https://annjose.pages.dev) — deployed on Cloudflare Pages
+- [Updated Wave 1 Plan](https://github.com/annjose/myblog/blob/master/docs/redesign/wave-1-plan.md) — Phase 2 tasks checked off
+- [Agent Session Transcript #4 — Implementation Phase 2](https://github.com/annjose/myblog/blob/master/docs/redesign/sessions/session-04-impl-phase2.md)
+
+Phase 2 was the heaviest part of the migration — converting 58 blog posts from Hugo's TOML frontmatter and shortcodes to Astro's YAML frontmatter and standard markdown. This is where the migration script did the heavy lifting, and where most of the bugs surfaced.
+
+#### The migration script (Task 8)
+
+Claude wrote the migration script using TDD — 23 tests first, then the implementation. The script handles TOML→YAML frontmatter conversion, five types of Hugo shortcodes (`pure_table`, `fluid_imgs`, `video`, `figure`, `highlight`), and copies page bundles with their colocated images. I was impressed by the test coverage — it caught edge cases I wouldn't have thought to test, like posts with no tags, dates with timezone offsets, and nested directories inside page bundles.
+
+#### Running the migration and fixing what broke (Task 9)
+
+Running the migration script was the moment of truth — and predictably, several things broke. This is where the iterative debugging with Claude was most valuable. Each fix led to a new discovery:
+
+1. **Page bundle subdirectories** — one post (`cloudflare-autorag-step-by-step`) had a `raw-images/` subdirectory inside its page bundle. The copy function tried to `copyFileSync` a directory. Claude added a recursive copy helper.
+
+2. **Missing shortcode types** — four posts had `figure` and `highlight` shortcodes that weren't handled. Claude added converters for both.
+
+3. **Images inside HTML blocks** — this was the most interesting bug. Hugo's `fluid_imgs` shortcode was being converted to markdown images wrapped in `<div class="image-grid">`. But markdown inside HTML block elements is not parsed — it's treated as raw text. The images simply didn't render. The fix was to drop the `<div>` wrapper entirely and output plain markdown images. The trade-off: we lose the multi-column grid layout for now (added to Wave 2 backlog).
+
+4. **Images in two locations** — I had to correct Claude that images weren't only in `static/img/` — some were in `content/img/` too. A good reminder that the human's knowledge of the codebase matters.
+
+5. **Double-slug URLs** — page bundle posts were generating URLs like `/blog/slug/slug` because AstroPaper's `getPath` utility was duplicating the directory name as a path segment. Claude traced through the path generation logic and added a filter for duplicate segments.
+
+6. **YAML date quoting** — Astro's `z.date()` schema expects unquoted YAML dates, but `js-yaml`'s `forceQuotes: true` was quoting them as strings. Fixed by passing `new Date()` objects instead of strings to the YAML serializer.
+
+#### Pulling Task 27 forward: /posts/ → /blog/
+
+I had originally planned the URL rename for later, but realized it made no sense to deploy with `/posts/` URLs and then rename later — that would create unnecessary redirects. So we pulled Task 27 into this session. Claude renamed the page directories, updated `getPath.ts`, and changed the nav/breadcrumb labels. I chose "Blog" for the nav link and "Reflections" for the page title — a nod to the original blog name.
+
+#### Disqus comment export (Task 10)
+
+The final task was converting the Disqus XML export to static HTML fragments. The XML had 193 threads (many duplicates from old domain changes and Google Translate proxies) and 34 comments. Claude wrote the conversion script with 15 tests, filtered out 2 deleted and 8 spam comments, and generated 9 HTML files with 24 valid comments. Threaded replies are preserved with recursive rendering.
+
+The comments aren't displayed on the site yet — that requires the `DisqusComments` component in Phase 5. For now they sit as static HTML ready to be plugged in.
+
+#### The site at the end of Phase 2
+
+Here's the new Astro site with all 58 posts migrated, avatar ring, and the "Reflections" page title — in both light and dark mode:
+
+{{< figure src="blog-redesign-v3-home.png" caption="The new Astro site — light mode" width="600" >}}
+
+{{< figure src="blog-redesign-v3-home-dark.png" caption="The new Astro site — dark mode" width="600" >}}
+
+And here's Claude Code's wave-1-plan showing the task progress — Phase 2 fully checked off:
+
+{{< figure src="blog-redesign-plan-tasks-progress.png" caption="Wave 1 plan — Phase 2 content migration complete" width="700" >}}
+
+#### Lessons and observations
+
+**One bug leads to five.** The migration script worked on the first run, but validation exposed a chain of issues that each required understanding a different part of the system — Astro's markdown processing, AstroPaper's URL generation, Hugo's image storage, YAML serialization quirks. Each fix was small, but finding the root cause required reading code carefully.
+
+**The agent is good at fixing what it can see, but needs the human for what it can't.** Claude found and fixed the HTML-block image rendering issue, the double-slug bug, and the date quoting problem entirely on its own. But it needed me to point out that images lived in `content/img/` (not just `static/img/`), and that the URL rename should happen now rather than later. The human provides context that isn't in the code.
+
+**TDD paid off.** The 23 migration tests and 15 Disqus tests made it safe to iterate quickly. When I asked for changes (drop the `<div>` wrapper, change the URL base path), Claude could make the change and immediately verify nothing else broke.
+
+Many a times, I would commit the code changes, push, but forget to check the build status on Cloudflare. And I would keep pushing new commits while the build may have failed 3 commits ago. I wish there was a better way to know if the Cloudflare build failed or not.
+
+**Phase 2 complete.** All 58 posts migrated, validated, and live at `/blog/<slug>`. Disqus comments exported. On to visual design.
+
 ---
 ## Part 2: Refine the Spec — Mar 13, 2026
 

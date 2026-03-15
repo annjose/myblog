@@ -104,6 +104,24 @@
     @apply border-neutral-700 bg-(--shiki-dark-bg) text-(--shiki-dark) [&_span]:text-(--shiki-dark);
   }
 
+  /* Line numbers: only on code blocks with 4+ lines */
+  .astro-code code {
+    counter-reset: line;
+  }
+
+  .astro-code code:has(.line:nth-child(4)) .line::before {
+    counter-increment: line;
+    content: counter(line);
+    display: inline-block;
+    width: 2rem;
+    margin-right: 1rem;
+    text-align: right;
+    color: var(--color-muted);
+    opacity: 0.5;
+    font-size: 0.8em;
+    user-select: none;
+  }
+
   /* Styles for Shiki transformers */
   /* https://shiki.style/packages/transformers */
   .astro-code {

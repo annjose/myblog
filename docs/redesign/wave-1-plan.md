@@ -168,14 +168,17 @@
 
 ### Task 12: Configure syntax highlighting
 
-**Files**: `astro.config.ts`, `src/styles/base.css`
+**Files**: `astro.config.ts`, `src/styles/typography.css`
 
-- [ ] Update `astro.config.ts` with Shiki themes: `{ light: "github-light", dark: "night-owl" }`
-- [ ] Set `wrap: true`
-- [ ] Install `@shikijs/transformers` and add line number transformer
-- [ ] Add line number CSS (counter-based)
-- [ ] Verify a post with code renders correctly in both modes
-- [ ] Commit
+- [x] Shiki themes already configured in Task 3: `{ light: "github-light", dark: "night-owl" }`
+- [x] Set `wrap: true` (was `false`)
+- [x] `@shikijs/transformers` already installed in Task 3 (diff, highlight, word highlight, file name)
+- [x] Add CSS counter-based line numbers — only on code blocks with 4+ lines, muted color, non-selectable
+- [x] Verify posts with code render correctly in both modes:
+  - `/blog/upgrade-hugo/` — short (2-line, no numbers) + long (10-line, with numbers), wrapping
+  - `/blog/mobile-on-device-ai-hands-on-gemma/` — Swift code, 11 lines
+  - `/blog/xcode-playgrounds-tdd/` — 26-line block in dark mode (night-owl)
+- [x] Commit
 
 ---
 

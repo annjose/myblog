@@ -149,19 +149,22 @@
 
 ### Task 11: Apply Warm & Earthy color palette
 
-**Files**: `src/styles/base.css` (or wherever AstroPaper defines CSS variables), `tailwind.config.mjs`
+**Files**: `src/styles/global.css`, `src/styles/typography.css`, `astro.config.ts`, `src/layouts/Layout.astro`, `src/layouts/PostDetails.astro`
 
-- [ ] Locate AstroPaper's color configuration (CSS variables, likely `:root` and `.dark` selectors)
-- [ ] Override CSS color variables with Warm & Earthy palette (see spec for hex→RGB values):
-  - Light: fill `250,247,245`, text `28,25,23`, accent `194,65,12`
-  - Dark: fill `28,25,23`, text `250,247,245`, accent `194,65,12`
-  - Card, card-muted, border values for both modes
-- [ ] Extend Tailwind config with custom font families:
-  - `sans: ["Inter", ...defaultTheme.fontFamily.sans]`
-  - `mono: ["JetBrains Mono", ...defaultTheme.fontFamily.mono]`
-- [ ] Add Google Fonts link to `Layout.astro` `<head>`: Inter + JetBrains Mono
-- [ ] Preview in browser — verify warm tones, dark mode toggle
-- [ ] Commit
+- [x] Locate AstroPaper's color configuration (CSS variables in `src/styles/global.css`, `:root` and `[data-theme="dark"]` selectors)
+- [x] Override CSS color variables with Warm & Earthy palette (hex values per spec):
+  - Light: background `#faf7f5`, text `#1c1917`, accent `#c2410c`, muted `#78716c`, border `#fed7aa`
+  - Dark: background `#1c1917`, text `#faf7f5`, accent `#c2410c`, muted `#a8a29e`, border `#44403c`
+  - Added `--tag-bg` and `--tag-border` variables for both modes
+- [x] Configure fonts via Astro experimental fonts API (replaces Tailwind config approach):
+  - Inter (400–700, sans-serif) for body/headings
+  - JetBrains Mono (400–500, monospace) for code
+- [x] Add `<Font>` components to `Layout.astro` for Inter + JetBrains Mono
+- [x] Style inline code with warm bg + neutral border, code blocks with neutral gray borders
+- [x] Style tables with alternating row colors and distinct header background
+- [x] Fix Copy button on code blocks: translucent bg with backdrop blur
+- [x] Preview in browser — verified warm tones, dark mode toggle, fonts, code blocks, tables
+- [x] Commit
 
 ### Task 12: Configure syntax highlighting
 

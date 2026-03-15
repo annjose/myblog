@@ -58,7 +58,11 @@
       }
 
       th {
-        @apply py-1.5;
+        @apply bg-tag-bg py-1.5 font-semibold;
+      }
+
+      tbody tr:nth-child(even) {
+        @apply bg-tag-bg/50;
       }
 
       code {
@@ -67,7 +71,7 @@
     }
 
     code {
-      @apply rounded bg-muted/75 p-1 wrap-break-word text-foreground before:content-none after:content-none;
+      @apply rounded bg-tag-bg border border-neutral-300 px-1.5 py-0.5 font-mono text-[0.875em] wrap-break-word text-foreground before:content-none after:content-none dark:border-neutral-600;
     }
 
     .astro-code code {
@@ -93,11 +97,11 @@
 
   /* ===== Code Blocks & Syntax Highlighting ===== */
   .astro-code {
-    @apply flex border bg-(--shiki-light-bg) text-(--shiki-light) outline-border [&_span]:text-(--shiki-light);
+    @apply flex border border-neutral-200 bg-(--shiki-light-bg) text-(--shiki-light) outline-border [&_span]:text-(--shiki-light);
   }
 
   html[data-theme="dark"] .astro-code {
-    @apply bg-(--shiki-dark-bg) text-(--shiki-dark) [&_span]:text-(--shiki-dark);
+    @apply border-neutral-700 bg-(--shiki-dark-bg) text-(--shiki-dark) [&_span]:text-(--shiki-dark);
   }
 
   /* Styles for Shiki transformers */

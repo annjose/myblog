@@ -5,28 +5,35 @@
 
 :root,
 html[data-theme="light"] {
-  --background: #fdfdfd;
-  --foreground: #282728;
-  --accent: #006cac;
-  --muted: #e6e6e6;
-  --border: #ece9e9;
+  --background: #faf7f5;
+  --foreground: #1c1917;
+  --accent: #c2410c;
+  --muted: #78716c;
+  --border: #fed7aa;
+  --tag-bg: #fff7ed;
+  --tag-border: #fed7aa;
 }
 
 html[data-theme="dark"] {
-  --background: #212737;
-  --foreground: #eaedf3;
-  --accent: #ff6b01;
-  --muted: #343f60;
-  --border: #ab4b08;
+  --background: #1c1917;
+  --foreground: #faf7f5;
+  --accent: #c2410c;
+  --muted: #a8a29e;
+  --border: #44403c;
+  --tag-bg: #292524;
+  --tag-border: #44403c;
 }
 
 @theme inline {
-  --font-app: var(--font-google-sans-code);
+  --font-app: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
   --color-muted: var(--muted);
   --color-border: var(--border);
+  --color-tag-bg: var(--tag-bg);
+  --color-tag-border: var(--tag-border);
 }
 
 @layer base {

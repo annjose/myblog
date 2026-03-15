@@ -29,7 +29,58 @@ These are transferable techniques I'd use again on any project with an AI agent.
 4. Cross-evaluate competing specs by asking an agent to compare them — it surfaces risks and tradeoffs you'd miss reading them yourself
 5. Keep spec and plan as separate documents — spec = decisions + rationale (the "why"), plan = ordered checklist (the "how"). Mixing them makes both harder to use
 
---- 
+---
+### Part 5: Implementation Phase 3: Visual Design — Mar 15, 2026
+
+**Goal:** Apply the Warm & Earthy color palette and typography from the spec, then refine code block styling for readability.
+
+**Output Artifacts:**
+- [Live site on Astro](https://annjose.pages.dev) — warm palette and new fonts live
+- [Updated Wave 1 Plan](https://github.com/annjose/myblog/blob/master/docs/redesign/wave-1-plan.md) — Phase 3 tasks checked off
+- [Agent Session Transcript #5 — Implementation Phase 3](https://github.com/annjose/myblog/blob/master/docs/redesign/sessions/session-05-impl-phase3.md)
+
+Phase 3 was about making the site *feel* right — replacing AstroPaper's default blue/orange scheme with a warm, earthy palette and swapping fonts to Inter + JetBrains Mono. Two tasks, but they touched almost every visual surface on the site.
+
+#### Color palette and fonts (Task 11)
+
+The spec called for a "Warm & Earthy" palette — warm whites (`#faf7f5`), warm blacks (`#1c1917`), burnt orange accent (`#c2410c`), and muted stone tones. Claude updated the CSS custom properties in `global.css` for both light and dark modes, added new `--tag-bg` and `--tag-border` variables for tag pills and table styling, and mapped everything through Tailwind's `@theme inline` block.
+
+For fonts, Astro's experimental fonts API made the swap clean — replace the single Google Sans Code entry in `astro.config.ts` with Inter (body text) and JetBrains Mono (code), add `<Font>` components in `Layout.astro`, and wire the CSS variables. No Google Fonts link tags or Tailwind font config needed.
+
+The bulk of this task was iterative visual refinement. I browsed the site in the preview and flagged issues one by one:
+
+1. **Inline code looked muddy** — the `bg-muted/75` background was a gray-brown (`#78716c` at 75% opacity) that clashed with the warm palette. Switched to `bg-tag-bg` with a subtle border for a clean pill-like appearance.
+2. **Copy button too dark** — the code block copy button used `bg-muted` which was almost the same darkness as the code block itself. Changed to `bg-background/80` with `backdrop-blur-sm` for a translucent floating effect.
+3. **Code block borders too warm** — the warm orange `--border` (`#fed7aa`) on code blocks looked off next to syntax highlighting colors. Switched to neutral grays (`border-neutral-200` light, `border-neutral-700` dark).
+4. **Inline code had double borders** — after fixing code blocks, inline code pills still had the orange `border-tag-border`. Switched to `border-neutral-300` / `dark:border-neutral-600` to match.
+
+Each fix was small, but finding the right combination required looking at the site in context — screenshots of real posts with real code and tables.
+
+#### Code block enhancements (Task 12)
+
+Two changes: enable line wrapping instead of horizontal scrollbars (`wrap: true` in Shiki config), and add line numbers on longer code blocks. The line numbers use a CSS counter with a `:has(.line:nth-child(4))` selector — blocks with fewer than 4 lines stay clean, longer blocks get subtle gray numbers that are `user-select: none` so they don't interfere with copy-paste.
+
+Tables also got a refresh with `bg-tag-bg` header rows and alternating `bg-tag-bg/50` even rows — small touches that improve readability.
+
+#### Lessons and observations
+
+**Visual design is inherently iterative.** Unlike content migration (which is either correct or broken), visual styling is a matter of judgment. The palette looked right in isolation, but real posts with code blocks, tables, and inline code exposed mismatches that only became visible in context. Five rounds of adjustments to get the code styling right — and each round required browsing the actual site, not just reading CSS.
+
+**The agent can apply a palette, but the human spots what's "off."** Claude implemented every color change correctly on the first try. But I was the one who noticed the muddy inline code background, the too-dark copy button, and the warm-orange borders clashing with syntax highlighting. The feedback loop was: I browse, I flag, Claude fixes. Neither of us could have done this well alone.
+
+**CSS custom properties + Tailwind `@theme inline` is a good architecture.** Having all colors defined as CSS variables in one place (`global.css`), with Tailwind consuming them through `@theme inline`, meant every change propagated everywhere instantly. No hunting for hardcoded color values across components.
+
+#### The site at the end of Phase 3
+
+{{< figure src="blog-v4-home.png" caption="Warm & Earthy palette — light mode" width="600" >}}
+
+{{< figure src="blog-v4-home-dark.png" caption="Warm & Earthy palette — dark mode" width="600" >}}
+
+{{< figure src="blog-v4-mobile-all.png" caption="Mobile views — homepage, blog listing, and archives" width="700" >}}
+
+**Phase 3 complete.** Warm & Earthy palette applied, Inter + JetBrains Mono fonts loaded, code blocks styled with line wrapping and conditional line numbers. On to Phase 4.
+
+---
 ### Part 4: Implementation Phase 2 — Content Migration — Mar 14, 2026
 
 **Goal:** Migrate all 58 blog posts from Hugo to Astro, validate everything, and export Disqus comments.
@@ -360,7 +411,3 @@ The final spec has 10 decisions, 8 implementation phases across ~14 days, a full
 Don't start with the AI. Start with your own thinking — even on paper. The handwritten spec forced me to decide what I *actually* want before an agent started suggesting things. The AI's job was to pressure-test it and add structure, not to dream it up from scratch. Also: the agent's first move was to *explore*, not ask. It built context before engaging. That's a good pattern for humans too.
 
 The review rounds taught me something else: **read the spec like a skeptic, not an approver.** The agent produced a thorough plan, but it had a "new repo" default that would have lost git history, wrong analytics (GA instead of Counterscale), and naming collisions I only caught by reading carefully. The AI is good at structure and completeness; the human is good at catching things that *feel wrong*.
-
----
-
-*Next up: kicking off the migration script and scaffolding the Astro project.*

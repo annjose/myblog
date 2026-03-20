@@ -193,12 +193,8 @@
 - [x] Update site config: title → "Ann Catherine Jose", description updated, ogImage → `og-default.jpg`
 - [x] Set `theme-color` meta tag to `#faf7f5` (warm light background)
 - [x] Verify OG and Twitter meta tags are present and correct
-- [ ] Add Counterscale analytics script to `<head>`:
-  ```html
-  <script id="counterscale-script" data-site-id="annjose-blog"
-    src="https://counterscale.annjose.workers.dev/tracker.js" defer></script>
-  ```
-- [ ] Commit
+- [ ] Add Counterscale analytics script — **deferred to pre-launch** (avoid polluting prod analytics with dev traffic)
+- [x] Commit
 
 ### Task 14: Post layout with TOC sidebar
 
@@ -452,7 +448,12 @@
 - [ ] Check for broken anchor links
 - [ ] Commit
 
-### Task 38: Full testing checklist
+### Task 38: Fix JSON-LD structured data on non-post pages
+
+- [ ] JSON-LD uses `BlogPosting` on all pages (homepage, about, tags) — should use `WebSite` or `Person` as appropriate
+- [ ] Update `Layout.astro` to accept a `schemaType` prop or conditionally set `@type` based on page context
+
+### Task 39: Full testing checklist
 
 - [ ] Run through the complete testing checklist from the spec
 - [ ] Fix any issues found
@@ -479,6 +480,7 @@
 
 ### Task 40: Pre-cutover validation
 
+- [ ] Add Counterscale analytics script to `<head>` of `Layout.astro` (deferred from Task 13 to avoid polluting prod analytics with dev traffic)
 - [ ] Final validation on `annjose.pages.dev`
 - [ ] Migrate any Hugo posts published during the transition period
 - [ ] Run Lighthouse on preview URL — compare against pre-migration baseline

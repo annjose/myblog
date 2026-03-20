@@ -19,7 +19,7 @@ I'm redesigning this blog from Hugo to Astro, using AI coding agents (Claude Cod
 
 --- 
 
-## Running Notes — Prompt patterns and reusable techniques
+## Running Notes — Learnings
 
 These are transferable techniques I'd use again on any project with an AI agent.
 
@@ -28,6 +28,52 @@ These are transferable techniques I'd use again on any project with an AI agent.
 3. For newer frameworks or critical integrations, paste in the relevant documentation URL and ask the agent to confirm the plan follows the framework's recommendations (e.g. [Astro Content Collections](https://docs.astro.build/en/guides/content-collections/))
 4. Cross-evaluate competing specs by asking an agent to compare them — it surfaces risks and tradeoffs you'd miss reading them yourself
 5. Keep spec and plan as separate documents — spec = decisions + rationale (the "why"), plan = ordered checklist (the "how"). Mixing them makes both harder to use
+6. **Context-switching back into an agentic project takes real time.** After a 4-day gap, getting back into the flow required re-reading the spec, plan, and recent commits. It's faster than pure manual coding (the plan and transcripts serve as breadcrumbs), but the idea that you can pop in and out of agentic sessions at will is a myth — you still need to rebuild mental context, and the agent needs to be caught up too.
+7. **Always run the production build, not just the dev server.** Vite's dev server resolves imports lazily — a deleted file that's still referenced will work in dev but fail in the production Rollup build. `pnpm run build` catches what `pnpm run dev` doesn't.
+
+---
+### Part 6: Implementation Phase 4: Base Layout, Floating TOC — Mar 20, 2026
+
+**Goal:** Replace all AstroPaper template defaults with real site identity and verify social media link previews work.
+
+**Output Artifacts:**
+- [Live site on Astro](https://annjose.pages.dev) — updated title, description, and OG image
+- [Updated Wave 1 Plan](https://github.com/annjose/myblog/blob/master/docs/redesign/wave-1-plan.md) — Task 13 checked off
+- [Agent Session Transcript #6 — Implementation Phase 4 Part 1](https://github.com/annjose/myblog/blob/master/docs/redesign/sessions/session-06-impl-phase4-part1.md)
+
+This session started after a 4-day break from the migration. Phase 4 is about Core Layouts, and Task 13 was the entry point — cleaning up all the template defaults that were still in the `<head>` tag: the title "Reflections," AstroPaper's default OG image, a stale description, and an empty `theme-color` meta tag.
+
+#### Site identity cleanup (Task 13)
+
+The first step was a comprehensive audit. I had the agent inspect the live dev server through Chrome — extracting every meta tag, JSON-LD block, and link element from the `<head>`. This surfaced everything that needed changing in one pass rather than discovering issues one by one.
+
+The fixes: title changed from "Reflections" to "Ann Catherine Jose" everywhere (config, OG tags, Twitter cards, JSON-LD), description updated, OG image replaced with a custom 1200×634 branded card, `theme-color` set to the warm palette's background color, and a missing `og:type` tag added.
+
+#### The build failure the agent should have caught
+
+After replacing the OG image, the Cloudflare deploy failed — `about.md` still referenced the deleted `astropaper-og.jpg`. The dev server didn't catch it because Vite resolves imports lazily. The production Rollup build does a strict resolve and fails on missing files.
+
+The agent should have run `pnpm run build` before declaring the commit ready. It didn't. I caught it from the Cloudflare deploy logs. A good reminder that **the dev server and the production build are different beasts** — always verify with the build.
+
+#### OG image: why Bluesky wasn't showing it
+
+After deploying the fix, I tried pasting the site URL into a Bluesky post. Title and description appeared, but no image. The issue: `SITE.website` was set to `https://annjose.com/`, so the `og:image` URL resolved to `annjose.com/og-default.jpg` — but the Hugo site at that domain doesn't have that file. Bluesky's crawler fetched it, got a 404, and showed no preview.
+
+The fix was temporary: point `SITE.website` to `annjose.pages.dev` for testing, confirm the image renders, and plan to revert during the pre-cutover phase (Task 40) when the domain points to the Astro site.
+
+I also researched OG image best practices — a 1200×630 branded card (photo + name + tagline) is the standard for personal sites. A bare profile photo would look awkward in the rectangular preview space. And `og:logo`, which one validator flagged as missing, isn't in the official Open Graph spec — safe to ignore.
+
+#### Deferring Counterscale analytics
+
+The original plan had Counterscale analytics in Task 13, but I decided to defer it to Task 40 (pre-cutover). Adding the tracking script now would log dev and preview traffic against the production `data-site-id`, polluting real analytics data. Better to add it right before the DNS cutover.
+
+#### Lessons and observations
+
+**Resuming after a break is harder than expected.** Four days away from the project meant re-reading the spec, plan, last session's transcript, and recent git history before I could start. The plan and transcripts made this faster than it would be without them — they're like breadcrumbs back into the project. But it still took real time. The popular notion that you can seamlessly pop in and out of agentic coding sessions overstates how easy it is.
+
+**Audit before you edit.** Having the agent inspect the live `<head>` through Chrome before making any changes was the right move. It surfaced the missing `og:type`, the empty `theme-color`, and the stale title all at once — rather than fixing one thing, deploying, finding another, and iterating.
+
+**Social media previews need the right domain.** OG tags are only useful if the URL in `og:image` actually resolves. During development, when your domain points elsewhere, previews will silently fail. This is expected — but it's worth testing once with the correct URL to confirm the image works, then reverting.
 
 ---
 ### Part 5: Implementation Phase 3: Visual Design — Mar 15, 2026

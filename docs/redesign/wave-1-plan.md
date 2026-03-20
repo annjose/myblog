@@ -193,7 +193,6 @@
 - [x] Update site config: title → "Ann Catherine Jose", description updated, ogImage → `og-default.jpg`
 - [x] Set `theme-color` meta tag to `#faf7f5` (warm light background)
 - [x] Verify OG and Twitter meta tags are present and correct
-- [ ] Add Counterscale analytics script — **deferred to pre-launch** (avoid polluting prod analytics with dev traffic)
 - [x] Commit
 
 ### Task 14: Post layout with TOC sidebar

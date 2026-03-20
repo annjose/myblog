@@ -480,6 +480,7 @@
 ### Task 40: Pre-cutover validation
 
 - [ ] Add Counterscale analytics script to `<head>` of `Layout.astro` (deferred from Task 13 to avoid polluting prod analytics with dev traffic)
+- [ ] Revert `SITE.website` in `src/config.ts` from `https://annjose.pages.dev/` back to `https://annjose.com/` (temporarily changed for OG image testing)
 - [ ] Final validation on `annjose.pages.dev`
 - [ ] Migrate any Hugo posts published during the transition period
 - [ ] Run Lighthouse on preview URL — compare against pre-migration baseline
@@ -506,4 +507,5 @@
 - [ ] Check Google Search Console for crawl errors
 - [ ] Remove CNAME from old `public/` submodule to avoid GitHub Pages conflict
 - [ ] Verify Counterscale analytics is receiving data
+- [ ] Verify OG image preview renders correctly on Bluesky, Signal, Slack after domain cutover to annjose.com
 - [ ] Celebrate 🎉

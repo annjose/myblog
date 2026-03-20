@@ -199,28 +199,24 @@
 
 **Files**: `src/layouts/PostDetails.astro`, `src/components/TableOfContents.astro`
 
-- [ ] Inspect AstroPaper's existing post layout
-- [ ] Create `TableOfContents.astro`:
+- [x] Inspect AstroPaper's existing post layout
+- [x] Create `TableOfContents.astro`:
   - Props: `headings: { depth, slug, text }[]`
   - Filter to h2 and h3 headings
   - Desktop: sticky sidebar (`position: sticky; top: 5rem`), `hidden lg:block`
   - Mobile: collapsible `<details>` dropdown, `lg:hidden`
   - Only render when 3+ headings
   - IntersectionObserver script for active section highlighting
-- [ ] Modify `PostDetails.astro`:
-  - Add two-column grid: article `~65%` + TOC sidebar `~25%` at lg+
+- [x] Modify `PostDetails.astro`:
+  - Add two-column flex layout: article `~65%` + TOC sidebar `~25%` at lg+
   - Mobile TOC dropdown above post body
   - Import and render `TableOfContents` component
-- [ ] Verify on a long post: sticky sidebar on desktop, dropdown on mobile
-- [ ] Commit
-
-### Task 15: Wider content area
-
-**Files**: `src/layouts/Main.astro`, `tailwind.config.mjs`
-
-- [ ] Increase AstroPaper's `max-w-3xl` → `max-w-4xl` for main content
-- [ ] Post pages with TOC: `max-w-6xl` total container
-- [ ] Commit
+  - Unified container so Go back, title, date, and content share the same left edge
+- [x] Remove `remark-toc` and `remark-collapse` from `astro.config.ts` (replaced by sidebar TOC)
+- [x] Remove `app-layout` from `BackButton.astro` (parent handles layout now)
+- [x] Increase `:target` scroll-margin to `5rem` for proper heading offset when jumping via TOC
+- [x] Verify on a long post: sticky sidebar on desktop, dropdown on mobile
+- [x] Commit
 
 ---
 

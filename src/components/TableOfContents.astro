@@ -1,0 +1,140 @@
+---
+type Heading = {
+  depth: number;
+  slug: string;
+  text: string;
+};
+
+type Props = {
+  headings: Heading[];
+};
+
+const { headings } = Astro.props;
+
+// Filter to h2 and h3 only
+const tocHeadings = headings.filter(h => h.depth === 2 || h.depth === 3);
+
+// Only render when 3+ qualifying headings
+const showToc = tocHeadings.length >= 3;
+---
+
+{
+  showToc && (
+    <>
+      {/* Mobile: collapsible dropdown */}
+      <details class="toc-mobile mb-6 rounded border border-border bg-tag-bg p-3 lg:hidden">
+        <summary class="cursor-pointer text-sm font-semibold text-foreground select-none">
+          Table of Contents
+        </summary>
+        <nav class="mt-2">
+          <ul class="space-y-1 text-sm">
+            {tocHeadings.map(h => (
+              <li class:list={[h.depth === 3 && "ml-4"]}>
+                <a
+                  href={`#${h.slug}`}
+                  class="toc-link block py-0.5 text-muted no-underline transition-colors hover:text-accent"
+                  data-slug={h.slug}
+                >
+                  {h.text}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </details>
+
+      {/* Desktop: sticky sidebar */}
+      <nav class="toc-desktop hidden lg:block sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto">
+        <p class="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">
+          On this page
+        </p>
+        <ul class="space-y-1 border-l border-border text-sm">
+          {tocHeadings.map(h => (
+            <li>
+              <a
+                href={`#${h.slug}`}
+                class:list={[
+                  "toc-link -ml-px block border-l border-transparent py-1 text-muted no-underline transition-colors hover:border-accent hover:text-accent",
+                  h.depth === 2 ? "pl-3" : "pl-6",
+                ]}
+                data-slug={h.slug}
+              >
+                {h.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </>
+  )
+}
+
+<script is:inline data-astro-rerun>
+  function initTocHighlight() {
+    const tocLinks = document.querySelectorAll(".toc-link");
+    if (tocLinks.length === 0) return;
+
+    // Build a map of slug -> TOC link elements (both mobile and desktop)
+    const linksBySlug = new Map();
+    tocLinks.forEach(link => {
+      const slug = link.getAttribute("data-slug");
+      if (!slug) return;
+      if (!linksBySlug.has(slug)) linksBySlug.set(slug, []);
+      linksBySlug.get(slug).push(link);
+    });
+
+    let activeSlug = null;
+
+    function setActive(slug) {
+      if (slug === activeSlug) return;
+      // Remove active from previous
+      if (activeSlug && linksBySlug.has(activeSlug)) {
+        linksBySlug.get(activeSlug).forEach(el => {
+          el.classList.remove("text-accent", "border-accent", "font-medium");
+          el.classList.add("text-muted", "border-transparent");
+        });
+      }
+      // Add active to new
+      if (slug && linksBySlug.has(slug)) {
+        linksBySlug.get(slug).forEach(el => {
+          el.classList.add("text-accent", "border-accent", "font-medium");
+          el.classList.remove("text-muted", "border-transparent");
+        });
+      }
+      activeSlug = slug;
+    }
+
+    // Collect heading elements that match TOC entries
+    const headingEls = [];
+    linksBySlug.forEach((_, slug) => {
+      const el = document.getElementById(slug);
+      if (el) headingEls.push(el);
+    });
+
+    if (headingEls.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      entries => {
+        // Find the topmost visible heading
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+            return;
+          }
+        }
+      },
+      {
+        rootMargin: "-80px 0px -70% 0px",
+      }
+    );
+
+    headingEls.forEach(el => observer.observe(el));
+
+    // Also handle scroll to top — activate first heading
+    const firstSlug = headingEls[0]?.id;
+    if (firstSlug && !activeSlug) {
+      setActive(firstSlug);
+    }
+  }
+  initTocHighlight();
+</script>

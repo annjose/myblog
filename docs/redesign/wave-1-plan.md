@@ -184,17 +184,20 @@
 
 ## Phase 4: Core Layouts
 
-### Task 13: Base layout — analytics and fonts
+### Task 13: Base layout — site identity, OG image, analytics
 
-**Files**: `src/layouts/Layout.astro`
+**Files**: `src/config.ts`, `src/layouts/Layout.astro`, `public/og-default.jpg`
 
-- [ ] Review what AstroPaper's layout already provides (head, dark mode, OG meta, Twitter Card)
+- [x] Review what AstroPaper's layout already provides (head, dark mode, OG meta, Twitter Card)
+- [x] Replace default OG image: resize custom banner to 1200x634 JPG (182KB), delete `astropaper-og.jpg`
+- [x] Update site config: title → "Ann Catherine Jose", description updated, ogImage → `og-default.jpg`
+- [x] Set `theme-color` meta tag to `#faf7f5` (warm light background)
+- [x] Verify OG and Twitter meta tags are present and correct
 - [ ] Add Counterscale analytics script to `<head>`:
   ```html
   <script id="counterscale-script" data-site-id="annjose-blog"
     src="https://counterscale.annjose.workers.dev/tracker.js" defer></script>
   ```
-- [ ] Verify OG and Twitter meta tags are present
 - [ ] Commit
 
 ### Task 14: Post layout with TOC sidebar

@@ -30,16 +30,18 @@ These are transferable techniques I'd use again on any project with an AI agent.
 5. Keep spec and plan as separate documents — spec = decisions + rationale (the "why"), plan = ordered checklist (the "how"). Mixing them makes both harder to use
 6. **Context-switching back into an agentic project takes real time.** After a 4-day gap, getting back into the flow required re-reading the spec, plan, and recent commits. It's faster than pure manual coding (the plan and transcripts serve as breadcrumbs), but the idea that you can pop in and out of agentic sessions at will is a myth — you still need to rebuild mental context, and the agent needs to be caught up too.
 7. **Always run the production build, not just the dev server.** Vite's dev server resolves imports lazily — a deleted file that's still referenced will work in dev but fail in the production Rollup build. `pnpm run build` catches what `pnpm run dev` doesn't.
+8. **Ask the agent to explain the *expected behavior* before fixing a visual bug.** When something looks off, don't just say "fix it." Ask the agent what the correct behavior should be and why. This forces it to reason about the design principle (e.g., "all content in a column should share one left edge") rather than trial-and-error patching. Three rounds of misalignment fixes could have been one if the principle was established first.
 
 ---
 ### Part 6: Implementation Phase 4: Base Layout, Floating TOC — Mar 20, 2026
 
-**Goal:** Replace all AstroPaper template defaults with real site identity and verify social media link previews work.
+**Goal:** Complete Phase 4 (Core Layouts) — site identity, OG image, and floating Table of Contents sidebar on blog posts.
 
 **Output Artifacts:**
-- [Live site on Astro](https://annjose.pages.dev) — updated title, description, and OG image
-- [Updated Wave 1 Plan](https://github.com/annjose/myblog/blob/master/docs/redesign/wave-1-plan.md) — Task 13 checked off
+- [Live site on Astro](https://annjose.pages.dev) — site identity updated, floating TOC sidebar on blog posts
+- [Updated Wave 1 Plan](https://github.com/annjose/myblog/blob/master/docs/redesign/wave-1-plan.md) — Tasks 13-14 checked off, Task 15 skipped
 - [Agent Session Transcript #6 — Implementation Phase 4 Part 1](https://github.com/annjose/myblog/blob/master/docs/redesign/sessions/session-06-impl-phase4-part1.md)
+- [Agent Session Transcript #7 — Implementation Phase 4 Part 2](https://github.com/annjose/myblog/blob/master/docs/redesign/sessions/session-07-impl-phase4-part2.md)
 
 This session started after a 4-day break from the migration. Phase 4 is about Core Layouts, and Task 13 was the entry point — cleaning up all the template defaults that were still in the `<head>` tag: the title "Reflections," AstroPaper's default OG image, a stale description, and an empty `theme-color` meta tag.
 
@@ -67,6 +69,38 @@ I also researched OG image best practices — a 1200×630 branded card (photo + 
 
 The original plan had Counterscale analytics in Task 13, but I decided to defer it to Task 40 (pre-cutover). Adding the tracking script now would log dev and preview traffic against the production `data-site-id`, polluting real analytics data. Better to add it right before the DNS cutover.
 
+#### Floating TOC sidebar (Task 14)
+
+The second half of this session added a floating Table of Contents sidebar to blog posts. The TOC appears as a sticky sidebar on desktop (showing "ON THIS PAGE" with all h2/h3 headings) and as a collapsible dropdown on mobile. An IntersectionObserver highlights the current section as you scroll — the active heading gets the burnt orange accent color with a left border indicator.
+
+The implementation replaced AstroPaper's built-in `remark-toc` plugin (which generated an inline, collapsed TOC within the markdown body) with a proper Astro component that receives headings from `render()`. Posts with fewer than 3 headings show no TOC at all.
+
+The layout restructure was where things got interesting. The post page needed a two-column flex layout at desktop widths (`max-w-6xl` container with article + sidebar), while keeping a single narrow column (`max-w-3xl`) for short posts without a TOC. This created an alignment problem that took three rounds to get right.
+
+#### The alignment bug: why "explain the principle first" matters
+
+The initial implementation split the page into two containers — the title/date in a narrow centered container, and the article+TOC in a wider flex container. The result: the article text started at a different left edge than the title. It looked jarring.
+
+{{< figure src="blog-toc-attempt-1.png" caption="Attempt 1 — article content starts at the left edge of the wider container while title stays centered in the narrow container" width="600" >}}
+
+I flagged it. The agent moved the title into the flex container. Fixed — but then "Go back" was still in its own container, offset from everything else.
+
+{{< figure src="blog-toc-attempt-2.png" caption="Attempt 2 — title now aligns with content, but 'Go back' is still centered in its own narrow container" width="600" >}}
+
+I flagged that too. The agent moved it. But now "Go back" had double padding — the outer container's `px-4` plus BackButton's own `app-layout` `px-4`.
+
+{{< figure src="blog-toc-attempt-3.png" caption="Attempt 3 — 'Go back' is in the right container but has double padding, slightly indented from the title" width="600" >}}
+
+At this point, instead of saying "fix it again," I asked the agent to **explain what the correct behavior should be and why** before making any more changes. The answer was clear: all elements in the content column — "Go back," title, date, TOC dropdown, and body text — should share one left edge. That's basic visual hierarchy. Once the principle was stated, the fix was obvious: remove the redundant layout wrapper from BackButton.
+
+{{< figure src="blog-toc-attempt-final.png" caption="Final — 'Go back', title, date, and content all share the same left edge" width="600" >}}
+
+Three rounds of fixes that could have been one, if the design principle had been established first. This is now my default approach: when something visual looks off, ask the agent to articulate the expected behavior before touching the code.
+
+#### Skipping Task 15 (wider content area)
+
+The plan called for widening the content area from `max-w-3xl` to `max-w-4xl`. I asked the agent whether this was worth doing. The recommendation was to skip it — 768px is near optimal line length for readability, posts with a TOC sidebar already use the wider container, and widening content would require widening every other page for consistency. I agreed and removed Task 15 from the plan.
+
 #### Lessons and observations
 
 **Resuming after a break is harder than expected.** Four days away from the project meant re-reading the spec, plan, last session's transcript, and recent git history before I could start. The plan and transcripts made this faster than it would be without them — they're like breadcrumbs back into the project. But it still took real time. The popular notion that you can seamlessly pop in and out of agentic coding sessions overstates how easy it is.
@@ -74,6 +108,10 @@ The original plan had Counterscale analytics in Task 13, but I decided to defer 
 **Audit before you edit.** Having the agent inspect the live `<head>` through Chrome before making any changes was the right move. It surfaced the missing `og:type`, the empty `theme-color`, and the stale title all at once — rather than fixing one thing, deploying, finding another, and iterating.
 
 **Social media previews need the right domain.** OG tags are only useful if the URL in `og:image` actually resolves. During development, when your domain points elsewhere, previews will silently fail. This is expected — but it's worth testing once with the correct URL to confirm the image works, then reverting.
+
+**Ask "what should this look like?" before "fix this."** When the agent produces something visually wrong, the instinct is to say "that's misaligned, fix it." But without establishing the design principle first, you get iterative patches that each fix one symptom while introducing another. Asking the agent to articulate the expected behavior forces it to reason about the underlying rule — and the fix that follows is usually correct on the first try.
+
+**Question every task in the plan.** Task 15 (wider content area) seemed reasonable in the abstract but would have made the site harder to read and created consistency problems across pages. The plan is a starting point, not a mandate. Asking "is this actually worth doing?" before each task prevents unnecessary work.
 
 ---
 ### Part 5: Implementation Phase 3: Visual Design — Mar 15, 2026

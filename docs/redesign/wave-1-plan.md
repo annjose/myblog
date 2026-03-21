@@ -359,21 +359,21 @@ Not doing in Wave 1. Not distinctive enough to justify the plugin/schema/compone
 
 **Files**: `public/_redirects`
 
-- [ ] Create `public/_redirects`:
+- [x] Create `public/_redirects`:
   ```
   /post/*    /blog/:splat   301
   /topics/*  /tags/:splat   301
   /index.xml /rss.xml       301
   ```
-- [ ] Commit
+- [x] Commit
 
 ### Task 29: RSS feed continuity
 
 **Files**: `src/pages/rss.xml.ts`
 
-- [ ] Verify AstroPaper's RSS feed generates at `/rss.xml`
-- [ ] Confirm redirect rule covers old `/index.xml` path
-- [ ] Commit if changes needed
+- [x] Verify AstroPaper's RSS feed generates at `/rss.xml` — confirmed in build output
+- [x] Confirm redirect rule covers old `/index.xml` path — included in `_redirects`
+- [x] No changes needed to RSS feed itself
 
 ### Task 30: Giscus setup
 

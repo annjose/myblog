@@ -31,6 +31,84 @@ These are transferable techniques I'd use again on any project with an AI agent.
 9. **Question transitive dependencies.** When a library requires importing CSS from a dependency's `dist/` folder (like `katex/dist/katex.min.css`), ask if there's an alternative that avoids the coupling. In this case, `rehype-mathjax/svg` renders math as inline SVG — no CSS import needed, one fewer thing to break.
 10. **Check what's already built before building.** Five of the nine Phase 5 tasks turned out to be already implemented by AstroPaper. Spending 5 minutes verifying existing functionality saves hours of redundant work.
 11. **Question the spec when it doesn't fit the tool.** The spec called for a content collection for standalone pages, but Astro's own docs warn against it for small numbers of independent pages. Checking the framework's recommendations against the spec caught unnecessary complexity before it was built.
+12. **Tell the agent explicitly not to write code when you're still planning.** The model can be eager to start coding. Even if you start in plan mode and ask it to detail the steps, it may jump out of plan mode and start implementing. If you switch it back to plan mode in the same session, it sometimes doesn't stick. The fix: explicitly say "answer the question without changing any code or content" before asking.
+13. **Off-the-shelf templates are surprisingly extensible with agents.** AstroPaper's Shiki-based code blocks were extended into a callout system (accent-bordered content blocks for song lyrics, quotes, etc.) by adding a single transformer and CSS — the agent figured out the approach and the meta string workaround for Shiki's language normalization.
+14. **Reuse components across different page types.** The `TableOfContents` component built for blog posts was reused on the redesign page with zero changes. The agent created a new layout (`RedesignLayout.astro`) that imports the same component, just with a different container width. Shared components compound in value.
+15. **Third-party integrations are easier than you think.** Giscus (GitHub Discussions-based comments) was the feature I was most worried about when planning the migration. Turns out: enable Discussions, configure at giscus.app, paste the credentials into the component, fix the View Transitions issue — done in 20 minutes. The agent handled the View Transitions bug (dynamic script creation on `astro:page-load`) without any hints.
+
+---
+## Part 9: Impl Phase 7: Custom Routes, Redirects & Comments (Mar 21, 2026)
+
+**Goal:** Complete Phase 7 — migrate standalone pages (`/ammachi`, `/redesign`), create Cloudflare redirect rules, verify RSS feed, and configure Giscus comments.
+
+**Output Artifacts:**
+- [Live site on Astro](https://annjose.pages.dev) — ammachi page, redesign page with TOC, Giscus comments, redirects
+- [Updated Wave 1 Plan](https://github.com/annjose/myblog/blob/master/docs/redesign/wave-1-plan.md) — Tasks 26-30 checked off
+- [Agent Session Transcript #10 — Implementation Phase 7](https://github.com/annjose/myblog/blob/master/docs/redesign/sessions/session-10-impl-phase7.md)
+
+This was the longest session so far — four tasks, each with its own challenges. The ammachi page led to building a reusable callout system. The redesign page required multiple rounds of TOC layout tuning. And Giscus, the feature I was most worried about, turned out to be the easiest.
+
+### Custom route pages (Task 26)
+
+The ammachi page is a standalone page with a song that's special to me. I wanted the lyrics displayed in a visually distinct way — not as a code block, but as content with an accent border. The agent proposed extending Shiki's code block system: use `` ```text callout `` as a meta string, detect it in a custom transformer, and style it with CSS.
+
+This turned into a reusable callout system with two variants:
+- `` ```text callout `` — accent left border, no box, body font (for inline quotes and lyrics)
+- `` ```text callout boxed `` — adds a subtle border and background (for boxed callouts)
+
+The implementation required working around a Shiki quirk: unknown language names get normalized to "plaintext" before transformers run, so you can't use `options.lang` to detect custom blocks. The meta string approach (`this.options.meta?.__raw`) works because it survives normalization.
+
+### The redesign page — TOC sidebar and layout tuning (Task 26b)
+
+The redesign page is the longest page on the site (600+ lines, 30+ headings), so it needed a Table of Contents. Rather than building a new component, the agent reused `TableOfContents.astro` from the blog post layout, wrapping it in a new `RedesignLayout.astro` with a two-column flex layout.
+
+The layout went through several rounds of tuning based on screenshots:
+- Content felt squished → adjusted flex constraints
+- TOC too narrow → tweaked max-width and font size
+- Large gap between content and TOC → reduced container from `max-w-6xl` to `max-w-5xl`
+- Mobile TOC missing → moved mobile rendering above `<main>` so it appears at top
+- h2 headings indistinguishable from h3 → added `font-medium` to h2 TOC entries
+
+One subtle bug: the scroll highlight script was toggling `font-medium` as part of the active state, which removed the bold from h2 entries when they became inactive. Fixed by only toggling color and border classes.
+
+The Astro `Read` tool has a default limit of 2000 lines, but the redesign page exceeded this. The agent handled it by using `offset` and `limit` parameters to read in chunks — no need to split the file.
+
+![The redesign page on Astro — TOC sidebar with bold h2 headings](/img/redesign/blog-redesign-top.png)
+
+![The redesign page scrolled down — TOC highlights the active section](/img/redesign/blog-redesign-part2.png)
+
+### Redirect rules and RSS (Tasks 28-29)
+
+Three Cloudflare Pages redirect rules in `public/_redirects`:
+- `/post/*` → `/blog/:splat` (Hugo used "post", Astro uses "blog")
+- `/topics/*` → `/tags/:splat` (Hugo taxonomy name)
+- `/index.xml` → `/rss.xml` (Hugo's RSS path)
+
+RSS feed at `/rss.xml` was already generated by AstroPaper — just verified it builds correctly.
+
+### Giscus comments (Task 30)
+
+This was the task I was most worried about when I first planned the migration. Moving from Disqus to a new comment system felt like it would be complicated. It wasn't.
+
+The setup: enable GitHub Discussions on the repo, configure at giscus.app (pathname mapping, Announcements category), paste the credentials into `GiscusComments.astro`. The whole thing took about 20 minutes.
+
+The one real issue was a View Transitions bug — Giscus loaded on the first page but disappeared when navigating to the next post via prev/next links. The root cause: Astro's `ClientRouter` does client-side navigation, so the static `<script>` tag never re-executes. The fix: dynamically create the script element on every `astro:page-load` event. The agent identified the issue and implemented the fix without any hints.
+
+![Giscus comments on a blog post — reactions and comment box](/img/redesign/blog-giscus-comments.png)
+
+![Pagefind search — instant results as you type](/img/redesign/blog-search.png)
+
+### Lessons and observations
+
+**Tell the agent not to code when you're still planning.** The model can be eager to start writing code. Even in plan mode, it sometimes jumps to implementation. The fix is explicit: "answer the question without changing any code or content." This keeps the conversation in design mode until you're ready to build.
+
+**Off-the-shelf templates are surprisingly extensible.** The callout system extended AstroPaper's Shiki code blocks into styled content blocks for lyrics and quotes — just one transformer file and some CSS. The agent figured out the meta string workaround for Shiki's language normalization. You don't need to fork the template to customize it.
+
+**Reuse components across page types.** The `TableOfContents` component built for blog posts worked on the redesign page with zero changes. The agent created a new layout that imports the same component with a different container width. Shared components compound.
+
+**Third-party integrations are easier than expected.** Giscus was my biggest migration worry. Reality: 20 minutes from zero to working comments with reactions, lazy loading, and dark mode support. The View Transitions fix was the only non-trivial part, and the agent handled it autonomously.
+
+**Phase 7 complete.** Custom routes, redirects, RSS, and comments all working. On to Phase 8: Testing & Polish.
 
 ---
 ## Part 8: Impl Phase 6: About Page (Mar 21, 2026)

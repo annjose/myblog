@@ -157,13 +157,6 @@ const nextPost =
 
       <ShareLinks />
 
-      {/* Comments section */}
-      <section id="comments" class="mt-10">
-        <h2 class="mb-4 text-xl font-bold">Comments</h2>
-        {disqusSlug && <ArchivedComments slug={disqusSlug} />}
-        <GiscusComments />
-      </section>
-
       <hr class="my-6 border-dashed" />
 
       <!-- Previous/Next Post Buttons -->
@@ -197,6 +190,13 @@ const nextPost =
           )
         }
       </div>
+
+      {/* Comments section */}
+      <section id="comments" class="mt-10">
+        <h2 class="mb-4 text-xl font-bold">Comments</h2>
+        {disqusSlug && <ArchivedComments slug={disqusSlug} />}
+        <GiscusComments />
+      </section>
     </main>
 
     {/* Desktop TOC: sticky sidebar */}

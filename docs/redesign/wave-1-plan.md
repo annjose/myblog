@@ -377,11 +377,13 @@ Not doing in Wave 1. Not distinctive enough to justify the plugin/schema/compone
 
 ### Task 30: Giscus setup
 
-- [ ] Enable GitHub Discussions on the `annjose.com` repo
-- [ ] Configure at giscus.app, get repo ID and category ID
-- [ ] Update `GiscusComments.astro` with repo config
-- [ ] Verify comments load on a post
-- [ ] Commit
+- [x] Enable GitHub Discussions on the `annjose.com` repo
+- [x] Configure at giscus.app, get repo ID and category ID (category: Announcements)
+- [x] Update `GiscusComments.astro` with repo config
+- [x] Fix Giscus not loading on View Transitions navigation — dynamically create script on `astro:page-load`
+- [x] Move prev/next navigation above comments section
+- [x] Verify comments load on a post
+- [x] Commit
 
 ---
 

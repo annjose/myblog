@@ -1,0 +1,57 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { slugifyStr } from "@/utils/slugify";
+import { getTagLabel } from "@/utils/tagLabels";
+import postFilter from "@/utils/postFilter";
+
+type Props = {
+  posts: CollectionEntry<"blog">[];
+};
+
+const { posts } = Astro.props;
+
+// Count posts per tag slug
+const tagCounts = new Map<string, number>();
+posts.filter(postFilter).forEach(post => {
+  post.data.tags.forEach(tag => {
+    const slug = slugifyStr(tag);
+    tagCounts.set(slug, (tagCounts.get(slug) ?? 0) + 1);
+  });
+});
+
+// Sort alphabetically by slug
+const sortedTags = [...tagCounts.entries()].sort(([a], [b]) =>
+  a.localeCompare(b)
+);
+
+const maxCount = Math.max(...tagCounts.values());
+const minCount = Math.min(...tagCounts.values());
+
+/** Map post count to a font size class (5 tiers) */
+function getFontSize(count: number): string {
+  if (maxCount === minCount) return "text-base";
+  const ratio = (count - minCount) / (maxCount - minCount);
+  if (ratio < 0.2) return "text-sm";
+  if (ratio < 0.4) return "text-base";
+  if (ratio < 0.6) return "text-lg";
+  if (ratio < 0.8) return "text-xl";
+  return "text-2xl";
+}
+---
+
+<div class="flex flex-wrap items-baseline gap-x-4 gap-y-3">
+  {sortedTags.map(([slug, count]) => (
+    <a
+      href={`/tags/${slug}/`}
+      class:list={[
+        getFontSize(count),
+        "inline-flex items-baseline gap-0.5 transition-colors",
+        "text-foreground/80 hover:text-accent",
+      ]}
+      title={`${count} post${count === 1 ? "" : "s"}`}
+    >
+      <span class="text-accent/60">#</span>{getTagLabel(slug)}
+      <sup class="text-xs text-foreground/50">{count}</sup>
+    </a>
+  ))}
+</div>

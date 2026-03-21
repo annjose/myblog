@@ -236,16 +236,15 @@
 
 **Files**: `src/utils/tagLabels.ts`, `src/utils/tagLabels.test.ts`, `src/components/TagCloud.astro`, `src/pages/tags/index.astro`
 
-- [ ] **Write failing tests first** for `getTagLabel()`:
-  - Returns "LLM" for "llm", "AI" for "ai", "RAG" for "rag"
-  - Returns slug itself for unknown tags
-- [ ] Run tests — expect failure
-- [ ] **Implement** `tagLabels.ts`: lookup map + `getTagLabel()` function
-- [ ] Run tests — expect pass
-- [ ] Create `TagCloud.astro`: weighted font sizes, links to `/tags/<slug>/`
-- [ ] Update `src/pages/tags/index.astro` to use TagCloud
-- [ ] Verify tag cloud renders with correct sizes and display labels
-- [ ] Commit
+- [x] **Write failing tests first** for `getTagLabel()`: 3 test cases (acronyms, auto-title-case, single words)
+- [x] Run tests — expect failure ✓
+- [x] **Implement** `tagLabels.ts`: lookup map (17 entries) + `getTagLabel()` with auto-title-case fallback
+- [x] Run tests — expect pass ✓ (41/41)
+- [x] Create `TagCloud.astro`: weighted font sizes (5 tiers), `#` prefix, superscript counts, links to `/tags/<slug>/`
+- [x] Update `src/pages/tags/index.astro` to use TagCloud
+- [x] Update `getUniqueTags.ts` to use `getTagLabel()` for display names on tag archive pages
+- [x] Verify tag cloud renders with correct sizes and display labels (light + dark mode)
+- [x] Commit
 
 ### Task 18: Comments section
 

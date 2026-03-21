@@ -1,0 +1,56 @@
+---
+import type { MarkdownLayoutProps } from "astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Layout from "./Layout.astro";
+import TableOfContents from "@/components/TableOfContents.astro";
+import { SITE } from "@/config";
+
+interface RedesignFrontmatter {
+  title: string;
+  description?: string;
+}
+
+type Props = MarkdownLayoutProps<RedesignFrontmatter>;
+
+const { frontmatter, headings } = Astro.props;
+
+const tocHeadings = headings.filter(
+  (h: { depth: number }) => h.depth === 2 || h.depth === 3
+);
+const showToc = tocHeadings.length >= 3;
+---
+
+<Layout title={`${frontmatter.title} | ${SITE.title}`}>
+  <Header />
+  <Breadcrumb />
+  <div
+    id="main-content"
+    class:list={[
+      "mx-auto w-full px-4 pb-12",
+      showToc ? "max-w-5xl lg:flex lg:gap-4" : "max-w-3xl",
+    ]}
+  >
+    {showToc && (
+      <div class="lg:hidden">
+        <TableOfContents headings={tocHeadings} />
+      </div>
+    )}
+    <main class:list={["min-w-0", showToc && "lg:flex-1"]}>
+      <h1 class="text-2xl font-semibold sm:text-3xl">{frontmatter.title}</h1>
+      {frontmatter.description && (
+        <p class="mt-2 mb-6 italic text-muted">{frontmatter.description}</p>
+      )}
+      <article class="app-prose mt-6 prose-img:border-0">
+        <slot />
+      </article>
+    </main>
+    {showToc && (
+      <div class="hidden lg:block lg:max-w-[18rem] lg:shrink-0">
+        <TableOfContents headings={tocHeadings} />
+      </div>
+    )}
+  </div>
+  <Footer />
+</Layout>

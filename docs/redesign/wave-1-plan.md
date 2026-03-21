@@ -342,8 +342,8 @@ Not doing in Wave 1. Not distinctive enough to justify the plugin/schema/compone
   - `` ```text callout boxed `` — accent left border + subtle border and background
 - [x] ~~Migrate `/epsilla`~~ — dropped (outdated content, no analytics traffic; Hugo source preserved in git history)
 - [x] Verified `/ammachi/` renders correctly in light and dark mode
-- [ ] Migrate `content/redesign/index.md` → `src/pages/redesign.md` with enhanced layout (TOC sidebar + collapsible parts)
-- [ ] Commit
+- [x] Migrate `content/redesign/index.md` → `src/pages/redesign.md` with enhanced layout (TOC sidebar + collapsible parts)
+- [x] Commit
 
 ### Task 27: URL routing — rename posts/ to blog/ *(pulled forward into Task 9)*
 

@@ -28,8 +28,8 @@ The blog at annjose.com ("Reflections" by Ann Catherine Jose) runs on Hugo with 
 
 **Wave 1 (Initial Launch)**: Core site + blog migration + deployment
 - Site scaffolding and configuration
-- Content migration: all 58 posts + existing pages (/about, /ammachi, /epsilla, /redesign). Excluded: /bluesky and /image-test (test pages, not migrated)
-- Blog features: TOC, tags, comments, search, prev/next, OG images, reading time
+- Content migration: all 58 posts + existing pages (/about, /ammachi, /redesign). Excluded: /bluesky, /image-test (test pages), /epsilla (outdated, no traffic)
+- Blog features: TOC, tags, comments, search, prev/next, OG images
 - RSS feed migration (preserve existing feed URL for subscribers)
 - Design: custom color palette, fonts, wider layout, light/dark mode
 - Analytics: Counterscale migrated to Astro
@@ -37,8 +37,13 @@ The blog at annjose.com ("Reflections" by Ann Catherine Jose) runs on Hugo with 
 - Deployment to Cloudflare Pages
 - DNS cutover
 
+**Not doing in Wave 1**:
+- Reading time — not distinctive enough to justify the remark plugin, schema, and component work
+- Epsilla page (`/epsilla/`) — outdated product evaluation with no analytics traffic; Hugo source preserved in git history
+
 **Wave 2 (Enhancements)**: After Wave 1 is stable
 - Projects page (side projects & open source, card grid layout)
+- Atom feed (`/atom.xml`) — evaluate alongside existing RSS
 - Auth for private routes (Cloudflare Access or Workers)
 - GUID-based secret URLs
 - Additional routes: `/books`, `/notes`, `/photos`
@@ -153,10 +158,10 @@ AstroPaper uses RGB triplets for CSS variables (for opacity modifiers). The hex 
 | `static/img/*` | `public/img/*` |
 | `content/about.md` | `src/pages/about.md` |
 | `content/ammachi/index.md` | `src/pages/ammachi.md` |
-| `content/epsilla/index.md` | `src/pages/epsilla.md` |
 | `content/redesign/index.md` | `src/pages/redesign.md` |
 
-**Pages to migrate**: `/about`, `/ammachi`, `/epsilla`, `/redesign`
+**Pages to migrate**: `/about`, `/ammachi`, `/redesign`
+**Pages dropped**: `/epsilla` (outdated product evaluation, no analytics traffic)
 **Pages NOT migrated**: `/bluesky` (test page), `/image-test` (test page)
 
 ### Disqus Comment Export
@@ -207,8 +212,7 @@ Cloudflare Pages native redirect rules:
 ### Custom Route Pages
 
 - `src/pages/ammachi.md` — family content with video
-- `src/pages/epsilla.md` — product evaluation
-- `src/pages/redesign.md` — redesign log page
+- `src/pages/redesign.md` — redesign log page (TOC sidebar + collapsible parts)
 - Architecture supports future `/books`, `/notes`, `/photos`
 
 ---
@@ -272,11 +276,6 @@ Cloudflare Pages native redirect rules:
 - Show at bottom of each post
 - Show post titles (not just arrows) for context
 - Sorted by date descending
-
-### Reading Time
-
-- Show estimated reading time on post cards and post detail pages
-- AstroPaper may already have this; verify and keep
 
 ### OG Images
 
@@ -381,7 +380,7 @@ Before starting migration, run Lighthouse on the current Hugo site and record sc
 - [ ] Shortcode conversions render correctly (tables, grids, video)
 - [ ] `/blog/slug-name/` URLs work correctly
 - [ ] `/post/slug-name/` redirects to `/blog/slug-name/` (301)
-- [ ] `/ammachi/`, `/epsilla/`, `/redesign/`, `/about/` work
+- [ ] `/ammachi/`, `/redesign/`, `/about/` work
 - [ ] Light/dark mode toggle works
 - [ ] Mobile responsive (375px, 768px, 1024px, 1440px)
 - [ ] TOC sidebar displays correctly, highlights on scroll
@@ -392,7 +391,6 @@ Before starting migration, run Lighthouse on the current Hugo site and record sc
 - [ ] Archived Disqus comments display on migrated posts
 - [ ] Prev/next navigation works with post titles
 - [ ] Code blocks: syntax highlighting, copy button, line highlighting
-- [ ] Reading time displays on posts
 - [ ] Sitemap and RSS feed work
 - [ ] RSS feed URL matches old Hugo feed URL (via redirect)
 - [ ] 404 page renders correctly
@@ -436,6 +434,7 @@ Before starting migration, run Lighthouse on the current Hugo site and record sc
 - **Projects content collection**: title, description, techStack[], liveUrl?, githubUrl?, status, featured, sortOrder, image?
 - **Auth for private routes**: Cloudflare Access or Workers + D1
 - **GUID-based secret URLs**: unlisted pages with long random URLs
+- **Atom feed**: Evaluate adding `/atom.xml` alongside existing RSS for broader feed reader compatibility
 - **Additional routes**: `/books`, `/notes`, `/photos`
 - **Newsletter integration**
 - **SSR adapter**: `@astrojs/cloudflare` if server-rendered routes needed
@@ -463,7 +462,7 @@ annjose.com/                          # Renamed repo, astro branch
 │   │   ├── Card.astro                # EXISTING: post card in listing
 │   │   ├── Tag.astro                 # EXISTING: tag pill
 │   │   ├── Breadcrumb.astro          # EXISTING: breadcrumb nav
-│   │   ├── Datetime.astro            # EXISTING: date + reading time
+│   │   ├── Datetime.astro            # EXISTING: date display
 │   │   ├── TableOfContents.astro     # NEW: floating sticky TOC sidebar
 │   │   ├── TagCloud.astro            # NEW: weighted tag cloud
 │   │   ├── GiscusComments.astro      # NEW: Giscus comment widget
@@ -496,7 +495,6 @@ annjose.com/                          # Renamed repo, astro branch
 │   │   ├── search.astro              # Search page (Pagefind)
 │   │   ├── 404.astro                 # MODIFY: custom 404 design
 │   │   ├── ammachi.md                # NEW: custom route (markdown)
-│   │   ├── epsilla.md                # NEW: custom route (markdown)
 │   │   ├── redesign.md               # NEW: redesign log page (markdown)
 │   │   ├── blog/                     # NEW name (was posts/)
 │   │   │   ├── [...slug].astro       # Individual post pages
@@ -554,7 +552,6 @@ annjose.com/                          # Renamed repo, astro branch
 | `src/utils/tagLabels.ts` | Tag slug → display label mapping |
 | `src/pages/blog/` | Blog routes (renamed from posts/) |
 | `src/pages/ammachi.md` | Custom route: family content |
-| `src/pages/epsilla.md` | Custom route: product evaluation |
 | `src/pages/redesign.md` | Redesign log page |
 | `src/pages/about.astro` | About page with Sectioned Profile layout |
 | `src/layouts/PostDetails.astro` | Post layout: TOC sidebar + comments |

@@ -300,7 +300,9 @@
 - [x] Multi-column grid layout deferred to Wave 2 per spec
 - [x] No changes needed
 
-### Task 24: Reading time — moved to Phase 8 (after Task 30)
+### Task 24: Reading time — removed from scope
+
+Not doing in Wave 1. Not distinctive enough to justify the plugin/schema/component work.
 
 ---
 
@@ -331,11 +333,11 @@
 
 ### Task 26: Custom route pages
 
-**Files**: `src/pages/ammachi.md`, `src/pages/epsilla.md`, `src/pages/redesign.md`
+**Files**: `src/pages/ammachi.md`, `src/pages/redesign.md`, `src/layouts/RedesignLayout.astro`
 
 - [ ] Migrate `content/ammachi/index.md` → `src/pages/ammachi.md`
-- [ ] Migrate `content/epsilla/index.md` → `src/pages/epsilla.md`
-- [ ] Migrate `content/redesign/index.md` → `src/pages/redesign.md`
+- [ ] Migrate `content/redesign/index.md` → `src/pages/redesign.md` with enhanced layout (TOC sidebar + collapsible parts)
+- [ ] ~~Migrate `/epsilla`~~ — dropped (outdated content, no analytics traffic; Hugo source preserved in git history)
 - [ ] Verify each page renders at its URL
 - [ ] Commit
 
@@ -369,10 +371,6 @@
 - [ ] Confirm redirect rule covers old `/index.xml` path
 - [ ] Commit if changes needed
 
----
-
-## Phase 8: Testing & Polish
-
 ### Task 30: Giscus setup
 
 - [ ] Enable GitHub Discussions on the `annjose.com` repo
@@ -381,13 +379,9 @@
 - [ ] Verify comments load on a post
 - [ ] Commit
 
-### Task 30b: Reading time (moved from Phase 5)
+---
 
-- [ ] Install `remark-reading-time` plugin
-- [ ] Add `readingTime` to content collection schema or remarkPluginFrontmatter
-- [ ] Show reading time on post cards and post detail pages (in Datetime component)
-- [ ] Verify reading time displays correctly
-- [ ] Commit
+## Phase 8: Testing & Polish
 
 ### Task 31: Header navigation
 
@@ -461,7 +455,6 @@
 
 - [ ] Run through the complete testing checklist from the spec
 - [ ] Fix any issues found
-- [ ] Deploy to Cloudflare Pages and verify on `annjose.pages.dev`
 
 ---
 

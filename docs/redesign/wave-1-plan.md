@@ -271,15 +271,16 @@
 - [x] Test: search only works in production build (expected — AstroPaper shows dev mode warning)
 - [x] No changes needed
 
-### Task 21: Math rendering (KaTeX)
+### Task 21: Math rendering (rehype-mathjax/svg)
 
-**Files**: `astro.config.ts`
+**Files**: `astro.config.ts`, `src/styles/global.css`
 
-- [x] Install `remark-math` + `rehype-katex` + `katex` (for local CSS)
+- [x] Install `remark-math` + `rehype-mathjax` (using `/svg` subpath — renders as inline SVG, no CSS needed)
 - [x] Add to `astro.config.ts` remarkPlugins/rehypePlugins
-- [x] Add KaTeX CSS via `@import "katex/dist/katex.min.css"` in global.css + fix `.katex-mathml` hidden by Tailwind reset
+- [x] Fix inline math line-breaking: add `display: inline` CSS for SVGs inside `mjx-container` (browser defaults SVG to `display: block`)
 - [x] Convert Hugo-style `\\(...\\)` math delimiters to standard `$...$` in both math posts
-- [x] Verify math renders in `display-math-expressions-in-hugo.md` (inline + display quadratic formula)
+- [x] Make `math-symbols-test.md` non-draft
+- [x] Verify math renders in both math posts (inline + display equations, colored text, fractions)
 - [x] Commit
 
 ### Task 22: Image optimization

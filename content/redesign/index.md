@@ -33,6 +33,58 @@ These are transferable techniques I'd use again on any project with an AI agent.
 8. **Ask the agent to explain the *expected behavior* before fixing a visual bug.** When something looks off, don't just say "fix it." Ask the agent what the correct behavior should be and why. This forces it to reason about the design principle (e.g., "all content in a column should share one left edge") rather than trial-and-error patching. Three rounds of misalignment fixes could have been one if the principle was established first.
 9. **Question transitive dependencies.** When a library requires importing CSS from a dependency's `dist/` folder (like `katex/dist/katex.min.css`), ask if there's an alternative that avoids the coupling. In this case, `rehype-mathjax/svg` renders math as inline SVG — no CSS import needed, one fewer thing to break.
 10. **Check what's already built before building.** Five of the nine Phase 5 tasks turned out to be already implemented by AstroPaper. Spending 5 minutes verifying existing functionality saves hours of redundant work.
+11. **Question the spec when it doesn't fit the tool.** The spec called for a content collection for standalone pages, but Astro's own docs warn against it for small numbers of independent pages. Checking the framework's recommendations against the spec caught unnecessary complexity before it was built.
+
+---
+### Part 8: Implementation Phase 6: About Page — Mar 21, 2026
+
+**Goal:** Build the About page — replace the AstroPaper placeholder with a real bio in a sectioned profile layout.
+
+**Output Artifacts:**
+- [Live site on Astro](https://annjose.pages.dev/about/) — About page live with sectioned profile
+- [Updated Wave 1 Plan](https://github.com/annjose/myblog/blob/master/docs/redesign/wave-1-plan.md) — Task 25 checked off
+- [Agent Session Transcript #9 — Implementation Phase 6](https://github.com/annjose/myblog/blob/master/docs/redesign/sessions/session-09-impl-phase6.md)
+
+This was a focused session — one task, but with significant content iteration. The technical implementation was straightforward; the real work was getting the content right.
+
+#### Design decision: No content collection
+
+The spec originally called for a `pages` content collection loaded via `getEntry('pages', 'about')`. But when I thought about it, a collection doesn't make sense here — each standalone page (`/about`, `/ammachi`, `/epsilla`) has completely different frontmatter and structure. Astro's own docs say collections are overkill for a small number of independent pages.
+
+Instead, we kept the existing pattern: `src/pages/about.md` (markdown with structured frontmatter) → enhanced `AboutLayout.astro` (reads frontmatter, renders sections). Simple, no collection boilerplate, and each future page can have its own layout.
+
+#### The sectioned profile layout
+
+The layout renders five sections, each with a burnt orange left accent border (`border-l-4 border-accent`):
+
+1. **Hero** — profile photo (Astro `Image`, rounded) + name + tagline, side-by-side on desktop, stacked on mobile
+2. **Bio** — the markdown body rendered via `<slot />` with `app-prose` styling
+3. **"What I work on"** — interest tags from frontmatter, rendered as styled pills
+4. **"Currently"** — a blurb about what I'm focused on right now
+5. **Connect** — reuses the existing `Socials.astro` component
+
+The social links section was a zero-effort win — the `Socials.astro` component and `SOCIALS` constant already had my GitHub, LinkedIn, Bluesky, and Hacker News profiles configured.
+
+#### Content iterations
+
+The bio content went through several rounds of refinement during the session:
+
+- **Tagline**: Changed from the spec's "Engineer, writer, and perpetual learner" to "Tech tinkerer & software developer. Building real products with Agentic AI." — more specific, more me.
+- **Currently**: Upgraded from a generic "exploring the intersection of AI tools..." to listing specific tools (Claude Code, Codex, Gemini, pi) and practices (context engineering, spec-driven development, understanding harnesses).
+- **Projects section**: Added a new section showing 7 projects in order of agentic coding progression — from KeepSeek (mostly hand-written) to this blog (fully agentic with spec-driven development). Content adapted from my blog post on agentic coding in practice.
+- **Philosophy of Life**: Removed — two blockquotes followed by a sentence felt generic. The rest of the bio already shows values through actions.
+
+{{< figure src="blog-about-1.png" caption="About page — hero section with photo, name, tagline, and bio" width="600" >}}
+
+{{< figure src="blog-about-2.png" caption="About page — interest tags, currently blurb, and social links" width="600" >}}
+
+#### Lessons and observations
+
+**Question the spec when it doesn't fit the tool.** The spec called for a content collection, which is a reasonable default for frameworks that provide them. But Astro's own docs warn against using collections for a small number of independent pages. Asking "why do we need this?" saved unnecessary infrastructure and kept the implementation simple.
+
+**Content is the hard part.** The layout took 15 minutes to build and worked on the first try. The bio content took the rest of the session — iterating on tagline, rewriting the "currently" section, adding a projects list, removing the philosophy section. The agent can build the frame, but filling it with authentic content requires the human.
+
+**Phase 6 complete.** About page live with sectioned profile layout. On to Phase 7.
 
 ---
 ### Part 7: Implementation Phase 5: Blog Components — Mar 20, 2026

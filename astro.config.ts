@@ -9,6 +9,7 @@ import {
   transformerNotationWordHighlight,
 } from "@shikijs/transformers";
 import { transformerFileName } from "./src/utils/transformers/fileName";
+import { transformerCallout } from "./src/utils/transformers/callout";
 import { SITE } from "./src/config";
 
 // https://astro.build/config
@@ -32,6 +33,7 @@ export default defineConfig({
         transformerNotationHighlight(),
         transformerNotationWordHighlight(),
         transformerNotationDiff({ matchAlgorithm: "v3" }),
+        transformerCallout(),
       ],
     },
   },

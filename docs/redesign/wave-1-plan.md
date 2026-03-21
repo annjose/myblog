@@ -333,12 +333,16 @@ Not doing in Wave 1. Not distinctive enough to justify the plugin/schema/compone
 
 ### Task 26: Custom route pages
 
-**Files**: `src/pages/ammachi.md`, `src/pages/redesign.md`, `src/layouts/RedesignLayout.astro`
+**Files**: `src/pages/ammachi.md`, `src/pages/redesign.md`, `src/layouts/PageLayout.astro`, `src/layouts/RedesignLayout.astro`
 
-- [ ] Migrate `content/ammachi/index.md` → `src/pages/ammachi.md`
+- [x] Migrate `content/ammachi/index.md` → `src/pages/ammachi.md` (TOML→YAML, uses `PageLayout.astro`)
+- [x] Created `src/layouts/PageLayout.astro` — reusable generic page layout (Header, Breadcrumb, prose content, Footer)
+- [x] Created callout block system: Shiki transformer (`src/utils/transformers/callout.js`) + CSS in `typography.css`
+  - `` ```text callout `` — accent left border, no box, no line numbers, body font
+  - `` ```text callout boxed `` — accent left border + subtle border and background
+- [x] ~~Migrate `/epsilla`~~ — dropped (outdated content, no analytics traffic; Hugo source preserved in git history)
+- [x] Verified `/ammachi/` renders correctly in light and dark mode
 - [ ] Migrate `content/redesign/index.md` → `src/pages/redesign.md` with enhanced layout (TOC sidebar + collapsible parts)
-- [ ] ~~Migrate `/epsilla`~~ — dropped (outdated content, no analytics traffic; Hugo source preserved in git history)
-- [ ] Verify each page renders at its URL
 - [ ] Commit
 
 ### Task 27: URL routing — rename posts/ to blog/ *(pulled forward into Task 9)*

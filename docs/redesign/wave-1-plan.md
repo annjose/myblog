@@ -226,11 +226,11 @@
 
 **Files**: `src/components/PostNav.astro` (or modify existing), `src/pages/blog/[...slug].astro`
 
-- [ ] Check if AstroPaper already has prev/next; if not, create component
-- [ ] Show post titles (not just arrows)
-- [ ] Wire into post page: compute prev/next from sorted collection
-- [ ] Verify links appear and navigate correctly
-- [ ] Commit
+- [x] Check if AstroPaper already has prev/next; if not, create component — AstroPaper already includes this in `PostDetails.astro` (lines 76-88, 150-180)
+- [x] Show post titles (not just arrows) — already shows "Previous/Next Post" label + title in accent color
+- [x] Wire into post page: compute prev/next from sorted collection — already wired via `getSortedPosts`
+- [x] Verify links appear and navigate correctly — verified visually on dev server
+- [x] Commit (no changes needed — already built into AstroPaper)
 
 ### Task 17: Tag cloud with display labels (TDD)
 

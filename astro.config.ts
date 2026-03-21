@@ -1,6 +1,8 @@
 import { defineConfig, envField, fontProviders } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
+import remarkMath from "remark-math";
+import rehypeMathjax from "rehype-mathjax/svg";
 import {
   transformerNotationDiff,
   transformerNotationHighlight,
@@ -18,7 +20,8 @@ export default defineConfig({
     }),
   ],
   markdown: {
-    remarkPlugins: [],
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [rehypeMathjax],
     shikiConfig: {
       // For more themes, visit https://shiki.style/themes
       themes: { light: "github-light", dark: "night-owl" },

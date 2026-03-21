@@ -19,5 +19,5 @@ Then my question was how do I use it with my blog engine [Hugo](https://gohugo.i
 
 So now, my blog is ready to display mathemtical expressions. Here is a sample expression of quadratic equation that shows both inline and display expressions:
 
-When $a \ne 0$, there are two solutions to \\(ax^2 + bx + c = 0\\) and they are as follows:
+When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are as follows:
 $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$$

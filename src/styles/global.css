@@ -81,6 +81,11 @@ html[data-theme="dark"] {
   @apply underline decoration-wavy decoration-2 underline-offset-8;
 }
 
+/* MathJax SVG: keep inline math inline with surrounding text */
+mjx-container:not([display]) > svg {
+  display: inline;
+}
+
 /* Source: https://piccalil.li/blog/a-more-modern-css-reset/ */
 /* Anything that has been anchored to should have extra scroll margin */
 :target {

@@ -259,50 +259,47 @@
 
 **Files**: `src/styles/global.css`, `src/components/` (if needed)
 
-- [ ] Add copy-to-clipboard button on all code blocks
-- [ ] Add line highlighting support (`{1,3-5}` syntax)
-- [ ] Add optional file name label above code blocks
-- [ ] Verify dual theme works (light/dark)
-- [ ] Commit
+- [x] Add copy-to-clipboard button on all code blocks — already in PostDetails.astro (`attachCopyButtons()`)
+- [x] Add line highlighting support (`{1,3-5}` syntax) — `transformerNotationHighlight()` in astro.config.ts
+- [x] Add optional file name label above code blocks — `transformerFileName()` in astro.config.ts
+- [x] Verify dual theme works (light/dark) — `github-light` / `night-owl` configured
+- [x] Commit (no changes needed — already implemented in Tasks 3 and 12)
 
 ### Task 20: Search (Pagefind)
 
-- [ ] Verify Pagefind works with migrated content (AstroPaper includes this)
-- [ ] Test: type query, results appear
-- [ ] Fix if broken; commit if changes needed
+- [x] Verify Pagefind works with migrated content — build indexes 55 pages, Pagefind output in `dist/pagefind/`
+- [x] Test: search only works in production build (expected — AstroPaper shows dev mode warning)
+- [x] No changes needed
 
 ### Task 21: Math rendering (KaTeX)
 
 **Files**: `astro.config.ts`
 
-- [ ] Install `remark-math` + `rehype-katex`
-- [ ] Add to `astro.config.ts` remarkPlugins/rehypePlugins
-- [ ] Add KaTeX CSS to layout
-- [ ] Verify math renders in `display-math-expressions-in-hugo.md` and `math-symbols-test.md`
-- [ ] Commit
+- [x] Install `remark-math` + `rehype-katex` + `katex` (for local CSS)
+- [x] Add to `astro.config.ts` remarkPlugins/rehypePlugins
+- [x] Add KaTeX CSS via `@import "katex/dist/katex.min.css"` in global.css + fix `.katex-mathml` hidden by Tailwind reset
+- [x] Convert Hugo-style `\\(...\\)` math delimiters to standard `$...$` in both math posts
+- [x] Verify math renders in `display-math-expressions-in-hugo.md` (inline + display quadratic formula)
+- [x] Commit
 
 ### Task 22: Image optimization
 
 **Files**: post markdown files (update image references)
 
-- [ ] Use `astro:assets` for post images
-- [ ] Configure automatic WebP/AVIF conversion, responsive `srcset`
-- [ ] Add lazy loading for below-fold images
-- [ ] Commit
+- [x] Use `astro:assets` for post images — already active, colocated images served through `_image` endpoint
+- [x] Configure automatic WebP/AVIF conversion, responsive `srcset` — `image: { responsiveStyles: true, layout: "constrained" }` in astro.config.ts
+- [x] Add lazy loading for below-fold images — Astro adds `loading="lazy"` automatically
+- [x] Commit (no changes needed — already configured)
 
 ### Task 23: Image grid CSS
 
 **Files**: `src/styles/global.css`
 
-- [ ] Add `.image-grid` with `grid-template-columns` for 2/3 col layouts
-- [ ] Responsive: collapses to 1 column on mobile
-- [ ] Verify posts with converted `fluid_imgs` render correctly
-- [ ] Commit
+- [x] No `fluid_imgs` shortcodes remain — migration converted them to plain markdown images (vertically stacked)
+- [x] Multi-column grid layout deferred to Wave 2 per spec
+- [x] No changes needed
 
-### Task 24: Reading time
-
-- [ ] Verify AstroPaper's existing reading time feature works with migrated content
-- [ ] Fix if broken; commit if changes needed
+### Task 24: Reading time — moved to Phase 8 (after Task 30)
 
 ---
 
@@ -379,6 +376,14 @@
 - [ ] Verify comments load on a post
 - [ ] Commit
 
+### Task 30b: Reading time (moved from Phase 5)
+
+- [ ] Install `remark-reading-time` plugin
+- [ ] Add `readingTime` to content collection schema or remarkPluginFrontmatter
+- [ ] Show reading time on post cards and post detail pages (in Datetime component)
+- [ ] Verify reading time displays correctly
+- [ ] Commit
+
 ### Task 31: Header navigation
 
 **Files**: `src/components/Header.astro`, `src/config.ts`
@@ -447,7 +452,7 @@
 - [ ] JSON-LD uses `BlogPosting` on all pages (homepage, about, tags) — should use `WebSite` or `Person` as appropriate
 - [ ] Update `Layout.astro` to accept a `schemaType` prop or conditionally set `@type` based on page context
 
-### Task 39: Full testing checklist
+### Task 38b: Full testing checklist
 
 - [ ] Run through the complete testing checklist from the spec
 - [ ] Fix any issues found

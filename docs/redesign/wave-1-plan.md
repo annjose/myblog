@@ -248,12 +248,12 @@
 
 ### Task 18: Comments section
 
-**Files**: `src/components/GiscusComments.astro`, `src/components/DisqusComments.astro`, `src/layouts/PostDetails.astro`
+**Files**: `src/components/GiscusComments.astro`, `src/components/ArchivedComments.astro`, `src/layouts/PostDetails.astro`
 
-- [ ] Create `GiscusComments.astro`: script embed, `data-theme="preferred_color_scheme"`
-- [ ] Create `DisqusComments.astro`: loads static HTML from `src/content/comments/<slug>.html`
-- [ ] Add both to `PostDetails.astro`: archived Disqus above Giscus
-- [ ] Commit (Giscus setup in Task 30)
+- [x] Create `GiscusComments.astro`: script embed, `data-theme="preferred_color_scheme"`, placeholder config (Task 30)
+- [x] Create `ArchivedComments.astro` (renamed from DisqusComments): loads static HTML from `src/content/comments/<slug>.html` using `disqusSlug` frontmatter
+- [x] Add both to `PostDetails.astro`: archived comments above Giscus, only shows archived section when comment file exists
+- [x] Commit (Giscus setup in Task 30)
 
 ### Task 19: Code block enhancements
 

@@ -15,6 +15,9 @@ import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
 import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
 import { SITE } from "@/config";
 import TableOfContents from "@/components/TableOfContents.astro";
+import IconMessage from "@/assets/icons/IconMessage.svg";
+import ArchivedComments from "@/components/ArchivedComments.astro";
+import GiscusComments from "@/components/GiscusComments.astro";
 
 type Props = {
   post: CollectionEntry<"blog">;
@@ -34,6 +37,7 @@ const {
   timezone,
   tags,
   hideEditPost,
+  disqusSlug,
 } = post.data;
 
 const { Content, headings } = await render(post);
@@ -110,6 +114,14 @@ const nextPost =
       </h1>
       <div class="my-2 flex items-center gap-2">
         <Datetime {pubDatetime} {modDatetime} {timezone} size="lg" />
+        <span aria-hidden="true">|</span>
+        <a
+          href="#comments"
+          class="inline-flex items-center opacity-80 hover:text-accent hover:opacity-100"
+          title="Jump to comments"
+        >
+          <IconMessage class="size-5" />
+        </a>
         <span
           aria-hidden="true"
           class:list={[
@@ -178,6 +190,13 @@ const nextPost =
           )
         }
       </div>
+
+      {/* Comments section */}
+      <section id="comments" class="mt-10">
+        <h2 class="mb-4 text-xl font-bold">Comments</h2>
+        {disqusSlug && <ArchivedComments slug={disqusSlug} />}
+        <GiscusComments />
+      </section>
     </main>
 
     {/* Desktop TOC: sticky sidebar */}

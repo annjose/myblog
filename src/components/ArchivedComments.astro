@@ -1,0 +1,61 @@
+---
+import fs from "node:fs";
+import path from "node:path";
+
+type Props = {
+  slug: string;
+};
+
+const { slug } = Astro.props;
+
+const commentPath = path.join(
+  process.cwd(),
+  "src/content/comments",
+  `${slug}.html`
+);
+
+let commentHtml = "";
+if (fs.existsSync(commentPath)) {
+  commentHtml = fs.readFileSync(commentPath, "utf-8");
+}
+---
+
+{commentHtml && (
+  <div class="mt-6">
+    <h3 class="mb-1 text-lg font-semibold">Archived Comments</h3>
+    <p class="mb-3 text-xs text-foreground/50">Previously hosted on Disqus</p>
+    <div class="archived-comments space-y-4 rounded-lg border border-border bg-secondary/30 p-4 text-sm">
+      <Fragment set:html={commentHtml} />
+    </div>
+  </div>
+)}
+
+<style>
+  .archived-comments :global(.disqus-comment) {
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed var(--border);
+  }
+  .archived-comments :global(.disqus-comment:last-child) {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .archived-comments :global(.disqus-reply) {
+    margin-left: 1.5rem;
+  }
+  .archived-comments :global(.comment-header) {
+    display: flex;
+    gap: 0.5rem;
+    align-items: baseline;
+    margin-bottom: 0.25rem;
+  }
+  .archived-comments :global(.comment-author) {
+    font-weight: 600;
+  }
+  .archived-comments :global(.comment-header time) {
+    font-size: 0.75rem;
+    opacity: 0.6;
+  }
+  .archived-comments :global(.comment-body p) {
+    margin-top: 0.25rem;
+  }
+</style>

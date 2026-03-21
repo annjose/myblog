@@ -31,6 +31,64 @@ These are transferable techniques I'd use again on any project with an AI agent.
 6. **Context-switching back into an agentic project takes real time.** After a 4-day gap, getting back into the flow required re-reading the spec, plan, and recent commits. It's faster than pure manual coding (the plan and transcripts serve as breadcrumbs), but the idea that you can pop in and out of agentic sessions at will is a myth — you still need to rebuild mental context, and the agent needs to be caught up too.
 7. **Always run the production build, not just the dev server.** Vite's dev server resolves imports lazily — a deleted file that's still referenced will work in dev but fail in the production Rollup build. `pnpm run build` catches what `pnpm run dev` doesn't.
 8. **Ask the agent to explain the *expected behavior* before fixing a visual bug.** When something looks off, don't just say "fix it." Ask the agent what the correct behavior should be and why. This forces it to reason about the design principle (e.g., "all content in a column should share one left edge") rather than trial-and-error patching. Three rounds of misalignment fixes could have been one if the principle was established first.
+9. **Question transitive dependencies.** When a library requires importing CSS from a dependency's `dist/` folder (like `katex/dist/katex.min.css`), ask if there's an alternative that avoids the coupling. In this case, `rehype-mathjax/svg` renders math as inline SVG — no CSS import needed, one fewer thing to break.
+10. **Check what's already built before building.** Five of the nine Phase 5 tasks turned out to be already implemented by AstroPaper. Spending 5 minutes verifying existing functionality saves hours of redundant work.
+
+---
+### Part 7: Implementation Phase 5: Blog Components — Mar 20, 2026
+
+**Goal:** Complete Phase 5 — tag cloud, comments, math rendering, and verify that code blocks, search, and images are already working.
+
+**Output Artifacts:**
+- [Live site on Astro](https://annjose.pages.dev) — tag cloud, archived comments, math rendering live
+- [Updated Wave 1 Plan](https://github.com/annjose/myblog/blob/master/docs/redesign/wave-1-plan.md) — Tasks 16-24 checked off
+- [Agent Session Transcript #8 — Implementation Phase 5](https://github.com/annjose/myblog/blob/master/docs/redesign/sessions/session-08-impl-phase5.md)
+
+Phase 5 covered nine tasks, but five of them turned out to be already implemented by AstroPaper — prev/next navigation, code block enhancements, search, and image optimization were all working out of the box. The real work was in three areas: tag cloud with display labels, a unified comments section, and math rendering.
+
+#### Tag cloud with display labels (Task 17)
+
+The tag cloud needed to solve two problems: visual weight (popular tags should look bigger) and display labels (the slug `ai` should display as "AI", not "Ai"). The implementation uses TDD — 41 tests for `getTagLabel()` covering acronyms, compound tags, and auto-title-case fallback.
+
+The tag cloud component sorts alphabetically, uses 5 font-size tiers based on post count, prefixes each tag with `#` in accent color, and shows post count as a superscript.
+
+{{< figure src="blog-tags.png" caption="Tag cloud with weighted font sizes and display labels" width="600" >}}
+
+#### Unified comments section (Task 18)
+
+The comments section combines two components: `ArchivedComments.astro` (static HTML exported from Disqus, rendered only for the 9 posts that had comments) and `GiscusComments.astro` (placeholder for new GitHub Discussions-based comments, configured in Task 30).
+
+The structure went through two user corrections. First, comments were placed after the prev/next navigation — moved them before, since comments are part of the post content while nav is for leaving. Second, clicking the `#comments` anchor was skipping past the archived comments because they were in a separate section — restructured into a unified section with archived comments as an h3 subsection.
+
+A comment icon (speech bubble) in the post header links to `#comments`, so readers don't have to scroll to the bottom to find the comments section.
+
+{{< figure src="blog-comments.png" caption="Unified comments section — archived Disqus comments above Giscus placeholder" width="600" >}}
+
+#### Math rendering: from KaTeX to MathJax SVG (Task 21)
+
+This task had the most interesting debugging journey. The initial implementation used `rehype-katex`, which required importing CSS from a transitive dependency (`katex/dist/katex.min.css`). When I asked about alternatives, the agent swapped to `rehype-mathjax/svg` — which renders math as inline SVG with no CSS dependency at all.
+
+But after the swap, inline math expressions like $a \ne 0$ were breaking onto their own lines instead of flowing with the surrounding text. The root cause was subtle: browsers default `<svg>` elements to `display: block`, so even though the parent `mjx-container` had `display: inline`, the SVG inside it forced a line break. A one-line CSS fix resolved it:
+``` css
+mjx-container:not([display]) > svg { display: inline }
+```
+
+{{< figure src="blog-math-expressions.png" caption="Math rendering with rehype-mathjax/svg — inline and display equations" width="600" >}}
+
+#### Tasks deferred
+
+- **Task 23 (image grid)**: No posts currently use multi-column image grids — deferred to Wave 2.
+- **Task 24 (reading time)**: Moved to Phase 8 as Task 30b, after Giscus setup.
+
+#### Lessons and observations
+
+**Check what's already built.** Five of nine Phase 5 tasks were already implemented by AstroPaper. The agent verified each one by inspecting the codebase and dev server, marked them complete, and moved on. No wasted effort building something that already exists.
+
+**Question transitive dependencies.** The KaTeX approach required importing CSS from `katex/dist/katex.min.css` — a file inside a transitive dependency. When Tailwind's reset conflicted with KaTeX's styles, it needed a `!important` override. Swapping to `rehype-mathjax/svg` eliminated both the CSS import and the override. Fewer dependencies = fewer things that can break.
+
+**Browser defaults matter.** The inline math bug wasn't caused by any CSS we wrote — it was the browser's default `display: block` on `<svg>` elements. This is the kind of issue that's invisible in DevTools (the parent shows `display: inline` correctly) but obvious visually. Understanding what the browser does by default, not just what your CSS does, is essential for debugging layout issues.
+
+**Phase 5 complete.** Tag cloud, comments, math rendering all working. On to Phase 6: About Page.
 
 ---
 ### Part 6: Implementation Phase 4: Base Layout, Floating TOC — Mar 20, 2026

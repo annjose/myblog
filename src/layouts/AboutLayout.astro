@@ -1,12 +1,23 @@
 ---
 import type { MarkdownLayoutProps } from "astro";
+import { Image } from "astro:assets";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
+import Socials from "@/components/Socials.astro";
 import Layout from "./Layout.astro";
 import { SITE } from "@/config";
+import profilePhoto from "@/assets/images/ann-color-sketch-square.png";
 
-type Props = MarkdownLayoutProps<{ title: string }>;
+interface AboutFrontmatter {
+  title: string;
+  name: string;
+  tagline: string;
+  interests: string[];
+  currently: string;
+}
+
+type Props = MarkdownLayoutProps<AboutFrontmatter>;
 
 const { frontmatter } = Astro.props;
 ---
@@ -14,10 +25,60 @@ const { frontmatter } = Astro.props;
 <Layout title={`${frontmatter.title} | ${SITE.title}`}>
   <Header />
   <Breadcrumb />
-  <main id="main-content" class="app-layout">
-    <section id="about" class="app-prose mb-28 max-w-app prose-img:border-0">
-      <h1 class="text-2xl tracking-wider sm:text-3xl">{frontmatter.title}</h1>
+  <main id="main-content" class="mx-auto w-full max-w-[700px] px-4">
+    {/* Hero: Photo + Name + Tagline */}
+    <section class="mb-8 border-l-4 border-accent pl-6 pt-8">
+      <div class="flex flex-col items-center gap-4 sm:flex-row sm:items-start">
+        <Image
+          src={profilePhoto}
+          alt={frontmatter.name}
+          width={150}
+          height={150}
+          class="rounded-full"
+        />
+        <div class="text-center sm:text-left">
+          <h1 class="text-2xl font-semibold tracking-wider sm:text-3xl">
+            {frontmatter.name}
+          </h1>
+          <p class="mt-2 text-lg italic text-muted">
+            {frontmatter.tagline}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* Bio: Markdown body */}
+    <section
+      id="about"
+      class="app-prose mb-8 border-l-4 border-accent pl-6 prose-img:border-0"
+    >
       <slot />
+    </section>
+
+    {/* What I work on: Interest tags */}
+    <section class="mb-8 border-l-4 border-accent pl-6">
+      <h2 class="mb-4 text-xl font-semibold">What I work on</h2>
+      <div class="flex flex-wrap gap-2">
+        {
+          frontmatter.interests.map((interest: string) => (
+            <span class="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-sm text-foreground">
+              {interest}
+            </span>
+          ))
+        }
+      </div>
+    </section>
+
+    {/* Currently */}
+    <section class="mb-8 border-l-4 border-accent pl-6">
+      <h2 class="mb-4 text-xl font-semibold">Currently</h2>
+      <p class="text-muted">{frontmatter.currently}</p>
+    </section>
+
+    {/* Social links */}
+    <section class="mb-28 border-l-4 border-accent pl-6">
+      <h2 class="mb-4 text-xl font-semibold">Connect</h2>
+      <Socials />
     </section>
   </main>
   <Footer />

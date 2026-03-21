@@ -308,18 +308,22 @@
 
 ### Task 25: Build the About page
 
-**Files**: `src/content/pages/about.md`, `src/pages/about.astro`
+**Files**: `src/pages/about.md`, `src/layouts/AboutLayout.astro`
 
-- [ ] Create `src/content/pages/about.md` with frontmatter schema (name, tagline, photo, interests, currently, social) + prose bio body
-- [ ] Verify profile photo exists at `public/img/ann-profile.jpg` (copy from Hugo if needed)
-- [ ] Create `src/pages/about.astro`:
-  - Load content via `getEntry('pages', 'about')`
-  - Render: photo + name + tagline → prose bio → "What I work on" interest tags → "Currently" blurb → social links
-  - Left accent border in burnt orange on each section
-  - Single-column, centered, max ~700px wide
-- [ ] Add About to navigation (in `src/config.ts` or Header component)
-- [ ] Verify at `http://localhost:4321/about/`
-- [ ] Commit
+- [x] Replaced AstroPaper placeholder in `src/pages/about.md` with Ann's real bio, structured frontmatter (name, tagline, interests, currently)
+- [x] Used markdown page + layout pattern instead of content collection (per Astro docs, collections are overkill for a few independent pages)
+- [x] Enhanced `AboutLayout.astro` with sectioned profile layout:
+  - Hero: profile photo (`ann-color-sketch-square.png` via Astro Image) + name + tagline
+  - Bio: markdown body rendered via `<slot />` with `app-prose` styling
+  - "What I work on": interest tags as styled pills from `frontmatter.interests`
+  - "Currently": blurb paragraph from `frontmatter.currently`
+  - "Connect": reuses `Socials.astro` component (GitHub, LinkedIn, Bluesky, HN)
+- [x] Each section has `border-l-4 border-accent` (burnt orange left accent border)
+- [x] Single-column, centered, `max-w-[700px]`
+- [x] Navigation already wired in `Header.astro` — no changes needed
+- [x] Bio content: Professional Journey, Career Pivot, Technical Expertise (with agentic coding), Current Focus, Projects (7 projects showing progression to agentic coding), Beyond Technology
+- [x] Verified: build passes, light/dark mode, mobile responsive
+- [x] Commit
 
 ---
 

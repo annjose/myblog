@@ -86,6 +86,17 @@ mjx-container:not([display]) > svg {
   display: inline;
 }
 
+/* MathJax display equations: scroll instead of shrinking on mobile */
+mjx-container[display="true"] {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+
+mjx-container[display="true"] > svg {
+  min-width: min-content;
+}
+
 /* Source: https://piccalil.li/blog/a-more-modern-css-reset/ */
 /* Anything that has been anchored to should have extra scroll margin */
 :target {

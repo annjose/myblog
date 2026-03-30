@@ -8,21 +8,21 @@ The blog at annjose.com ("Reflections" by Ann Catherine Jose) runs on Hugo with 
 
 ## Decisions
 
-| Decision | Choice | Rationale |
-|---|---|---|
-| **Base template** | AstroPaper (as Astro template, not fork) | `pnpm create astro@latest --template satnaing/astro-paper` |
-| **Package manager** | pnpm | Faster installs, stricter dependency resolution, disk-efficient; AstroPaper's own repo uses pnpm |
-| **Astro version** | Start on Astro 5 (AstroPaper's current base), upgrade to Astro 6 before launch | AstroPaper not yet updated for Astro 6; mechanical upgrade path exists |
-| **Hosting** | Cloudflare Pages (static output for Wave 1) | Free, fast CDN, supports SSR later for auth |
-| **Comments** | Static embed of old Disqus comments + Giscus for new posts | Preserves history, no Disqus dependency going forward |
-| **Migration** | All 58 posts migrated | No content left behind |
-| **Topics taxonomy** | Merge into tags (deduplicate) | Simplifies architecture, one taxonomy system |
-| **URL scheme** | New posts at `/blog/<slug>/`, 301 redirects from `/post/<slug>/` | Cleaner URLs, old links preserved via Cloudflare redirects |
-| **Repo strategy** | Same repo (rename `myblog` → `annjose.com`), new `astro` branch | Preserves full git history; merge to main when ready |
-| **Branch name** | Rename `master` → `main` during final merge | Modern convention; done as part of cutover |
-| **Coexistence** | Old Hugo site stays live at `annjose.com`; new Astro site tested at Cloudflare Pages preview URL | DNS cutover only when new site is fully validated |
-| **Deployment strategy** | Deploy to Cloudflare Pages at end of bootstrap, then continuously at each milestone | Catches integration issues early; no big-bang deploy at the end |
-| **Analytics** | Counterscale (existing, self-hosted on Cloudflare Workers) | Privacy-friendly, already set up, no Google Analytics needed |
+| Decision                | Choice                                                                                           | Rationale                                                                                        |
+| ----------------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| **Base template**       | AstroPaper (as Astro template, not fork)                                                         | `pnpm create astro@latest --template satnaing/astro-paper`                                       |
+| **Package manager**     | pnpm                                                                                             | Faster installs, stricter dependency resolution, disk-efficient; AstroPaper's own repo uses pnpm |
+| **Astro version**       | Start on Astro 5 (AstroPaper's current base), upgrade to Astro 6 before launch                   | AstroPaper not yet updated for Astro 6; mechanical upgrade path exists                           |
+| **Hosting**             | Cloudflare Pages (static output for Wave 1)                                                      | Free, fast CDN, supports SSR later for auth                                                      |
+| **Comments**            | Static embed of old Disqus comments + Giscus for new posts                                       | Preserves history, no Disqus dependency going forward                                            |
+| **Migration**           | All 58 posts migrated                                                                            | No content left behind                                                                           |
+| **Topics taxonomy**     | Merge into tags (deduplicate)                                                                    | Simplifies architecture, one taxonomy system                                                     |
+| **URL scheme**          | New posts at `/blog/<slug>/`, 301 redirects from `/post/<slug>/`                                 | Cleaner URLs, old links preserved via Cloudflare redirects                                       |
+| **Repo strategy**       | Same repo (rename `myblog` → `annjose.com`), new `astro` branch                                  | Preserves full git history; merge to main when ready                                             |
+| **Branch name**         | Rename `master` → `main` during final merge                                                      | Modern convention; done as part of cutover                                                       |
+| **Coexistence**         | Old Hugo site stays live at `annjose.com`; new Astro site tested at Cloudflare Pages preview URL | DNS cutover only when new site is fully validated                                                |
+| **Deployment strategy** | Deploy to Cloudflare Pages at end of bootstrap, then continuously at each milestone              | Catches integration issues early; no big-bang deploy at the end                                  |
+| **Analytics**           | Counterscale (existing, self-hosted on Cloudflare Workers)                                       | Privacy-friendly, already set up, no Google Analytics needed                                     |
 
 ## Scope: Wave 1 vs Wave 2
 
@@ -94,14 +94,14 @@ Standard approach: lowercase slugs in URLs, display labels in UI.
 
 ### Color Palette: Warm & Earthy
 
-| Role | Light mode | Dark mode |
-|---|---|---|
-| Accent | `#c2410c` (burnt orange) | `#c2410c` |
-| Background | `#faf7f5` (warm white) | `#1c1917` (warm black) |
-| Text | `#1c1917` | `#faf7f5` |
-| Muted text | `#78716c` | `#a8a29e` |
-| Tag background | `#fff7ed` | `#292524` |
-| Tag border | `#fed7aa` | `#44403c` |
+| Role           | Light mode               | Dark mode              |
+| -------------- | ------------------------ | ---------------------- |
+| Accent         | `#c2410c` (burnt orange) | `#c2410c`              |
+| Background     | `#faf7f5` (warm white)   | `#1c1917` (warm black) |
+| Text           | `#1c1917`                | `#faf7f5`              |
+| Muted text     | `#78716c`                | `#a8a29e`              |
+| Tag background | `#fff7ed`                | `#292524`              |
+| Tag border     | `#fed7aa`                | `#44403c`              |
 
 AstroPaper uses RGB triplets for CSS variables (for opacity modifiers). The hex values above are converted to RGB in the implementation.
 
@@ -131,15 +131,15 @@ AstroPaper uses RGB triplets for CSS variables (for opacity modifiers). The hex 
 
 ### Front Matter Conversion (TOML `+++` → YAML `---`)
 
-| Hugo field | Astro field | Notes |
-|---|---|---|
-| `title` | `title` | Direct copy |
-| `description` | `description` | Generate from first 160 chars if missing |
-| `date` | `pubDatetime` | Parse ISO date to Date object |
-| `draft` | `draft` | Direct copy |
-| `tags` + `topics` | `tags` | **Merge** topics into tags, deduplicate |
-| `images[0]` | `ogImage` | First image, relative path for bundles |
-| (new) | `author` | Default: "Ann Catherine Jose" |
+| Hugo field        | Astro field   | Notes                                    |
+| ----------------- | ------------- | ---------------------------------------- |
+| `title`           | `title`       | Direct copy                              |
+| `description`     | `description` | Generate from first 160 chars if missing |
+| `date`            | `pubDatetime` | Parse ISO date to Date object            |
+| `draft`           | `draft`       | Direct copy                              |
+| `tags` + `topics` | `tags`        | **Merge** topics into tags, deduplicate  |
+| `images[0]`       | `ogImage`     | First image, relative path for bundles   |
+| (new)             | `author`      | Default: "Ann Catherine Jose"            |
 
 ### Hugo Shortcode Conversion (found in ~15 posts)
 
@@ -151,14 +151,14 @@ AstroPaper uses RGB triplets for CSS variables (for opacity modifiers). The hex 
 
 ### File Structure Mapping
 
-| Hugo path | Astro path |
-|---|---|
+| Hugo path                    | Astro path                                               |
+| ---------------------------- | -------------------------------------------------------- |
 | `content/post/slug/index.md` | `src/content/blog/slug/index.md` (with colocated images) |
-| `content/post/slug.md` | `src/content/blog/slug.md` |
-| `static/img/*` | `public/img/*` |
-| `content/about.md` | `src/pages/about.md` |
-| `content/ammachi/index.md` | `src/pages/ammachi.md` |
-| `content/redesign/index.md` | `src/pages/redesign.md` |
+| `content/post/slug.md`       | `src/content/blog/slug.md`                               |
+| `static/img/*`               | `public/img/*`                                           |
+| `content/about.md`           | `src/pages/about.md`                                     |
+| `content/ammachi/index.md`   | `src/pages/ammachi.md`                                   |
+| `content/redesign/index.md`  | `src/pages/redesign.md`                                  |
 
 **Pages to migrate**: `/about`, `/ammachi`, `/redesign`
 **Pages dropped**: `/epsilla` (outdated product evaluation, no analytics traffic)
@@ -538,28 +538,28 @@ annjose.com/                          # Renamed repo, astro branch
 
 ### Key Files Reference
 
-| File | Purpose |
-|---|---|
-| `scripts/migrate-content.ts` | Content migration: TOML→YAML, shortcodes, file structure |
-| `scripts/convert-disqus.ts` | Disqus XML export → static HTML fragments |
-| `scripts/validate-migration.ts` | Post-migration validation checks |
-| `src/content.config.ts` | Content collection schema (blog + pages) |
-| `src/config.ts` | Site metadata, author, social links |
-| `src/components/TableOfContents.astro` | Floating sticky TOC with scroll tracking |
-| `src/components/TagCloud.astro` | Weighted tag cloud with display labels |
-| `src/components/GiscusComments.astro` | Giscus comment embed |
-| `src/components/DisqusComments.astro` | Archived Disqus static comments |
-| `src/utils/tagLabels.ts` | Tag slug → display label mapping |
-| `src/pages/blog/` | Blog routes (renamed from posts/) |
-| `src/pages/ammachi.md` | Custom route: family content |
-| `src/pages/redesign.md` | Redesign log page |
-| `src/pages/about.astro` | About page with Sectioned Profile layout |
-| `src/layouts/PostDetails.astro` | Post layout: TOC sidebar + comments |
-| `public/_redirects` | Cloudflare redirect rules |
-| `wrangler.jsonc` | Cloudflare Pages deployment config |
-| `astro.config.ts` | Astro configuration |
-| `tailwind.config.mjs` | Tailwind: custom colors, wider max-width |
-| `tests/e2e/*.spec.ts` | Playwright e2e tests |
+| File                                   | Purpose                                                  |
+| -------------------------------------- | -------------------------------------------------------- |
+| `scripts/migrate-content.ts`           | Content migration: TOML→YAML, shortcodes, file structure |
+| `scripts/convert-disqus.ts`            | Disqus XML export → static HTML fragments                |
+| `scripts/validate-migration.ts`        | Post-migration validation checks                         |
+| `src/content.config.ts`                | Content collection schema (blog + pages)                 |
+| `src/config.ts`                        | Site metadata, author, social links                      |
+| `src/components/TableOfContents.astro` | Floating sticky TOC with scroll tracking                 |
+| `src/components/TagCloud.astro`        | Weighted tag cloud with display labels                   |
+| `src/components/GiscusComments.astro`  | Giscus comment embed                                     |
+| `src/components/DisqusComments.astro`  | Archived Disqus static comments                          |
+| `src/utils/tagLabels.ts`               | Tag slug → display label mapping                         |
+| `src/pages/blog/`                      | Blog routes (renamed from posts/)                        |
+| `src/pages/ammachi.md`                 | Custom route: family content                             |
+| `src/pages/redesign.md`                | Redesign log page                                        |
+| `src/pages/about.astro`                | About page with Sectioned Profile layout                 |
+| `src/layouts/PostDetails.astro`        | Post layout: TOC sidebar + comments                      |
+| `public/_redirects`                    | Cloudflare redirect rules                                |
+| `wrangler.jsonc`                       | Cloudflare Pages deployment config                       |
+| `astro.config.ts`                      | Astro configuration                                      |
+| `tailwind.config.mjs`                  | Tailwind: custom colors, wider max-width                 |
+| `tests/e2e/*.spec.ts`                  | Playwright e2e tests                                     |
 
 ### Reference Links
 

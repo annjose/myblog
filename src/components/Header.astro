@@ -46,7 +46,7 @@ const isActive = (path: string) => {
   >
     <a
       href="/"
-      class="absolute py-1 sm:static sm:my-auto"
+      class="flex shrink-0 items-center gap-2 py-1"
     >
       <span class="avatar-ring inline-block rounded-full p-[2px]">
         <Image
@@ -56,6 +56,9 @@ const isActive = (path: string) => {
           height={44}
           class="rounded-full"
         />
+      </span>
+      <span class="hidden whitespace-nowrap text-base font-semibold sm:inline">
+        {SITE.title}
       </span>
     </a>
     <nav

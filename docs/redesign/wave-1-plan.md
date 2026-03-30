@@ -414,8 +414,9 @@ Not doing in Wave 1. Not distinctive enough to justify the plugin/schema/compone
 
 ### Task 34: Draft preview
 
-- [ ] Verify draft posts (`draft: true`) are excluded from production builds
-- [ ] Verify they're viewable locally with `pnpm run dev`
+- [x] Verify draft posts (`draft: true`) are excluded from production builds
+- [x] Verify they're viewable locally with `pnpm run dev`
+- [x] Delete the two draft posts that are now obsolete
 
 ### Task 35: Playwright e2e tests
 

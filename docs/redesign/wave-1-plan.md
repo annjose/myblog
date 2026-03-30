@@ -393,24 +393,24 @@ Not doing in Wave 1. Not distinctive enough to justify the plugin/schema/compone
 
 **Files**: `src/components/Header.astro`, `src/config.ts`
 
-- [ ] Configure nav items: Home, Blog, About
-- [ ] Verify clean horizontal nav
-- [ ] Commit
+- [x] Configure nav items: Home, Blog, About
+- [x] Verify clean horizontal nav
+- [x] Commit
 
 ### Task 32: Footer with social links
 
 **Files**: `src/components/Footer.astro`
 
-- [ ] Verify social links: GitHub, LinkedIn, Bluesky, HackerNews
-- [ ] Commit if changes needed
+- [x] Verify social links: GitHub, LinkedIn, Bluesky, HackerNews
+- [x] No changes needed
 
 ### Task 33: Custom 404 page
 
 **Files**: `src/pages/404.astro`
 
-- [ ] Design 404 page matching site theme
-- [ ] Add helpful navigation back to home/blog
-- [ ] Commit
+- [x] Design 404 page matching site theme
+- [x] Add helpful navigation back to home/blog
+- [x] No changes needed
 
 ### Task 34: Draft preview
 

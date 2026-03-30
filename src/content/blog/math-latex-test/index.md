@@ -522,7 +522,7 @@ $$
 The right generalization of the $k_n$ gadget is not just “split into more parts,” but “split into $t$ parts and use every support size with harmonic weights.” Fix $t\ge 2$, and let
 $$
 h_t:=1+\frac12+\cdots+\frac1t,\qquad
-L_t:=\operatorname{lcm}\Bigl{\binom{t-1}{j}:0\le j\le t-1\Bigr}.
+L_t:=\operatorname{lcm}\Bigl\{\binom{t-1}{j}:0\le j\le t-1\Bigr\}.
 $$
 Take $t$ recursive blocks, each with partition budget $qL_t$. For every subset $A\subseteq [t]$ of size $s\ge 2$, add
 $$

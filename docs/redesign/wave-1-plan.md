@@ -418,14 +418,14 @@ Not doing in Wave 1. Not distinctive enough to justify the plugin/schema/compone
 - [x] Verify they're viewable locally with `pnpm run dev`
 - [x] Delete the two draft posts that are now obsolete
 
-### Task 34a: Replace Hugo-era local checks with Astro checks
+### Task 34a: Replace Hugo-era local checks with Astro checks ✅
 
-**Files**: `scripts/check-content.sh`
+**Files**: `scripts/check-content.sh` → deleted; `scripts/check-taxonomy.test.ts` → added; `package.json` → updated
 
-- [ ] Remove Hugo dependency from local check flow
-- [ ] Update script to run Astro-local checks (`pnpm test`, `pnpm build`) and keep useful content validations
-- [ ] Ensure script exits cleanly on success and fails clearly on invalid content or build errors
-- [ ] Commit
+- [x] Deleted Hugo-era `scripts/check-content.sh`
+- [x] Added `scripts/check-taxonomy.test.ts` — vitest test detecting tag taxonomy collisions
+- [x] Added `pnpm run check` script (runs tests + build)
+- [x] Committed
 
 ### Task 34b: Update operator docs from Hugo to Astro
 

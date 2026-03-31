@@ -27,11 +27,6 @@ pnpm run build
 pnpm test
 ```
 
-## Full check (test + build)
-```bash
-pnpm run check
-```
-
 ## Deploy
 Push to `astro` (or `main`) branch — Cloudflare Pages auto-builds and deploys.
 

@@ -44,10 +44,6 @@ pnpm run build
 ```bash
 pnpm test
 ```
-- Full check (test + build):
-```bash
-pnpm run check
-```
 
 ## Content Conventions
 - Front matter format: YAML (`---`)

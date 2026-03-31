@@ -420,11 +420,10 @@ Not doing in Wave 1. Not distinctive enough to justify the plugin/schema/compone
 
 ### Task 34a: Replace Hugo-era local checks with Astro checks ✅
 
-**Files**: `scripts/check-content.sh` → deleted; `scripts/check-taxonomy.test.ts` → added; `package.json` → updated
+**Files**: `scripts/check-content.sh` → deleted; `scripts/check-taxonomy.test.ts` → added
 
 - [x] Deleted Hugo-era `scripts/check-content.sh`
 - [x] Added `scripts/check-taxonomy.test.ts` — vitest test detecting tag taxonomy collisions
-- [x] Added `pnpm run check` script (runs tests + build)
 - [x] Committed
 
 ### Task 34b: Update operator docs from Hugo to Astro ✅
@@ -438,14 +437,15 @@ Not doing in Wave 1. Not distinctive enough to justify the plugin/schema/compone
 - [x] Deleted 6 obsolete Hugo-era docs (thin/obvious content consolidated into README + AGENTS.md)
 - [x] Committed
 
-### Task 34c: Modernize CI workflow for Astro
+### Task 34c: Modernize CI workflow for Astro ✅
 
-**Files**: `.github/workflows/content-check.yml`
+**Files**: `.github/workflows/content-check.yml`, `package.json`, `README.md`, `AGENTS.md`
 
-- [ ] Replace Hugo setup/build steps with Node + pnpm + Astro checks
-- [ ] Run install, local check script, and Astro production build in CI
-- [ ] Update branch triggers for current/future default branch strategy (`astro` and `main`)
-- [ ] Commit
+- [x] Replaced Hugo/ripgrep setup with pnpm + Node 22, removed submodules checkout
+- [x] Steps: install → `pnpm test` → `pnpm run build`
+- [x] Branch triggers: push on `astro` and `main`, all PRs
+- [x] Removed redundant `pnpm run check` script (CI covers test + build separately)
+- [x] Committed
 
 ### Task 35: Playwright e2e tests
 

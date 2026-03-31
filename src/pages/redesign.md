@@ -35,6 +35,59 @@ These are transferable techniques I'd use again on any project with an AI agent.
 13. **Off-the-shelf templates are surprisingly extensible with agents.** AstroPaper's Shiki-based code blocks were extended into a callout system (accent-bordered content blocks for song lyrics, quotes, etc.) by adding a single transformer and CSS — the agent figured out the approach and the meta string workaround for Shiki's language normalization.
 14. **Reuse components across different page types.** The `TableOfContents` component built for blog posts was reused on the redesign page with zero changes. The agent created a new layout (`RedesignLayout.astro`) that imports the same component, just with a different container width. Shared components compound in value.
 15. **Third-party integrations are easier than you think.** Giscus (GitHub Discussions-based comments) was the feature I was most worried about when planning the migration. Turns out: enable Discussions, configure at giscus.app, paste the credentials into the component, fix the View Transitions issue — done in 20 minutes. The agent handled the View Transitions bug (dynamic script creation on `astro:page-load`) without any hints.
+16. **When a fix doesn't take effect, suspect the cache before the code.** Astro's `.astro` cache caused warnings to persist after the underlying issue was fixed — multiple times. The fix is trivial (`rm -rf .astro`), but the symptom erodes trust in your build output and wastes debugging time.
+17. **Delete docs aggressively during migrations.** Six Hugo-era documentation files were deleted because they were obvious, thin, or obsolete. The remaining docs have genuine reference value. Less documentation, better maintained.
+18. **Multi-agent handoffs work when the plan is specific.** A structured handoff prompt with exact tasks, file paths, and constraints let a second agent session execute cleanly with no re-exploration. The wave-1-plan document serves as a shared contract between agents.
+
+---
+## Part 10: Phase 8 — Testing, Polish & Tooling Cleanup (Mar 30, 2026)
+
+**Goal:** Complete Phase 8 — fix content edge cases, build a comprehensive content sample post, and replace all Hugo-era tooling with Astro equivalents.
+
+This part spans two agent sessions: one with Codex (GPT-5.3) for content debugging and the sample post, and one with Claude Code (Opus) for the tooling cleanup. Between them, the migration's support infrastructure — scripts, docs, CI — was fully cut over from Hugo to Astro.
+
+### Content sample post
+
+Every template needs a stress test. I asked Codex to create a single post that exercises every content pattern the site supports: standard markdown (headings, lists, tables, blockquotes, checklists), code blocks (standard, diff, filename meta, Shiki notation markers, callouts), inline and display math, images from both `@/assets` and `public/` paths, `<details>` disclosure, `<figure>`/`<figcaption>`, and embedded video.
+
+The post lives at `/blog/content-sample` — a slug override from the file name `content-demo-post.md`, which also validates the mixed slug routing fix (see below).
+
+![Math rendering with MathJax SVG — complex LaTeX expressions with TOC sidebar](/img/redesign/blog-math-latex-toc.png)
+
+Building this post surfaced three bugs:
+- **`<details>` styling** — a CSS rule in `typography.css` was hiding `<p>` elements inside `<details>` even when expanded. One-line fix.
+- **Duplicate content ID warning** — Astro's content loader was parsing a `slug:` value inside a YAML code example in the post body as a real frontmatter slug, producing a phantom duplicate. Fix: use a clearly-fake example slug.
+- **Stale `.astro` cache** — warnings persisted after fixes until `rm -rf .astro` cleared the cache. This happened multiple times. Running `pnpm dev` and `pnpm build` concurrently also caused false failures.
+
+### Mixed slug routing
+
+The migration spec required "folder slug by default, frontmatter `slug` override when present." But the repo's `getPath.ts` was concatenating folder path + frontmatter slug, producing doubled URLs like `/blog/math-latex-test/test-math-latex/`.
+
+Codex patched `getPath.ts` to detect a frontmatter `slug` and use it as the sole URL segment. Unit tests cover both the default-folder and slug-override paths. The math-latex post was the test case: with `slug: "test-math-latex"`, the route correctly became `/blog/test-math-latex/`.
+
+### Tooling cleanup (Tasks 34a-c)
+
+With the content work done, the next session focused on cutting the remaining Hugo dependencies from the repo's support infrastructure. Three tasks, each committed separately:
+
+**Task 34a — Local checks.** Deleted `scripts/check-content.sh` (which required Hugo binary). Replaced it with a vitest test (`scripts/check-taxonomy.test.ts`) that scans all blog posts for tag taxonomy collisions — the one genuinely useful check from the old script. The rest (Hugo build, TOML frontmatter parsing, `config.toml` checks) was no longer relevant.
+
+**Task 34b — Operator docs.** Rewrote `README.md` and `AGENTS.md` for Astro (pnpm commands, YAML frontmatter, Cloudflare Pages deploy). Updated `content-style-guide.md` and `taxonomy-conventions.md`. Deleted six Hugo-era docs that were either thin, obvious, or obsolete: `runbook.md`, `deploy.md`, `repo-structure.md`, `maintenance-baseline.md`, `theme-overrides.md`, `image-guidelines.md`. The principle: if the content is straightforward, delete it; if it has real value, consolidate into README or a dedicated reference.
+
+**Task 34c — CI workflow.** Replaced the GitHub Actions workflow (`content-check.yml`) — removed Hugo setup, ripgrep install, and submodule checkout. The new workflow: pnpm + Node 22 setup → `pnpm test` → `pnpm run build`. Branch triggers updated from `master` to `astro` and `main`.
+
+Also fixed three pre-existing TypeScript warnings in the migration scripts (unused variables in `convert-disqus.ts` and `migrate-content.ts`) — `astro check` now reports zero warnings.
+
+### Lessons and observations
+
+**Agents make different kinds of mistakes.** Codex went through four file renames for the content sample post before landing on a name I liked. It also changed a real frontmatter `slug` when I asked it to change the example slug in the post body — a reading comprehension error I had to catch. These aren't logic bugs; they're misinterpretations of intent that require the human to stay engaged.
+
+**Cache bugs are the worst kind of debugging.** The stale `.astro` cache issue wasted significant time across multiple rounds. The fix is simple (`rm -rf .astro`), but the symptom — warnings that persist after the code is correct — erodes trust in the build output. Lesson: when a fix doesn't take effect, suspect the cache before suspecting the code.
+
+**Delete docs aggressively during migrations.** Six documentation files were deleted because their content was either obvious (repo structure), thin (deploy = push to branch), or Hugo-specific (theme overrides, maintenance baseline). The remaining docs — content style guide and taxonomy conventions — have genuine reference value. Less documentation, better maintained.
+
+**Multi-agent handoffs work when the plan is specific.** The Codex session ended with a structured handoff prompt that listed exact tasks, file paths, and constraints. The Claude Code session picked up cleanly and executed all three tasks without re-exploration. The wave-1-plan document served as the shared contract between agents.
+
+**Phase 8 progress:** Content sample post live, Hugo tooling fully replaced, CI modernized, zero build warnings. Remaining: Playwright e2e tests, Lighthouse CI, link checker, and JSON-LD structured data fixes.
 
 ---
 ## Part 9: Impl Phase 7: Custom Routes, Redirects & Comments (Mar 21, 2026)

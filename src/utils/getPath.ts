@@ -1,5 +1,6 @@
-import { BLOG_PATH } from "@/content.config";
 import { slugifyStr } from "./slugify";
+
+const BLOG_PATH = "src/content/blog";
 
 /**
  * Get full path of a blog post
@@ -13,34 +14,47 @@ export function getPath(
   filePath: string | undefined,
   includeBase = true
 ) {
-  const pathSegments = filePath
+  const pathSegments =
+    filePath
     ?.replace(BLOG_PATH, "")
     .split("/")
     .filter(path => path !== "") // remove empty string in the segments ["", "other-path"] <- empty string will be removed
     .filter(path => !path.startsWith("_")) // exclude directories start with underscore "_"
     .slice(0, -1) // remove the last segment_ file name_ since it's unnecessary
-    .map(segment => slugifyStr(segment)); // slugify each segment path
+    .map(segment => slugifyStr(segment)) ?? []; // slugify each segment path
 
   const basePath = includeBase ? "/blog" : "";
 
-  // Making sure `id` does not contain the directory
-  const blogId = id.split("/");
-  const slug = blogId.length > 0 ? blogId.slice(-1) : blogId;
+  // Astro content `id` can come from file path (default) or from frontmatter `slug`.
+  // Keep folder-name routes as default, but let frontmatter `slug` override final segment.
+  const idSegments = id
+    .split("/")
+    .filter(segment => segment !== "")
+    .map(segment => slugifyStr(segment));
 
-  // If not inside the sub-dir, simply return the file path
-  if (!pathSegments || pathSegments.length < 1) {
-    return [basePath, slug].join("/");
+  if (idSegments.length < 1) {
+    return basePath || "/";
   }
 
-  // For page bundles (slug/index.md), the slug already matches the directory,
-  // so filter out pathSegments that duplicate the slug to avoid /blog/slug/slug
-  const filteredSegments = pathSegments.filter(
-    segment => segment !== slug[0]
-  );
-
-  if (filteredSegments.length < 1) {
-    return [basePath, slug].join("/");
+  // If no directory context is available, rely entirely on id segments.
+  if (pathSegments.length < 1) {
+    return [basePath, ...idSegments].join("/");
   }
 
-  return [basePath, ...filteredSegments, slug].join("/");
+  // Nested custom slugs (e.g. "ai/math/test") should be used as-is.
+  if (idSegments.length > 1) {
+    return [basePath, ...idSegments].join("/");
+  }
+
+  const idSlug = idSegments[0];
+  const defaultSlug = pathSegments[pathSegments.length - 1];
+
+  // Frontmatter slug override: replace only the final segment, keep parent dirs.
+  if (idSlug !== defaultSlug) {
+    const parentSegments = pathSegments.slice(0, -1);
+    return [basePath, ...parentSegments, idSlug].join("/");
+  }
+
+  // Default behavior: keep folder-based route.
+  return [basePath, ...pathSegments].join("/");
 }

@@ -418,6 +418,33 @@ Not doing in Wave 1. Not distinctive enough to justify the plugin/schema/compone
 - [x] Verify they're viewable locally with `pnpm run dev`
 - [x] Delete the two draft posts that are now obsolete
 
+### Task 34a: Replace Hugo-era local checks with Astro checks
+
+**Files**: `scripts/check-content.sh`
+
+- [ ] Remove Hugo dependency from local check flow
+- [ ] Update script to run Astro-local checks (`pnpm test`, `pnpm build`) and keep useful content validations
+- [ ] Ensure script exits cleanly on success and fails clearly on invalid content or build errors
+- [ ] Commit
+
+### Task 34b: Update operator docs from Hugo to Astro
+
+**Files**: `README.md`, `docs/runbook.md`
+
+- [ ] Replace Hugo-specific build/dev/deploy instructions with Astro equivalents
+- [ ] Keep only minimal legacy notes where needed (if any)
+- [ ] Verify docs match current branch workflow and commands
+- [ ] Commit
+
+### Task 34c: Modernize CI workflow for Astro
+
+**Files**: `.github/workflows/content-check.yml`
+
+- [ ] Replace Hugo setup/build steps with Node + pnpm + Astro checks
+- [ ] Run install, local check script, and Astro production build in CI
+- [ ] Update branch triggers for current/future default branch strategy (`astro` and `main`)
+- [ ] Commit
+
 ### Task 35: Playwright e2e tests
 
 **Files**: `tests/e2e/pages.spec.ts`, `tests/e2e/navigation.spec.ts`, `tests/e2e/features.spec.ts`, `tests/e2e/playwright.config.ts`

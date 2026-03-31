@@ -12,7 +12,8 @@
     "format": "prettier --write .",
     "lint": "eslint .",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "check": "vitest run && pnpm run build"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.14",

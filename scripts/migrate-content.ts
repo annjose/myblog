@@ -170,20 +170,6 @@ export function convertFluidImgs(shortcode: string): string {
     }
   }
 
-  // Determine column count from CSS classes
-  let cols = 1;
-  if (images.length > 0) {
-    const classStr = images[0].classes;
-    const colMatch = classStr.match(/pure-u-(?:md-)?1-(\d+)/);
-    if (colMatch) {
-      cols = parseInt(colMatch[1], 10);
-    }
-    // Handle "pure-u-1-1" (single full-width image)
-    if (classStr.includes("pure-u-1-1")) {
-      cols = 1;
-    }
-  }
-
   const imgMarkdown = images.map(img => `![${img.alt}](${img.src})`).join("\n\n");
 
   return imgMarkdown;

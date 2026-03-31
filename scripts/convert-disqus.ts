@@ -37,11 +37,7 @@ function getElementText(parent: string, tagName: string): string {
   return match ? match[1].trim() : "";
 }
 
-function getAttr(element: string, attrName: string): string {
-  const regex = new RegExp(`${attrName}="([^"]*)"`, "i");
-  const match = element.match(regex);
-  return match ? match[1] : "";
-}
+
 
 export function parseDisqusXml(xmlString: string): {
   threads: Map<string, string>;
@@ -131,7 +127,7 @@ export function filterAndGroupComments(
   }
 
   // Sort each group by date
-  for (const [slug, comments] of grouped) {
+  for (const [, comments] of grouped) {
     comments.sort(
       (a, b) =>
         new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()

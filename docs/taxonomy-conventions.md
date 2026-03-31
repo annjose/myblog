@@ -5,11 +5,11 @@
 - Avoid duplicate buckets caused by casing or punctuation differences.
 
 ## Canonical Rules
-- Use lowercase taxonomy values.
+- Use lowercase tag values.
 - Use hyphens (`-`) as separators.
 - Avoid dots and spaces where a slug exists.
 - Reuse existing canonical values when possible.
-- Keep canonical slugs in front matter and URLs; apply readability formatting in templates instead of mixed-case taxonomy values.
+- Keep canonical slugs in front matter and URLs; apply readability formatting via tag labels (`src/utils/tagLabels.ts`) instead of mixed-case values.
 
 ## Current Known Normalization Targets
 - `LLM` -> `llm`
@@ -52,4 +52,4 @@ Use this section to track taxonomy migrations:
 - Date: `2026-02-15`
 - Changed: canonicalized uppercase/mixed-case taxonomy values to lowercase (`LLM` -> `llm`, `AI` -> `ai`, `RAG` -> `rag`) and aligned menu/tag URL references.
 - Reason: avoid split archives and broken case-sensitive URLs while preserving readable acronym labels in UI.
-- Impacted posts: all posts containing uppercase/mixed-case `tags` or `topics` values.
+- Impacted posts: all posts containing uppercase/mixed-case `tags` values.

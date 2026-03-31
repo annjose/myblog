@@ -427,14 +427,16 @@ Not doing in Wave 1. Not distinctive enough to justify the plugin/schema/compone
 - [x] Added `pnpm run check` script (runs tests + build)
 - [x] Committed
 
-### Task 34b: Update operator docs from Hugo to Astro
+### Task 34b: Update operator docs from Hugo to Astro ✅
 
-**Files**: `README.md`, `docs/runbook.md`
+**Rewrote**: `README.md`, `AGENTS.md`, `docs/content-style-guide.md`, `docs/taxonomy-conventions.md`
+**Deleted**: `docs/runbook.md`, `docs/deploy.md`, `docs/repo-structure.md`, `docs/maintenance-baseline.md`, `docs/theme-overrides.md`, `docs/image-guidelines.md`
 
-- [ ] Replace Hugo-specific build/dev/deploy instructions with Astro equivalents
-- [ ] Keep only minimal legacy notes where needed (if any)
-- [ ] Verify docs match current branch workflow and commands
-- [ ] Commit
+- [x] Rewrote README.md and AGENTS.md for Astro (commands, content model, definition of done)
+- [x] Updated content-style-guide.md for YAML frontmatter and Astro conventions
+- [x] Updated taxonomy-conventions.md (removed topics references)
+- [x] Deleted 6 obsolete Hugo-era docs (thin/obvious content consolidated into README + AGENTS.md)
+- [x] Committed
 
 ### Task 34c: Modernize CI workflow for Astro
 

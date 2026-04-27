@@ -38,3 +38,4 @@ resources/_gen/
 .claude/launch.json
 public/pagefind/
 .astro/
+.lighthouseci/

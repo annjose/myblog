@@ -447,31 +447,20 @@ Not doing in Wave 1. Not distinctive enough to justify the plugin/schema/compone
 - [x] Removed redundant `pnpm run check` script (CI covers test + build separately)
 - [x] Committed
 
-### Task 35: Playwright e2e tests
+### Task 35: Playwright e2e tests — deferred to Wave 2
 
-**Files**: `tests/e2e/pages.spec.ts`, `tests/e2e/navigation.spec.ts`, `tests/e2e/features.spec.ts`, `tests/e2e/playwright.config.ts`
+Deferred: low priority for a personal blog given extensive manual verification throughout each phase.
 
-- [ ] Install: `pnpm add -D @playwright/test && pnpm exec playwright install`
-- [ ] Write tests per spec's Playwright section:
-  - Pages render (home, blog listing, post, about, ammachi, tags, 404)
-  - Navigation (header links, prev/next, tag links)
-  - Redirects (`/post/<slug>/` → `/blog/<slug>/`, 301)
-  - Dark mode toggle
-  - TOC sidebar (desktop visible, mobile hidden)
-  - Search (type query, results appear)
-  - Code blocks (copy button)
-  - Images load
-- [ ] Run tests — expect pass
-- [ ] Commit
+### Task 36: Lighthouse CI ✅
 
-### Task 36: Lighthouse CI
+**Files**: `.github/workflows/lighthouse.yml`, `lighthouserc.cjs`
 
-**Files**: `.github/workflows/ci.yml`
-
-- [ ] Set up GitHub Actions workflow: build + Lighthouse CI
-- [ ] Run Lighthouse on home, blog post, tags pages
-- [ ] Enforce thresholds: performance > 90, accessibility > 95, best practices > 95, SEO > 95
-- [ ] Commit
+- [x] Install `@lhci/cli` as dev dependency
+- [x] Create `lighthouserc.cjs`: collect from `./dist` staticDistDir, 5 URLs (home, blog listing, a post, tags, about)
+- [x] Enforce thresholds: performance ≥ 90 (warn), accessibility ≥ 95 (error), best practices ≥ 95 (error), SEO ≥ 95 (error)
+- [x] Upload results to temporary-public-storage
+- [x] Create `.github/workflows/lighthouse.yml`: triggers on push to `astro`/`main` + PRs
+- [x] Commit
 
 ### Task 37: Link checker
 
@@ -482,10 +471,14 @@ Not doing in Wave 1. Not distinctive enough to justify the plugin/schema/compone
 - [ ] Check for broken anchor links
 - [ ] Commit
 
-### Task 38: Fix JSON-LD structured data on non-post pages
+### Task 38: Fix JSON-LD structured data on non-post pages ✅
 
-- [ ] JSON-LD uses `BlogPosting` on all pages (homepage, about, tags) — should use `WebSite` or `Person` as appropriate
-- [ ] Update `Layout.astro` to accept a `schemaType` prop or conditionally set `@type` based on page context
+**Files**: `src/layouts/Layout.astro`
+
+- [x] JSON-LD was using `BlogPosting` on all pages (homepage, about, tags)
+- [x] Use existing `pubDatetime` prop as the signal: present → `BlogPosting` (post pages), absent → `WebSite` (all other pages)
+- [x] `WebSite` schema includes name, url, description, and author
+- [x] Commit
 
 ### Task 38b: Full testing checklist
 

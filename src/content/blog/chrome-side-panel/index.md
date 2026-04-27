@@ -15,7 +15,7 @@ disqusSlug: "chrome-side-panel"
 ogImage: "side-panel-bookmarks.png"
 ---
 
-Of late, I have been building and [learning about browser extensions](/post/browser-extn-intro/) for a few projects. It was surprising to learn that there are many ways to build UI for these extensions and the most interesting one was the Side Panel UI available to Chrome extensions. In this post, I will talk about the Chrome side panel, how to build one and the advantages and limitations of using it.
+Of late, I have been building and [learning about browser extensions](/blog/browser-extn-intro/) for a few projects. It was surprising to learn that there are many ways to build UI for these extensions and the most interesting one was the Side Panel UI available to Chrome extensions. In this post, I will talk about the Chrome side panel, how to build one and the advantages and limitations of using it.
 
 ## The Chrome side panel
 It is a vertical panel that opens on either side of the browser window, providing quick access to your bookmarks, history, reading list, and Google Lens. It has a consistent layout and behavior across all websites. It was first introduced in Chrome in May 2023. 
@@ -65,7 +65,7 @@ It is super easy and fun  to build a side panel. The API is straight-forward. Bu
 In order to create a side panel, you create a Chrome extension with the permissions to show the side panel and add the html/css/js files to render your content. Let's go through the steps one by one.
 
 1. Create a new extension 
-    * If this is your first time creating an extension, see detailed description in my previous post [How to create a Chrome extension](/post/browser-extn-intro#the-how).
+    * If this is your first time creating an extension, see detailed description in my previous post [How to create a Chrome extension](/blog/browser-extn-intro#the-how).
 2. Create an HTML file **sidepanel.html** and add any HTML content to it. 
 3. Update the manifest file **manifest.json** to add **sidePanel** to the **permissions** array. See details about the [manifest file](https://developer.chrome.com/docs/extensions/reference/manifest):
 4. Load the extension in the browser using the 'Load unpacked' option in the [local Chrome extensions](chrome://extensions/) page.

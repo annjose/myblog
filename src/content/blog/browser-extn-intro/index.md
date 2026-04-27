@@ -16,7 +16,7 @@ disqusSlug: "browser-extn-intro"
 
 Imagine a world where every website adapts to your specific needs in real-time, securely and easily, without selling your data to third party companies. It will be cool, right? Yes and it is possible - thanks to **Browser extensions**.
 
-In this post, we will learn about browser extensions - what they are, why you should build them and how to build them. We will conclude by looking at a few issues that come up frequently while building an extension and how to troubleshoot them. For those interested in advanced topics, check out Part 2 of this series - [Browser Extensions: Part 2 - Advanced Concepts](/post/browser-extn-adv/).
+In this post, we will learn about browser extensions - what they are, why you should build them and how to build them. We will conclude by looking at a few issues that come up frequently while building an extension and how to troubleshoot them. For those interested in advanced topics, check out Part 2 of this series - [Browser Extensions: Part 2 - Advanced Concepts](/blog/browser-extn-adv/).
           
 ## The What
 Browser extensions are lightweight software components that can be integrated into web browsers to customize and enhance the web browsing experience. It enables you to modify web page content, add UI elements like buttons or sidebars, observe browser events, capture user input and run background scripts.
@@ -149,7 +149,7 @@ chrome.scripting
   )
 ```
 
-3. **Inject programmatically** - Inject the content scripts programatically when you want to run some script only based on a condition or in response to specific events. You can do this using another Scripting API - **chrome.scripting.executeScript()**. The sample code this method is lengthy, so I will give it in the follow-up blog post at [Browser Extensions: Part 2 - Advanced Concepts](/post/browser-extn-adv/).
+3. **Inject programmatically** - Inject the content scripts programatically when you want to run some script only based on a condition or in response to specific events. You can do this using another Scripting API - **chrome.scripting.executeScript()**. The sample code this method is lengthy, so I will give it in the follow-up blog post at [Browser Extensions: Part 2 - Advanced Concepts](/blog/browser-extn-adv/).
 
 #### Step #4: Load the extension in your browser
 As you are developing your extension, you can load them into your local browser to test and verify that everything is working as intended. Follow these steps:
@@ -200,4 +200,4 @@ Next, I want to build a private local extension that can bring the GPT 4o or Per
 ## References
 * [Chrome Documentation](https://developer.chrome.com/docs/extensions/get-started/tutorial/scripts-on-every-tab)
 * all my browser extensions - [annjose/browser-extensions](https://github.com/annjose/browser-extensions/)
-* Part 2 of this article - [Browser Extensions: Part 2 - Advanced Concepts](/post/browser-extn-adv/)
+* Part 2 of this article - [Browser Extensions: Part 2 - Advanced Concepts](/blog/browser-extn-adv/)

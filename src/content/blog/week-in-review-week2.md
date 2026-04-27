@@ -11,11 +11,11 @@ author: "Ann Catherine Jose"
 disqusSlug: "week-in-review-week2"
 ---
 
-OK, here we are at Week #2 of the "new beginning" [I set forth mid October](/post/new-beginning/) - a journey which did not get a specific name, but it doesn't matter. I guess some things are better served unnamed, yeah? Anyway, let's jump into the review. As always, this is free flow writing and I will follow the same format as [last week's review](/post/week-in-review-week1/ "Week In Review - Week 1").
+OK, here we are at Week #2 of the "new beginning" [I set forth mid October](/blog/new-beginning/) - a journey which did not get a specific name, but it doesn't matter. I guess some things are better served unnamed, yeah? Anyway, let's jump into the review. As always, this is free flow writing and I will follow the same format as [last week's review](/blog/week-in-review-week1/ "Week In Review - Week 1").
 
 ## What I did during the week
 
-An honest review of this week should start by reviewing the goals I set out at the beginning of the week. These are the goals I decided in [my last week's review](/post/week-in-review-week1/ "Week In Review - Week 1"):
+An honest review of this week should start by reviewing the goals I set out at the beginning of the week. These are the goals I decided in [my last week's review](/blog/week-in-review-week1/ "Week In Review - Week 1"):
 
   1. **Complete the courses - Learn JavaScript and Modern JavaScript** - I could not achieve this goal 100%, but completed 80% of the first course and 50% of the second one. I found that I had to do the structured course quite a bit before I can get the best value of the [Execute Program course](https://www.executeprogram.com/courses/modern-javascript). Btw, it has been a long time since I learned the fundamentals of a technology at this level of depth. This is plain HTML, JS and CSS at its core. I want to solidify my understanding of this before I learn React, Tailwind etc. I also completed the capstone project to build a simple Todo app from scratch with plain HTML, JS and CSS and stores the data in a Firebase DB 🚀.
 

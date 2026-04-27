@@ -14,7 +14,7 @@ author: "Ann Catherine Jose"
 disqusSlug: "browser-extn-adv"
 ---
 
-This is the second part of my blog series on browser extensions. Here, we'll delve into advanced concepts including TypeScript integration, service workers, and programmatic script injection. For a solid foundation, I recommend reading [Browser Extensions: Part 1 - Introduction](/post/browser-extn-intro/) before tackling these more complex topics.
+This is the second part of my blog series on browser extensions. Here, we'll delve into advanced concepts including TypeScript integration, service workers, and programmatic script injection. For a solid foundation, I recommend reading [Browser Extensions: Part 1 - Introduction](/blog/browser-extn-intro/) before tackling these more complex topics.
 
 ## How to use TypeScript in browser extensions
 By default, browser extensions use JavaScript as the programming language in the content scripts. However, TypeScript is more type safe and reliable to write the business logic. You can add TypeScript support to the extension project, but how do you do it? Chrome docs mention this as a one-liner as follows:
@@ -175,7 +175,7 @@ This occurs when you are running the extension on a sensistiv page like Extensio
 Solution - open the extension on another page like https://github.com/ and enjoy the color rainbow!
 
 ## How to inject content script programatically
-In the [previous post](/post/browser-extn-intro/), we looked at three ways of injecting content scripts into an extension - statically declare, dynamically declare and programmatically inject. It covered the first two methods in depth, so now let's look at the third method.
+In the [previous post](/blog/browser-extn-intro/), we looked at three ways of injecting content scripts into an extension - statically declare, dynamically declare and programmatically inject. It covered the first two methods in depth, so now let's look at the third method.
 
 Injecting content scripts programatically is useful when you want to run some script based on a condition or in response to specific events. You can inject the scripts using the Chrome Scripting API **chrome.scripting.executeScript**, which takes an array of script files (as 'files') or a function body (as 'func') and executes the script in the context of the extension.
 
@@ -240,4 +240,4 @@ Allows you to intercept, block or modify a network request.
 
 ## References
 - [Chrome Documentation](https://developer.chrome.com/docs/extensions/get-started/tutorial/scripts-on-every-tab)
-- Part 1 of this article - [Browser Extensions: Part 1 - Introduction](/post/browser-extn-intro/)
+- Part 1 of this article - [Browser Extensions: Part 1 - Introduction](/blog/browser-extn-intro/)

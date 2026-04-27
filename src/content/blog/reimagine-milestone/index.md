@@ -11,14 +11,14 @@ author: "Ann Catherine Jose"
 disqusSlug: "reimagine-milestone"
 ---
 
-Nine months ago, I started the [Reimagine Journey](/post/new-beginning/) to shift my career from engineering leadership to hands-on technology, specifically focusing on my health, personal growth and advanced tech skills. The long extended leave gave me the time and space to reflect on what I truly love and shape the next chapter of my career. It gave me the opportunity to determine how I want to live the rest of my life. 
+Nine months ago, I started the [Reimagine Journey](/blog/new-beginning/) to shift my career from engineering leadership to hands-on technology, specifically focusing on my health, personal growth and advanced tech skills. The long extended leave gave me the time and space to reflect on what I truly love and shape the next chapter of my career. It gave me the opportunity to determine how I want to live the rest of my life. 
 
 This decision felt risky and nerve-wracking at the time, but it has turned out to be one of the best choices of my life. In this post, I would like to share how I spent that time and what I learned from it, in the hope that someone may find it useful as a blueprint or source of inspiration. Read along and let me know your thoughts!
 
 If you are considering a similar path, I would be happy to share more details and brainstorm concrete ideas on how you can also do it too, for the same duration or shorter one. Please DM me on [LinkedIn](https://www.linkedin.com/in/annjose/).
 
 ## The beginning
-I started the journey in October 2023 determined to focus on four key areas - tech builder, time freedom, mental health and physical health. As we stepped into [the new year](/goodbye-thankyou-2023/), I refined these goals to build three assets:
+I started the journey in October 2023 determined to focus on four key areas - tech builder, time freedom, mental health and physical health. As we stepped into [the new year](/blog/goodbye-thankyou-2023/), I refined these goals to build three assets:
 1. **healthy body** 💪 - build muscle, achieve a fit and lean body and eat nutritious whole foods.
 2. **active brain** 🧠 - strengthen my tech foundation, code, build apps, read and learn math.
 3. **relaxed mind** 💚 - pursue hobbies like piano, dance, travel and invest in family and friends.
@@ -43,7 +43,7 @@ I know that showing goals like these can be abstract, so let me get to some spec
 
 * **January** - started learning NextJS, Tailwind UI and . Learning NextJS was a fun experience, thanks to their detailed documentationand vibrant community support. Tailwind CSS proved equally impressive, both proving how far frontend development frameworks have evolved. I also started learning Math by starting a course [Mathematical Foundations](https://mathacademy.com/courses/mathematical-foundations-i) by [Math Academy](https://mathacademy.com/learn).
 
-    This was also the time I delve deeper into the new advances in AI and LLMs such as LLaMA 2, Gemini, Claude. I experimented by running some of the [models locally using Ollama](/post/run-code-llama-70B-locally/). The pace of innovation in this space was truly incredible.
+    This was also the time I delve deeper into the new advances in AI and LLMs such as LLaMA 2, Gemini, Claude. I experimented by running some of the [models locally using Ollama](/blog/run-code-llama-70B-locally/). The pace of innovation in this space was truly incredible.
 
 * **February** - I shifted gears from learning to building starting with simple apps like TicTacToe, a movie browser named Movie Mania using TMDB APIs, and a Helix tutor app. All these apps are deployed and published at my [ANNonymous playground](https://learn-react-umber-five.vercel.app/). Each of these are fairly straightforward, but it helped me put my lessons into practice and gain real hands-on experience. I went through the highs when things worked well and the lows when they dodn't go as expected. And I loved it. 
 

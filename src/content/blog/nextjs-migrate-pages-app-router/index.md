@@ -12,7 +12,7 @@ author: "Ann Catherine Jose"
 disqusSlug: "nextjs-migrate-pages-app-router"
 ---
 
-A few months ago, Next.js introduced **App Router**, a new way to build React applications using the latest features like React Server components and streaming. This was included in Next.js version 13 and is meant to replace the **Pages Router** eventually. I have been using the App Router for all my [builder projects](/post/learning-to-building/) for a while now. In fact, I usually kicked off projects with the standard `create-next-app` script that starts a new app from scratch. 
+A few months ago, Next.js introduced **App Router**, a new way to build React applications using the latest features like React Server components and streaming. This was included in Next.js version 13 and is meant to replace the **Pages Router** eventually. I have been using the App Router for all my [builder projects](/blog/learning-to-building/) for a while now. In fact, I usually kicked off projects with the standard `create-next-app` script that starts a new app from scratch. 
 
 This worked well, until....
 
@@ -94,7 +94,7 @@ Here are a few changes that were tricky to migrate:
 
 ## Learnings and pleasant surprises
 
-* Next.js provides a [helpful migration guide]((https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration)) that makes it easy to understand the changes.
+* Next.js provides a [helpful migration guide](https://nextjs.org/docs/app/building-your-application/upgrading/app-router-migration) that makes it easy to understand the changes.
 * Next.js documentation has dedicated sections for Pages router and App router for each of the features. So you can always switch back and forth between the two methods.
 * You can migrate your app incrementally rather than a giant one-shot upgrade. The app directory works alongside the pages directory, so it is super easy.
 * Upgrading to Next.js 13 does not require using the new app directory. You can continue using pages with new features that work in both directories, such as the updated Image component, Link component, Script component, and Font optimization.

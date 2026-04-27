@@ -12,7 +12,8 @@
     "format": "prettier --write .",
     "lint": "eslint .",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "check:links": "lychee --offline --root-dir \"$PWD/dist\" --no-progress 'dist/**/*.html'"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.14",

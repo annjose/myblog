@@ -462,14 +462,22 @@ Deferred: low priority for a personal blog given extensive manual verification t
 - [x] Create `.github/workflows/lighthouse.yml`: triggers on push to `astro`/`main` + PRs
 - [x] Commit
 
-### Task 37: Link checker
+### Task 37: Link checker ✅
 
-**Files**: `.github/workflows/ci.yml`
+**Files**: `.github/workflows/content-check.yml`, `package.json`, `docs/link-checker.md`
 
-- [ ] Add `lychee` or `broken-link-checker` to CI
-- [ ] Validate all internal links resolve
-- [ ] Check for broken anchor links
-- [ ] Commit
+- [x] Added lychee step to `content-check.yml` after `pnpm run build` — offline mode, fails on broken internal links
+- [x] Added `pnpm run check:links` for local runs (requires `brew install lychee`)
+- [x] Documented setup, usage, and external-link triage workflow in `docs/link-checker.md`
+- [x] Fixed 54 broken internal links found by the first run:
+  - Bulk rewrote Hugo-era `/post/<slug>` markdown links to `/blog/<slug>` across 18 posts
+  - Fixed `perplexity-ai-ceo-interview` typo → `perplexity-ai-ceo-insights`
+  - Fixed missing `/blog/` prefix on `goodbye-thankyou-2023` link in `reimagine-milestone/`
+  - Fixed wrong target on second OpenAI DevDay link in `week-in-review-week4`
+  - Fixed doubled parens `]((https://...))` in `nextjs-migrate-pages-app-router/`
+  - Fixed `<video src="piano-practice-perfect-song.mp4">` to absolute `/media/...` path
+- [x] Re-ran lychee — 0 errors across 8159 links
+- [x] Commit
 
 ### Task 38: Fix JSON-LD structured data on non-post pages ✅
 
@@ -479,11 +487,6 @@ Deferred: low priority for a personal blog given extensive manual verification t
 - [x] Use existing `pubDatetime` prop as the signal: present → `BlogPosting` (post pages), absent → `WebSite` (all other pages)
 - [x] `WebSite` schema includes name, url, description, and author
 - [x] Commit
-
-### Task 38b: Full testing checklist
-
-- [ ] Run through the complete testing checklist from the spec
-- [ ] Fix any issues found
 
 ---
 

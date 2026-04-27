@@ -11,7 +11,7 @@ author: "Ann Catherine Jose"
 disqusSlug: "week-in-review-week4"
 ---
 
-Yes, it is week #4 of my [remagine journey](/post/new-beginning/) and it's time for the review. I couldn't post it last week because of reasons I will explain below. The previous week's reviews and the full series can be found at [new-beginning tag collection](/tags/new-beginning/).
+Yes, it is week #4 of my [remagine journey](/blog/new-beginning/) and it's time for the review. I couldn't post it last week because of reasons I will explain below. The previous week's reviews and the full series can be found at [new-beginning tag collection](/tags/new-beginning/).
 
 ## What I was able to do this week
 Ok, here is the honest, bitter, truth - this week (week #4) was super rough for me - in terms of learning and reaching the goals I had set out at the beginning of the week.
@@ -24,7 +24,7 @@ That was not even half the battle - now I had to import all the data from the ba
 
 In a way, it was a good learning experience and helped me do a thorough review of our finances, but it was a lot of time 🥺. And now that I am using Monarch Money, I am liking it and getting used to it. There are a few open questions about setting up tracking investments, but will ask the support team about it. But overall, it is a good product (mental note - maybe I should write a blog on migrating the data from Mint to Monarch Money).
 
-**Third** 3️⃣, the OpenAI Dev Day was on Monday of this week and that created a break in my daily routine to go to SF, plan for it and stay until the end of the mixer. I really enjoyed it, learned a lot and met a lot of wonderful people. At the end of the week, I wanted to blog about the event, but I had to choose between that and writing this weekly post. Reluctantly, I chose to write the Dev Day blog and ended up writing up two posts about the event - [OpenAI DevDay 2023 - Observations & Learnings](/post/openai-devday-2023-observations-learnings/) and [OpenAI DevDay 2023 - Highlights](/post/openai-devday-2023-observations-learnings/).
+**Third** 3️⃣, the OpenAI Dev Day was on Monday of this week and that created a break in my daily routine to go to SF, plan for it and stay until the end of the mixer. I really enjoyed it, learned a lot and met a lot of wonderful people. At the end of the week, I wanted to blog about the event, but I had to choose between that and writing this weekly post. Reluctantly, I chose to write the Dev Day blog and ended up writing up two posts about the event - [OpenAI DevDay 2023 - Observations & Learnings](/blog/openai-devday-2023-observations-learnings/) and [OpenAI DevDay 2023 - Highlights](/blog/openai-devday-2023-highlights/).
 
 **Last and most important** 🔀, my overall motivation for the week was very low and it was harder to focus on learning. Whatever little motivation I could muster up in the morning would dissolve by noon and then I would be lost in distractions. During the small pockets of time I carved out for learning, I could not focus for more than 15 min. I would do maybe one lesson and would get distracted by YouTube, Twitter or the next "important" thing to be done in the house. It was rough and I struggled.
 

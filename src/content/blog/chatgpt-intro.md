@@ -13,7 +13,7 @@ disqusSlug: "chatgpt-intro"
 
 Over the past few months, ChatGPT has captured my attention through numerous forums, articles and AI experts. I am fascinated by this technology and learning more about it everyday. With this introductory post, I hope to share my knowledge and insights on ChatGPT - how it works, its capabilities and limitations, potential pitfalls, and future prospects.
 
-*Note - Just for fun, I did an experiment to write two more versions of this post - one that was written by ChatGPT itself using a rough outline I provided, and another also written by ChatGPT, but imrprovised from my original post. Curious to see the results of the experiment? Head over to the meta post [Blog about ChatGPT in three different ways](/post/chatgpt-intro-3-ways).*
+*Note - Just for fun, I did an experiment to write two more versions of this post - one that was written by ChatGPT itself using a rough outline I provided, and another also written by ChatGPT, but imrprovised from my original post. Curious to see the results of the experiment? Head over to the meta post [Blog about ChatGPT in three different ways](/blog/chatgpt-intro-3-ways).*
 
 ### What is ChatGPT?
 ChatGPT is a **chat**bot capable of having human-like conversations using AI and NLP (Natural Launguage Processing). This bot can answer your questions on a wide range of topics, write code, summarize text and explain concepts in a simple way. ChatGPT was developed by [OpenAI](https://openai.com/), the creators of [DallE-2](https://openai.com/dall-e-2/), the popular AI text-to-image generator and [Whisper](https://openai.com/blog/whisper/), the powerful speech recognition system. 
@@ -68,7 +68,7 @@ Andrej Karapathy, who led the computer vision team at Tesla, [tweeted that GitHu
 
 As Satya Nadella shared in a [recent interview at the 2023 World Economic Forum](https://www.youtube.com/watch?v=UNbyT7wPwk4), if Andrej, who is one of the best AI developers could get that much leverage and productivity boost, why wouldn't every developer adopt this technology and take advantage of it? And I agree.
 
-I myself did an experiment to understand how I can use ChatGPT in my day-to-day and it has completely changed the way I work. You can read about my experiment and its results at [Blog about ChatGPT in three different ways](/post/chatgpt-intro-3-ways).
+I myself did an experiment to understand how I can use ChatGPT in my day-to-day and it has completely changed the way I work. You can read about my experiment and its results at [Blog about ChatGPT in three different ways](/blog/chatgpt-intro-3-ways).
 
 Generative AI technologies like ChatGPT are here to stay and they can help us. We must learn how to use it and take advantage of it to improve our writing skills, coding skiils and overall productivity, albeit beware of its limitations. The benefit and productivty boost far outweights the risks associated with it.
 

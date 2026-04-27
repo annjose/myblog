@@ -25,7 +25,7 @@ In traditional **Cloud AI**, an end device (like a security camera) sends all it
 
 **Edge AI** is the implementation of AI algorithms at the *edge* of the network rather than in a centralized cloud computing facility or a remote data center. This means that the AI computations, particularly the inference step of making predictions or decisions based on new data happen **locally on the end device**, or on a more powerful **server physically located nearby** (an edge server). These two variations of Edge AI are called **on-device AI** and **edge server**.
 
-If you want to learn more about on-device AI, read my post [Mobile on-device AI](/post/mobile-on-device-ai).
+If you want to learn more about on-device AI, read my post [Mobile on-device AI](/blog/mobile-on-device-ai).
 
 ## Examples
 - In **retail stores**, numerous cameras and smart shelves can collect in-store analytics (tracking customer behavior, monitoring shelf stock). Then a small server in the store's back office could process video feeds for customer analytics (foot traffic, dwell times), manage inventory data, and enable faster checkout, improving the customer experience.
@@ -66,7 +66,7 @@ Edge AI represents a fundamental shift toward bringing intelligence closer to wh
 
 As mobile devices become more powerful and specialized AI chips become commonplace, we're just beginning to see the potential of Edge AI. The next frontier lies in mobile on-device AI, where the devices we carry every day become powerful AI platforms.
 
-Ready to dive deeper? Continue with [Mobile On-Device AI: Smarter and Faster Private Apps](/post/mobile-on-device-ai/) to explore how this technology is revolutionizing mobile applications.
+Ready to dive deeper? Continue with [Mobile On-Device AI: Smarter and Faster Private Apps](/blog/mobile-on-device-ai/) to explore how this technology is revolutionizing mobile applications.
 
 ## References
 * Nvidia article on Edge AI: [What is Edge AI](https://blogs.nvidia.com/blog/what-is-edge-ai/)

@@ -25,3 +25,9 @@ jobs:
 
       - name: Build site
         run: pnpm run build
+
+      - name: Check internal links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --offline --base dist --no-progress 'dist/**/*.html'
+          fail: true

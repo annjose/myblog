@@ -14,7 +14,7 @@ disqusSlug: "openai-devday-2023-highlights"
 
 This week I attended the [Open AI Dev Day](https://devday.openai.com/) on 6 Nov 2023 at SVN West, San Francisco. This event was special in many ways - for me, this is the first conference I attended since the pandemic and the first one during my new journey; for OpenAI, this is their first developer conference ever! So I think it deserves a dedicated blog post to share the highlights, key takeaways and my observations, right? Right! 
 
-I will split this into two posts - Part 1 (this post right here) which gives a comprehensive list of all the announcements in the event and Part 2 as a fast follow [OpenAI DevDay 2023 - Observations & Learnings](/post/openai-devday-2023-observations-learnings/) which has my observations, learnings from the networking with folks and trying out some of the capabilities hands-on. So, let's go!
+I will split this into two posts - Part 1 (this post right here) which gives a comprehensive list of all the announcements in the event and Part 2 as a fast follow [OpenAI DevDay 2023 - Observations & Learnings](/blog/openai-devday-2023-observations-learnings/) which has my observations, learnings from the networking with folks and trying out some of the capabilities hands-on. So, let's go!
 
 Note - There are a lot of links and references in this post so that everyone (myself included) can refer to it later. Who doesn't love going down rabbit holes😉? You will also find a lot of content in italics, which are mostly my monologue/comments on the topics.
 

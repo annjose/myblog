@@ -11,11 +11,11 @@ author: "Ann Catherine Jose"
 disqusSlug: "week-in-review-week5"
 ---
 
-Welcome to Week #5 review of my [remagine journey](/post/new-beginning/). The previous week's reviews and the full series can be found at [new-beginning tag collection](/tags/new-beginning/).
+Welcome to Week #5 review of my [remagine journey](/blog/new-beginning/). The previous week's reviews and the full series can be found at [new-beginning tag collection](/tags/new-beginning/).
 
 ## What I was able to do this week
 
-* First things first - I was able to get out of the rut from last week. if you don't know what I am talking about, see last's week review [Week #4 Review](/post/week-in-review-week4/) where it was rough for me in terms of motivation and learning routine. But this week was different. Phew! ❣️
+* First things first - I was able to get out of the rut from last week. if you don't know what I am talking about, see last's week review [Week #4 Review](/blog/week-in-review-week4/) where it was rough for me in terms of motivation and learning routine. But this week was different. Phew! ❣️
 
 * Started AND finished the Execute Program course [TypeScript Basics](https://www.executeprogram.com/courses/typescript-basics). Yes, in just 4 days - super happy! How was I able to finish it this fast - well, I think it is because TypeScript is an addition to JavaScript and also, the concepts in this course match my mental model much better than with JS (one statically typed language, and the other is JavaScript).
 

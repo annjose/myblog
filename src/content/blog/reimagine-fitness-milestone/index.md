@@ -12,7 +12,7 @@ disqusSlug: "reimagine-fitness-milestone"
 
 A few months ago, if you had told me I’d be deadlifting 155 lbs, I would have laughed and said, "No way!" But here I am, doing it—something I never thought possible.
 
-In a previous [post in my reimagine journey](/post/reimagine-milestone/), I talked about reframing milestones to focus on consistency rather than arbitrary goals. At the time, I was working out on my own, trying to stay active with strength training and Zone 2 walks. I was making some progress, but it was small and I felt stuck. Looking back, I realize it wasn’t a lack of effort—it was a lack of structure, consistency, and progression.
+In a previous [post in my reimagine journey](/blog/reimagine-milestone/), I talked about reframing milestones to focus on consistency rather than arbitrary goals. At the time, I was working out on my own, trying to stay active with strength training and Zone 2 walks. I was making some progress, but it was small and I felt stuck. Looking back, I realize it wasn’t a lack of effort—it was a lack of structure, consistency, and progression.
 
 Something had to change.
 

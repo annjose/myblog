@@ -13,7 +13,7 @@ disqusSlug: "agent-coding-in-practice"
 ogImage: "hero.png"
 ---
 
-In the [last post](/post/agentic-coding-basics/), I explained the basic concepts of agentic coding - the terminology, the constructs, when to use what. It was mostly theoretical. This post is the practical follow-up that describes how I actually build features with AI agents day to day.
+In the [last post](/blog/agentic-coding-basics/), I explained the basic concepts of agentic coding - the terminology, the constructs, when to use what. It was mostly theoretical. This post is the practical follow-up that describes how I actually build features with AI agents day to day.
 
 I hesitate to call these 'best practices' because in this fast moving space, it just means 'what someone discovered last week'. So, think of this as a field report: here's what works for me today, and why.
 

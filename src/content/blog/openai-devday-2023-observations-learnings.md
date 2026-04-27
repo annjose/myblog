@@ -12,7 +12,7 @@ author: "Ann Catherine Jose"
 disqusSlug: "openai-devday-2023-observations-learnings"
 ---
 
-This is the fast follow (Part 2) of the previous post [OpenAI DevDay 2023 - Highlights](/post/openai-devday-2023-highlights) (aka Part 1) where I shared the highlights and the announcements made at [OpenAI DevDay 2023](https://devday.openai.com/). 
+This is the fast follow (Part 2) of the previous post [OpenAI DevDay 2023 - Highlights](/blog/openai-devday-2023-highlights) (aka Part 1) where I shared the highlights and the announcements made at [OpenAI DevDay 2023](https://devday.openai.com/). 
 
 In this post right here, I will share **my observations** - about the event and OpenAI tech - and **my learnings** - from talking to people during the event and by trying out the tech hands-on. So, let's jump in!
 

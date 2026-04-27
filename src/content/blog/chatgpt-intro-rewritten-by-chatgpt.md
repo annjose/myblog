@@ -11,7 +11,7 @@ author: "Ann Catherine Jose"
 disqusSlug: "chatgpt-intro-rewritten-by-chatgpt"
 ---
 
-*Note - This post is written by ChatGPT by rewriting my original post [An Introduction to ChatGPT](/post/chatgpt-intro) - section by section. This is a fun exercise to demonstrate the potential of ChatGPT and how it can change how we create content, art and code. You can see the full results of the experiment at [Blog about ChatGPT in three different ways](/post/chatgpt-intro-3-ways).*
+*Note - This post is written by ChatGPT by rewriting my original post [An Introduction to ChatGPT](/blog/chatgpt-intro) - section by section. This is a fun exercise to demonstrate the potential of ChatGPT and how it can change how we create content, art and code. You can see the full results of the experiment at [Blog about ChatGPT in three different ways](/blog/chatgpt-intro-3-ways).*
 
 
 As an avid learner and technology enthusiast, I have been following the advancements and discussions surrounding ChatGPT in various forums and sources. With this blog post, I aim to share my understanding of ChatGPT - what it is, its key benefits, potential limitations, and my vision of its future trajectory. Through my research and analysis of expert opinions, I hope to provide a comprehensive overview of this cutting-edge technology and its potential impact on our daily lives.

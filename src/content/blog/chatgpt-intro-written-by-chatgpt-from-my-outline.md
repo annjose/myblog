@@ -12,7 +12,7 @@ author: "Ann Catherine Jose"
 disqusSlug: "chatgpt-intro-written-by-chatgpt-from-my-outline"
 ---
 
-*Note - This post is written by ChatGPT expanding on the outline of my original post [An Introduction to ChatGPT](/post/chatgpt-intro) - section by section. This is a fun exercise to demonstrate the potential of ChatGPT and how it can change how we create content, art and code. You can see the full results of the experiment at [Blog about ChatGPT in three different ways](/post/chatgpt-intro-3-ways).*
+*Note - This post is written by ChatGPT expanding on the outline of my original post [An Introduction to ChatGPT](/blog/chatgpt-intro) - section by section. This is a fun exercise to demonstrate the potential of ChatGPT and how it can change how we create content, art and code. You can see the full results of the experiment at [Blog about ChatGPT in three different ways](/blog/chatgpt-intro-3-ways).*
 
 Have you ever heard of ChatGPT? It's a large language model that has taken the AI world by storm. But what exactly is ChatGPT and how does it work? This post will break down the basics and give you a good understanding of what it is, how it's built and how it can be used in the real world.
 

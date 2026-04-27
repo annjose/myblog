@@ -14,7 +14,7 @@ ogImage: "peloton-oct-running-challenge.jpg"
 
 *This post has been sitting in my draft for two weeks, waiting for my time to polish and post. But then as usual, I never got to it and it just stayed there. Anyway, now I am gonna just publish. So if you see typos or mistakes, please lmk. Progress, not perfection, yeah?*
 
-It's time to review Week #3 of my [reimagine journey](/post/new-beginning/). The previous week's reviews and the full series be found at [new-beginning tag collection](/tags/new-beginning/).
+It's time to review Week #3 of my [reimagine journey](/blog/new-beginning/). The previous week's reviews and the full series be found at [new-beginning tag collection](/tags/new-beginning/).
 
 ## What I was able to do this week ✅
 
@@ -61,7 +61,7 @@ As I am doing the course, I am seeing it in action in the product. It has just t
 
 As you can see, it is nowhere close to the real song, in fact, you may not even recognize the song as you know it. Sorry🥺! But, you know, this is my progress at the time and I am happy to share it with you. Also,his is my first and best performance on the piano in my entire life. Progress over perfection, right? 
 
-<video src="piano-practice-perfect-song.mp4" width="200px" height="300px" autoplay controls>
+<video src="/media/piano-practice-perfect-song.mp4" width="200px" height="300px" autoplay controls>
   Your browser does not support the video tag.
 </video>
 

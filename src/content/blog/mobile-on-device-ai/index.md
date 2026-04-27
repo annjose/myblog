@@ -15,9 +15,9 @@ disqusSlug: "mobile-on-device-ai"
 
 While cloud computing drives many AI breakthroughs, a parallel revolution is happening right in our hands - running LLMs locally on mobile devices. This emerging field, known as **Mobile On-device AI**, enables us to build more private, faster and smarter app experiences - especially as mobile devices become increasingly powerful. As a developer passionate about **AI and mobile**, I am fascinated by the convergence these two worlds and the possibilities it brings.
 
-This post unpacks Mobile On-device AI - what it is, why it matters and how it relates to the broader Edge AI landscape (see my earlier post: [Edge AI Essentials](/post/edge-ai-essentials)). We'll explore real-world applications, weigh the pros and cons, and introduce core tools like Apple Core ML and Google AI Edge (with TensorFlow Lite). Whether you're new to the concept or a seasoned developer, I hope this helps as a useful starting point for your own explorations.
+This post unpacks Mobile On-device AI - what it is, why it matters and how it relates to the broader Edge AI landscape (see my earlier post: [Edge AI Essentials](/blog/edge-ai-essentials)). We'll explore real-world applications, weigh the pros and cons, and introduce core tools like Apple Core ML and Google AI Edge (with TensorFlow Lite). Whether you're new to the concept or a seasoned developer, I hope this helps as a useful starting point for your own explorations.
 
-If you're ready to get hands-on, check out this follow-up guide: [Hands-On: Mobile AI with Gemma - iOS, Android](/post/mobile-on-device-ai-hands-on-gemma/), where I walk through how to run a small LLM locally on a mobile device. 
+If you're ready to get hands-on, check out this follow-up guide: [Hands-On: Mobile AI with Gemma - iOS, Android](/blog/mobile-on-device-ai-hands-on-gemma/), where I walk through how to run a small LLM locally on a mobile device. 
 
 I'd love to hear your thoughts on this topic; feel free to join the discussion on [Bluesky](https://bsky.app/profile/annjose.com/post/3lquwpq6zy22b) or [LinkedIn](https://www.linkedin.com/posts/annjose_mobile-on-device-ai-smarter-faster-private-activity-7336452492366422018-LstO).
 
@@ -107,12 +107,12 @@ Understanding these models and frameworks is the first step. For those ready to 
 ## Conclusion
 Mobile on-device AI offers a powerful way to build smarter, faster, and more private app experiences by bringing intelligence directly to the user's device. While there are challenges to consider, the benefits of low latency, offline capability, and enhanced privacy are compelling for a wide range of applications. By leveraging optimized models and robust frameworks, developers can unlock new possibilities in mobile technology.
 
-Now that you have a solid understanding of the essentials of mobile on-device AI, you might be wondering how to actually implement these concepts. In my next post, [Hands-On: Mobile AI with Gemma - iOS, Android](/post/mobile-on-device-ai-hands-on-gemma), we dive into practical examples and show you how to run state-of-the-art models like Gemma directly on your iOS and Android devices. We hope you'll join us there!
+Now that you have a solid understanding of the essentials of mobile on-device AI, you might be wondering how to actually implement these concepts. In my next post, [Hands-On: Mobile AI with Gemma - iOS, Android](/blog/mobile-on-device-ai-hands-on-gemma), we dive into practical examples and show you how to run state-of-the-art models like Gemma directly on your iOS and Android devices. We hope you'll join us there!
 
 ## Further Reading in this Series
-*   [Edge AI Essentials](/post/edge-ai-essentials/)
-*   [Mobile On-Device AI: Smarter and Faster Private Apps](/post/mobile-on-device-ai/)
-*   [Hands-On: Mobile AI with Gemma - iOS, Android](/post/mobile-on-device-ai-hands-on-gemma/)
+*   [Edge AI Essentials](/blog/edge-ai-essentials/)
+*   [Mobile On-Device AI: Smarter and Faster Private Apps](/blog/mobile-on-device-ai/)
+*   [Hands-On: Mobile AI with Gemma - iOS, Android](/blog/mobile-on-device-ai-hands-on-gemma/)
 
 ## References
 *   Announcement of Gemma 3n at Google I/O 2025: [Google Developers Blog: Introducing Gemma 3n](https://developers.googleblog.com/en/introducing-gemma-3n/)

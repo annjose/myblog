@@ -18,7 +18,7 @@ disqusSlug: "mobile-on-device-ai-hands-on-gemma"
 ogImage: "gemma-3n-ai-studio.png"
 ---
 
-In our previous post, [Mobile On-device AI: Smarter Faster Private Apps](/post/mobile-on-device-ai/), we explored the fundamentals of running AI locally on mobile devices. Now, it's time to get hands-on and see this technology in action!
+In our previous post, [Mobile On-device AI: Smarter Faster Private Apps](/blog/mobile-on-device-ai/), we explored the fundamentals of running AI locally on mobile devices. Now, it's time to get hands-on and see this technology in action!
 
 This practical guide walks you through implementing mobile on-device AI using Google's powerful Gemma model family, including the cutting-edge Gemma 3n. You'll learn to deploy these models across iOS, Android, and web platforms using industry-standard frameworks.
 
@@ -384,9 +384,9 @@ Getting hands-on with on-device AI, especially with powerful open models like th
 The landscape is evolving rapidly, particularly with models like Gemma 3n, opening up exciting possibilities for the future of mobile AI. We encourage you to experiment with the sample apps and start thinking about how you can integrate these capabilities into your own projects.
 
 ## Further Reading in this Series
-*   [Edge AI Essentials](/post/edge-ai-essentials/)
-*   [Mobile On-Device AI: Smarter and Faster Private Apps](/post/mobile-on-device-ai/)
-*   [Hands-On: Mobile AI with Gemma - iOS, Android](/post/mobile-on-device-ai-hands-on-gemma/)
+*   [Edge AI Essentials](/blog/edge-ai-essentials/)
+*   [Mobile On-Device AI: Smarter and Faster Private Apps](/blog/mobile-on-device-ai/)
+*   [Hands-On: Mobile AI with Gemma - iOS, Android](/blog/mobile-on-device-ai-hands-on-gemma/)
 
 ## References
 **Google On-Device AI Models:**

@@ -78,7 +78,7 @@ Finally, there are ongoing controversies about [Perplexity Bot using not honorin
 
 As I mentioned in the beginning, my deeper exploration of Perplexity was inspired by the interview of their CEO. In this long (three hours!) long interview, Aravind talked about the major breakthroughs in AI that brought us to LLMs, the mission of Perplexity, how the technology works, his vision of the future of search and web in general, and some valuable advice for startup founders and young people. 
 
-All the while I  was using this tool, I would think back to the interview and realized that there are a lot of great nuggets that I need to write down. I did that, but the list is too long to fit into this post. So I wrote them in a separate post here - [Inside Perplexity AI: Insights from the CEO Aravind Srinivas](/post/perplexity-ai-ceo-interview/). Hope you will enjoy the read!
+All the while I  was using this tool, I would think back to the interview and realized that there are a lot of great nuggets that I need to write down. I did that, but the list is too long to fit into this post. So I wrote them in a separate post here - [Inside Perplexity AI: Insights from the CEO Aravind Srinivas](/blog/perplexity-ai-ceo-insights/). Hope you will enjoy the read!
  
 ## Conclusion
 As of now, my verdict about Perplexity is that it is reliable and useful to discover new information and increase our understanding. It seems to be living up to the promise of being a tool to discover knowledge. At the end of the day, it also comes down to how they do it, including how they handle the controversies mentioned above. So if (and that is a big if) they do it right, this could revolutionize the way we discover knowledge. 

@@ -65,7 +65,7 @@ export default defineConfig({
     fonts: [
       {
         name: "Inter",
-        cssVariable: "--font-inter",
+        cssVariable: "--font-main",
         provider: fontProviders.google(),
         fallbacks: ["sans-serif"],
         weights: [400, 500, 600, 700],

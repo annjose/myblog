@@ -64,7 +64,7 @@ export default defineConfig({
     preserveScriptOrder: true,
     fonts: [
       {
-        name: "Inter",
+        name: "Lato",
         cssVariable: "--font-main",
         provider: fontProviders.google(),
         fallbacks: ["sans-serif"],

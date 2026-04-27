@@ -45,10 +45,10 @@ const showToc = tocHeadings.length >= 3;
 
       {/* Desktop: sticky sidebar */}
       <nav class="toc-desktop hidden xl:block sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto" style="scrollbar-width: thin; scrollbar-color: rgba(128,128,128,0.3) transparent;">
-        <p class="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">
+        <p class="mb-3 text-sm font-semibold uppercase tracking-wide text-muted">
           On this page
         </p>
-        <ul class="space-y-1 border-l border-border text-xs">
+        <ul class="space-y-1 border-l border-border text-sm">
           {tocHeadings.map(h => (
             <li>
               <a

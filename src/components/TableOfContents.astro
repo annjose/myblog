@@ -22,7 +22,7 @@ const showToc = tocHeadings.length >= 3;
   showToc && (
     <>
       {/* Mobile: collapsible dropdown */}
-      <details class="toc-mobile mb-6 rounded border border-border bg-tag-bg p-3 lg:hidden">
+      <details class="toc-mobile mb-6 rounded border border-border bg-tag-bg p-3 xl:hidden">
         <summary class="cursor-pointer text-sm font-semibold text-foreground select-none">
           Table of Contents
         </summary>
@@ -44,7 +44,7 @@ const showToc = tocHeadings.length >= 3;
       </details>
 
       {/* Desktop: sticky sidebar */}
-      <nav class="toc-desktop hidden lg:block sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto" style="scrollbar-width: thin; scrollbar-color: rgba(128,128,128,0.3) transparent;">
+      <nav class="toc-desktop hidden xl:block sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto" style="scrollbar-width: thin; scrollbar-color: rgba(128,128,128,0.3) transparent;">
         <p class="mb-3 text-xs font-semibold uppercase tracking-wide text-muted">
           On this page
         </p>

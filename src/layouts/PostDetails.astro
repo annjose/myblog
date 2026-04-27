@@ -97,13 +97,10 @@ const nextPost =
   {/* Post content + TOC: unified container for consistent alignment */}
   <div
     id="main-content"
-    class:list={[
-      "mx-auto w-full px-4 pb-12",
-      showToc ? "max-w-6xl lg:flex lg:gap-10" : "max-w-app",
-    ]}
+    class="app-layout pb-12 relative"
     data-pagefind-body
   >
-    <main class:list={["min-w-0", showToc && "lg:flex-1 lg:max-w-3xl"]}>
+    <main class="min-w-0">
       <BackButton />
       {/* Post header: title, date, edit */}
       <h1
@@ -132,9 +129,9 @@ const nextPost =
         <EditPost {hideEditPost} {post} class="max-sm:hidden" />
       </div>
 
-      {/* Mobile TOC: collapsible dropdown above article */}
+      {/* Mobile/tablet TOC: collapsible dropdown above article (below xl breakpoint) */}
       {showToc && (
-        <div class="mt-4 lg:hidden">
+        <div class="mt-4 xl:hidden">
           <TableOfContents headings={headings} />
         </div>
       )}
@@ -199,9 +196,9 @@ const nextPost =
       </section>
     </main>
 
-    {/* Desktop TOC: sticky sidebar */}
+    {/* Desktop TOC: overhangs to the right of the page container at xl+ */}
     {showToc && (
-      <aside class="hidden lg:block w-64 shrink-0 pt-8">
+      <aside class="hidden xl:block absolute top-0 bottom-0 left-full ml-6 w-48 pt-8">
         <TableOfContents headings={headings} />
       </aside>
     )}

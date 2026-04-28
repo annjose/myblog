@@ -2,7 +2,7 @@ name: Content Check
 
 on:
   push:
-    branches: [astro, main]
+    branches: [astro, main, master]
   pull_request:
 
 jobs:

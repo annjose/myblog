@@ -490,9 +490,46 @@ Deferred: low priority for a personal blog given extensive manual verification t
 
 ---
 
-## Phase 9: Astro 6 Upgrade
+## Phase 9: DNS Cutover & Launch
 
-### Task 39: Upgrade Astro 5 → 6
+### Task 40: Pre-cutover validation
+
+- [x] Add Counterscale analytics script to `<head>` of `Layout.astro` (deferred from Task 13 to avoid polluting prod analytics with dev traffic)
+- [x] Migrate any Hugo posts published during the transition period
+- [x] Delete all Hugo content in this repo (eg: /content, /src/content/_demos folder)
+- [x] Make sure the previous URL with `post` will continue to work and redirect to `blog`
+- [x] Revert `SITE.website` in `src/config.ts` from `https://annjose.pages.dev/` back to `https://annjose.com/` (temporarily changed for OG image testing)
+- [x] Final validation on `annjose.pages.dev`
+- [ ] Run Lighthouse on preview URL — compare against pre-migration baseline
+- [ ] Verify Google Search Console is set up for new site
+
+### Task 41: DNS cutover
+
+- [ ] Update DNS: point `annjose.com` to Cloudflare Pages
+- [ ] Wait for DNS propagation (5-30 min with Cloudflare proxy)
+- [ ] Verify SSL certificate is active
+- [ ] Test live site on `annjose.com`
+- [ ] Submit updated sitemap to Google Search Console
+
+### Task 42: Branch merge & rename
+
+- [ ] Merge `astro` branch into `master`
+- [ ] Rename `master` → `main`: `git branch -m master main && git push origin main`
+- [ ] Update GitHub default branch to `main`
+- [ ] Update Cloudflare Pages production branch to `main`
+
+### Task 43: Post-launch monitoring
+
+- [ ] Monitor Cloudflare Analytics for 404 errors
+- [ ] Check Google Search Console for crawl errors
+- [ ] Remove CNAME from old `public/` submodule to avoid GitHub Pages conflict
+- [ ] Verify Counterscale analytics is receiving data
+- [ ] Verify OG image preview renders correctly on Bluesky, Signal, Slack after domain cutover to annjose.com
+- [ ] Celebrate 🎉
+
+## Phase 10: Astro 6 Upgrade
+
+### Task 45: Upgrade Astro 5 → 6
 
 - [ ] Run `npx @astrojs/upgrade` to upgrade
 - [ ] Address breaking changes:
@@ -504,38 +541,3 @@ Deferred: low priority for a personal blog given extensive manual verification t
 - [ ] Commit
 
 ---
-
-## Phase 10: DNS Cutover & Launch
-
-### Task 40: Pre-cutover validation
-
-- [ ] Add Counterscale analytics script to `<head>` of `Layout.astro` (deferred from Task 13 to avoid polluting prod analytics with dev traffic)
-- [ ] Revert `SITE.website` in `src/config.ts` from `https://annjose.pages.dev/` back to `https://annjose.com/` (temporarily changed for OG image testing)
-- [ ] Final validation on `annjose.pages.dev`
-- [ ] Migrate any Hugo posts published during the transition period
-- [ ] Run Lighthouse on preview URL — compare against pre-migration baseline
-- [ ] Verify Google Search Console is set up for new site
-
-### Task 41: Branch merge & rename
-
-- [ ] Merge `astro` branch into `master`
-- [ ] Rename `master` → `main`: `git branch -m master main && git push origin main`
-- [ ] Update GitHub default branch to `main`
-- [ ] Update Cloudflare Pages production branch to `main`
-
-### Task 42: DNS cutover
-
-- [ ] Update DNS: point `annjose.com` to Cloudflare Pages
-- [ ] Wait for DNS propagation (5-30 min with Cloudflare proxy)
-- [ ] Verify SSL certificate is active
-- [ ] Test live site on `annjose.com`
-- [ ] Submit updated sitemap to Google Search Console
-
-### Task 43: Post-launch monitoring
-
-- [ ] Monitor Cloudflare Analytics for 404 errors
-- [ ] Check Google Search Console for crawl errors
-- [ ] Remove CNAME from old `public/` submodule to avoid GitHub Pages conflict
-- [ ] Verify Counterscale analytics is receiving data
-- [ ] Verify OG image preview renders correctly on Bluesky, Signal, Slack after domain cutover to annjose.com
-- [ ] Celebrate 🎉

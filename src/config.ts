@@ -1,5 +1,5 @@
 export const SITE = {
-  website: "https://annjose.pages.dev/",
+  website: "https://annjose.com/",
   author: "Ann Catherine Jose",
   profile: "https://annjose.com/about/",
   desc: "Software engineer sharing insights on agentic AI, hands-on coding, and building real products.",

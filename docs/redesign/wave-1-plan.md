@@ -506,11 +506,11 @@ Deferred: low priority for a personal blog given extensive manual verification t
 
 ### Task 41: DNS cutover
 
-- [ ] Update DNS: point `annjose.com` to Cloudflare Pages
-- [ ] Wait for DNS propagation (5-30 min with Cloudflare proxy)
-- [ ] Verify SSL certificate is active
-- [ ] Test live site on `annjose.com`
-- [ ] Submit updated sitemap to Google Search Console
+- [x] Update DNS: point `annjose.com` to Cloudflare Pages
+- [x] Wait for DNS propagation (5-30 min with Cloudflare proxy)
+- [x] Verify SSL certificate is active
+- [x] Test live site on `annjose.com`
+- [x] Submit updated sitemap to Google Search Console https://search.google.com/search-console?resource_id=sc-domain:annjose.com
 
 ### Task 42: Branch merge & rename
 

@@ -1,4 +1,7 @@
 ---
+type Props = { totalPages?: number };
+const { totalPages } = Astro.props;
+
 // Remove current url path and remove trailing slash if exists
 const currentUrlPath = Astro.url.pathname.replace(/\/+$/, "");
 
@@ -7,19 +10,21 @@ const currentUrlPath = Astro.url.pathname.replace(/\/+$/, "");
 const breadcrumbList = currentUrlPath.split("/").slice(1);
 
 // if breadcrumb is Home > Blog > 1 <etc>
-// replace Blog with Reflections (page number)
+// replace Blog with Reflections (Page X of Y)
 if (breadcrumbList[0] === "blog") {
-  breadcrumbList.splice(0, 2, `Reflections (Page ${breadcrumbList[1] || 1})`);
+  const pageNum = Number(breadcrumbList[1]) || 1;
+  const suffix = totalPages ? `Page ${pageNum} of ${totalPages}` : `Page ${pageNum}`;
+  breadcrumbList.splice(0, 2, `Reflections - ${suffix}`);
 }
 
 // if breadcrumb is Home > Tags > [tag] > [page] <etc>
-// replace [tag] > [page] with [tag] (page number)
+// replace [tag] > [page] with [tag] (Page X of Y)
 if (breadcrumbList[0] === "tags" && !isNaN(Number(breadcrumbList[2]))) {
-  breadcrumbList.splice(
-    1,
-    3,
-    `${breadcrumbList[1]} ${Number(breadcrumbList[2]) === 1 ? "" : "(page " + breadcrumbList[2] + ")"}`
-  );
+  const pageNum = Number(breadcrumbList[2]);
+  const pageSuffix = pageNum === 1
+    ? ""
+    : totalPages ? ` - Page ${pageNum} of ${totalPages}` : ` (page ${pageNum})`;
+  breadcrumbList.splice(1, 3, `${breadcrumbList[1]}${pageSuffix}`);
 }
 ---
 
@@ -36,7 +41,7 @@ if (breadcrumbList[0] === "tags" && !isNaN(Number(breadcrumbList[2]))) {
         index + 1 === breadcrumbList.length ? (
           <li>
             <span
-              class:list={["capitalize opacity-75", { lowercase: index > 0 }]}
+              class:list={["opacity-75", index === 0 ? "normal-case" : "capitalize lowercase"]}
               aria-current="page"
             >
               {/* make the last part lowercase in Home > Tags > some-tag */}

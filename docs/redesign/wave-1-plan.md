@@ -500,8 +500,9 @@ Deferred: low priority for a personal blog given extensive manual verification t
 - [x] Make sure the previous URL with `post` will continue to work and redirect to `blog`
 - [x] Revert `SITE.website` in `src/config.ts` from `https://annjose.pages.dev/` back to `https://annjose.com/` (temporarily changed for OG image testing)
 - [x] Final validation on `annjose.pages.dev`
-- [ ] Run Lighthouse on preview URL — compare against pre-migration baseline
-- [ ] Verify Google Search Console is set up for new site
+- [x] Run Lighthouse on preview URL — compare against pre-migration baseline. Ran Lighthouse and success numbers - Performance 100, Accessibility 90, Best Practices 100, SEO 100
+- [x] Verify Google Search Console is set up for new site
+- [x] UI polish - taglines, pagination
 
 ### Task 41: DNS cutover
 

@@ -2,7 +2,7 @@
 layout: ../layouts/AboutLayout.astro
 title: "About"
 name: Ann Catherine Jose
-tagline: Tech tinkerer & software developer. Building real products with Agentic AI.
+tagline: Software Builder. Lifelong learner. Hands-on tech tinkerer. Building meaningful products using AI agents.
 interests:
   - Agentic AI
   - Large Language Models

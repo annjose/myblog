@@ -5,7 +5,7 @@ import { SITE } from "@/config";
 type StringTitle = { pageTitle: string };
 type ArrayTitle = { pageTitle: [string, string]; titleTransition: string };
 
-type Props = (StringTitle | ArrayTitle) & { pageDesc?: string };
+type Props = (StringTitle | ArrayTitle) & { pageDesc?: string; rssHref?: string };
 
 const { props } = Astro;
 
@@ -26,7 +26,18 @@ const backUrl = SITE.showBackButton ? Astro.url.pathname : "/";
       <h1 class="text-2xl font-semibold sm:text-3xl">{props.pageTitle}</h1>
     )
   }
-  <p class="mt-2 mb-6 italic">{props.pageDesc}</p>
+  <p class="mt-2 mb-6 italic">
+    {props.pageDesc}
+    {props.rssHref && (
+      <a
+        href={props.rssHref}
+        target="_blank"
+        class="ms-2 text-sm not-italic text-muted underline decoration-dashed underline-offset-4 hover:text-accent"
+      >
+        Subscribe via RSS
+      </a>
+    )}
+  </p>
   <slot />
 </main>
 

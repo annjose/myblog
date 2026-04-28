@@ -44,9 +44,10 @@ html[data-theme="dark"] {
   }
   html {
     @apply overflow-y-scroll scroll-smooth;
+    font-size: 112.5%; /* 18px base: 18/16 = 1.125 */
   }
   body {
-    @apply flex min-h-svh flex-col bg-background font-app text-[17px] text-foreground selection:bg-accent/75 selection:text-background;
+    @apply flex min-h-svh flex-col bg-background font-app text-foreground selection:bg-accent/75 selection:text-background;
   }
   a,
   button {

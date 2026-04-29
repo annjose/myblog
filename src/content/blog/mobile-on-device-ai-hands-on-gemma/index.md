@@ -22,7 +22,7 @@ In our previous post, [Mobile On-device AI: Smarter Faster Private Apps](/blog/m
 
 This practical guide walks you through implementing mobile on-device AI using Google's powerful Gemma model family, including the cutting-edge Gemma 3n. You'll learn to deploy these models across iOS, Android, and web platforms using industry-standard frameworks.
 
-### What You'll Learn Here
+## What You'll Learn Here
 - Test various Gemma models, including Gemma 3n, in Google AI Studio.
 - Run sample on-device AI applications on Android using tools like the Google AI Edge Gallery App and MediaPipe.
 - Implement on-device Large Language Model (LLM) inference on iOS using MediaPipe.
@@ -33,7 +33,7 @@ This practical guide walks you through implementing mobile on-device AI using Go
 
 **Time needed:** 1-2 hours depending on platforms explored
 
-### Navigating this guide
+## Navigating this guide
 1. [Understanding Gemma Models](#understanding-gemma-models)
 2. [Deep Dive: Gemma 3n (Features & Architecture)](#deep-dive-gemma-3n)
 3. [Frameworks in Action: Apple Core ML & Google AI Edge](#frameworks-in-action)
@@ -172,7 +172,7 @@ This is the fastest way to try out Gemma 3n without any setup hassle.
 - Other Gemma models are also available here. You can use any of them.
 
 Here is a screenshot of Google AI Studio running Gemma 3n 4B. As you can see, the answer to my question about a new book on heart health didn't come out correctly. This is a limitation of smaller models.
-![](gemma-3n-ai-studio.png)
+![Google AI Studio chat interface showing Gemma 3n 4B responding to a question about a heart health book, illustrating the model's limitations with factual queries](gemma-3n-ai-studio.png)
 
 ### 2. Run Gemma on Android
 
@@ -193,7 +193,7 @@ Here are some screenshots of Android MediaPipe sample app running on my Pixel 8 
 ![MediaPipe sample with Gemma 3 - 1B](mediapipe-android-app-chat-gemma-3-1B.png)
 
 And the sample app code in Android Studio
-![](mediapipe-android-app-AndroidStudio.png)
+![MediaPipe LLM inference Android sample app code open in Android Studio](mediapipe-android-app-AndroidStudio.png)
 
 #### 2.2 Google AI Edge Gallery App
 This is a newer, more versatile sample app available as an experimental Alpha release. It’s sleek, easy to use, and demonstrates the full power of on-device AI. You can run Gemma 3n models (E2B and E4B) directly on your device, but not older models.    
@@ -290,7 +290,7 @@ do {
 ```
 
 Here is the sample app code in Xcode:
-![](mediapipe-ios-app-xcode.png)
+![MediaPipe LLM inference iOS sample app code open in Xcode](mediapipe-ios-app-xcode.png)
 
 For detailed instructions and advanced setup, see the official documentation: [MediaPipe LLM Inference API for iOS](https://ai.google.dev/edge/mediapipe/solutions/genai/llm_inference/ios). The API also supports LoRA (Low-Rank Adaptation) for efficient fine-tuning of models, allowing you to customize model behavior for specific tasks.
 

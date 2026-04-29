@@ -47,11 +47,12 @@ function getFontSize(count: number): string {
         getFontSize(count),
         "inline-flex items-baseline gap-0.5 transition-colors",
         "text-foreground/80 hover:text-accent",
+        "underline decoration-dashed decoration-1 underline-offset-2 decoration-foreground/40 hover:decoration-accent",
       ]}
       title={`${count} post${count === 1 ? "" : "s"}`}
     >
-      <span class="text-accent/60">#</span>{getTagLabel(slug)}
-      <sup class="text-xs text-foreground/50">{count}</sup>
+      <span class="text-accent">#</span>{getTagLabel(slug)}
+      <sup class="text-xs text-muted">{count}</sup>
     </a>
   ))}
 </div>

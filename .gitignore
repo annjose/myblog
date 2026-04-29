@@ -39,3 +39,4 @@ resources/_gen/
 public/pagefind/
 .astro/
 .lighthouseci/
+lighthouse-reports/

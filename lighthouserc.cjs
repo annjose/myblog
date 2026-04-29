@@ -5,7 +5,6 @@ module.exports = {
       url: [
         "http://localhost/",
         "http://localhost/blog/",
-        "http://localhost/blog/mobile-on-device-ai-hands-on-gemma/",
         "http://localhost/tags/",
         "http://localhost/about/",
       ],
@@ -19,7 +18,9 @@ module.exports = {
       },
     },
     upload: {
-      target: "temporary-public-storage",
+      target: "filesystem",
+      outputDir: "./lighthouse-reports",
+      reportFilenamePattern: "%%PATHNAME%%-%%DATETIME%%-report.%%EXTENSION%%",
     },
   },
 };

@@ -43,7 +43,7 @@ I know that showing goals like these can be abstract, so let me get to some spec
 
 * **January** - started learning NextJS, Tailwind UI and . Learning NextJS was a fun experience, thanks to their detailed documentationand vibrant community support. Tailwind CSS proved equally impressive, both proving how far frontend development frameworks have evolved. I also started learning Math by starting a course [Mathematical Foundations](https://mathacademy.com/courses/mathematical-foundations-i) by [Math Academy](https://mathacademy.com/learn).
 
-    This was also the time I delve deeper into the new advances in AI and LLMs such as LLaMA 2, Gemini, Claude. I experimented by running some of the [models locally using Ollama](/blog/run-code-llama-70B-locally/). The pace of innovation in this space was truly incredible.
+    This was also the time I delve deeper into the new advances in AI and LLMs such as LLaMA 2, Gemini, Claude. I experimented by running some of the [models locally using Ollama](/blog/run-code-llama-70b-locally/). The pace of innovation in this space was truly incredible.
 
 * **February** - I shifted gears from learning to building starting with simple apps like TicTacToe, a movie browser named Movie Mania using TMDB APIs, and a Helix tutor app. All these apps are deployed and published at my [ANNonymous playground](https://learn-react-umber-five.vercel.app/). Each of these are fairly straightforward, but it helped me put my lessons into practice and gain real hands-on experience. I went through the highs when things worked well and the lows when they dodn't go as expected. And I loved it. 
 

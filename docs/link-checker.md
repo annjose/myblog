@@ -37,11 +37,12 @@ A clean run ends with `🚫 0 Errors`.
 
 ### Version pinning
 
-CI pins lychee to a specific version via `lycheeVersion` in `lycheeverse/lychee-action`. Keep your local brew version in sync:
+CI uses `lycheeverse/lychee-action` pinned to a specific release tag (e.g. `@v2.8.0`) which bundles its own lychee binary (v0.23.0 as of v2.8.0). Do not override `lycheeVersion` in the action config — lychee v0.24+ changed its tarball structure and the v2 action installer breaks with it. Wait for a new action release before upgrading.
+
+Your local brew version may be ahead of CI. That's acceptable — the behavior is compatible. Check:
 
 ```sh
 lychee --version       # check current local version
-brew upgrade lychee    # upgrade if behind
 ```
 
 Version drift between local and CI can cause false passes locally — macOS is case-insensitive, Linux CI is not. A link like `/blog/run-code-llama-70B-locally` will pass on Mac but fail in CI if the actual slug is lowercase. Always run `pnpm run check:links` locally before pushing, but treat a CI failure as authoritative.

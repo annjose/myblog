@@ -27,8 +27,7 @@ jobs:
         run: pnpm run build
 
       - name: Check internal links
-        uses: lycheeverse/lychee-action@v2
+        uses: lycheeverse/lychee-action@v2.8.0
         with:
-          lycheeVersion: v0.24.1
           args: --offline --root-dir $GITHUB_WORKSPACE/dist --no-progress 'dist/**/*.html'
           fail: true

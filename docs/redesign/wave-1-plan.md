@@ -511,21 +511,22 @@ Deferred: low priority for a personal blog given extensive manual verification t
 - [x] Verify SSL certificate is active
 - [x] Test live site on `annjose.com`
 - [x] Submit updated sitemap to Google Search Console https://search.google.com/search-console?resource_id=sc-domain:annjose.com
+- [x] Verify Counterscale analytics is receiving data
+- [x] Verify OG image preview renders correctly on Bluesky, Signal, Slack after domain cutover to annjose.com
 
 ### Task 42: Branch merge & rename
 
-- [ ] Merge `astro` branch into `master`
-- [ ] Rename `master` → `main`: `git branch -m master main && git push origin main`
-- [ ] Update GitHub default branch to `main`
-- [ ] Update Cloudflare Pages production branch to `main`
+- [x] Merge `astro` branch into `master`
+- [x] Rename `master` → `main`: `git branch -m master main && git push origin main`
+- [x] Update GitHub default branch to `main`
+- [x] Make sure GitHub C succeeds
+- [x] Update Cloudflare Pages production branch to `main`
+- [x] Remove CNAME from old `public/` submodule to avoid GitHub Pages conflict
 
 ### Task 43: Post-launch monitoring
 
 - [ ] Monitor Cloudflare Analytics for 404 errors
 - [ ] Check Google Search Console for crawl errors
-- [ ] Remove CNAME from old `public/` submodule to avoid GitHub Pages conflict
-- [ ] Verify Counterscale analytics is receiving data
-- [ ] Verify OG image preview renders correctly on Bluesky, Signal, Slack after domain cutover to annjose.com
 - [ ] Celebrate 🎉
 
 ## Phase 10: Astro 6 Upgrade

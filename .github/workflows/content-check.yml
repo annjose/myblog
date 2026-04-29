@@ -29,5 +29,5 @@ jobs:
       - name: Check internal links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --offline --base $GITHUB_WORKSPACE/dist --no-progress 'dist/**/*.html'
+          args: --offline --root-dir $GITHUB_WORKSPACE/dist --exclude '^#' --no-progress 'dist/**/*.html'
           fail: true

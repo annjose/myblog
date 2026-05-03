@@ -2,7 +2,7 @@
 layout: ../layouts/AboutLayout.astro
 title: "About"
 name: Ann Catherine Jose
-tagline: Software Builder. Lifelong learner. Hands-on tech tinkerer. Building meaningful products using AI agents.
+tagline: Software builder. Lifelong learner. Agentic AI coding practitioner.
 interests:
   - Agentic AI
   - Large Language Models
@@ -11,7 +11,7 @@ interests:
   - Mathematics
   - Mentoring
   - Personal Development
-currently: Building real projects using agentic AI tools (Claude Code, Codex, Gemini, pi) - from web apps to this blog. Deep into agentic workflows, context engineering, spec-driven development, and understanding under the hood of harnesses.
+currently: Building real projects using agentic AI. Tinkering with open source coding agents and open-weights models. Learning about agentic engineering and context management.
 ---
 
 I'm **Ann Catherine Jose**, a software developer specialized in building full-stack web and native mobile applications. As a lifelong learner and builder, I've always loved learning different technologies and creating valuable solutions for people.
@@ -41,8 +41,8 @@ In August 2024, after an incredible 14-year journey at Intuit, I made the bitter
 As a hands-on tech enthusiast, I'm expanding my skills by:
 
 - Mastering Agentic AI using coding agents and context engineering practices
-- Exploring the capabilities of AI, large language models and RAG
-- Building web applications and websites for personal projects and family/friends
+- Teaching the basics of AI, its capabilities and risks to people in the community
+- Building web applications for open-source and personal use
 
 ## Projects
 

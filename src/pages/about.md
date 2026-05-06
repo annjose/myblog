@@ -12,23 +12,23 @@ interests:
   - Mentoring
   - Personal Development
 currently: Building real projects using agentic AI. Tinkering with open source coding agents and open-weights models. Learning about agentic engineering and context management.
+thirdPartyBio:
+  - "Ann Catherine Jose is a software builder, lifelong learner, and hands-on technologist focused on building meaningful products with AI agents. With more than two decades of experience in software engineering, she brings deep expertise in full-stack web development, native mobile applications, engineering leadership, and modern AI-assisted development workflows."
+  - "Before focusing on independent building, Ann spent 14 years at Intuit, where she led engineering for QuickBooks Platform and Mobile. As Head of Engineering, she partnered closely with Product, Design, and Marketing leaders to deliver customer-focused products, drive the QuickBooks mobile strategy, complete long-term platform infrastructure initiatives, and help establish the foundation for Generative AI in Intuit's Small Business group. Earlier in her career, she held engineering and leadership roles at Philips, SAP, and Tata Infotech."
+  - "In 2023, Ann began a deliberate career pivot from executive engineering leadership back into hands-on technology. Since leaving Intuit in 2024, she has focused on learning, experimenting, and building real-world products using agentic AI tools such as Claude Code, Codex, Gemini CLI, and other modern coding agents. Her current work explores agentic workflows, context engineering, spec-driven development, full-stack web applications, mobile development, large language models, and practical AI-native product building."
 ---
 
-I'm **Ann Catherine Jose**, a software developer specialized in building full-stack web and native mobile applications. As a lifelong learner and builder, I've always loved learning different technologies and creating valuable solutions for people.
+## My Story
 
-I find joy in the immersive experience of learning and coding for hours - being *in the flow*. My expertise is in rapidly developing fully functional modern web applications using the best technologies and tools, including AI at the appropriate level.
+I started my career as a software engineer because I loved the feeling of making things work and working with teams. Over time, my path moved through larger teams, broader platforms, and executive engineering leadership. I learned a lot from that phase of my career, especially about people, customers, teams, and doing the right thing when the work is hard.
 
-## Professional Journey
+At the same time, I kept feeling the pull toward [hands-on technology](/blog/what-do-i-really-want/). I missed coding regularly, learning new tools from scratch, and building small useful things myself.
 
-My career spans over two decades in the software industry, with significant engineering roles at major tech companies. Prior to my last position, I held roles at [Philips](https://www.philips.com/a-w/about/our-strategy.html), [SAP](https://www.sap.com/index.html) and [Tata Infotech](https://www.tcs.com/), as individual contributor and engineering leader. These experiences laid the foundation for my technical expertise and leadership approach.
+In 2023, I made a conscious decision to [return to hands-on building](/blog/new-beginning/). I took time to focus on health, personal growth, math, music, and modern web development. That eventually led me to AI coding tools and a new way of building software. I wrote more about that phase in [Reimagine Journey - A Big Milestone](/blog/reimagine-milestone/).
 
-During my 12-year tenure at [Intuit](https://www.intuit.com/), I led the Engineering organization for QuickBooks Platform and Mobile. As the Head of Engineering, I collaborated closely with Product, Design, and Marketing leaders to deliver best-in-class solutions for our customers. My legacy includes driving the QuickBooks mobile strategy, completing high-risk, long-term infrastructure initiatives in QuickBooks Platform, and establishing a strong foundation for Gen AI in Intuit's Small Business group.
+I started this site in 2015 as a place to write about what I was learning. It continues to be my place to share technical notes, personal reflections, and practical lessons from whatever I am exploring at the time.
 
-## Career Pivot
-
-In 2023, I made a career pivot and embarked on a [Reimagine Journey](/tags/new-beginning/) to shift my focus from engineering leadership to hands-on technology. This extended leave gave me the opportunity to reflect on my passions and shape the next chapter of my career.
-
-In August 2024, after an incredible 14-year journey at Intuit, I made the bittersweet decision to leave and pursue a life focusing on personal growth, learning and building tech solutions to real-life problems without the constraints of a full-time job.
+My goal now is simple: keep learning the fundamentals, build useful things, do the work properly, and share what I learn along the way.
 
 ## Technical Expertise
 

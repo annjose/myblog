@@ -5,7 +5,7 @@ pubDatetime: 2026-03-30T10:00:00.000Z
 modDatetime: 2026-03-30T17:00:00.000Z
 slug: "content-sample"
 featured: false
-draft: false
+draft: true
 tags:
   - "astro"
   - "markdown"

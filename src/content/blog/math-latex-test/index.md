@@ -2,7 +2,7 @@
 title: "Testing LaTeX Math Rendering After Migrating to Astro"
 description: "A test of LaTeX and MathJax rendering on this blog, using a GPT-5.4 Pro math transcript as source material."
 pubDatetime: 2026-03-26T23:23:08.000Z
-draft: false
+draft: true
 tags:
   - "math"
   - "astro"

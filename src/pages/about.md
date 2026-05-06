@@ -4,10 +4,12 @@ title: "About"
 name: Ann Catherine Jose
 tagline: Software builder. Lifelong learner. Agentic AI practitioner.
 interests:
-  - Agentic AI
-  - Large Language Models
+  - Agentic Engineering
+  - Context Window
   - Full Stack Web Development
+  - On-device ML
   - Open Source
+  - Open Weights Models
   - Teaching AI Basics
   - Mentoring
 currently: Building real projects using agentic AI. Tinkering with open source coding agents and open-weights models. Learning about agentic engineering and context management.

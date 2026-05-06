@@ -16,6 +16,24 @@ const posts = await getCollection("blog");
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+
+const startHereLinks = [
+  {
+    href: "/about/#my-story",
+    title: "About / My Story",
+    description: "My story, background, current focus, and how I work.",
+  },
+  {
+    href: "/about/#projects",
+    title: "Projects",
+    description: "A few apps and experiments from my hands-on building phase.",
+  },
+  {
+    href: "/talks/demystifying-ai/",
+    title: "Demystifying AI",
+    description: "An introductory session on AI that I gave at my local library.",
+  },
+];
 ---
 
 <Layout>
@@ -27,27 +45,39 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       </h1>
 
       <p>
-        Software engineer with 20+ years building web and mobile products and leading engineering teams.
-        I love tinkering with technology and sharing what I learn on this blog.
+        Software builder, lifelong learner and engineering leader with 25+ years building web, mobile, and platform products. I love tinkering with technology, learning fundamentals,
+        and writing about what I learn.
       </p>
       <p class="mt-2">
-        Currently building modern web apps with agentic AI and tinkering with open-weights and on-device models. Fascinated by context engineering and open-source agentic frameworks.
-        <LinkButton
-          class="underline decoration-dashed underline-offset-4 hover:text-accent"
-          href="/about"
-        >
-          My story
-        </LinkButton>.
+        Right now I'm building modern web apps with AI coding agents, experimenting with open-weights
+        and on-device models, and learning how to work better with agentic tools.
       </p>
       {
         // only display if at least one social link is enabled
         SOCIALS.length > 0 && (
           <div class="mt-4 flex max-sm:flex-col sm:items-center">
-            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div>
+            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Connect with me:</div>
             <Socials />
           </div>
         )
       }
+    </section>
+
+    <section id="start-here" class="border-b border-border py-8">
+      <h2 class="text-2xl font-semibold tracking-wide">Start here</h2>
+      <div class="mt-4 grid gap-4 sm:grid-cols-3">
+        {
+          startHereLinks.map(link => (
+            <a
+              href={link.href}
+              class="rounded-lg border border-border px-4 py-3 hover:border-accent"
+            >
+              <h3 class="font-semibold text-accent">{link.title}</h3>
+              <p class="mt-1 text-sm text-muted">{link.description}</p>
+            </a>
+          ))
+        }
+      </div>
     </section>
 
     {

@@ -2,15 +2,14 @@
 layout: ../layouts/AboutLayout.astro
 title: "About"
 name: Ann Catherine Jose
-tagline: Software builder. Lifelong learner. Agentic AI coding practitioner.
+tagline: Software builder. Lifelong learner. Agentic AI practitioner.
 interests:
   - Agentic AI
   - Large Language Models
   - Full Stack Web Development
-  - Mobile App Development
-  - Mathematics
+  - Open Source
+  - Teaching AI Basics
   - Mentoring
-  - Personal Development
 currently: Building real projects using agentic AI. Tinkering with open source coding agents and open-weights models. Learning about agentic engineering and context management.
 thirdPartyBio:
   - "Ann Catherine Jose is a software builder, lifelong learner, and hands-on technologist focused on building meaningful products with AI agents. With more than two decades of experience in software engineering, she brings deep expertise in full-stack web development, native mobile applications, engineering leadership, and modern AI-assisted development workflows."
@@ -30,19 +29,20 @@ I started this site in 2015 as a place to write about what I was learning. It co
 
 My goal now is simple: keep learning the fundamentals, build useful things, do the work properly, and share what I learn along the way.
 
+## How I Work
+
+- **Start with fundamentals** - I like to understand the basics before building on top of a tool or framework.
+- **Build real things** - I learn best by making something useful, testing it, breaking it, and improving it.
+- **Use AI carefully** - I use AI coding agents to move faster, but I stay close to the problem, architecture, code quality, and user experience.
+- **Do the work properly** - I care about clear writing, simple design, good naming, maintainable code, and solving the right problem.
+- **Share what I learn** - I enjoy explaining ideas in simple terms, whether through blog posts, mentoring, or teaching sessions.
+
 ## Technical Expertise
 
-- **Agentic coding** - building full projects with AI coding agents like Claude Code, Codex, and Gemini CLI, with a focus on crafting effective specs, context, and workflows
-- Building web applications using **modern web technologies** like Next.js, React, Tailwind, TypeScript, and advanced JavaScript
-- Developing mobile apps using **mobile technologies** like iOS, Android, Swift and Kotlin
-
-## Current Focus
-
-As a hands-on tech enthusiast, I'm expanding my skills by:
-
-- Mastering Agentic AI using coding agents and context engineering practices
-- Teaching the basics of AI, its capabilities and risks to people in the community
-- Building web applications for open-source and personal use
+- **Agentic AI and coding workflows** - building full projects with AI coding agents like Claude Code, Codex, and Gemini CLI, with a focus on clear specs, useful context, and steady review.
+- **Full-stack web development** - building modern web applications with Astro, Next.js, React, Tailwind, TypeScript, and JavaScript.
+- **Mobile and platform engineering** - deep experience with native mobile apps, mobile architecture, GraphQL data layers, build pipelines, and platform foundations from my QuickBooks and TurboTax work.
+- **Engineering leadership** - shaping technical strategy, leading high-performing teams, partnering across Product, Design, and Marketing, and mentoring engineers through hard product and platform problems.
 
 ## Projects
 
@@ -56,6 +56,10 @@ Each of these projects pushed me further along the agentic coding spectrum - fro
 - **[HN Companion](https://app.hncompanion.com/)** - Steady-state agentic coding with planned features, Linear tracking, and code review throughout
 - **[annjose.com](/)** - My personal website migrated from Hugo to Astro, built entirely with Claude Code using spec-driven development
 
-## Beyond Technology
+## Teaching & Community
 
-Outside of technology, two areas of passion for me are Math and Music which complement my technical side and keep me inspired. I learn Math from [Math Academy](https://www.mathacademy.com/) and [MIT OCW](https://ocw.mit.edu/). I learn and practice piano during my free time.
+I enjoy helping people understand technology in simple, practical terms. Recently, I gave a community talk at the San Jose Public Library called [Demystifying AI](/talks/demystifying-ai/), a plain-English introduction to what AI is, where it is useful, what to be careful about, and how to start using it without getting lost in the hype.
+
+## Outside Technology
+
+Outside of technology, I spend time with math, music, and books. I still like learning math in small doses through videos and puzzles. I enjoy country music and melodious Malayalam songs. These days, I also read more physical books from libraries and used bookstores - mostly historical fiction, investigative stories, and simple stories about everyday people.

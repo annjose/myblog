@@ -43,7 +43,7 @@ const {
 const { Content, headings } = await render(post);
 
 const tocHeadings = headings.filter(
-  (h: { depth: number }) => h.depth === 2 || h.depth === 3
+  (h: { depth: number }) => h.depth === 2 || h.depth === 3,
 );
 const showToc = tocHeadings.length >= 3;
 
@@ -85,7 +85,7 @@ const allPosts = posts.map(({ data: { title }, id, filePath }) => ({
   filePath,
 }));
 
-const currentPostIndex = allPosts.findIndex(a => a.id === post.id);
+const currentPostIndex = allPosts.findIndex((a) => a.id === post.id);
 
 const prevPost = currentPostIndex !== 0 ? allPosts[currentPostIndex - 1] : null;
 const nextPost =
@@ -95,11 +95,7 @@ const nextPost =
 <Layout {...layoutProps}>
   <Header />
   {/* Post content + TOC: unified container for consistent alignment */}
-  <div
-    id="main-content"
-    class="app-layout pb-12 relative"
-    data-pagefind-body
-  >
+  <div id="main-content" class="app-layout pb-12 relative" data-pagefind-body>
     <main class="min-w-0">
       <BackButton />
       {/* Post header: title, date, edit */}
@@ -109,7 +105,7 @@ const nextPost =
       >
         {title}
       </h1>
-      <div class="my-2 flex items-center gap-2">
+      <div class="my-2 flex flex-wrap items-center gap-x-2 gap-y-1">
         <Datetime {pubDatetime} {modDatetime} {timezone} size="lg" />
         <span aria-hidden="true">|</span>
         <a
@@ -127,14 +123,30 @@ const nextPost =
           ]}>|</span
         >
         <EditPost {hideEditPost} {post} class="max-sm:hidden" />
+        {
+          tags.length > 0 && (
+            <>
+              <span aria-hidden="true">|</span>
+              <ul class="flex flex-wrap items-center gap-x-3 gap-y-1">
+                {tags.map((tag) => (
+                  <Tag tag={slugifyStr(tag)} tagName={tag} size="sm" />
+                ))}
+              </ul>
+            </>
+          )
+        }
       </div>
 
-      {/* Mobile/tablet TOC: collapsible dropdown above article (below xl breakpoint) */}
-      {showToc && (
-        <div class="mt-4 xl:hidden">
-          <TableOfContents headings={headings} />
-        </div>
-      )}
+      {
+        /* Mobile/tablet TOC: collapsible dropdown above article (below xl breakpoint) */
+      }
+      {
+        showToc && (
+          <div class="mt-4 xl:hidden">
+            <TableOfContents headings={headings} />
+          </div>
+        )
+      }
       <article
         id="article"
         class="app-prose mt-8 w-full max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"
@@ -145,10 +157,6 @@ const nextPost =
       <hr class="my-8 border-dashed" />
 
       <EditPost class="sm:hidden" {hideEditPost} {post} />
-
-      <ul class="mt-4 mb-8 flex flex-wrap gap-4 sm:my-8">
-        {tags.map(tag => <Tag tag={slugifyStr(tag)} tagName={tag} size="sm" />)}
-      </ul>
 
       <BackToTopButton />
 
@@ -197,11 +205,13 @@ const nextPost =
     </main>
 
     {/* Desktop TOC: overhangs to the right of the page container at xl+ */}
-    {showToc && (
-      <aside class="hidden xl:block absolute top-0 bottom-0 left-full ml-6 w-48 pt-8">
-        <TableOfContents headings={headings} />
-      </aside>
-    )}
+    {
+      showToc && (
+        <aside class="hidden xl:block absolute top-0 bottom-0 left-full ml-6 w-48 pt-8">
+          <TableOfContents headings={headings} />
+        </aside>
+      )
+    }
   </div>
   <Footer />
 </Layout>
@@ -252,7 +262,7 @@ const nextPost =
    *  allowing sharing of sections easily */
   function addHeadingLinks() {
     const headings = Array.from(
-      document.querySelectorAll("h2, h3, h4, h5, h6")
+      document.querySelectorAll("h2, h3, h4, h5, h6"),
     );
     for (const heading of headings) {
       heading.classList.add("group");
@@ -323,6 +333,6 @@ const nextPost =
 
   /* Go to page start after page swap */
   document.addEventListener("astro:after-swap", () =>
-    window.scrollTo({ left: 0, top: 0, behavior: "instant" })
+    window.scrollTo({ left: 0, top: 0, behavior: "instant" }),
   );
 </script>

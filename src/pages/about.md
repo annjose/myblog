@@ -12,7 +12,7 @@ interests:
   - Open Weights Models
   - Teaching AI Basics
   - Mentoring
-currently: Building real projects using agentic AI. Tinkering with open source coding agents and open-weights models. Learning about agentic engineering and context management.
+currently: Building meainingful products using agentic AI. Tinkering with open source coding agents and open-weights models. Learning about agentic engineering and context management.
 thirdPartyBio:
   - "Ann Catherine Jose is a software builder, lifelong learner, and hands-on technologist focused on building meaningful products with AI agents. With more than two decades of experience in software engineering, she brings deep expertise in full-stack web development, native mobile applications, engineering leadership, and modern AI-assisted development workflows."
   - "Before focusing on independent building, Ann spent 14 years at Intuit, where she led engineering for QuickBooks Platform and Mobile. As Head of Engineering, she partnered closely with Product, Design, and Marketing leaders to deliver customer-focused products, drive the QuickBooks mobile strategy, complete long-term platform infrastructure initiatives, and help establish the foundation for Generative AI in Intuit's Small Business group. Earlier in her career, she held engineering and leadership roles at Philips, SAP, and Tata Infotech."

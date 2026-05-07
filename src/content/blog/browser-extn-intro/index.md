@@ -4,9 +4,7 @@ description: "An introductory guide to building and troubleshooting browser exte
 pubDatetime: 2024-09-04T17:12:32.000Z
 draft: false
 tags:
-  - "modern-web-dev"
-  - "web-development"
-  - "tech-explorations"
+  - "web"
   - "how-to"
   - "building"
   - "browser-extensions"

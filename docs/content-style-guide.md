@@ -32,7 +32,7 @@ Recommended order:
 
 Examples:
 
-- Good: `llm`, `next-js`, `web-development`
+- Good: `llm`, `next-js`, `web`
 - Avoid: `LLM`, `next.js`, `WebDevelopment`
 
 ## Post Structure

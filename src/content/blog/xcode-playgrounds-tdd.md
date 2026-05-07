@@ -5,9 +5,7 @@ pubDatetime: 2017-04-02T09:02:31.000Z
 draft: false
 tags:
   - "ios"
-  - "swift"
-  - "mobile-tech"
-  - "tech-explorations"
+  - "mobile"
 author: "Ann Catherine Jose"
 disqusSlug: "xcode-playgrounds-tdd"
 ---

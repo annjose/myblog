@@ -5,7 +5,6 @@ pubDatetime: 2025-06-01T19:32:08.000Z
 draft: false
 tags:
   - "ai"
-  - "tech-explorations"
   - "on-device-ai"
   - "edge-ai"
 author: "Ann Catherine Jose"

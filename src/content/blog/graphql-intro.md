@@ -4,7 +4,7 @@ description: "An introduction to GraphQL with examples and comparison to REST"
 pubDatetime: 2019-01-28T22:30:28.000Z
 draft: false
 tags:
-  - "mobile-tech"
+  - "mobile"
   - "graphql"
 author: "Ann Catherine Jose"
 disqusSlug: "graphql-intro"

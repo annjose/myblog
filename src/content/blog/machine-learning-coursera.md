@@ -4,7 +4,6 @@ description: "Few weeks ago, I started the Machine Learning course on Coursera b
 pubDatetime: 2016-08-10T03:05:54.000Z
 draft: false
 tags:
-  - "tech-explorations"
   - "machine-learning"
 author: "Ann Catherine Jose"
 disqusSlug: "machine-learning-coursera"

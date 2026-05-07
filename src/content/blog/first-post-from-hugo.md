@@ -4,7 +4,6 @@ description: "This is my first blog post created by Hugo, a simple, fast and pow
 pubDatetime: 2015-04-27T07:49:45.000Z
 draft: false
 tags:
-  - "tech-explorations"
   - "hugo"
 author: "Ann Catherine Jose"
 disqusSlug: "first-post-from-hugo"

@@ -5,8 +5,6 @@ pubDatetime: 2025-03-23T23:14:23.000Z
 draft: false
 tags:
   - "privacy"
-  - "browsers"
-  - "tech-explorations"
 author: "Ann Catherine Jose"
 disqusSlug: "browsers-privacy-compare"
 ---

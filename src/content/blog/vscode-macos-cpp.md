@@ -4,9 +4,7 @@ description: "Build, run and debug C++ code using VS Code for Mac"
 pubDatetime: 2020-06-30T05:32:55.000Z
 draft: false
 tags:
-  - "tech-explorations"
   - "how-to"
-  - "visual-studio-code"
   - "c++"
 author: "Ann Catherine Jose"
 disqusSlug: "vscode-macos-cpp"

@@ -4,9 +4,7 @@ description: "Exploring advanced concepts in browser extension development"
 pubDatetime: 2024-09-05T21:24:13.000Z
 draft: false
 tags:
-  - "modern-web-dev"
-  - "web-development"
-  - "tech-explorations"
+  - "web"
   - "how-to"
   - "building"
   - "browser-extensions"

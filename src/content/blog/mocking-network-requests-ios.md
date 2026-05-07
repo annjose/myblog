@@ -5,8 +5,7 @@ pubDatetime: 2019-03-12T04:00:52.000Z
 draft: false
 tags:
   - "ios"
-  - "mobile-tech"
-  - "unit-testing"
+  - "mobile"
 author: "Ann Catherine Jose"
 disqusSlug: "mocking-network-requests-ios"
 ---

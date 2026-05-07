@@ -5,9 +5,8 @@ pubDatetime: 2024-01-29T23:42:25.000Z
 draft: false
 tags:
   - "llm"
-  - "tech-explorations"
   - "how-to"
-  - "generative-ai"
+  - "ai"
 author: "Ann Catherine Jose"
 disqusSlug: "run-code-llama-70B-locally"
 ogImage: "ollama-terminal.png"

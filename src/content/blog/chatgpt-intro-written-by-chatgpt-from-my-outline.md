@@ -5,9 +5,8 @@ pubDatetime: 2023-02-13T04:54:11.000Z
 draft: false
 tags:
   - "chatgpt"
-  - "generative-ai"
+  - "ai"
   - "llm"
-  - "tech-explorations"
 author: "Ann Catherine Jose"
 disqusSlug: "chatgpt-intro-written-by-chatgpt-from-my-outline"
 ---

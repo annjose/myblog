@@ -4,8 +4,7 @@ description: "My notes and key takeaways from the OpenAI DevDay"
 pubDatetime: 2023-11-09T13:32:13.000Z
 draft: false
 tags:
-  - "gpt"
-  - "generative-ai"
+  - "ai"
   - "llm"
   - "conferences"
 author: "Ann Catherine Jose"

@@ -7,24 +7,20 @@ const TAG_LABELS: Record<string, string> = {
   tdd: "TDD",
   ios: "iOS",
   "c++": "C++",
-  gpt: "GPT",
   graphql: "GraphQL",
   chatgpt: "ChatGPT",
   "next-js": "Next.js",
-  "react-native": "React Native",
   "how-to": "How-To",
   "edge-ai": "Edge AI",
   "on-device-ai": "On-Device AI",
-  "generative-ai": "Generative AI",
-  "ghc-2018": "GHC 2018",
-  "modern-web-dev": "Modern Web Dev",
+  "agentic-coding": "Agentic Coding",
 };
 
-/** Convert a slug like "web-development" to "Web Development" */
+/** Convert a slug like "personal-growth" to "Personal Growth" */
 function titleCase(slug: string): string {
   return slug
     .split("-")
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
 }
 

@@ -5,10 +5,8 @@ pubDatetime: 2025-02-24T11:32:12.000Z
 draft: false
 tags:
   - "ai"
-  - "coding-assistants"
-  - "agentic-systems"
+  - "agentic-coding"
   - "llm"
-  - "tech-explorations"
 author: "Ann Catherine Jose"
 disqusSlug: "claude-code-first-impressions"
 ogImage: "cmd-init-result.jpg"

@@ -4,9 +4,7 @@ description: "The easiest way to build a user interface for browser extensions"
 pubDatetime: 2024-12-15T19:15:21.000Z
 draft: false
 tags:
-  - "modern-web-dev"
-  - "web-development"
-  - "tech-explorations"
+  - "web"
   - "how-to"
   - "building"
   - "browser-extensions"

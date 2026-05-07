@@ -4,7 +4,7 @@ description: "I had the wonderful opportunity to attend Google I/O last week and
 pubDatetime: 2017-05-23T10:37:57.000Z
 draft: false
 tags:
-  - "mobile-tech"
+  - "mobile"
   - "android"
 author: "Ann Catherine Jose"
 disqusSlug: "GoogleIO-2017"

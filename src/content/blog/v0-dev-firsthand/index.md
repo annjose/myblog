@@ -5,7 +5,7 @@ pubDatetime: 2024-11-04T22:54:13.000Z
 draft: false
 tags:
   - "how-to"
-  - "web-development"
+  - "web"
 author: "Ann Catherine Jose"
 disqusSlug: "v0-dev-firsthand"
 ogImage: "todo-app-v1.png"

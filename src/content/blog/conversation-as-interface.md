@@ -4,8 +4,7 @@ description: "The User Interface is going beyond UI and voice recognition to the
 pubDatetime: 2016-04-09T03:47:54.000Z
 draft: false
 tags:
-  - "mobile-tech"
-  - "tech-explorations"
+  - "mobile"
 author: "Ann Catherine Jose"
 disqusSlug: "conversation-as-interface"
 ---

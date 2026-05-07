@@ -6,8 +6,7 @@ draft: false
 tags:
   - "ai"
   - "llm"
-  - "coding-assistants"
-  - "tech-explorations"
+  - "agentic-coding"
 author: "Ann Catherine Jose"
 disqusSlug: "agentic-coding-basics"
 ogImage: "agentic-loop.png"

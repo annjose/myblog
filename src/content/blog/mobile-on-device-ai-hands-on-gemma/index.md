@@ -6,11 +6,8 @@ draft: false
 tags:
   - "mobile"
   - "ai"
-  - "mobile-development"
   - "privacy"
   - "gemma"
-  - "hands-on"
-  - "tech-explorations"
   - "on-device-ai"
   - "edge-ai"
 author: "Ann Catherine Jose"

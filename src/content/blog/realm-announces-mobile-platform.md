@@ -4,9 +4,7 @@ description: "Realm is a company that I respect a lot because of their support f
 pubDatetime: 2016-09-27T15:22:02.000Z
 draft: false
 tags:
-  - "mobile-tech"
-  - "tech-explorations"
-  - "realm"
+  - "mobile"
 author: "Ann Catherine Jose"
 disqusSlug: "realm-announces-mobile-platform"
 ---

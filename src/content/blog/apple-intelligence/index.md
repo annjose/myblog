@@ -5,8 +5,6 @@ pubDatetime: 2024-06-12T03:14:23.000Z
 draft: false
 tags:
   - "ai"
-  - "tech-explorations"
-  - "generative-ai"
   - "llm"
 author: "Ann Catherine Jose"
 disqusSlug: "apple-intelligence"

@@ -4,10 +4,8 @@ description: "My key insights and takeaways from the GPT-4 Technical Report"
 pubDatetime: 2023-04-09T20:59:18.000Z
 draft: false
 tags:
-  - "gpt"
-  - "generative-ai"
+  - "ai"
   - "llm"
-  - "tech-explorations"
 author: "Ann Catherine Jose"
 disqusSlug: "gpt-4-tech-report-highlights"
 ---

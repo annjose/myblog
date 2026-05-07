@@ -5,9 +5,7 @@ pubDatetime: 2018-10-13T04:09:12.000Z
 draft: false
 tags:
   - "ios"
-  - "swift"
-  - "mobile-tech"
-  - "tech-explorations"
+  - "mobile"
 author: "Ann Catherine Jose"
 disqusSlug: "swift42-whats-new"
 ---

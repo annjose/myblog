@@ -4,8 +4,7 @@ description: "Learnings and Experience of Grace Hopper Celebration 2018"
 pubDatetime: 2018-10-01T04:17:46.000Z
 draft: false
 tags:
-  - "ghc-2018"
-  - "highlights"
+  - "conferences"
 author: "Ann Catherine Jose"
 disqusSlug: "ghc-2018-hightlights"
 ---

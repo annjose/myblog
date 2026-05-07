@@ -15,13 +15,13 @@ describe("getTagLabel", () => {
   });
 
   it("auto-title-cases unknown slugs", () => {
-    expect(getTagLabel("web-development")).toBe("Web Development");
+    expect(getTagLabel("web")).toBe("Web");
     expect(getTagLabel("personal-growth")).toBe("Personal Growth");
     expect(getTagLabel("career")).toBe("Career");
   });
 
   it("returns title-cased single words for unknown tags", () => {
     expect(getTagLabel("privacy")).toBe("Privacy");
-    expect(getTagLabel("health")).toBe("Health");
+    expect(getTagLabel("mobile")).toBe("Mobile");
   });
 });

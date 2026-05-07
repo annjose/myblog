@@ -6,9 +6,8 @@ draft: false
 tags:
   - "how-to"
   - "building"
-  - "technology"
   - "next-js"
-  - "modern-web-dev"
+  - "web"
 author: "Ann Catherine Jose"
 disqusSlug: "how-to-customize-nextauth-session"
 ---

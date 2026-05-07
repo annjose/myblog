@@ -6,7 +6,6 @@ draft: false
 tags:
   - "mobile"
   - "ai"
-  - "tech-explorations"
   - "on-device-ai"
   - "edge-ai"
 author: "Ann Catherine Jose"

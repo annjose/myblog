@@ -5,8 +5,8 @@ pubDatetime: 2023-02-13T06:57:43.000Z
 draft: false
 tags:
   - "chatgpt"
-  - "machine-learning"
-  - "tech-explorations"
+  - "ai"
+  - "llm"
 author: "Ann Catherine Jose"
 disqusSlug: "chatgpt-intro-3-ways"
 ---

@@ -4,8 +4,7 @@ description: "My observations and learnings from the OpenAI DevDay"
 pubDatetime: 2023-11-09T17:02:53.000Z
 draft: false
 tags:
-  - "gpt"
-  - "generative-ai"
+  - "ai"
   - "llm"
   - "conferences"
 author: "Ann Catherine Jose"

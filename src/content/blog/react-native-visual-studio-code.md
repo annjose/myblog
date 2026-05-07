@@ -4,10 +4,7 @@ description: "I have been thoroughly enjoying working on ReactNative projects, b
 pubDatetime: 2016-04-14T04:22:02.000Z
 draft: false
 tags:
-  - "mobile-tech"
-  - "tech-explorations"
-  - "react-native"
-  - "visual-studio-code"
+  - "mobile"
 author: "Ann Catherine Jose"
 disqusSlug: "react-native-visual-studio-code"
 ---

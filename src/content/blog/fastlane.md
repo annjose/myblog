@@ -5,9 +5,8 @@ pubDatetime: 2017-12-23T20:02:23.000Z
 draft: false
 tags:
   - "ios"
-  - "mobile-tech"
+  - "mobile"
   - "how-to"
-  - "fastlane"
 author: "Ann Catherine Jose"
 disqusSlug: "fastlane"
 ---

@@ -4,9 +4,8 @@ description: "A step-by-step guide with lessons and gotchas for a smooth migrati
 pubDatetime: 2024-06-05T19:42:25.000Z
 draft: false
 tags:
-  - "tech-explorations"
   - "how-to"
-  - "web-development"
+  - "web"
   - "next-js"
 author: "Ann Catherine Jose"
 disqusSlug: "nextjs-migrate-pages-app-router"

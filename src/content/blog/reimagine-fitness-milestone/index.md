@@ -4,7 +4,6 @@ description: "How structure, consistency, and fun helped me break past my limits
 pubDatetime: 2025-03-13T21:24:23.000Z
 draft: false
 tags:
-  - "health"
   - "personal-growth"
 author: "Ann Catherine Jose"
 disqusSlug: "reimagine-fitness-milestone"

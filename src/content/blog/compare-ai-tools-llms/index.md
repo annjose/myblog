@@ -4,9 +4,7 @@ description: "Side by side comparison of AI tools and models useful for everyday
 pubDatetime: 2024-10-26T00:22:33.000Z
 draft: false
 tags:
-  - "tech-explorations"
   - "llm"
-  - "generative-ai"
   - "ai"
 author: "Ann Catherine Jose"
 disqusSlug: "compare-ai-tools-llms"

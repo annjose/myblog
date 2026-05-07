@@ -5,7 +5,6 @@ pubDatetime: 2016-09-24T14:49:00.000Z
 draft: false
 tags:
   - "how-to"
-  - "machine-learning"
   - "hugo"
 author: "Ann Catherine Jose"
 disqusSlug: "display-math-expressions-in-hugo"

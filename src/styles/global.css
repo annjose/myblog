@@ -24,6 +24,66 @@ html[data-theme="dark"] {
   --tag-border: #44403c;
 }
 
+html[data-palette="raspberry"][data-theme="light"] {
+  --background: #fbfafc;
+  --foreground: #18141d;
+  --accent: #a21caf;
+  --muted: #625967;
+  --border: #eadceb;
+  --tag-bg: #fbf0fb;
+  --tag-border: #e8cce9;
+}
+
+html[data-palette="raspberry"][data-theme="dark"] {
+  --background: #150f16;
+  --foreground: #fbf5fb;
+  --accent: #f0abfc;
+  --muted: #b9acbb;
+  --border: #432c44;
+  --tag-bg: #251426;
+  --tag-border: #543457;
+}
+
+html[data-palette="aubergine"][data-theme="light"] {
+  --background: #fbfaf8;
+  --foreground: #18151f;
+  --accent: #7c3aed;
+  --muted: #5f5a66;
+  --border: #e4ddea;
+  --tag-bg: #f5f0fa;
+  --tag-border: #ded2eb;
+}
+
+html[data-palette="aubergine"][data-theme="dark"] {
+  --background: #141019;
+  --foreground: #f7f4fb;
+  --accent: #a78bfa;
+  --muted: #b4abbf;
+  --border: #352b40;
+  --tag-bg: #1f1728;
+  --tag-border: #463656;
+}
+
+html[data-palette="rosewood"][data-theme="light"] {
+  --background: #fbfaf8;
+  --foreground: #18151f;
+  --accent: #be123c;
+  --muted: #5f5a66;
+  --border: #eadbe1;
+  --tag-bg: #fbf0f3;
+  --tag-border: #e7ccd5;
+}
+
+html[data-palette="rosewood"][data-theme="dark"] {
+  --background: #141019;
+  --foreground: #f7f4fb;
+  --accent: #fb7185;
+  --muted: #b4abbf;
+  --border: #46313a;
+  --tag-bg: #28171d;
+  --tag-border: #573744;
+}
+
 @theme inline {
   --font-app: var(--font-main);
   --font-mono: var(--font-jetbrains-mono);
@@ -85,6 +145,10 @@ html[data-theme="dark"] {
 /* MathJax SVG: keep inline math inline with surrounding text */
 mjx-container:not([display]) > svg {
   display: inline;
+}
+
+mjx-container[display="true"] {
+  color: var(--color-foreground);
 }
 
 /* MathJax display equations: scroll instead of shrinking on mobile */

@@ -3,6 +3,7 @@
 Use this file to keep short architecture/process decisions so agents and humans do not re-litigate the same topics repeatedly.
 
 ## Entry Template
+
 - Date: `YYYY-MM-DD`
 - Decision:
 - Context:
@@ -12,6 +13,14 @@ Use this file to keep short architecture/process decisions so agents and humans 
 - Follow-ups:
 
 ## Initial Entries
+
+- Date: `2026-05-07`
+- Decision: Make Raspberry the default palette and keep palette comparison behind a local preview flag.
+- Context: The previous warm brick/orange theme felt too common and too close to current AI-product visual trends. Raspberry had the best balance across light/dark content samples.
+- Options considered: expose a public palette selector, use `?palette=...` URLs, or keep comparison controls hidden.
+- Chosen approach: default to Raspberry; show the temporary palette dropdown only when `?themePreview=1` is present. Preview palettes are `Raspberry`, `Aubergine`, `Rosewood`, and `Brick`.
+- Consequences: normal visitors see one stable theme; local reviewers can still compare palettes without changing production behavior.
+- Follow-ups: remove the preview dropdown and unused palette variants after the final palette decision is complete.
 
 - Date: `2026-02-15`
 - Decision: Use `AGENTS.md` as single source of truth for multi-agent collaboration.

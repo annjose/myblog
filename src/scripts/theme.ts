@@ -1,7 +1,13 @@
 // Constants
 const THEME = "theme";
+const PALETTE = "palette";
 const LIGHT = "light";
 const DARK = "dark";
+const DEFAULT_PALETTE = "raspberry";
+const PALETTES = ["raspberry", "aubergine", "rosewood", "brick"] as const;
+const THEME_PREVIEW = "themePreview";
+
+type Palette = (typeof PALETTES)[number];
 
 // Initial color scheme
 // Can be "light", "dark", or empty string for system's prefers-color-scheme
@@ -21,18 +27,55 @@ function getPreferTheme(): string {
     : LIGHT;
 }
 
+function isPalette(value: string | null): value is Palette {
+  return PALETTES.includes(value as Palette);
+}
+
+function getPreferPalette(): Palette {
+  const previewEnabled = isThemePreviewEnabled();
+  if (!previewEnabled) return DEFAULT_PALETTE;
+
+  const savedPalette = localStorage.getItem(PALETTE);
+  if (isPalette(savedPalette)) return savedPalette;
+
+  return DEFAULT_PALETTE;
+}
+
+function isThemePreviewEnabled(): boolean {
+  return new URLSearchParams(window.location.search).get(THEME_PREVIEW) === "1";
+}
+
 // Use existing theme value from inline script if available, otherwise detect
 let themeValue = window.theme?.themeValue ?? getPreferTheme();
+let paletteValue = window.theme?.paletteValue ?? getPreferPalette();
 
 function setPreference(): void {
   localStorage.setItem(THEME, themeValue);
+  if (isThemePreviewEnabled()) {
+    localStorage.setItem(PALETTE, paletteValue);
+  } else {
+    localStorage.removeItem(PALETTE);
+  }
   reflectPreference();
 }
 
 function reflectPreference(): void {
   document.firstElementChild?.setAttribute("data-theme", themeValue);
+  document.firstElementChild?.setAttribute("data-palette", paletteValue);
 
   document.querySelector("#theme-btn")?.setAttribute("aria-label", themeValue);
+
+  const paletteSelect =
+    document.querySelector<HTMLSelectElement>("#palette-select");
+  const paletteSwitcher =
+    document.querySelector<HTMLElement>("#palette-switcher");
+  if (paletteSwitcher) {
+    paletteSwitcher.classList.toggle("hidden", !isThemePreviewEnabled());
+    paletteSwitcher.classList.toggle("flex", isThemePreviewEnabled());
+  }
+  if (paletteSelect) {
+    paletteSelect.value = paletteValue;
+  }
 
   // Get a reference to the body element
   const body = document.body;
@@ -59,11 +102,16 @@ if (window.theme) {
 } else {
   window.theme = {
     themeValue,
+    paletteValue,
     setPreference,
     reflectPreference,
     getTheme: () => themeValue,
     setTheme: (val: string) => {
       themeValue = val;
+    },
+    getPalette: () => paletteValue,
+    setPalette: (val: string) => {
+      if (isPalette(val)) paletteValue = val;
     },
   };
 }
@@ -81,6 +129,18 @@ function setThemeFeature(): void {
     window.theme?.setTheme(themeValue);
     setPreference();
   });
+
+  const paletteSelect =
+    document.querySelector<HTMLSelectElement>("#palette-select");
+  if (paletteSelect) {
+    paletteSelect.value = paletteValue;
+    paletteSelect.onchange = () => {
+      if (!isPalette(paletteSelect.value)) return;
+      paletteValue = paletteSelect.value;
+      window.theme?.setPalette(paletteValue);
+      setPreference();
+    };
+  }
 }
 
 // Set up theme features after page load
@@ -91,7 +151,7 @@ document.addEventListener("astro:after-swap", setThemeFeature);
 
 // Set theme-color value before page transition
 // to avoid navigation bar color flickering in Android dark mode
-document.addEventListener("astro:before-swap", event => {
+document.addEventListener("astro:before-swap", (event) => {
   const astroEvent = event;
   const bgColor = document
     .querySelector("meta[name='theme-color']")

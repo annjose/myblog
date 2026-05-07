@@ -3,9 +3,9 @@
 Source repository for the Astro-powered blog at `https://annjose.com`.
 
 ## Stack
-- [Astro](https://astro.build/) 5 static site generator
-- Tailwind CSS
-- Deployed on [Cloudflare Pages](https://pages.cloudflare.com/)
+- [Astro 5](https://astro.build/) static site generator
+- [Tailwind CSS](https://tailwindcss.com/)
+- Deployed on [Cloudflare](https://workers.cloudflare.com/)
 
 ## Setup
 ```bash
@@ -28,10 +28,17 @@ pnpm test
 ```
 
 ## Deploy
-Push to `astro` (or `main`) branch — Cloudflare Pages auto-builds and deploys.
+Push to `main` branch — Cloudflare Workers auto-builds and deploys.
 
 ## Content
 - Blog posts live in `src/content/blog/` as YAML-frontmatter Markdown
 - Content sample post at `/blog/content-sample` exercises all formatting features
 - See [docs/content-style-guide.md](docs/content-style-guide.md) for frontmatter and writing conventions
 - See [docs/taxonomy-conventions.md](docs/taxonomy-conventions.md) for tag naming rules
+
+## Theme Preview
+
+- Raspberry is the default palette.
+- Add `?themePreview=1` to any local URL to show the temporary palette dropdown.
+- Preview options: `Raspberry`, `Aubergine`, `Rosewood`, and `Brick`.
+- The dropdown is hidden without `themePreview=1`; do not use palette query params for production behavior.

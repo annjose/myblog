@@ -127,6 +127,7 @@
     border: none;
     background: transparent !important;
     border-left: 4px solid var(--color-accent);
+    color: var(--color-foreground);
     padding-left: 1.5rem;
     font-family: var(--font-main), sans-serif;
     font-size: 1rem;
@@ -135,11 +136,18 @@
 
   html[data-theme="dark"] .astro-code[data-callout] {
     background: transparent !important;
+    border-left-color: var(--color-accent);
   }
 
   .astro-code[data-callout] code {
     border: none;
     background: transparent;
+    color: var(--color-foreground);
+  }
+
+  .astro-code[data-callout] code span,
+  .astro-code[data-callout] code .line {
+    color: var(--color-foreground) !important;
   }
 
   .astro-code[data-callout] code .line::before {
@@ -154,7 +162,17 @@
   }
 
   html[data-theme="dark"] .astro-code[data-callout-boxed] {
-    background: var(--color-tag-bg) !important;
+    background: color-mix(
+      in srgb,
+      var(--color-accent) 12%,
+      var(--color-background)
+    ) !important;
+    border-color: color-mix(
+      in srgb,
+      var(--color-accent) 35%,
+      var(--color-border)
+    );
+    border-left-color: var(--color-accent);
   }
 
   /* Styles for Shiki transformers */

@@ -17,8 +17,8 @@ const currentPath =
   pathname.endsWith("/") && pathname !== "/" ? pathname.slice(0, -1) : pathname;
 
 const isActive = (path: string) => {
-  const currentPathArray = currentPath.split("/").filter(p => p.trim());
-  const pathArray = path.split("/").filter(p => p.trim());
+  const currentPathArray = currentPath.split("/").filter((p) => p.trim());
+  const pathArray = path.split("/").filter((p) => p.trim());
 
   return currentPath === path || currentPathArray[0] === pathArray[0];
 };
@@ -44,10 +44,7 @@ const isActive = (path: string) => {
       "flex items-baseline justify-between sm:items-center",
     ]}
   >
-    <a
-      href="/"
-      class="flex shrink-0 items-center gap-2 py-1"
-    >
+    <a href="/" class="flex shrink-0 items-center gap-2 py-1">
       <span class="avatar-ring inline-block rounded-full p-[2px]">
         <Image
           src={avatarImg}
@@ -132,6 +129,23 @@ const isActive = (path: string) => {
             <IconSearch />
             <span class="sr-only">Search</span>
           </LinkButton>
+        </li>
+        <li
+          id="palette-switcher"
+          class="hidden col-span-2 items-center justify-center sm:col-span-1"
+        >
+          <label class="sr-only" for="palette-select">Color palette</label>
+          <select
+            id="palette-select"
+            class="rounded border border-border bg-background px-2 py-1 text-sm text-foreground hover:border-accent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-dashed"
+            aria-label="Color palette"
+            title="Color palette"
+          >
+            <option value="raspberry">Raspberry</option>
+            <option value="aubergine">Aubergine</option>
+            <option value="rosewood">Rosewood</option>
+            <option value="brick">Brick</option>
+          </select>
         </li>
         {
           SITE.lightAndDarkMode && (

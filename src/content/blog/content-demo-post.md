@@ -24,7 +24,7 @@ Internal file name can change over time, while public URL remains stable via fro
 
 ### Emphasis
 
-Regular text, **bold text**, *italic text*, and inline `code`.
+Regular text, **bold text**, _italic text_, and inline `code`.
 
 ### Links
 
@@ -49,11 +49,11 @@ Regular text, **bold text**, *italic text*, and inline `code`.
 
 ## Table
 
-| Area | Example | Expected |
-| --- | --- | --- |
-| Markdown | Heading/list/table | Renders with typography styles |
-| Math | Inline and block equations | MathJax SVG output |
-| Code | TypeScript and diff blocks | Shiki highlighting + copy button |
+| Area     | Example                    | Expected                         |
+| -------- | -------------------------- | -------------------------------- |
+| Markdown | Heading/list/table         | Renders with typography styles   |
+| Math     | Inline and block equations | MathJax SVG output               |
+| Code     | TypeScript and diff blocks | Shiki highlighting + copy button |
 
 ## Code Blocks
 

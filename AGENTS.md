@@ -10,7 +10,7 @@ This file is the source of truth for AI coding agents working in this repo.
 - Content model:
   - Blog posts as page bundles: `src/content/blog/<slug>/index.md` (+ colocated images)
   - Blog posts as single files: `src/content/blog/<name>.md`
-  - Content sample post at `/blog/content-sample` exercises all formatting features
+  - Content sample post at `/blog/content-sample` exercises all formatting features. This should have draft: true.
 
 ## Source of Truth
 - Primary source: `src/content/`, `src/pages/`, `src/components/`, `src/layouts/`
@@ -60,6 +60,14 @@ pnpm test
   - `canonicalURL`
 - Use page bundles (`<slug>/index.md`) for posts with colocated images.
 - See `docs/content-style-guide.md` for full conventions.
+
+## Theme Preview
+
+- Default palette: Raspberry.
+- Temporary comparison UI is enabled by adding `?themePreview=1` to any local URL.
+- Available preview palettes: `Raspberry`, `Aubergine`, `Rosewood`, `Brick`.
+- The palette dropdown is hidden unless `themePreview=1` is present.
+- Do not use `?palette=...`; palette query parameters are intentionally not part of production behavior.
 
 ## Taxonomy Conventions
 - Canonical taxonomy values should be lowercase, hyphenated slugs.

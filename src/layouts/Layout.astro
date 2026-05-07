@@ -146,8 +146,7 @@ const structuredData = pubDatetime
       id="counterscale-script"
       data-site-id="annjose-blog"
       src="https://counterscale.annjose.workers.dev/tracker.js"
-      defer
-    ></script>
+      defer></script>
 
     {
       // If PUBLIC_GOOGLE_SITE_VERIFICATION is set in the environment variable,
@@ -167,7 +166,11 @@ const structuredData = pubDatetime
     <script is:inline>
       (function () {
         const initialColorScheme = ""; // "light" | "dark"
+        const initialPalette = "raspberry"; // "raspberry" | "aubergine" | "rosewood" | "brick"
+        const paletteValues = ["raspberry", "aubergine", "rosewood", "brick"];
         const currentTheme = localStorage.getItem("theme");
+        const currentPalette = localStorage.getItem("palette");
+        const searchParams = new URLSearchParams(window.location.search);
 
         function getPreferTheme() {
           if (currentTheme) return currentTheme;
@@ -177,17 +180,31 @@ const structuredData = pubDatetime
             : "light";
         }
 
+        function getPreferPalette() {
+          const previewEnabled = searchParams.get("themePreview") === "1";
+          if (!previewEnabled) return initialPalette;
+          if (paletteValues.includes(currentPalette)) return currentPalette;
+          return initialPalette;
+        }
+
         const themeValue = getPreferTheme();
+        const paletteValue = getPreferPalette();
 
         // Set theme immediately to prevent flash
         document.firstElementChild?.setAttribute("data-theme", themeValue);
+        document.firstElementChild?.setAttribute("data-palette", paletteValue);
 
         // Export minimal API for external script
         window.theme = {
           themeValue: themeValue,
+          paletteValue: paletteValue,
           getTheme: () => window.theme.themeValue,
-          setTheme: val => {
+          setTheme: (val) => {
             window.theme.themeValue = val;
+          },
+          getPalette: () => window.theme.paletteValue,
+          setPalette: (val) => {
+            window.theme.paletteValue = val;
           },
         };
       })();
